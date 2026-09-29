@@ -890,16 +890,16 @@
         maxZoom: 19
       });
 
-      const osmDark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; CARTO',
-        maxZoom: 19
+      const esriDark = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+        maxZoom: 16
       });
 
-      // Agregar mapa base OpenStreetMap por defecto (No requiere ninguna API Key)
-      osmDark.addTo(leafletMap);
+      // Agregar mapa base Esri Oscuro por defecto (100% Libre sin API Key ni marcas de agua)
+      esriDark.addTo(leafletMap);
 
       const baseMaps = {
-        "OpenStreetMap Oscuro (Neón)": osmDark,
+        "Mapa Oscuro (Esri - Sin API Key)": esriDark,
         "OpenStreetMap Estándar": osmStandard
       };
 
