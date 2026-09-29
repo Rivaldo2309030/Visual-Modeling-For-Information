@@ -885,10 +885,25 @@
 
       leafletMap = L.map('mapContainer').setView([20.9674, -89.6237], 12);
 
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
+      const osmStandard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 19
-      }).addTo(leafletMap);
+      });
+
+      const osmDark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; CARTO',
+        maxZoom: 19
+      });
+
+      // Agregar mapa base OpenStreetMap por defecto (No requiere ninguna API Key)
+      osmDark.addTo(leafletMap);
+
+      const baseMaps = {
+        "OpenStreetMap Oscuro (Neón)": osmDark,
+        "OpenStreetMap Estándar": osmStandard
+      };
+
+      L.control.layers(baseMaps).addTo(leafletMap);
 
       const meridaNodes = [
         { name: "Salida Progreso (Periférico Norte)", lat: 21.0365, lng: -89.6152, status: "danger", desc: "Sin semáforo peatonal • Velocidad 90 km/h • 313 siniestros/año", icon: "🔴" },
