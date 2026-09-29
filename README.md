@@ -1,11 +1,15 @@
 # Sentir la Calle: El Viaje Peatonal en Mérida
 
+> 🌐 **Sitio Web Interactivo (GitHub Pages):**  
+> 👉 **[https://rivaldo2309030.github.io/Visual-Modeling-For-Information/](https://rivaldo2309030.github.io/Visual-Modeling-For-Information/)**
+
 Proyecto de **Data Storytelling Interactivo de 9 Vistas** para el libro colectivo de la materia. Analizamos la percepción de seguridad, confort e infraestructura peatonal en Mérida a través de un recorrido narrativo estilo UPY DataViz.
 
 ---
 
 ## 🌐 Prototipo Web Interactivo (9 Vistas)
-Accede al prototipo navegable con **9 Vistas estilo Glassmorphism (Chart.js + Three.js 3D)** en [`index.html`](index.html).
+Accede al prototipo navegable con **9 Vistas estilo Glassmorphism (Chart.js + Three.js 3D)** en:  
+🔗 **[https://rivaldo2309030.github.io/Visual-Modeling-For-Information/](https://rivaldo2309030.github.io/Visual-Modeling-For-Information/)** o directamente en el archivo local [`index.html`](index.html).
 
 ---
 

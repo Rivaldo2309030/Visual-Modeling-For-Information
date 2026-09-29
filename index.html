@@ -487,15 +487,33 @@
       document.getElementById('banner-desc').innerText = data.desc;
       document.getElementById('viz-title').innerHTML = `<i class="fa-solid fa-chart-bar" style="color:var(--accent-cyan);"></i> ${data.vizTitle}`;
       document.getElementById('story-title').innerText = data.storyTitle;
-      document.getElementById('story-text').innerText = data.text;
+      
+      // Asignación explícita del texto narrativo
+      const storyTextEl = document.getElementById('story-text');
+      if (storyTextEl) {
+        storyTextEl.innerText = data.storyText || data.text || "";
+      }
+
       document.getElementById('story-insight').innerText = data.insight;
 
       document.getElementById('kpi1-val').innerText = data.k1_v;
       document.getElementById('kpi1-lbl').innerText = data.k1_l;
+      
       document.getElementById('kpi2-val').innerText = data.k2_v;
       document.getElementById('kpi2-lbl').innerText = data.k2_l;
+      
       document.getElementById('kpi3-val').innerText = data.k3_v;
       document.getElementById('kpi3-lbl').innerText = data.k3_l;
+
+      // Actualizar iconos dinámicamente si existen
+      const icon1 = document.querySelector('.kpi-card:nth-child(1) .kpi-icon i');
+      if (icon1 && data.k1_icon) icon1.className = `fa-solid ${data.k1_icon}`;
+
+      const icon2 = document.querySelector('.kpi-card:nth-child(2) .kpi-icon i');
+      if (icon2 && data.k2_icon) icon2.className = `fa-solid ${data.k2_icon}`;
+
+      const icon3 = document.querySelector('.kpi-card:nth-child(3) .kpi-icon i');
+      if (icon3 && data.k3_icon) icon3.className = `fa-solid ${data.k3_icon}`;
 
       const chartCanvas = document.getElementById('mainChart');
       const threeContainer = document.getElementById('threeContainer');
