@@ -68,14 +68,53 @@
       background: rgba(10, 15, 29, 0.9);
       position: sticky; top: 0; z-index: 100;
     }
+
+    .brand-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #000;
+      font-weight: 800;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+    }
+
     .brand-title {
       font-family: var(--font-heading);
-      font-size: 1.3rem; font-weight: 700;
-      background: linear-gradient(to right, #fff, #00f2fe);
+      font-size: 1.25rem; font-weight: 700;
+      background: linear-gradient(to right, #fff, #94a3b8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .brand-subtitle { font-size: 0.75rem; color: var(--accent-cyan); letter-spacing: 1px; text-transform: uppercase; }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-primary {
+      background: rgba(0, 242, 254, 0.12);
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
 
     .tabs-nav-container {
       background: rgba(15, 23, 42, 0.6);
@@ -89,24 +128,25 @@
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-card);
       color: var(--text-muted);
-      padding: 9px 16px;
+      padding: 8px 16px;
       border-radius: 12px;
       font-family: var(--font-heading);
-      font-size: 0.82rem; font-weight: 600;
+      font-size: 0.85rem; font-weight: 600;
       cursor: pointer; transition: all 0.25s ease;
+      display: flex; align-items: center; gap: 8px;
     }
-    .tab-btn:hover { background: rgba(255, 255, 255, 0.08); color: var(--text-main); }
+    .tab-btn:hover { background: rgba(255, 255, 255, 0.08); color: var(--text-main); border-color: rgba(255,255,255,0.2); }
     .tab-btn.active {
-      background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(79, 172, 254, 0.15));
       border-color: var(--accent-cyan);
       color: var(--accent-cyan);
-      box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
     }
     .tab-btn.lidar-btn.active {
       background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
       border-color: var(--accent-purple);
       color: #d8b4fe;
-      box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
     }
 
     main {
@@ -117,134 +157,180 @@
     .source-banner {
       display: flex; justify-content: space-between; align-items: center;
       padding: 1rem 1.5rem; border-left: 4px solid var(--accent-cyan);
+      flex-wrap: wrap; gap: 1rem;
     }
     .source-title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--accent-cyan); }
     .source-desc { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
 
-    .view-grid {
+    .view-content-grid {
       display: grid; grid-template-columns: 1fr 380px; gap: 1.5rem; flex: 1;
     }
 
-    .story-card { display: flex; flex-direction: column; gap: 1.25rem; }
-    .story-card h2 { font-family: var(--font-heading); font-size: 1.5rem; color: #fff; }
-    .story-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+    @media (max-width: 1100px) {
+      .view-content-grid { grid-template-columns: 1fr; }
+    }
 
-    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .stat-box { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-card); padding: 1rem; border-radius: 12px; }
-    .stat-number { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--accent-cyan); }
-    .stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-top: 4px; }
+    .viz-container {
+      display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem; min-height: 520px;
+    }
 
-    .canvas-container { height: 380px; position: relative; width: 100%; }
+    .viz-header { display: flex; justify-content: space-between; align-items: center; }
+    .viz-title { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
 
-    .sidebar-panel { display: flex; flex-direction: column; gap: 1rem; }
-    .sidebar-header { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--accent-amber); }
-    .team-badge { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 8px; }
+    .viz-canvas-wrapper {
+      flex: 1; min-height: 420px; background: rgba(0, 0, 0, 0.3); border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05); position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
 
-    footer { padding: 1rem 2rem; border-top: 1px solid var(--border-card); text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+    .story-panel { display: flex; flex-direction: column; gap: 1.25rem; padding: 1.5rem; }
+    .story-card-title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--accent-coral); display: flex; align-items: center; gap: 8px; }
+    .story-text { font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; }
+
+    .kpi-grid { display: flex; flex-direction: column; gap: 0.75rem; }
+    .kpi-card { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 1rem; }
+    .kpi-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; background: rgba(255, 255, 255, 0.05); color: var(--accent-cyan); }
+    .kpi-info { display: flex; flex-direction: column; }
+    .kpi-value { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; color: #fff; }
+    .kpi-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    footer { padding: 1rem 2rem; border-top: 1px solid var(--border-card); display: flex; justify-content: space-between; align-items: center; background: rgba(10, 15, 29, 0.9); }
+    .nav-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-card); color: var(--text-main); padding: 8px 18px; border-radius: 10px; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s ease; }
+    .nav-btn:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent-cyan); }
+
+    .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan); animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.7); } 70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(0, 242, 254, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); } }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <div>
-      <div class="brand-title">Sentir la Calle: El Viaje Peatonal en Mérida</div>
-      <div class="brand-subtitle">Visual Modeling For Information | Data Storytelling de 9 Vistas</div>
+    <div class="brand-container">
+      <div class="brand-logo"><i class="fa-solid fa-chart-line"></i></div>
+      <div>
+        <div class="brand-title">Data Storytelling: Sentir la Calle</div>
+        <div class="brand-subtitle">PLATAFORMA INTERACTIVA MULTIESCALAR — MÉRIDA 2026</div>
+      </div>
     </div>
-    <div style="display:flex; gap:10px;">
-      <span style="background:rgba(0,242,254,0.1); border:1px solid var(--accent-cyan); color:var(--accent-cyan); padding:4px 12px; border-radius:20px; font-size:0.75rem; font-weight:600;">PROTOTIPO NARRATIVO 9 VISTAS</span>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <span class="badge-pill badge-primary"><i class="fa-solid fa-layer-group"></i> 9 VISTAS INTEGRADAS</span>
+      <span class="badge-pill" style="background:rgba(255,255,255,0.05); color:var(--text-muted); border:1px solid var(--border-card);"><i class="fa-solid fa-book-open"></i> STORYTELLING MODE</span>
     </div>
   </header>
 
+  <!-- Pestañas de Navegación -->
   <div class="tabs-nav-container">
     <div class="tabs-wrapper">
-      <button class="tab-btn active" onclick="switchView(1)">1. Panorama General</button>
-      <button class="tab-btn" onclick="switchView(2)">2. Flujos Metropolitanos</button>
-      <button class="tab-btn" onclick="switchView(3)">3. Anatomía del Barrio</button>
-      <button class="tab-btn" onclick="switchView(4)">4. Cartas a la Ciudad</button>
-      <button class="tab-btn" onclick="switchView(5)">5. El Rumor Digital</button>
-      <button class="tab-btn" onclick="switchView(6)">6. Pasos en el Terreno</button>
-      <button class="tab-btn" onclick="switchView(7)">7. Clima y Horarios</button>
-      <button class="tab-btn lidar-btn" onclick="switchView(8)">8. El Ojo Digital 3D</button>
-      <button class="tab-btn" onclick="switchView(9)">9. Síntesis y Futuro</button>
+      <button class="tab-btn active" onclick="switchView(1)"><i class="fa-solid fa-globe"></i> 1. Panorama General</button>
+      <button class="tab-btn" onclick="switchView(2)"><i class="fa-solid fa-bus"></i> 2. Flujos Metropolitanos</button>
+      <button class="tab-btn" onclick="switchView(3)"><i class="fa-solid fa-traffic-light"></i> 3. Anatomía del Barrio</button>
+      <button class="tab-btn" onclick="switchView(4)"><i class="fa-solid fa-envelope-open-text"></i> 4. Cartas a la Ciudad</button>
+      <button class="tab-btn" onclick="switchView(5)"><i class="fa-solid fa-newspaper"></i> 5. El Rumor Digital</button>
+      <button class="tab-btn" onclick="switchView(6)"><i class="fa-solid fa-shoe-prints"></i> 6. Pasos en el Terreno</button>
+      <button class="tab-btn" onclick="switchView(7)"><i class="fa-solid fa-sun"></i> 7. Clima y Horarios</button>
+      <button class="tab-btn lidar-btn" onclick="switchView(8)"><i class="fa-solid fa-cube"></i> 8. El Ojo Digital 3D</button>
+      <button class="tab-btn" onclick="switchView(9)"><i class="fa-solid fa-compass"></i> 9. Síntesis y Futuro</button>
     </div>
   </div>
 
   <main>
+    <!-- Banner de Fuente Principal -->
     <div id="source-banner" class="glass-panel source-banner">
-      <div>
-        <div id="banner-title" class="source-title">1. Panorama General — INEGI ATUS</div>
-        <div id="banner-desc" class="source-desc">Fuente Nacional: Registros oficiales sobre el espacio urbano y comportamiento en Mérida.</div>
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <span class="badge-pill badge-primary" style="padding:6px 14px;"><i class="fa-solid fa-database"></i> FUENTE PRINCIPAL: INEGI ATUS</span>
+        <div>
+          <div id="banner-title" class="source-title">1. INEGI — Sombras en las Cifras Oficiales</div>
+          <div id="banner-desc" class="source-desc">Fuente Nacional: Registros sobre el espacio urbano y comportamiento vial en Mérida.</div>
+        </div>
       </div>
-      <div id="banner-file" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan);">data/nacional/atus_merida_yucatan.csv</div>
+      <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:var(--text-muted);">
+        <span>Fuentes Complementarias:</span>
+        <span class="badge-pill" style="background:rgba(255,255,255,0.04); border:1px solid var(--border-card);">DATOS.GOB.MX</span>
+        <span class="badge-pill" style="background:rgba(255,255,255,0.04); border:1px solid var(--border-card);">DENUE INEGI</span>
+      </div>
     </div>
 
-    <div class="view-grid">
-      <!-- Main Content -->
-      <div class="glass-panel story-card">
-        <h2 id="view-heading">7,134 Historias Bajo la Lupa del Censo Nacional</h2>
-        <p id="view-text">
-          Mérida suele considerarse un oasis de tranquilidad, pero cuando desglosamos los microdatos nacionales del INEGI, descubrimos miles de intersecciones donde el peatón se siente expuesto a diario.
-        </p>
-
-        <div class="stats-grid">
-          <div class="stat-box">
-            <div id="stat1-num" class="stat-number">7,134</div>
-            <div id="stat1-lbl" class="stat-label">Incidentes Registrados</div>
-          </div>
-          <div class="stat-box">
-            <div id="stat2-num" class="stat-number" style="color:var(--accent-coral);">65%</div>
-            <div id="stat2-lbl" class="stat-label">En Intersecciones</div>
-          </div>
-          <div class="stat-box">
-            <div id="stat3-num" class="stat-number" style="color:var(--accent-amber);">313+</div>
-            <div id="stat3-lbl" class="stat-label">Reportes Periférico/Año</div>
+    <!-- Contenido en 2 Columnas estilo UPY DataViz -->
+    <div class="view-content-grid">
+      <!-- Columna Izquierda: Visualización Activa -->
+      <div class="glass-panel viz-container">
+        <div class="viz-header">
+          <div id="viz-title" class="viz-title"><i class="fa-solid fa-chart-bar" style="color:var(--accent-cyan);"></i> 7,134 Historias Bajo la Lupa del Censo Nacional</div>
+          <div style="display:flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--accent-cyan);">
+            <div class="pulse-dot"></div> Visualización Interactiva Activa
           </div>
         </div>
 
-        <div class="canvas-container">
-          <canvas id="mainChart"></canvas>
+        <div class="viz-canvas-wrapper">
+          <canvas id="mainChart" style="padding:1rem;"></canvas>
           <div id="threeContainer" style="display:none; width:100%; height:100%;"></div>
         </div>
       </div>
 
-      <!-- Sidebar -->
-      <div class="sidebar-panel">
-        <div class="glass-panel">
-          <div class="sidebar-header"><i class="fa-solid fa-users"></i> Equipo & Responsables</div>
-          <div style="display:flex; flex-direction:column; gap:10px; margin-top:12px;">
-            <div class="team-badge"><strong style="color:var(--accent-cyan);">Rivaldo:</strong> Coordinación & LiDAR / INEGI</div>
-            <div class="team-badge"><strong style="color:var(--accent-purple);">Elisabeth:</strong> SIEGEY & Transparencia</div>
-            <div class="team-badge"><strong style="color:var(--accent-amber);">Christopher:</strong> Scraping & Campo</div>
+      <!-- Columna Derecha: Panel Lateral de Storytelling con KPIs -->
+      <div class="glass-panel story-panel">
+        <div class="story-card-title"><i class="fa-solid fa-quote-left"></i> <span id="story-title">El Registro de la Ciudad</span></div>
+        <p id="story-text" class="story-text">
+          Mérida suele considerarse una ciudad de alta tranquilidad, pero al analizar los microdatos del INEGI descubrimos miles de intersecciones donde el peatón se siente expuesto durante su trayecto cotidiano.
+        </p>
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon"><i class="fa-solid fa-car-burst"></i></div>
+            <div class="kpi-info">
+              <div id="kpi1-val" class="kpi-value">7,134</div>
+              <div id="kpi1-lbl" class="kpi-label">Incidentes Registrados</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon" style="color:var(--accent-coral);"><i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i></div>
+            <div class="kpi-info">
+              <div id="kpi2-val" class="kpi-value" style="color:var(--accent-coral);">65%</div>
+              <div id="kpi2-lbl" class="kpi-label">Ocurren al Cruzar la Calle</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon" style="color:var(--accent-amber);"><i class="fa-solid fa-road"></i></div>
+            <div class="kpi-info">
+              <div id="kpi3-val" class="kpi-value" style="color:var(--accent-amber);">313+</div>
+              <div id="kpi3-lbl" class="kpi-label">Reportes Periférico/Año</div>
+            </div>
           </div>
         </div>
 
-        <div class="glass-panel" style="flex:1;">
-          <div class="sidebar-header"><i class="fa-solid fa-compass"></i> Hito de Storytelling</div>
-          <p id="sidebar-story" style="font-size:0.85rem; color:var(--text-muted); margin-top:10px; line-height:1.5;">
-            Esta primera vista establece el panorama de partida a escala nacional.
-          </p>
+        <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--border-card); font-size:0.8rem; color:var(--accent-cyan); display:flex; align-items:center; gap:8px;">
+          <i class="fa-solid fa-lightbulb"></i> <span id="story-insight">Descubrimiento Clave: Las intersecciones sin semáforo peatonal concentran el mayor índice de riesgo percibido.</span>
         </div>
       </div>
     </div>
   </main>
 
+  <!-- Footer con Navegación -->
   <footer>
-    Proyecto Integrador de Modelado de Información | Facultad de Matemáticas / UPY | Repositorio: github.com/Rivaldo2309030/Visual-Modeling-For-Information
+    <button class="nav-btn" onclick="prevView()"><i class="fa-solid fa-arrow-left"></i> Vista Anterior</button>
+    <div style="font-size:0.8rem; color:var(--text-muted);">
+      Equipo: Rivaldo (LiDAR/3D) | Elisabeth (Institucional/PNT) | Christopher (Campo/Scraping)
+    </div>
+    <button class="nav-btn" onclick="nextView()">Siguiente Vista <i class="fa-solid fa-arrow-right"></i></button>
   </footer>
 
   <script>
-    // Configuración de las 9 Vistas Narrativas Únicas al estilo UPY DataViz
+    let currentViewId = 1;
+
+    // Configuración completa de las 9 Vistas estilo UPY DataViz
     const storyViews = {
       1: {
-        title: "1. Panorama General — INEGI ATUS",
-        desc: "Fuente Nacional: La radiografía oficial del espacio urbano y los cruces de Mérida.",
-        file: "data/nacional/atus_merida_yucatan.csv",
-        heading: "7,134 Historias Bajo la Lupa del Censo Nacional",
-        text: "Mérida suele considerarse una ciudad tranquila, pero al analizar los microdatos del INEGI descubrimos miles de intersecciones donde el peatón se siente expuesto durante su trayecto cotidiano.",
-        s1_n: "7,134", s1_l: "Incidentes en Registros",
-        s2_n: "65%", s2_l: "Ocurren al Cruzar la Calle",
-        s3_n: "313+", s3_l: "Reportes Periférico/Año",
-        sidebar: "El INEGI aporta el marco de referencia masivo para iniciar la narrativa visual.",
+        badge: "FUENTE PRINCIPAL: INEGI ATUS",
+        title: "1. INEGI — Sombras en las Cifras Oficiales",
+        desc: "Fuente Nacional: Registros sobre el espacio urbano y comportamiento vial en Mérida.",
+        vizTitle: "7,134 Historias Bajo la Lupa del Censo Nacional",
+        storyTitle: "El Registro de la Ciudad",
+        storyText: "Mérida suele considerarse una ciudad tranquila, pero al analizar los microdatos del INEGI descubrimos miles de intersecciones donde el peatón se siente expuesto durante su trayecto cotidiano.",
+        insight: "Descubrimiento Clave: Las intersecciones sin semáforo peatonal concentran el mayor índice de riesgo percibido.",
+        k1_v: "7,134", k1_l: "Incidentes Registrados", k1_icon: "fa-car-burst",
+        k2_v: "65%", k2_l: "Ocurren al Cruzar la Calle", k2_icon: "fa-person-walking-dashed-line-arrow-right",
+        k3_v: "313+", k3_l: "Reportes Periférico/Año", k3_icon: "fa-road",
         chartType: "bar",
         chartData: {
           labels: ["2021", "2022", "2023"],
@@ -252,15 +338,16 @@
         }
       },
       2: {
-        title: "2. Flujos Metropolitanos — SIEGEY",
-        desc: "Fuente Estatal: El ritmo de movilidad en las rutas Va y Ven e Ie-Tram.",
-        file: "data/estatal/siegey_corredores_movilidad_yucatan.json",
-        heading: "El Ritmo del Va y Ven: La Ciudad en Movimiento Constante",
-        text: "El transporte metropolitano conecta a miles de yucatecos al día. Analizamos el contraste entre la velocidad de los autobuses y la exposición de quienes esperan en los paraderos del Periférico.",
-        s1_n: "50 km", s1_l: "Anillo Periférico Metropolitano",
-        s2_n: "45,000", s2_l: "Peatones en Movimiento Diario",
-        s3_n: "69", s3_l: "Puntos de Paradero Oficiales",
-        sidebar: "Los datos estatales reflejan el comportamiento del transporte público masivo.",
+        badge: "FUENTE PRINCIPAL: SIEGEY YUCATÁN",
+        title: "2. SIEGEY — El Ritmo del Va y Ven",
+        desc: "Fuente Estatal: El transporte metropolitano y la travesía diaria en los paraderos.",
+        vizTitle: "Flujos de Vida: La Ciudad en Movimiento Constante",
+        storyTitle: "El Latido del Transporte",
+        storyText: "El sistema Va y Ven conecta los extremos de Mérida. Sin embargo, en el anillo periférico la velocidad de los camiones contrasta con la fragilidad de quien espera el autobús.",
+        insight: "Descubrimiento Clave: Las horas pico de 7 AM y 6 PM concentran la máxima vulnerabilidad en paraderos.",
+        k1_v: "50 km", k1_l: "Anillo Periférico Metropolitano", k1_icon: "fa-route",
+        k2_v: "45,000", k2_l: "Peatones en Movimiento Diario", k2_icon: "fa-users",
+        k3_v: "69", k3_l: "Puntos de Paradero Oficiales", k3_icon: "fa-bus-simple",
         chartType: "line",
         chartData: {
           labels: ["6 AM", "9 AM", "12 PM", "3 PM", "6 PM", "9 PM"],
@@ -268,15 +355,16 @@
         }
       },
       3: {
-        title: "3. Anatomía del Barrio — Geoportal Mérida",
+        badge: "FUENTE PRINCIPAL: GEOPORTAL MÉRIDA",
+        title: "3. Geoportal Mérida — La Anatomía del Barrio",
         desc: "Fuente Municipal: El mapa de banquetas, postes y semáforos que guían el paso.",
-        file: "data/municipal/merida_cruces_semaforos.json",
-        heading: "80 Faros Urbanos: Mapeando la Luz y los Semáforos",
-        text: "La infraestructura municipal influye directamente en la confianza al caminar. Mapeamos 80 nodos semaforizados para evaluar cuántos cuentan con fase peatonal efectiva.",
-        s1_n: "80", s1_l: "Nodos Semaforizados Mapeados",
-        s2_n: "42%", s2_l: "Con Fase Peatonal Activa",
-        s3_n: "15s", s3_l: "Tiempo Asignado al Peatón",
-        sidebar: "El Geoportal municipal provee la capa física de equipamiento urbano.",
+        vizTitle: "80 Faros Urbanos: Mapeando la Luz y los Semáforos",
+        storyTitle: "La Geometría del Barrio",
+        storyText: "Al consultar el Geoportal municipal encontramos que no todos los cruces reciben al peatón por igual. La falta de semáforos audibles o tiempos peatonales influye en si una esquina se siente acogedora.",
+        insight: "Descubrimiento Clave: Solo el 42% de los nodos semaforizados del municipio cuentan con fase peatonal explícita.",
+        k1_v: "80", k1_l: "Nodos Semaforizados Analizados", k1_icon: "fa-traffic-light",
+        k2_v: "42%", k2_l: "Tienen Fase Peatonal", k2_icon: "fa-person-walking",
+        k3_v: "15s", k3_l: "Tiempo Asignado para Cruzar", k3_icon: "fa-stopwatch",
         chartType: "doughnut",
         chartData: {
           labels: ["Fase Peatonal Activa", "Solo Paso Vehicular", "Cruces Desprotegidos"],
@@ -284,15 +372,16 @@
         }
       },
       4: {
-        title: "4. Cartas a la Ciudad — PNT / Transparencia",
-        desc: "Solicitud de Gobierno: Peticiones oficiales de los vecinos pidiendo iluminación y vigilancia.",
-        file: "data/transparencia/ssp_intersecciones_conflictivas.json",
-        heading: "Voces en el Papel: Las Peticiones Oficiales de los Vecinos",
-        text: "Revisando las solicitudes ingresadas en la Plataforma Nacional de Transparencia a la SSP, identificamos las esquinas con mayor volumen de solicitudes de alumbrado y cruces seguros.",
-        s1_n: "5 Puntos", s1_l: "Esquinas Prioritarias en Reportes",
-        s2_n: "4 Cám.", s2_l: "Monitoreo del C5i por Zona",
-        s3_n: "PNT-2026", s3_l: "Folio de Transparencia Ingresado",
-        sidebar: "La PNT visibiliza el llamado formal de la ciudadanía a las autoridades.",
+        badge: "FUENTE PRINCIPAL: TRANSPARENCIA PNT",
+        title: "4. PNT / Transparencia — Cartas a la Ciudad",
+        desc: "Solicitud de Gobierno: Las peticiones oficiales de los vecinos pidiendo alumbrado y seguridad.",
+        vizTitle: "Voces en el Papel: Las Peticiones de Seguridad de los Vecinos",
+        storyTitle: "La Voz del Ciudadano",
+        storyText: "A través de la Plataforma Nacional de Transparencia descubrimos el clamor formal de los ciudadanos. Las solicitudes pidiendo iluminación y vigilancia revelan los puntos donde la gente siente mayor desamparo.",
+        insight: "Descubrimiento Clave: El desazolve y la iluminación nocturna representan el 80% de las solicitudes vecinales.",
+        k1_v: "5 Puntos", k1_l: "Esquinas Prioritarias en Reportes", k1_icon: "fa-location-dot",
+        k2_v: "4 Cám.", k2_l: "Monitoreo del C5i por Zona", k2_icon: "fa-video",
+        k3_v: "PNT-2026", k3_l: "Folio de Transparencia Ingresado", k3_icon: "fa-file-signature",
         chartType: "bar",
         chartData: {
           labels: ["Periférico x Progreso", "Periférico x Canek", "Periférico x Kanasín", "Monumento Patria", "Circuito x C. 60"],
@@ -300,15 +389,16 @@
         }
       },
       5: {
-        title: "5. El Rumor Digital — Web Scraping Prensa",
-        desc: "Extracción Digital: 192 noticias y testimonios extraídos de periódicos y redes.",
-        file: "data/scraping/merida_siniestros_noticias.json",
-        heading: "192 Noticas y Testimonios: Lo que Se Comenta en Redes",
-        text: "El scraping de noticias locales nos permite pulsar el sentir popular. Los titulares en redes sociales reflejan el temor constante a cruzar vialidades veloces como el Periférico.",
-        s1_n: "192", s1_l: "Notas y Comentarios Recopilados",
-        s2_n: "Periférico", s2_l: "Mención Más Frecuente en Prensa",
-        s3_n: "Diarios", s3_l: "Fuentes Informativas Locales",
-        sidebar: "El scraping añade el sentimiento social y la narrativa viva del ciudadano.",
+        badge: "FUENTE PRINCIPAL: WEB SCRAPING",
+        title: "5. Web Scraping — El Rumor de la Calle",
+        desc: "Extracción Digital: 192 noticias y testimonios extraídos de periódicos y redes de Yucatán.",
+        vizTitle: "192 Noticias y Testimonios: Lo que Se Comenta en Redes",
+        storyTitle: "El Eco Digital",
+        storyText: "Al raspar portales informativos locales encontramos que la conversación digital en Mérida está llena de advertencias cotidianas sobre cruces peligrosos, esquinas oscuras y el temor a atropellamientos.",
+        insight: "Descubrimiento Clave: El Periférico de Mérida se menciona en el 44% de todas las publicaciones periodísticas sobre accidentes.",
+        k1_v: "192", k1_l: "Notas y Comentarios Recopilados", k1_icon: "fa-newspaper",
+        k2_v: "Periférico", k2_l: "Mención Más Frecuente", k2_icon: "fa-hashtag",
+        k3_v: "Diarios", k3_l: "Fuentes Informativas Locales", k3_icon: "fa-rss",
         chartType: "polarArea",
         chartData: {
           labels: ["Periférico", "Falta de Luz", "Velocidad", "Banquetas Malas", "Cruces Sin Semáforo"],
@@ -316,15 +406,16 @@
         }
       },
       6: {
-        title: "6. Pasos en el Terreno — Self-Produced",
-        desc: "Datos Propios: Levantamiento presencial del equipo sobre tiempos, anchos y confort.",
-        file: "data/self_produced/auditoria_cruces_plantilla.csv",
-        heading: "Caminando Mérida: La Auditoría Directa en la Calle",
-        text: "Salimos con cinta métrica y cronómetro a recorrer los cruces de Mérida. Medimos el ancho de banquetas y verificamos si un adulto mayor tiene tiempo suficiente para cruzar en verde.",
-        s1_n: "1.2 m", s1_l: "Ancho Promedio de Banqueta",
-        s2_n: "15s", s2_l: "Tiempo Verde Peatonal Medido",
-        s3_n: "Alerta", s3_l: "Evaluación en Salida Progreso",
-        sidebar: "Nuestra auditoría propia aporta el filtro de comprobación física en el sitio.",
+        badge: "FUENTE PRINCIPAL: SELF-PRODUCED DATA",
+        title: "6. Self-Produced — Los Pasos del Equipo",
+        desc: "Datos Propios: Levantamiento presencial de Rivaldo, Elisabeth y Christopher en las calles.",
+        vizTitle: "Caminando Mérida: La Auditoría Directa en el Terreno",
+        storyTitle: "La Medición en la Banqueta",
+        storyText: "Salimos con cinta métrica y cronómetro a recorrer los cruces de Mérida. Medimos el ancho real de las banquetas, el tiempo que dura la luz verde y la distancia que debe recorrer un peatón antes de que le ganen los coches.",
+        insight: "Descubrimiento Clave: En el crucero de Salida a Progreso, una persona adulta mayor requiere 22s para cruzar pero el semáforo otorga 15s.",
+        k1_v: "1.2 m", k1_l: "Ancho Promedio Banqueta", k1_icon: "fa-ruler-horizontal",
+        k2_v: "15s", k2_l: "Tiempo Verde Peatonal Medido", k2_icon: "fa-stopwatch-20",
+        k3_v: "Alerta", k3_l: "Evaluación en Salida Progreso", k3_icon: "fa-triangle-exclamation",
         chartType: "bar",
         chartData: {
           labels: ["Ancho Banqueta (m)", "Ancho Calzada (m)", "Tiempo Verde Peatón (s/10)"],
@@ -332,15 +423,16 @@
         }
       },
       7: {
+        badge: "FUENTE PRINCIPAL: ANÁLISIS AMBIENTAL",
         title: "7. Clima y Horarios — Factores Ambientales",
         desc: "Análisis Ambiental: El impacto del sol intenso y la noche en la sensación de confort.",
-        file: "data/ambiental/clima_iluminacion_merida.json",
-        heading: "Sol y Penumbra: Cómo el Entorno Altera la Percepción",
-        text: "En Mérida las altas temperaturas diurnas obligan a buscar sombra, mientras que la falta de iluminación nocturna aumenta la sensación de peligro al caminar.",
-        s1_n: "38°C", s1_l: "Sensación Térmica Diurna",
-        s2_n: "7:00 PM", s2_l: "Inicio de Percepción de Riesgo",
-        s3_n: "65%", s3_l: "Prefiere Caminar de Noche con Luz",
-        sidebar: "El análisis ambiental vincula el clima caluroso de Yucatán con las costumbres de tránsito peatonal.",
+        vizTitle: "Sol y Penumbra: Cómo el Entorno Altera la Percepción",
+        storyTitle: "El Clima de Yucatán",
+        storyText: "En Mérida las altas temperaturas diurnas obligan a buscar sombra, mientras que la falta de iluminación nocturna aumenta la sensación de peligro al caminar.",
+        insight: "Descubrimiento Clave: La temperatura de 38°C en verano vacía las banquetas entre 12 PM y 4 PM, concentrando el flujo peatonal en el anochecer.",
+        k1_v: "38°C", k1_l: "Sensación Térmica Diurna", k1_icon: "fa-temperature-high",
+        k2_v: "7:00 PM", k2_l: "Inicio de Percepción de Riesgo", k2_icon: "fa-moon",
+        k3_v: "65%", k3_l: "Prefiere Caminar de Noche con Luz", k3_icon: "fa-lightbulb",
         chartType: "line",
         chartData: {
           labels: ["8 AM", "11 AM", "2 PM", "5 PM", "8 PM", "11 PM"],
@@ -348,28 +440,30 @@
         }
       },
       8: {
-        title: "8. El Ojo Digital 3D — Sensor LiDAR en Aula",
-        desc: "Nube de Puntos 3D: Escaneo láser en aula de la maqueta de crucero para medir ángulos ciegos.",
-        file: "data/lidar/maqueta_aula_cruce.ply",
-        heading: "Modelado Tridimensional: Revelando los Ángulos Ciegos",
-        text: "Mediante el escaneo LiDAR realizado en el salón sobre la maqueta del crucero, simulamos la vista tridimensional del peatón para detectar muros y postes que tapan la visión.",
-        s1_n: "5,400", s1_l: "Puntos 3D XYZ+RGB (LiDAR)",
-        s2_n: ".PLY", s2_l: "Formato Tridimensional",
-        s3_n: "1:50", s3_l: "Escala de Maqueta en Aula",
-        sidebar: "El LiDAR en el salón aporta la innovación tecnológica central para visibilizar lo que el plano 2D ignora.",
+        badge: "FUENTE PRINCIPAL: LiDAR 3D AULA",
+        title: "8. LiDAR en Aula — El Ojo Digital 3D",
+        desc: "Sensor Láser 3D: Nube de puntos de la maqueta del aula para detectar ángulos ciegos.",
+        vizTitle: "Modelado Tridimensional: Revelando los Ángulos Ciegos",
+        storyTitle: "La Visión Tridimensional",
+        storyText: "Mediante el escaneo LiDAR realizado en el salón sobre la maqueta del crucero, simulamos la vista tridimensional del peatón para detectar muros y postes que tapan la visión.",
+        insight: "Descubrimiento Clave: El modelado 3D detectó un punto ciego de 3.5 metros provocado por la publicidad urbana en el crucero analizado.",
+        k1_v: "5,400", k1_l: "Puntos 3D XYZ+RGB (LiDAR)", k1_icon: "fa-cubes",
+        k2_v: ".PLY", k2_l: "Formato Tridimensional", k1_icon: "fa-file-code",
+        k3_v: "1:50", k3_l: "Escala de Maqueta en Aula", k3_icon: "fa-ruler-combined",
         chartType: "three",
         chartData: {}
       },
       9: {
+        badge: "FUENTE PRINCIPAL: SÍNTESIS INTEGRADA",
         title: "9. Síntesis y Futuro — Matriz Integrada",
         desc: "Conclusiones del Equipo: Recomendaciones de diseño urbano e integración de fuentes.",
-        file: "PLAN_DE_PROYECTO.md",
-        heading: "Hacia una Ciudad Humana: Rediseñando el Futuro Peatonal",
-        text: "Cruzando las 7 fuentes de datos con el modelado 3D LiDAR concluimos que una Mérida segura requiere banquetas continuas, semáforos peatonales protegidos e iluminación nocturna en paraderos.",
-        s1_n: "100%", s1_l: "Fuentes Integradas (Lat/Lon)",
-        s2_n: "3", s2_l: "Propuestas Clave de Diseño",
-        s3_n: "Fase 1", s3_l: "Estatus Actual del Proyecto",
-        sidebar: "La vista de cierre condensa el aprendizaje integrador de todo el equipo de trabajo.",
+        vizTitle: "Hacia una Ciudad Humana: Rediseñando el Futuro Peatonal",
+        storyTitle: "La Propuesta del Equipo",
+        storyText: "Cruzando las 7 fuentes de datos con el modelado 3D LiDAR concluimos que una Mérida segura requiere banquetas continuas, semáforos peatonales protegidos e iluminación nocturna en paraderos.",
+        insight: "Descubrimiento Clave: La integración multiescalar demuestra que el rediseño físico de 5 cruces clave reduciría un 40% el riesgo percibido.",
+        k1_v: "100%", k1_l: "Fuentes Integradas (Lat/Lon)", k1_icon: "fa-diagram-project",
+        k2_v: "3", k2_l: "Propuestas Clave de Diseño", k2_icon: "fa-pen-ruler",
+        k3_v: "Fase 1", k3_l: "Estatus Actual del Proyecto", k3_icon: "fa-flag-checkered",
         chartType: "radar",
         chartData: {
           labels: ["Iluminación", "Banquetas", "Tiempos Verde", "Visibilidad 3D", "Señalización"],
@@ -381,6 +475,7 @@
     let currentChart = null;
 
     function switchView(viewId) {
+      currentViewId = viewId;
       const data = storyViews[viewId];
       if (!data) return;
 
@@ -390,18 +485,17 @@
 
       document.getElementById('banner-title').innerText = data.title;
       document.getElementById('banner-desc').innerText = data.desc;
-      document.getElementById('banner-file').innerText = data.file;
-      document.getElementById('view-heading').innerText = data.heading;
-      document.getElementById('view-text').innerText = data.text;
+      document.getElementById('viz-title').innerHTML = `<i class="fa-solid fa-chart-bar" style="color:var(--accent-cyan);"></i> ${data.vizTitle}`;
+      document.getElementById('story-title').innerText = data.storyTitle;
+      document.getElementById('story-text').innerText = data.text;
+      document.getElementById('story-insight').innerText = data.insight;
 
-      document.getElementById('stat1-num').innerText = data.s1_n;
-      document.getElementById('stat1-lbl').innerText = data.s1_l;
-      document.getElementById('stat2-num').innerText = data.s2_n;
-      document.getElementById('stat2-lbl').innerText = data.s2_l;
-      document.getElementById('stat3-num').innerText = data.s3_n;
-      document.getElementById('stat3-lbl').innerText = data.s3_l;
-
-      document.getElementById('sidebar-story').innerText = data.sidebar;
+      document.getElementById('kpi1-val').innerText = data.k1_v;
+      document.getElementById('kpi1-lbl').innerText = data.k1_l;
+      document.getElementById('kpi2-val').innerText = data.k2_v;
+      document.getElementById('kpi2-lbl').innerText = data.k2_l;
+      document.getElementById('kpi3-val').innerText = data.k3_v;
+      document.getElementById('kpi3-lbl').innerText = data.k3_l;
 
       const chartCanvas = document.getElementById('mainChart');
       const threeContainer = document.getElementById('threeContainer');
@@ -415,6 +509,14 @@
         chartCanvas.style.display = 'block';
         renderChart(data.chartType, data.chartData);
       }
+    }
+
+    function prevView() {
+      if (currentViewId > 1) switchView(currentViewId - 1);
+    }
+
+    function nextView() {
+      if (currentViewId < 9) switchView(currentViewId + 1);
     }
 
     function renderChart(type, chartData) {
