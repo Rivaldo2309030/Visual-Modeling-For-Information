@@ -1,90 +1,221 @@
-# Prototipo, Wireframes y Diseño de Interfaz (UI/UX)
-### *Proyecto Data Viz UPY: Sentir la Calle - El Viaje Peatonal, Seguridad y Confort Urbano en Mérida*
+# Guía Maestra de Bocetaje y Wireframing a Mano: Prototipo de 9 Vistas
+### *Manual para dibujar a mano el prototipo de Data Storytelling (Storyboards & Wireframes) - Sentir la Calle (Mérida UPY)*
 
 ---
 
-## 🎨 Guía de Estilo y Sistema de Diseño (Design System)
+## 🎨 Instrucciones Generales para el Dibujante a Mano
 
-El diseño del tablero interactivo sigue un enfoque **Sleek Dark Mode / Urban Tech Aesthetic** con alto contraste, tipografía moderna (`Outfit` / `Inter`) y paleta de colores optimizada para visualización cartográfica nocturna y diurna.
+Esta guía está diseñada para que cualquier integrante del equipo (**Rivaldo, Elisabeth, Christopher**) pueda tomar hojas de papel (o tablet/iPad) y dibujar a mano alzada las **9 pantallas del prototipo**.
 
-### Paleta de Colores
-- **Fondo Principal:** `#0b0f19` (Azul Noche Profundo)
-- **Superficie de Tarjetas (Glassmorphism):** `rgba(15, 23, 42, 0.75)` con borde `rgba(255, 255, 255, 0.1)`
-- **Acento Primario (Peatón / Seguridad):** `#38bdf8` (Azul Neón Cían)
-- **Alerta / Siniestros (Peligro):** `#f43f5e` (Rojo Carmesí)
-- **Zonas Confortables / Verde:** `#10b981` (Verde Esmeralda)
-- **Advertencia / Semáforos:** `#f59e0b` (Ámbar)
+### Convenciones Visuales Recomendadas para el Dibujo:
+- **Estructura Común (Layout Base en todas las hojas):**
+  1. **Encabezado Superior (Header):** Título del proyecto ("Sentir la Calle • UPY") + Barra de pestañas navegables (9 botones).
+  2. **Franja de Atribución de Fuentes:** 
+     - Cuadro destacado a la izquierda: `[🏷️ FUENTE PRINCIPAL: <Nombre de la Fuente>]`
+     - Texto a la derecha: `[🔗 Fuentes de Apoyo: <Fuente 2, Fuente 3>]`
+  3. **Cuerpo Central Dividido en 2 Columnas:**
+     - **Columna Izquierda (35% del ancho):** **Panel Editorial de Storytelling & Pasos Guiados** (Título, pregunta lead, narrador de audio, pasos guiados de análisis).
+     - **Columna Derecha (65% del ancho):** **Área Principal de Visualización Interactiva** (Lienzo Leaflet, Diagrama Sankey, Radar, Visor 3D Three.js, Grafo D3, Holograma AR).
+  4. **Pie de Pantalla (Footer):** Barra de KPIs (3 números grandes) + Insight Clave + Botones `[⬅️ Anterior / Siguiente ➡️]`.
 
 ---
 
-## 📐 Estructura General del Dashboard (Wireframe Global)
-
+```mermaid
+graph TD
+    subgraph BocetoBase ["Esquema General de Cada Hoja a Dibujar"]
+        H["1. HEADER: Título + Barra de 9 Pestañas"]
+        FA["2. FRANJA DE FUENTES: [🏷️ FUENTE PRINCIPAL] | [🔗 Fuentes de Apoyo]"]
+        
+        subgraph Cuerpo ["3. CUERPO PRINCIPAL (2 Columnas)"]
+            STORY["COLUMNA IZQUIERDA (35%)<br><b>Storytelling Deck</b><br>- Título & Pregunta Lead<br>- Botón Narrador Audio<br>- Pasos Guiados (Beats)"]
+            VIZ["COLUMNA DERECHA (65%)<br><b>Lienzo de Visualización Interactiva</b><br>(Mapa Leaflet, Radar, Visor 3D, Grafo D3)<br>+ Herramientas Viewport (Cam, Full)"]
+        end
+        
+        FO["4. FOOTER & KPIs: 3 Tarjetas de Métricas + Conclusión + Navegación [⬅️ / ➡️]"]
+        
+        H --> FA
+        FA --> Cuerpo
+        Cuerpo --> FO
+    end
 ```
-+-----------------------------------------------------------------------------------+
-|  [HEADER / NAVIGATION BAR]                                                        |
-|  Title: SENTIR LA CALLE | UPY Data Viz | Team: Rivaldo, Elisabeth, Christopher    |
-|  Tabs: [1.INEGI] [2.Datos.gob] [3.SIEGY] [4.GeoPortal] [5.PNT] [6.Scraping]       |
-|        [7.Campo] [8.LiDAR 3D] [9.AR Inmersión]                                    |
-+-----------------------------------------------------------------------------------+
-|  [KPI SUMMARY METRICS BAR]                                                         |
-|  - Total Cruces: 80  | - Accidentes ATUS: 7,134  | - Confort Medio: 38.5°C        |
-+-----------------------------------------------------------------------------------+
-|  [SIDEBAR FILTROS & CONTROLES]  |  [CANVAS PRINCIPAL DE VISUALIZACIÓN]             |
-|  - Filtro por Horario (Día/Noche) |  - Mapa Interactivo Leaflet (OSM / Esri Dark)   |
-|  - Selector de Fuente             |  - Visor 3D Three.js (Nube LiDAR .PLY)         |
-|  - Buscador de Cruces / Nodos     |  - Gráficos Estadísticos (Chart.js)            |
-|  - Simulación Verde Semáforo      |  - Modelo Holográfico en AR WebXR              |
-+-----------------------------------------------------------------------------------+
-|  [FOOTER & DATALAKE CREDITS]                                                      |
-|  Enterprise Data Lake Pipeline: SSH/FTP -> HDFS -> PySpark -> Data Viz            |
-+-----------------------------------------------------------------------------------+
+
+---
+
+## 📋 Detalle de las 9 Vistas para Dibujar a Mano
+
+---
+
+### 🖼️ HOJA 1: VISTA INEGI ATUS & DENUE
+**Título en el dibujo:** `Vista 1: INEGI ATUS & DENUE — Sombras en las Cifras Oficiales`  
+**Insignia de Fuentes:**  
+- `[🏷️ FUENTE PRINCIPAL: INEGI (ATUS & DENUE 2020)]`  
+- `[🔗 Fuentes de Apoyo: Microdatos ATUS Mérida, DENUE Cruces, Censo Manzanas]`
+
+```text
++---------------------------------------------------------------------------------------+
+| 🚶 DATA STORYTELLING: SENTIR LA CALLE | [1.INEGI] [2.Datos] [3.SIEGY] ...             |
++---------------------------------------------------------------------------------------+
+| 🏷️ FUENTE PRINCIPAL: INEGI (ATUS & DENUE)     | 🔗 Fuentes: Microdatos ATUS, DENUE Cruces |
++-----------------------------------------------+---------------------------------------+
+| [COLUMNA NARRATIVA 35%]                       | [LIENZO VISUALIZACIÓN 65%]            |
+| - Título: Sombras en las Cifras Oficiales     | +-----------------------------------+ |
+| - Lead: ¿Qué revela el registro oficial?      | | MAPA LEAFLET CLUSTERS DE SINIESTROS| |
+| - Botón Escuchar Audio                        | | (7,134 puntos marcados en Mérida)  | |
+| - Paso 1: Densidad Centro Histórico           | +-----------------------------------+ |
+| - Paso 2: Nodos Periférico                    | [Herramientas: Captura | Pantalla]    |
++-----------------------------------------------+---------------------------------------+
+| KPIs: [7,134 Siniestros]  [3,842 Comercios Expuestos]  [18 Zonas Críticas]            |
+| 💡 Insight: Zonas comerciales registran 3.4 veces más percances peatonales.          |
++---------------------------------------------------------------------------------------+
 ```
 
 ---
 
-## 🖼️ Especificación Detallada de Pantallas (Wireframes por Vista)
+### 🖼️ HOJA 2: VISTA DATOS.GOB.MX
+**Título en el dibujo:** `Vista 2: Datos.gob.mx — La Curva de la Movilidad Peatonal`  
+**Insignia de Fuentes:**  
+- `[🏷️ FUENTE PRINCIPAL: Datos.gob.mx (Catálogo Nacional de Siniestros)]`  
+- `[🔗 Fuentes de Apoyo: Base Viales Abiertos, Registro Movilidad]`
 
-### Vista 1: Sombras en las Cifras Oficiales (INEGI ATUS & DENUE)
-- **Layout:** Mapa a pantalla completa con capa de mapas de calor (Heatmap) de accidentes viales según ATUS INEGI.
-- **Componentes:** Panel desplegable con desglose de accidentes por tipo (atropellamiento, colisión, choque) y conteo de negocios DENUE a 50m.
-
-### Vista 2: La Curva de la Movilidad Peatonal (Datos.gob.mx)
-- **Layout:** Gráfico Sankey / Diagrama de Flujo combinado con gráfica multilineal de tendencias anuales.
-- **Componentes:** Selector de rango de años (2018-2024) y métricas de velocidad vehicular promedio vs. índice de vulnerabilidad peatonal.
-
-### Vista 3: El Latido Metropolitano (SIEGY Yucatán)
-- **Layout:** Mapa de rutas Va y Ven superpuesto con polígonos de densidad de demanda peatonal SIEGY.
-- **Componentes:** Radar Multidimensional de calidad de transporte y calculadora de tiempos de transbordo en paraderos.
-
-### Vista 4: La Ciudad a Escala Humana (GeoPortal Mérida)
-- **Layout:** Mapa interactivo Leaflet con los 80 nodos semaforizados reales de Mérida y polígonos de banquetas.
-- **Componentes:** Marcadores interactivos que despliegan fotos de calle, estado de la señalización y presencia de rampas de accesibilidad.
-
-### Vista 5: Voces en el Papel (PNT / Transparencia)
-- **Layout:** Visor de oficios y peticiones ciudadanas con distribución tipo Raincloud Plot de tiempos de respuesta institucional.
-- **Componentes:** Buscador por palabra clave ("semáforo", "paso cebra", "alumbrado", "boyas") y línea de tiempo de atención gubernamental.
-
-### Vista 6: El Rumor Digital (Web Scraping Prensa)
-- **Layout:** Grafo interactivo de co-ocurrencia de términos periodísticos y nube de análisis de sentimiento (NLP).
-- **Componentes:** Ticker en vivo de noticias minadas de Diario de Yucatán y Por Esto! con enlace a la fuente directa.
-
-### Vista 7: La Voz del Terreno (Datos Propios UPY)
-- **Layout:** Panel interactivo de auditoría de campo con simulador de tiempo de cruce peatonal vs. tiempo en verde.
-- **Componentes:** Calculadora de huella peatonal y termómetro de confort térmico según hora del día en Mérida.
-
-### Vista 8: El Ojo Digital 3D (LiDAR 3D)
-- **Layout:** Canvas tridimensional renderizado con Three.js mostrando la nube de puntos .PLY de un crucero conflictivo.
-- **Componentes:** Control OrbitControl (rotación, zoom, pan), simulador de cono de visión de choferes y medición de distancia a obstáculos.
-
-### Vista 9: Inmersión Urbana (Realidad Aumentada AR)
-- **Layout:** Visor AR WebXR / Canvas interactivo 3D con propuesta de rediseño urbano seguro.
-- **Componentes:** Botón de activación de cámara AR, toggle de elementos urbanos (ampliación de banqueta, bolardos, semáforo auditivo).
+```text
++---------------------------------------------------------------------------------------+
+| 🚶 DATA STORYTELLING: SENTIR LA CALLE | [1.INEGI] [2.Datos] [3.SIEGY] ...             |
++---------------------------------------------------------------------------------------+
+| [NARRATIVA 35%]                               | [DIAGRAMA SANKEY & TENDENCIA 65%]     |
+| - La Curva de la Movilidad Peatonal           | +-----------------------------------+ |
+| - Lead: Comparativa Nacional vs. Yucatán      | | GRÁFICO SANKEY FLUSO MOVILIDAD   | |
+| - Pasos: Olas de Siniestralidad y Horarios    | +-----------------------------------+ |
++-----------------------------------------------+---------------------------------------+
+| KPIs: [642 veh/1k hab]  [72.4% Vulnerabilidad]  [68 km/h Velocidad Promedio]           |
++---------------------------------------------------------------------------------------+
+```
 
 ---
 
-## 🛠️ Tecnologías Empleadas en el Front-End
-- **Estructura:** HTML5 semántico con estándares SEO y accesibilidad WCAG.
-- **Estilos:** CSS Vanilla puro con custom properties, CSS Grid y Flexbox.
-- **Mapeo:** Leaflet.js v1.9.4 con mosaicos de Esri World Dark Gray y OpenStreetMap.
-- **Visualización 3D:** Three.js r128 para nubes de puntos LiDAR y modelos urbanos.
-- **Gráficos Estadísticos:** Chart.js v4.4 para histogramas y comparativas.
+### 🖼️ HOJA 3: VISTA SIEGY YUCATÁN
+**Título en el dibujo:** `Vista 3: SIEGY Yucatán — El Latido Metropolitano (Va y Ven)`  
+**Insignia de Fuentes:**  
+- `[🏷️ FUENTE PRINCIPAL: SIEGY Yucatán & Agencia de Transporte ATY]`  
+- `[🔗 Fuentes de Apoyo: Traza Va y Ven, Cohesión SIEGY, Matriz Origen-Destino]`
+
+```text
++---------------------------------------------------------------------------------------+
+| [NARRATIVA 35%]                               | [RADAR MULTIDIMENSIONAL 65%]          |
+| - El Latido Metropolitano                     | +-----------------------------------+ |
+| - Cohesión de Transporte & Paraderos          | | RADAR MULTIEJE SERVICIOS VA Y VEN | |
+| - Tiempos de Caminata a Paradero              | +-----------------------------------+ |
++-----------------------------------------------+---------------------------------------+
+| KPIs: [210,000 Usuarios Va y Ven]  [850m Caminata Promedio]  [34% Cobertura Sombra]   |
++---------------------------------------------------------------------------------------+
+```
+
+---
+
+### 🖼️ HOJA 4: VISTA GEOPORTAL MÉRIDA
+**Título en el dibujo:** `Vista 4: GeoPortal Mérida & OSM — La Ciudad a Escala Humana`  
+**Insignia de Fuentes:**  
+- `[🏷️ FUENTE PRINCIPAL: GeoPortal Mérida & OpenStreetMap Overpass]`  
+- `[🔗 Fuentes de Apoyo: Capa GIS Banquetas, Inventario Semáforos, 80 Nodos OSM]`
+
+```text
++---------------------------------------------------------------------------------------+
+| [NARRATIVA 35%]                               | [MAPA LEAFLET 80 SEMÁFOROS 65%]       |
+| - La Ciudad a Escala Humana                   | +-----------------------------------+ |
+| - Inspección de 80 Nodos Semaforizados        | | MAPA CARTOGRÁFICO DE NODOS REALES | |
+| - Fases Verdes de 14 Segundos                 | +-----------------------------------+ |
++-----------------------------------------------+---------------------------------------+
+| KPIs: [80 Nodos Georeferenciados]  [14s Verde Promedio]  [51.2% Rampas Universal]      |
++---------------------------------------------------------------------------------------+
+```
+
+---
+
+### 🖼️ HOJA 5: VISTA TRANSPARENCIA PNT
+**Título en el dibujo:** `Vista 5: Transparencia PNT — Voces en el Papel`  
+**Insignia de Fuentes:**  
+- `[🏷️ FUENTE PRINCIPAL: PNT / SSP Yucatán]`  
+- `[🔗 Fuentes de Apoyo: Solicitud PNT SSP, Buzón Municipal, C5i Radares]`
+
+```text
++---------------------------------------------------------------------------------------+
+| [NARRATIVA 35%]                               | [RAINCLOUD PLOTS & BARRAS PNT 65%]    |
+| - Voces en el Papel                           | +-----------------------------------+ |
+| - Oficios Vecinales y Solicitudes PNT         | | GRÁFICO HISTOGRAMA PETICIONES SSP | |
++-----------------------------------------------+---------------------------------------+
+| KPIs: [142 Oficios PNT]  [44.3% Semáforos Peatonales]  [18 Días Respuesta]           |
++---------------------------------------------------------------------------------------+
+```
+
+---
+
+### 🖼️ HOJA 6: VISTA WEB SCRAPING
+**Título en el dibujo:** `Vista 6: Web Scraping — El Rumor Digital`  
+**Insignia de Fuentes:**  
+- `[🏷️ FUENTE PRINCIPAL: Web Scraping Prensa Local (Diario de Yucatán, Por Esto!)]`  
+- `[🔗 Fuentes de Apoyo: Scraping Diario Yucatán, Mining Por Esto!, Redes #Periférico]`
+
+```text
++---------------------------------------------------------------------------------------+
+| [NARRATIVA 35%]                               | [GRAFO SEMÁNTICO DE FUERZAS D3 65%]   |
+| - El Rumor Digital                            | +-----------------------------------+ |
+| - Minería de Co-ocurrencia y Sentimiento      | | GRAFO DE NODOS Y PALABRAS CLAVE   | |
++-----------------------------------------------+---------------------------------------+
+| KPIs: [854 Notas Minadas]  [68% Sentimiento Negativo]  [Cruces: Periférico & Chenkú]  |
++---------------------------------------------------------------------------------------+
+```
+
+---
+
+### 🖼️ HOJA 7: VISTA SELF-PRODUCED UPY
+**Título en el dibujo:** `Vista 7: Self-Produced UPY — La Voz del Terreno`  
+**Insignia de Fuentes:**  
+- `[🏷️ FUENTE PRINCIPAL: Auditoría de Campo UPY]`  
+- `[🔗 Fuentes de Apoyo: Conteo Afluencia, Ancho Banqueta 1.2m, Confort 38°C]`
+
+```text
++---------------------------------------------------------------------------------------+
+| [NARRATIVA 35%]                               | [CALCULADORA & CONFORT TÉRMICO 65%]   |
+| - La Voz del Terreno                          | +-----------------------------------+ |
+| - Medición Presencial a Pie por UPY           | | BARRAS COMPARATIVAS ANCHO LIBRE   | |
++-----------------------------------------------+---------------------------------------+
+| KPIs: [12 Cruces Auditados]  [58.3% Banquetas <1.20m]  [38.5°C Temperatura Campo]   |
++---------------------------------------------------------------------------------------+
+```
+
+---
+
+### 🖼️ HOJA 8: VISTA LIDAR 3D
+**Título en el dibujo:** `Vista 8: LiDAR 3D — El Ojo Digital 3D`  
+**Insignia de Fuentes:**  
+- `[🏷️ FUENTE PRINCIPAL: Sensor LiDAR 3D (Escaneo en Aula UPY)]`  
+- `[🔗 Fuentes de Apoyo: Nube Puntos .PLY, Mapeo Ángulos Ciegos 3.5m, Perfil Rampas]`
+
+```text
++---------------------------------------------------------------------------------------+
+| [NARRATIVA 35%]                               | [VISOR 3D WEBGL THREE.JS 65%]         |
+| - El Ojo Digital 3D                           | +-----------------------------------+ |
+| - Nube de Puntos Volumétrica Cyberpunk        | | LIENZO 3D CON CONTROL ORBITAL     | |
+| - Ángulos Ciegos de 3.5 Metros                | +-----------------------------------+ |
++-----------------------------------------------+---------------------------------------+
+| KPIs: [125,000 Puntos LiDAR]  [3.5m Radio Ángulo Ciego]  [±2cm Precisión]            |
++---------------------------------------------------------------------------------------+
+```
+
+---
+
+### 🖼️ HOJA 9: VISTA REALIDAD AUMENTADA (AR)
+**Título en el dibujo:** `Vista 9: Realidad Aumentada (AR) — Inmersión Urbana`  
+**Insignia de Fuentes:**  
+- `[🏷️ FUENTE PRINCIPAL: Realidad Aumentada AR (WebXR / Modelado 3D)]`  
+- `[🔗 Fuentes de Apoyo: Modelo Holográfico 3D, Filtro AR WebXR, Matriz Integrada]`
+
+```text
++---------------------------------------------------------------------------------------+
+| [NARRATIVA 35%]                               | [HOLOGRAMA 3D & PROYECCIÓN WEBXR 65%] |
+| - Inmersión Urbana                            | +-----------------------------------+ |
+| - Rediseño de Crucero Seguro                  | | MAQUETA HOLOGRÁFICA WEBXR         | |
+| - Botón para Proyectar en Mesa con Móvil      | +-----------------------------------+ |
++-----------------------------------------------+---------------------------------------+
+| KPIs: [Modelo WebXR Ready]  [+88% Seguridad Proyectada]  [-40% Velocidad Vehicular]   |
++---------------------------------------------------------------------------------------+
+```

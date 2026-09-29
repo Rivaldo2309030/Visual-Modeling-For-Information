@@ -3,1759 +3,295 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Storytelling: Sentir la Calle | Plataforma Vistosa e Interactiva de 9 Vistas</title>
-  
-  <!-- Google Fonts & FontAwesome -->
+  <title>Data Storytelling: Sentir la Calle | Plataforma Peatonal y Movilidad • Mérida UPY</title>
+  <meta name="description" content="Plataforma interactiva de Data Storytelling sobre movilidad peatonal, percepción de seguridad, accesibilidad universal, LiDAR 3D y Realidad Aumentada en Mérida, Yucatán. UPY.">
+  <meta name="keywords" content="Data Storytelling, Peatón, Mérida, INEGI, DENUE, Datos.gob.mx, SIEGY, GeoPortal Mérida, LiDAR, WebXR, AR, UPY">
+
+  <!-- Google Fonts: Outfit, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Chart.js, Three.js & Leaflet.js CDN -->
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/visualizations.css">
+
+  <!-- Chart.js & Three.js with OrbitControls CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-  <style>
-    :root {
-      --bg-main: #060913;
-      --bg-card: rgba(15, 23, 42, 0.82);
-      --border-card: rgba(255, 255, 255, 0.12);
-      --border-glow: rgba(0, 242, 254, 0.5);
-      --accent-cyan: #00f2fe;
-      --accent-blue: #3b82f6;
-      --accent-magenta: #ec4899;
-      --accent-coral: #ff5252;
-      --accent-amber: #ffbe0b;
-      --accent-green: #10b981;
-      --accent-purple: #a855f7;
-      --accent-neon-cyan: #00f0ff;
-      --text-main: #ffffff;
-      --text-muted: #94a3b8;
-      --font-heading: 'Outfit', sans-serif;
-      --font-body: 'Inter', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body {
-      background-color: var(--bg-main);
-      background-image: 
-        radial-gradient(at 10% 10%, rgba(0, 242, 254, 0.18) 0px, transparent 40%),
-        radial-gradient(at 90% 20%, rgba(236, 72, 153, 0.18) 0px, transparent 45%),
-        radial-gradient(at 50% 90%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
-        radial-gradient(at 20% 80%, rgba(255, 190, 11, 0.12) 0px, transparent 40%);
-      background-attachment: fixed;
-      color: var(--text-main);
-      font-family: var(--font-body);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-      transition: background 0.6s ease;
-    }
-
-    /* Temas Dinámicos Ambientales para Vista 7 */
-    body.theme-day {
-      --bg-main: #181510;
-      background-image: 
-        radial-gradient(at 50% 0%, rgba(255, 190, 11, 0.35) 0px, transparent 60%),
-        radial-gradient(at 10% 90%, rgba(236, 72, 153, 0.2) 0px, transparent 50%);
-    }
-    body.theme-night {
-      --bg-main: #030611;
-      background-image: 
-        radial-gradient(at 50% 100%, rgba(168, 85, 247, 0.3) 0px, transparent 60%),
-        radial-gradient(at 90% 10%, rgba(0, 242, 254, 0.25) 0px, transparent 50%);
-    }
-
-    /* Estilos Glassmorphism Avanzado */
-    .glass-panel {
-      background: var(--bg-card);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--border-card);
-      border-radius: 20px;
-      padding: 1.5rem;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-    }
-    .glass-panel:hover {
-      border-color: var(--border-glow);
-      box-shadow: 0 15px 50px -10px rgba(0, 242, 254, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
-    }
-
-    /* Header Estilizado Vibrant */
-    header {
-      padding: 1.1rem 2.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(6, 9, 19, 0.88);
-      position: sticky; top: 0; z-index: 100;
-      backdrop-filter: blur(16px);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .brand-container { display: flex; align-items: center; gap: 14px; }
-    .brand-logo {
-      width: 48px; height: 48px; border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; color: #fff; font-weight: 900;
-      box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
-      animation: logoGlow 3s infinite alternate;
-    }
-    @keyframes logoGlow {
-      0% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.5); }
-      100% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.7); }
-    }
-
-    .brand-title {
-      font-family: var(--font-heading); font-size: 1.45rem; font-weight: 800;
-      background: linear-gradient(135deg, #ffffff 0%, #00f2fe 50%, #ec4899 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      letter-spacing: -0.5px;
-    }
-    .brand-subtitle { font-size: 0.78rem; color: var(--accent-cyan); letter-spacing: 1.2px; text-transform: uppercase; font-family: var(--font-mono); font-weight: 600; }
-
-    .badge-pill {
-      display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px;
-      border-radius: 30px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .badge-primary {
-      background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(59, 130, 246, 0.2));
-      border: 1px solid var(--accent-cyan); color: var(--accent-cyan);
-      box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
-    }
-    .badge-magenta {
-      background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(168, 85, 247, 0.2));
-      border: 1px solid var(--accent-magenta); color: #f472b6;
-      box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
-    }
-
-    /* Pestañas Navegación 9 Vistas */
-    .tabs-nav-container {
-      background: rgba(15, 23, 42, 0.75);
-      padding: 0.85rem 2rem;
-      border-bottom: 1px solid var(--border-card);
-      overflow-x: auto; white-space: nowrap;
-      backdrop-filter: blur(12px);
-    }
-    .tabs-wrapper { display: inline-flex; gap: 10px; }
-    .tab-btn {
-      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-card); color: var(--text-muted);
-      padding: 10px 18px; border-radius: 14px; font-family: var(--font-heading);
-      font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease;
-      display: flex; align-items: center; gap: 9px;
-    }
-    .tab-btn:hover {
-      background: rgba(255, 255, 255, 0.12); color: #fff; border-color: rgba(255,255,255,0.3);
-      transform: translateY(-2px);
-    }
-    .tab-btn.active {
-      background: linear-gradient(135deg, rgba(0, 242, 254, 0.25), rgba(236, 72, 153, 0.25));
-      border-color: var(--accent-cyan); color: #fff;
-      box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
-      transform: translateY(-2px);
-    }
-
-    main {
-      flex: 1; padding: 1.8rem 2.5rem; max-width: 1650px; width: 100%; margin: 0 auto;
-      display: flex; flex-direction: column; gap: 1.8rem;
-    }
-
-    /* Banner Fuente Principal */
-    .source-banner {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.2rem 1.8rem; border-left: 5px solid var(--accent-cyan);
-      flex-wrap: wrap; gap: 1rem;
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8));
-    }
-    .source-title { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--accent-cyan); }
-    .source-desc { font-size: 0.88rem; color: var(--text-muted); margin-top: 3px; }
-
-    .view-content-grid {
-      display: grid; grid-template-columns: 1fr 400px; gap: 1.8rem; flex: 1;
-    }
-
-    @media (max-width: 1150px) {
-      .view-content-grid { grid-template-columns: 1fr; }
-    }
-
-    /* Contenedor Visualización Izquierda */
-    .viz-container {
-      display: flex; flex-direction: column; gap: 1.2rem; padding: 1.8rem; min-height: 580px;
-    }
-    .viz-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
-    .viz-title { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; display: flex; align-items: center; gap: 10px; color: #fff; }
-
-    .viz-canvas-wrapper {
-      flex: 1; min-height: 460px; background: rgba(3, 7, 18, 0.6); border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.08); position: relative; overflow: hidden;
-      display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem;
-      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
-    }
-
-    /* Panel Lateral Storytelling */
-    .story-panel { display: flex; flex-direction: column; gap: 1.4rem; padding: 1.8rem; }
-    .story-card-title { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--accent-magenta); display: flex; align-items: center; gap: 10px; }
-    .story-text { font-size: 0.95rem; line-height: 1.7; color: #e2e8f0; font-weight: 400; }
-
-    .kpi-grid { display: flex; flex-direction: column; gap: 0.9rem; }
-    .kpi-card {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
-      border: 1px solid var(--border-card); border-radius: 14px; padding: 1.1rem;
-      display: flex; align-items: center; gap: 1.2rem; transition: all 0.3s ease;
-    }
-    .kpi-card:hover { transform: translateY(-3px); border-color: var(--accent-cyan); background: rgba(0, 242, 254, 0.06); }
-    .kpi-icon {
-      width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; background: rgba(255, 255, 255, 0.08); color: var(--accent-cyan);
-      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
-    }
-    .kpi-info { display: flex; flex-direction: column; }
-    .kpi-value { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: #fff; }
-    .kpi-label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; font-weight: 600; }
-
-    footer {
-      padding: 1.2rem 2.5rem; border-top: 1px solid var(--border-card); display: flex;
-      justify-content: space-between; align-items: center; background: rgba(6, 9, 19, 0.9); flex-wrap: wrap; gap: 1rem;
-    }
-    .nav-btn {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-      border: 1px solid var(--border-card); color: var(--text-main); padding: 10px 22px; border-radius: 12px;
-      font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease;
-    }
-    .nav-btn:hover { background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); border-color: var(--accent-cyan); color: #000; box-shadow: 0 0 20px rgba(0, 242, 254, 0.4); }
-
-    .pulse-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent-cyan); box-shadow: 0 0 12px var(--accent-cyan); animation: pulse 1.5s infinite; }
-    @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.8); } 70% { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(0, 242, 254, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); } }
-
-    /* ESTILOS DE COMPONENTES INTERACTIVOS MULTI-VISTA */
-    .creative-viz-wrapper { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 1.3rem; }
-
-    .viz-controls-bar {
-      width: 100%; display: flex; justify-content: space-between; align-items: center;
-      background: rgba(255,255,255,0.04); border: 1px solid var(--border-card);
-      padding: 0.6rem 1.2rem; border-radius: 12px; margin-bottom: 0.5rem; gap: 12px; flex-wrap: wrap;
-    }
-    .ctrl-btn {
-      background: rgba(255,255,255,0.06); border: 1px solid var(--border-card); color: var(--text-muted);
-      padding: 6px 14px; border-radius: 8px; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.25s ease;
-    }
-    .ctrl-btn:hover, .ctrl-btn.active {
-      background: linear-gradient(135deg, rgba(0,242,254,0.25), rgba(236,72,153,0.25));
-      color: #fff; border-color: var(--accent-cyan); box-shadow: 0 0 12px rgba(0,242,254,0.3);
-    }
-
-    /* Vista 2: Paraderos de Autobús */
-    .bus-stops-visual { display: flex; flex-direction: column; gap: 1rem; width: 100%; }
-    .bus-stop-card {
-      background: rgba(255,255,255,0.03); border: 1px solid var(--border-card); border-radius: 14px; padding: 1.1rem 1.4rem;
-      display: flex; align-items: center; gap: 1.2rem; cursor: pointer; transition: all 0.25s ease;
-    }
-    .bus-stop-card:hover { background: rgba(0,242,254,0.08); border-color: var(--accent-cyan); transform: translateX(5px); }
-    .bus-stop-icon { font-size: 2rem; color: var(--accent-cyan); text-shadow: 0 0 12px var(--accent-cyan); }
-    .bus-stop-bar-bg { flex: 1; height: 16px; background: rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden; display: flex; }
-    .bus-stop-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta)); border-radius: 10px; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-
-    /* Vista 4: Buzón PNT */
-    .letters-visual { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; width: 100%; }
-    .letter-card {
-      background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); border-radius: 16px; padding: 1.2rem;
-      display: flex; flex-direction: column; gap: 10px; border-left: 5px solid var(--accent-coral); cursor: pointer; transition: all 0.3s ease;
-    }
-    .letter-card:hover { transform: translateY(-4px); border-color: var(--accent-coral); background: rgba(255,82,82,0.1); box-shadow: 0 10px 30px rgba(255,82,82,0.2); }
-    .letter-header { font-size: 0.82rem; font-family: var(--font-mono); color: var(--accent-coral); display: flex; justify-content: space-between; font-weight: 700; }
-    .letter-body { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.5; }
-
-    /* Vista 5: Nube de Titulares y News Ticker */
-    .news-cloud-visual { display: flex; flex-direction: column; gap: 1.4rem; width: 100%; }
-    .news-ticker {
-      background: linear-gradient(135deg, rgba(0,242,254,0.1), rgba(236,72,153,0.1));
-      border: 1px solid var(--border-glow); border-radius: 12px; padding: 10px 20px; font-size: 0.9rem; color: var(--accent-cyan);
-      display: flex; align-items: center; gap: 12px; font-weight: 600;
-    }
-    .tags-container { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-content: center; }
-    .news-tag { padding: 10px 20px; border-radius: 30px; font-size: 0.9rem; font-weight: 700; background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); cursor: pointer; transition: all 0.25s ease; }
-    .news-tag:hover { transform: scale(1.08); box-shadow: 0 0 15px rgba(0,242,254,0.3); }
-    .tag-large { font-size: 1.15rem; color: var(--accent-coral); border-color: var(--accent-coral); background: rgba(255,82,82,0.15); }
-    .tag-medium { font-size: 1rem; color: var(--accent-amber); border-color: var(--accent-amber); }
-
-    /* Vista 6: Huellas de Zapatos */
-    .footprints-visual { width: 100%; display: flex; flex-direction: column; gap: 1.2rem; justify-content: center; }
-    .footprint-row { display: flex; align-items: center; gap: 1.2rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-card); padding: 1.2rem 1.5rem; border-radius: 16px; }
-    .footprint-info { width: 200px; font-size: 0.9rem; font-weight: 700; color: var(--text-main); }
-    .footprints-track { flex: 1; display: flex; align-items: center; gap: 12px; overflow-x: auto; padding: 6px 0; }
-    .footprint-item { font-size: 1.35rem; color: var(--accent-cyan); display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
-    .footprint-item.step-left { transform: rotate(-15deg); color: var(--accent-cyan); filter: drop-shadow(0 0 8px var(--accent-cyan)); }
-    .footprint-item.step-right { transform: rotate(15deg) translateY(5px); color: var(--accent-amber); filter: drop-shadow(0 0 8px var(--accent-amber)); }
-    .footprint-item.alert-step { color: var(--accent-coral); font-size: 1.5rem; filter: drop-shadow(0 0 12px var(--accent-coral)); }
-    .footprint-value { font-family: var(--font-mono); font-weight: 800; font-size: 1rem; color: var(--accent-amber); margin-left: auto; }
-
-    /* Vista 7: Sol y Noche Ambient Slider */
-    .ambient-visual-wrapper { display: flex; flex-direction: column; gap: 1.4rem; width: 100%; }
-    .ambient-slider-box { background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); border-radius: 16px; padding: 1.2rem 1.8rem; display: flex; flex-direction: column; gap: 12px; }
-    .ambient-slider { width: 100%; accent-color: var(--accent-cyan); height: 8px; cursor: pointer; border-radius: 4px; }
-    .info-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); padding: 1.4rem; border-radius: 16px; }
-    .info-tag { font-size: 0.78rem; color: var(--accent-amber); font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 6px; font-weight: 700; }
-    .info-title { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
-    .info-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; }
-
-    /* Vista 8: LiDAR Controls */
-    .lidar-overlay-controls { position: absolute; top: 16px; left: 16px; display: flex; gap: 10px; z-index: 10; }
-    .lidar-btn-ctrl {
-      background: rgba(6,9,19,0.9); border: 1px solid var(--accent-purple); color: #e9d5ff; padding: 8px 16px;
-      border-radius: 10px; font-size: 0.8rem; font-weight: 700; cursor: pointer; backdrop-filter: blur(10px); transition: all 0.25s ease;
-    }
-    .lidar-btn-ctrl:hover { background: var(--accent-purple); color: #fff; box-shadow: 0 0 15px rgba(168,85,247,0.5); }
-
-    /* Vista 9: Matriz de Acción */
-    .v9-matrix-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; width: 100%; }
-    .v9-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); border-radius: 16px; padding: 1.2rem; display: flex; flex-direction: column; gap: 8px; transition: all 0.3s ease; }
-    .v9-card:hover { transform: translateY(-3px); border-color: var(--accent-cyan); background: rgba(0,242,254,0.06); }
-    .v9-card-title { font-size: 0.98rem; font-weight: 800; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px; }
-    .v9-card-body { font-size: 0.86rem; color: var(--text-muted); line-height: 1.5; }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
 
-  <!-- Header Interactivo de la Plataforma -->
+  <!-- Toast Notification Container -->
+  <div class="toast-msg" id="toastMsg">
+    <i class="fa-solid fa-circle-check" style="color: var(--accent-cyan);"></i>
+    <span id="toastText">Acción ejecutada</span>
+  </div>
+
+  <!-- Header -->
   <header>
     <div class="brand-container">
-      <div class="brand-logo"><i class="fa-solid fa-person-walking"></i></div>
+      <div class="brand-logo">
+        <i class="fa-solid fa-person-walking"></i>
+      </div>
       <div>
         <div class="brand-title">Data Storytelling: Sentir la Calle</div>
-        <div class="brand-subtitle">PLATAFORMA INTERACTIVA MULTIESCALAR — MÉRIDA 2026</div>
+        <div class="brand-subtitle">
+          <span class="pulse-dot" style="width: 6px; height: 6px;"></span>
+          El Viaje Peatonal, Seguridad y Confort Urbano en Mérida • UPY
+        </div>
       </div>
     </div>
-    <div style="display:flex; gap:12px; align-items:center;">
-      <span class="badge-pill badge-primary"><i class="fa-solid fa-layer-group"></i> 9 VISTAS INTEGRADAS</span>
-      <span class="badge-pill badge-magenta"><i class="fa-solid fa-wand-magic-sparkles"></i> HIGH-IMPACT VIZ</span>
+
+    <div class="header-actions">
+      <button class="btn-ghost" id="presBtn" title="Reproducir recorrido guiado automático">
+        <i class="fa-solid fa-play" id="presIcon"></i> <span id="presText">Auto-Tour</span>
+      </button>
+      <button class="btn-ghost" id="btnOpenMethodology" title="Ver Ficha Técnica y Metodología (Atajo: M)">
+        <i class="fa-solid fa-database"></i> Metodología & Datos
+      </button>
+      <button class="btn-ghost" id="btnExportData" title="Descargar datos del capítulo en formato JSON">
+        <i class="fa-solid fa-download"></i> Exportar JSON
+      </button>
+      <span class="badge-pill badge-primary"><i class="fa-solid fa-layer-group"></i> 9 Vistas</span>
     </div>
   </header>
 
-  <!-- Navegación por Pestañas de las 9 Vistas -->
-  <div class="tabs-nav-container">
-    <div class="tabs-wrapper">
-      <button class="tab-btn active" onclick="switchView(1)"><i class="fa-solid fa-globe"></i> 1. Panorama General</button>
-      <button class="tab-btn" onclick="switchView(2)"><i class="fa-solid fa-bus"></i> 2. Flujos Metropolitanos</button>
-      <button class="tab-btn" onclick="switchView(3)"><i class="fa-solid fa-map-location-dot"></i> 3. Anatomía del Barrio</button>
-      <button class="tab-btn" onclick="switchView(4)"><i class="fa-solid fa-envelope-open-text"></i> 4. Cartas a la Ciudad</button>
-      <button class="tab-btn" onclick="switchView(5)"><i class="fa-solid fa-newspaper"></i> 5. El Rumor Digital</button>
-      <button class="tab-btn" onclick="switchView(6)"><i class="fa-solid fa-shoe-prints"></i> 6. Pasos en el Terreno</button>
-      <button class="tab-btn" onclick="switchView(7)"><i class="fa-solid fa-sun"></i> 7. Clima y Horarios</button>
-      <button class="tab-btn lidar-btn" onclick="switchView(8)"><i class="fa-solid fa-cube"></i> 8. El Ojo Digital 3D</button>
-      <button class="tab-btn" onclick="switchView(9)"><i class="fa-solid fa-compass"></i> 9. Síntesis y Futuro</button>
+  <!-- Journey Arc Stepper (Línea de Tiempo del Storytelling) -->
+  <section class="journey-arc-nav" aria-label="Fases del Viaje de Storytelling">
+    <div style="font-size: 0.76rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; letter-spacing: 0.8px;">
+      <i class="fa-solid fa-route" style="color: var(--accent-cyan);"></i> Hilo Narrativo:
     </div>
-  </div>
+    <div class="arc-steps-wrapper">
+      <button class="arc-step-pill active" id="arcPill1" title="Vistas 1 al 3">
+        <i class="fa-solid fa-earth-americas arc-step-icon"></i> 1. Macro & Registros Oficiales
+      </button>
+      <button class="arc-step-pill" id="arcPill2" title="Vistas 4 al 6">
+        <i class="fa-solid fa-city arc-step-icon"></i> 2. Escala Humana & Percepción
+      </button>
+      <button class="arc-step-pill" id="arcPill3" title="Vista 7">
+        <i class="fa-solid fa-clipboard-user arc-step-icon"></i> 3. Auditoría en Terreno UPY
+      </button>
+      <button class="arc-step-pill" id="arcPill4" title="Vistas 8 y 9">
+        <i class="fa-solid fa-cube arc-step-icon"></i> 4. Inmersión 3D LiDAR & AR
+      </button>
+    </div>
+    <div style="font-size: 0.78rem; color: var(--accent-cyan); font-weight: 600;">
+      <i class="fa-solid fa-sparkles"></i> Experiencia Guiada
+    </div>
+  </section>
 
+  <!-- Pestañas de Navegación de las 9 Vistas -->
+  <nav class="tabs-nav-container" aria-label="Navegación de las 9 Vistas">
+    <div class="tabs-wrapper" id="tabsWrapper">
+      <button class="tab-btn active">
+        <span class="tab-number">1</span> <i class="fa-solid fa-map-location-dot"></i> INEGI ATUS & DENUE
+      </button>
+      <button class="tab-btn">
+        <span class="tab-number">2</span> <i class="fa-solid fa-chart-line"></i> Datos.gob.mx
+      </button>
+      <button class="tab-btn">
+        <span class="tab-number">3</span> <i class="fa-solid fa-bus"></i> SIEGY Yucatán
+      </button>
+      <button class="tab-btn">
+        <span class="tab-number">4</span> <i class="fa-solid fa-traffic-light"></i> GeoPortal Mérida
+      </button>
+      <button class="tab-btn">
+        <span class="tab-number">5</span> <i class="fa-solid fa-file-contract"></i> Transparencia PNT
+      </button>
+      <button class="tab-btn">
+        <span class="tab-number">6</span> <i class="fa-solid fa-newspaper"></i> Web Scraping
+      </button>
+      <button class="tab-btn">
+        <span class="tab-number">7</span> <i class="fa-solid fa-shoe-prints"></i> Self-Produced UPY
+      </button>
+      <button class="tab-btn tech-tab">
+        <span class="tab-number">8</span> <i class="fa-solid fa-cube"></i> LiDAR 3D
+      </button>
+      <button class="tab-btn tech-tab">
+        <span class="tab-number">9</span> <i class="fa-solid fa-vr-cardboard"></i> Realidad Aumentada (AR)
+      </button>
+    </div>
+  </nav>
+
+  <!-- Área Principal de Storytelling & Visualización -->
   <main>
-    <!-- Banner Principal con Información de la Fuente -->
-    <div id="source-banner" class="glass-panel source-banner">
-      <div style="display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap;">
-        <span id="banner-badge" class="badge-pill badge-primary" style="padding:8px 18px;"><i class="fa-solid fa-database"></i> FUENTE PRINCIPAL: INEGI ATUS</span>
-        <div>
-          <div id="banner-title" class="source-title">1. INEGI — Sombras en las Cifras Oficiales</div>
-          <div id="banner-desc" class="source-desc">Fuente Nacional: Registros sobre el espacio urbano y comportamiento vial en Mérida.</div>
-        </div>
+    <!-- Franja de Fuentes de Información -->
+    <section class="glass-panel source-banner" id="sourceBanner">
+      <div class="source-left">
+        <span class="badge-pill badge-primary" id="primarySourceBadge">
+          <i class="fa-solid fa-tag"></i> FUENTE PRINCIPAL: INEGI (ATUS & DENUE)
+        </span>
       </div>
-      <div style="display:flex; align-items:center; gap:0.6rem; font-size:0.85rem; color:var(--text-muted);">
-        <span>Responsable:</span>
-        <span id="banner-author" class="badge-pill" style="background:rgba(255,255,255,0.08); border:1px solid var(--border-card); color:#fff;"><i class="fa-solid fa-user-astronaut"></i> Rivaldo</span>
+      <div class="source-right" id="secondarySourceContainer">
+        <span><i class="fa-solid fa-link"></i> Fuentes Complementarias:</span>
+        <span class="badge-pill badge-secondary">Microdatos ATUS Mérida</span>
+        <span class="badge-pill badge-secondary">DENUE Comercio</span>
+        <span class="badge-pill badge-secondary">Censo Manzanas 2020</span>
       </div>
-    </div>
+    </section>
 
-    <!-- Rejilla en 2 Columnas Principal -->
-    <div class="view-content-grid">
-      <!-- Columna Izquierda: Visualización Interactiva Adaptativa -->
-      <div class="glass-panel viz-container">
-        <div class="viz-header">
-          <div id="viz-title" class="viz-title"><i class="fa-solid fa-chart-bar" style="color:var(--accent-cyan);"></i> 7,134 Historias Bajo la Lupa del Censo Nacional</div>
-          <div style="display:flex; align-items:center; gap:10px; font-size:0.85rem; color:var(--accent-cyan); font-weight:700;">
-            <div class="pulse-dot"></div> Componente Interactivo Activo
+    <!-- Workspace de 2 Columnas (Editorial Storytelling + Dynamic Canvas) -->
+    <div class="storytelling-workspace">
+      
+      <!-- Columna Izquierda: Deck Narrativo Editorial Guiado -->
+      <aside class="glass-panel story-narrative-deck">
+        <div class="story-badge-header">
+          <div class="story-tag" id="storyTag">
+            <i class="fa-solid fa-compass"></i> CAPÍTULO 1 • COBERTURA NACIONAL E INVENTORY OFICIAL
           </div>
         </div>
 
-        <div class="viz-canvas-wrapper">
-          <canvas id="mainChart"></canvas>
-          <div id="threeContainer" style="display:none; width:100%; height:100%; position:relative;"></div>
-          <div id="mapContainer" style="display:none; width:100%; height:100%; border-radius:14px; position:relative; z-index:1;"></div>
-          <div id="creativeContainer" style="display:none; width:100%; height:100%;"></div>
-        </div>
-      </div>
+        <h1 class="story-title-main" id="storyTitle">
+          Sombras en las Cifras Oficiales
+        </h1>
 
-      <!-- Columna Derecha: Panel Lateral Narrativo y KPIs -->
-      <div class="glass-panel story-panel">
-        <div class="story-card-title"><i class="fa-solid fa-quote-left"></i> <span id="story-title">El Registro de la Ciudad</span></div>
-        <p id="story-text" class="story-text">
-          Mérida suele considerarse una ciudad de alta tranquilidad, pero al analizar los microdatos del INEGI descubrimos miles de intersecciones donde el peatón se siente expuesto durante su trayecto cotidiano.
+        <!-- Pregunta Guía / Lead del Storytelling -->
+        <div class="story-lead-question" id="storyLead">
+          ¿Qué revela el registro oficial frente a la realidad cotidiana del peatón en Mérida?
+        </div>
+
+        <p class="story-text-body" id="storyDescription">
+          El censo de Accidentes de Tránsito Terrestre (ATUS) del INEGI registra 7,134 percances en Mérida. Sin embargo, al cruzar estos puntos con la presencia de unidades económicas DENUE, descubrimos que la mayor exposición al riesgo ocurre en arterias comerciales sin semáforo peatonal.
         </p>
 
-        <div class="kpi-grid">
-          <div class="kpi-card">
-            <div class="kpi-icon"><i id="kpi1-icon" class="fa-solid fa-car-burst"></i></div>
-            <div class="kpi-info">
-              <div id="kpi1-val" class="kpi-value">7,134</div>
-              <div id="kpi1-lbl" class="kpi-label">Incidentes Registrados</div>
-            </div>
+        <!-- Barra de Audio Narrador (Web Speech API) -->
+        <div class="story-audio-bar">
+          <div class="audio-info">
+            <i class="fa-solid fa-volume-high" style="color: var(--accent-cyan);"></i> Narrador del Capítulo
           </div>
-          <div class="kpi-card">
-            <div class="kpi-icon" style="color:var(--accent-coral);"><i id="kpi2-icon" class="fa-solid fa-street-view"></i></div>
-            <div class="kpi-info">
-              <div id="kpi2-val" class="kpi-value" style="color:var(--accent-coral);">65%</div>
-              <div id="kpi2-lbl" class="kpi-label">Ocurren al Cruzar la Calle</div>
-            </div>
+          <button class="btn-audio-play" id="narrateBtn">
+            <i class="fa-solid fa-play" id="narrateIcon"></i> Escuchar
+          </button>
+        </div>
+
+        <!-- Pasos Guiados / Story Beats Interactivos -->
+        <div class="story-beats-container">
+          <div class="beats-heading">
+            <i class="fa-solid fa-list-check" style="color: var(--accent-cyan);"></i> Pasos Guiados de Análisis:
           </div>
-          <div class="kpi-card">
-            <div class="kpi-icon" style="color:var(--accent-amber);"><i id="kpi3-icon" class="fa-solid fa-shield-halved"></i></div>
-            <div class="kpi-info">
-              <div id="kpi3-val" class="kpi-value" style="color:var(--accent-amber);">313+</div>
-              <div id="kpi3-lbl" class="kpi-label">Reportes Periférico/Año</div>
-            </div>
+          <div id="storyBeatsList" style="display: flex; flex-direction: column; gap: 8px;">
+            <!-- Inyectados dinámicamente por JS -->
+          </div>
+        </div>
+      </aside>
+
+      <!-- Columna Derecha: Lienzo de Visualización Interactiva -->
+      <section class="glass-panel viz-container">
+        <div class="viz-header">
+          <div class="viz-title" id="vizTitle">
+            <i class="fa-solid fa-compass-drafting" style="color: var(--accent-cyan);"></i> Explorador Cartográfico con Clusters de Siniestralidad y Exposición Comercial
+          </div>
+          <div class="controls-bar" id="vizControls">
+            <!-- Controles contextuales inyectados dinámicamente -->
           </div>
         </div>
 
-        <div style="margin-top:auto; padding-top:1.2rem; border-top:1px solid var(--border-card); font-size:0.85rem; color:var(--accent-cyan); display:flex; align-items:center; gap:10px; font-weight:600;">
-          <i class="fa-solid fa-lightbulb" style="font-size:1.1rem; color:var(--accent-amber);"></i> <span id="story-insight">Descubrimiento Clave: Las intersecciones sin semáforo peatonal concentran el mayor índice de riesgo percibido.</span>
+        <!-- Lienzo Interactivo / Canvas -->
+        <div class="viz-canvas-wrapper" id="canvasWrapper">
+          <div class="interactive-overlay">
+            <div class="pulse-dot"></div>
+            <span id="overlayStatus">Simulación Interactiva Activa</span>
+          </div>
+
+          <!-- Chart.js Canvas -->
+          <canvas id="vizChart" style="max-height: 480px; width: 100%; display: block;"></canvas>
+          
+          <!-- Three.js 3D WebGL Canvas Container -->
+          <div id="threejsContainer" style="width: 100%; height: 100%; display: none; position: absolute; top: 0; left: 0;"></div>
+          
+          <!-- Custom Interactive 2D Simulation Surface (SVG GIS / Force Graph) -->
+          <div id="interactiveCustomSurface" style="display: none;"></div>
+
+          <!-- Viewport Tools Floating in Canvas -->
+          <div class="viewport-tools">
+            <button class="tool-btn" id="btnSnapshot" title="Tomar captura de la visualización">
+              <i class="fa-solid fa-camera"></i>
+            </button>
+            <button class="tool-btn" id="btnFullscreen" title="Pantalla Completa">
+              <i class="fa-solid fa-expand"></i>
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
+
+    </div>
+
+    <!-- Fila Inferior: Métricas Clave (KPIs) con Tendencias y Hallazgo -->
+    <div class="kpis-story-row" id="kpiContainer">
+      <!-- Inyectados por JS -->
+    </div>
+
+    <!-- Descubrimiento Clave / Conclusión del Capítulo -->
+    <div class="insight-banner-box" id="storyInsight">
+      💡 <b>Descubrimiento Clave:</b> Las intersecciones comerciales densas registran 3.4 veces más percances peatonales debido a la interferencia entre carga/descarga y el cruce a pie.
     </div>
   </main>
 
-  <!-- Footer Narrativo -->
+  <!-- Footer Navigation -->
   <footer>
-    <button class="nav-btn" onclick="prevView()"><i class="fa-solid fa-arrow-left"></i> Vista Anterior</button>
-    <div style="font-size:0.88rem; color:var(--text-muted); text-align:center;">
-      <i class="fa-solid fa-users" style="color:var(--accent-cyan);"></i> Equipo del Proyecto: <strong style="color:#fff;">Rivaldo</strong> (Técnico/LiDAR) | <strong style="color:#fff;">Elisabeth</strong> (Institucional/PNT) | <strong style="color:#fff;">Christopher</strong> (Campo/Scraping)
+    <button class="nav-btn" id="prevBtn">
+      <i class="fa-solid fa-arrow-left"></i> Anterior
+    </button>
+    
+    <div class="nav-controls-center">
+      <div class="progress-bar-container" title="Progreso del Data Storytelling">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+      </div>
+      <div style="font-size: 0.84rem; color: var(--text-muted); font-family: var(--font-heading);" id="stepIndicator">
+        Capítulo 1 de 9 • INEGI ATUS & DENUE
+      </div>
     </div>
-    <button class="nav-btn" onclick="nextView()">Siguiente Vista <i class="fa-solid fa-arrow-right"></i></button>
+
+    <button class="nav-btn nav-btn-primary" id="nextBtn">
+      Siguiente Capítulo <i class="fa-solid fa-arrow-right"></i>
+    </button>
   </footer>
 
-  <script>
-    let currentViewId = 1;
+  <!-- Modal de Metodología y Fuentes de Datos (<dialog>) -->
+  <dialog class="modal-dialog" id="methodologyModal">
+    <div class="modal-header">
+      <h3 style="font-family: var(--font-heading); font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-database" style="color: var(--accent-cyan);"></i> Metodología & Fuentes de Información
+      </h3>
+      <button class="modal-close" id="btnCloseMethodology">&times;</button>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.88rem; line-height: 1.6; color: #cbd5e1; max-height: 60vh; overflow-y: auto; padding-right: 8px;">
+      <p>
+        Este proyecto integra un pipeline de datos multiescalar con 7 fuentes de datos primarias estructuradas y 2 entornos volumétricos tecnológicos de última generación para evaluar el confort y la seguridad peatonal en Mérida:
+      </p>
+      <ul style="padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+        <li><strong>1. INEGI ATUS & DENUE:</strong> Microdatos de 7,134 percances viales registrados en Mérida y 3,842 establecimientos comerciales expuestos.</li>
+        <li><strong>2. Datos.gob.mx:</strong> Registros abiertos nacionales de movilidad, transporte e indicadores de siniestralidad peatonal.</li>
+        <li><strong>3. SIEGY Yucatán:</strong> Datos geoestadísticos y sociodemográficos de transporte metropolitano, rutas y paraderos Va y Ven.</li>
+        <li><strong>4. GeoPortal Mérida & OSM:</strong> Geolocalización e inventario de 80 nodos semaforizados reales y capas vectoriales de banquetas.</li>
+        <li><strong>5. Transparencia PNT:</strong> Peticiones vecinales tramitadas ante la SSP Yucatán y el Ayuntamiento solicitando alumbrado y semáforos peatonales.</li>
+        <li><strong>6. Web Scraping Prensa:</strong> Minería de texto sobre más de 850 notas periodísticas locales (Diario de Yucatán, Por Esto!) y análisis semántico.</li>
+        <li><strong>7. Self-Produced (UPY):</strong> Auditoría presencial a pie midiendo tiempos de semáforo verde, ancho efectivo de banquetas (1.2m) y confort térmico (38°C).</li>
+        <li><strong>8. LiDAR 3D:</strong> Modelo digital volumétrico de nube de puntos 3D (.PLY / .XYZ) para análisis de ángulos ciegos e infraestructura.</li>
+        <li><strong>9. Realidad Aumentada (AR):</strong> Propuesta holográfica en WebXR de rediseño de crucero seguro con refugio peatonal y accesibilidad universal.</li>
+      </ul>
+      <div style="background: rgba(0, 242, 254, 0.08); padding: 10px 14px; border-radius: 8px; border-left: 3px solid var(--accent-cyan);">
+        📌 <strong>Universidad Politécnica de Yucatán (UPY)</strong> • Equipo: Rivaldo (PM / LiDAR), Elisabeth (Institucional), Christopher (Campo / Scraping)
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem; text-align: right;">
+      <button class="nav-btn nav-btn-primary" id="btnMethodologyUnderstood">Entendido</button>
+    </div>
+  </dialog>
 
-    // Configuración Completa de las 9 Vistas Narrativas con Visualizaciones Vistosas e Interactivas
-    const storyViews = {
-      1: {
-        badge: "FUENTE PRINCIPAL: INEGI ATUS",
-        title: "1. INEGI — Sombras en las Cifras Oficiales",
-        desc: "Fuente Nacional: La radiografía oficial del espacio urbano y los cruces de Mérida.",
-        author: "Rivaldo",
-        vizTitle: "7,134 Historias Bajo la Lupa del Censo Nacional",
-        storyTitle: "El Registro de la Ciudad",
-        storyText: "Mérida suele considerarse un oasis de tranquilidad en México. Sin embargo, al desglosar los microdatos del INEGI descubrimos 7,134 eventos registrados en 3 años. Lo revelador es que el 65% de los incidentes ocurren en intersecciones donde las personas intentan cruzar la calle.",
-        insight: "Descubrimiento Clave: El 65% de las emergencias viales no suceden en autopistas abiertas, sino en los cruces de nuestros propios barrios.",
-        k1_v: "7,134", k1_l: "Incidentes Registrados", k1_icon: "fa-car-burst",
-        k2_v: "65%", k2_l: "Ocurren al Cruzar la Calle", k2_icon: "fa-street-view",
-        k3_v: "313+", k3_l: "Reportes en Periférico/Año", k3_icon: "fa-shield-halved",
-        vizMode: "chart",
-        chartType: "bar",
-        chartData: {
-          labels: ["2021", "2022", "2023"],
-          datasets: [
-            { label: "Colisiones Vehículo-Peatón", data: [1436, 1547, 1653], backgroundColor: "#00f2fe", borderRadius: 8 },
-            { label: "Otros Siniestros en Cruces", data: [774, 833, 891], backgroundColor: "#ec4899", borderRadius: 8 }
-          ]
-        }
-      },
-      2: {
-        badge: "FUENTE PRINCIPAL: SIEGEY YUCATÁN",
-        title: "2. SIEGEY — El Ritmo del Va y Ven",
-        desc: "Fuente Estatal: El transporte metropolitano y la travesía diaria en los paraderos.",
-        author: "Elisabeth",
-        vizTitle: "Afluencia y Paraderos: Mapeo de la Red Metropolitana",
-        storyTitle: "El Latido del Transporte",
-        storyText: "Cada día, 45,000 peatones abordan el sistema Va y Ven. En el circuito Periférico de 50 km, la prisa de las rutas exprés choca con la falta de puentes cerca de paraderos clave.",
-        insight: "Descubrimiento Clave: A las 6:00 PM la afluencia en paraderos coincide con el descenso de luz natural, duplicando la vulnerabilidad del usuario.",
-        k1_v: "50 km", k1_l: "Circuito Metropolitano", k1_icon: "fa-route",
-        k2_v: "45,000", k2_l: "Usuarios Diarios Estimados", k2_icon: "fa-users",
-        k3_v: "69", k3_l: "Paraderos Oficiales Mapeados", k3_icon: "fa-bus-simple",
-        vizMode: "creative",
-        creativeHtml: `
-          <div class="creative-viz-wrapper">
-            <div class="viz-controls-bar">
-              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan);"><i class="fa-solid fa-sliders"></i> SELECCIÓN DE CORREDOR METROPOLITANO:</span>
-              <div style="display:flex; gap:8px;">
-                <button class="ctrl-btn active" onclick="updateBusView('all')">Todos los Paraderos</button>
-                <button class="ctrl-btn" onclick="updateBusView('periferico')">Periférico Norte</button>
-                <button class="ctrl-btn" onclick="updateBusView('kanasin')">Corredor Kanasín</button>
-              </div>
-            </div>
-            <div class="bus-stops-visual" id="bus-stops-list">
-              <div class="bus-stop-card">
-                <i class="fa-solid fa-bus bus-stop-icon"></i>
-                <div style="flex:1;">
-                  <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Salida Progreso (Periférico Norte)</div>
-                  <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Sin puente peatonal en 450m • Velocidad: 90 km/h</div>
-                  <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:90%;"></div></div>
-                </div>
-                <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-cyan);">90% Congestión</div>
-              </div>
-              <div class="bus-stop-card">
-                <i class="fa-solid fa-bus bus-stop-icon" style="color:var(--accent-amber);"></i>
-                <div style="flex:1;">
-                  <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Entronque Kanasín (Periférico Oriente)</div>
-                  <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Cruce a nivel de calle • Tiempo espera promedio: 14 min</div>
-                  <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:82%; background:linear-gradient(90deg, #ffbe0b, #ff5252);"></div></div>
-                </div>
-                <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-amber);">82% Congestión</div>
-              </div>
-              <div class="bus-stop-card">
-                <i class="fa-solid fa-bus bus-stop-icon" style="color:var(--accent-coral);"></i>
-                <div style="flex:1;">
-                  <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Av. Caucel (Periférico Poniente)</div>
-                  <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Afluencia escolar y laboral masiva a las 6:00 PM</div>
-                  <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:75%; background:linear-gradient(90deg, #ff5252, #ec4899);"></div></div>
-                </div>
-                <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-coral);">75% Congestión</div>
-              </div>
-            </div>
-          </div>
-        `
-      },
-      3: {
-        badge: "FUENTE PRINCIPAL: GEOPORTAL MÉRIDA",
-        title: "3. Geoportal Mérida — La Anatomía del Barrio",
-        desc: "Fuente Municipal: El mapa interactivo de banquetas, semáforos y cruceros en Mérida.",
-        author: "Elisabeth",
-        vizTitle: "Geoportal Interactivo: Mapeo de Nodos Semaforizados y Cruceros",
-        storyTitle: "La Geometría del Barrio",
-        storyText: "Geolocalizamos 80 nodos semaforizados en la mancha urbana de Mérida. Al hacer clic en cada marcador neón en el mapa, descubrirás qué cruces cuentan con fase peatonal exclusiva y cuáles obligan al peatón a arriesgarse.",
-        insight: "Descubrimiento Clave: El 58% de las intersecciones georreferenciadas carecen de fase peatonal activa, concentrándose en el anillo Periférico.",
-        k1_v: "80 Nodos", k1_l: "Cruceros Mapeados en Mérida", k1_icon: "fa-map-location-dot",
-        k2_v: "42%", k2_l: "Con Fase Peatonal Activa", k2_icon: "fa-person-walking",
-        k3_v: "58%", k3_l: "Sin Fase Peatonal Protegida", k3_icon: "fa-triangle-exclamation",
-        vizMode: "map"
-      },
-      4: {
-        badge: "FUENTE PRINCIPAL: TRANSPARENCIA PNT",
-        title: "4. PNT / Transparencia — Cartas a la Ciudad",
-        desc: "Solicitud de Gobierno: Las peticiones oficiales de los vecinos pidiendo alumbrado y seguridad.",
-        author: "Elisabeth",
-        vizTitle: "Buzón Ciudadano: Mapeo de Solicitudes Formales de Iluminación",
-        storyTitle: "La Voz del Ciudadano",
-        storyText: "La consulta a la Plataforma Nacional de Transparencia arrojó los oficios donde la comunidad solicita luz y cruces seguros. Transformamos las peticiones frías en un buzón visual de reclamos vecinales.",
-        insight: "Descubrimiento Clave: Las solicitudes de iluminación en avenidas secundarias tardan hasta 3 veces más en gestionarse que en zonas turísticas.",
-        k1_v: "5 Puntos", k1_l: "Esquinas Prioritarias Vecinales", k1_icon: "fa-location-dot",
-        k2_v: "4 Cám.", k2_l: "Monitoreo del C5i por Zona", k2_icon: "fa-video",
-        k3_v: "PNT-2026", k3_l: "Folio de Transparencia Ingresado", k3_icon: "fa-file-signature",
-        vizMode: "creative",
-        creativeHtml: `
-          <div class="creative-viz-wrapper">
-            <div class="viz-controls-bar">
-              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan);"><i class="fa-solid fa-filter"></i> FILTRAR SOLICITUDES DE VECINOS:</span>
-              <div style="display:flex; gap:8px;">
-                <button class="ctrl-btn active" onclick="filterLetters('all')">Todas</button>
-                <button class="ctrl-btn" onclick="filterLetters('luz')">Alumbrado</button>
-                <button class="ctrl-btn" onclick="filterLetters('sem')">Semáforos</button>
-              </div>
-            </div>
-            <div class="letters-visual" id="letters-container">
-              <div class="letter-card" data-cat="luz">
-                <div class="letter-header"><span>FOLIO #PNT-9841</span> <span>12 MAR</span></div>
-                <div class="letter-body"><i class="fa-solid fa-lightbulb" style="color:var(--accent-amber);"></i> Solicitud urgente de alumbrado continuo en paradero Salida Progreso.</div>
-                <span class="badge-pill" style="align-self:flex-start; background:rgba(16,185,129,0.15); border:1px solid #10b981; color:#10b981;">Aprobado en Cabildo</span>
-              </div>
-              <div class="letter-card" data-cat="sem">
-                <div class="letter-header"><span>FOLIO #PNT-7720</span> <span>04 ABR</span></div>
-                <div class="letter-body"><i class="fa-solid fa-person-walking-arrow-right" style="color:var(--accent-cyan);"></i> Petición de semáforo peatonal accesible en cruce Kanasín.</div>
-                <span class="badge-pill" style="align-self:flex-start; background:rgba(255,190,11,0.15); border:1px solid var(--accent-amber); color:var(--accent-amber);">En Dictamen Técnico</span>
-              </div>
-              <div class="letter-card" data-cat="cam">
-                <div class="letter-header"><span>FOLIO #PNT-5412</span> <span>19 MAY</span></div>
-                <div class="letter-body"><i class="fa-solid fa-video" style="color:var(--accent-purple);"></i> Instalación de cámara de vigilancia C5i por exceso de velocidad en Canek.</div>
-                <span class="badge-pill" style="align-self:flex-start; background:rgba(0,242,254,0.15); border:1px solid var(--accent-cyan); color:var(--accent-cyan);">Ingresado a C5i</span>
-              </div>
-              <div class="letter-card" data-cat="banqueta">
-                <div class="letter-header"><span>FOLIO #PNT-3309</span> <span>02 JUN</span></div>
-                <div class="letter-body"><i class="fa-solid fa-road" style="color:var(--accent-coral);"></i> Reparación de banquetas fracturadas e invadidas en Circuito Colonias.</div>
-                <span class="badge-pill" style="align-self:flex-start; background:rgba(255,82,82,0.15); border:1px solid #ef4444; color:#ef4444;">Pendiente Presupuesto</span>
-              </div>
-            </div>
-          </div>
-        `
-      },
-      5: {
-        badge: "FUENTE PRINCIPAL: WEB SCRAPING",
-        title: "5. Web Scraping — El Rumor de la Calle",
-        desc: "Extracción Digital: 192 noticias y testimonios extraídos de periódicos y redes de Yucatán.",
-        author: "Christopher",
-        vizTitle: "Nube de Titulares y Termómetro Digital de Riesgo Peatonal",
-        storyTitle: "El Eco Digital",
-        storyText: "El scraping de 192 noticias y comentarios digitales nos muestra las expresiones más frecuentes de los ciudadanos sobre el peligro de caminar en avenidas principales.",
-        insight: "Descubrimiento Clave: La palabra 'Periférico' y 'Falta de Luz' dominan el 60% de la conversación de riesgo en medios.",
-        k1_v: "192", k1_l: "Notas y Comentarios Recopilados", k1_icon: "fa-newspaper",
-        k2_v: "44%", k2_l: "Menciones sobre Periférico", k2_icon: "fa-hashtag",
-        k3_v: "Prensa", k3_l: "Fuentes Informativas Locales", k3_icon: "fa-rss",
-        vizMode: "creative",
-        creativeHtml: `
-          <div class="creative-viz-wrapper news-cloud-visual">
-            <div class="news-ticker">
-              <i class="fa-solid fa-bullhorn" style="font-size:1.2rem; color:var(--accent-cyan);"></i>
-              <marquee scrollamount="7">
-                🚨 SCRAPING NOTICIAS EN VIVO: "Vecinos exigen alumbrado público en Periférico Sur" — "Aumentan reportes de cruces a ciegas en Av. Canek" — "Piden reductores de velocidad en zonas escolares de Mérida"
-              </marquee>
-            </div>
-            
-            <div class="tags-container">
-              <span class="news-tag tag-large" onclick="showNewsTopic('periferico')">#PeriféricoPeligroso (85)</span>
-              <span class="news-tag tag-medium" onclick="showNewsTopic('luz')">#FaltaDeAlumbrado (42)</span>
-              <span class="news-tag tag-medium" onclick="showNewsTopic('velocidad')">#ExcesoVelocidad (35)</span>
-              <span class="news-tag" onclick="showNewsTopic('banquetas')">#BanquetasRotas (18)</span>
-              <span class="news-tag" onclick="showNewsTopic('semaforo')">#SinSemáforoPeatonal (12)</span>
-              <span class="news-tag tag-large" onclick="showNewsTopic('atropellamiento')">#Atropellamiento (50)</span>
-              <span class="news-tag tag-medium" onclick="showNewsTopic('cruceros')">#CrucerosOscuros (28)</span>
-            </div>
-
-            <div id="news-snippet-box" style="background:rgba(255,255,255,0.04); border:1px solid var(--border-glow); padding:12px 18px; border-radius:12px; font-size:0.9rem; color:#cbd5e1; text-align:center;">
-              <i class="fa-solid fa-hand-pointer" style="color:var(--accent-cyan);"></i> Haz clic en cualquiera de las etiquetas para desplegar el resumen periodístico.
-            </div>
-          </div>
-        `
-      },
-      6: {
-        badge: "FUENTE PRINCIPAL: SELF-PRODUCED DATA",
-        title: "6. Self-Produced — Los Pasos del Equipo",
-        desc: "Datos Propios: Levantamiento presencial y mapa de huellas en las calles de Mérida.",
-        author: "Christopher",
-        vizTitle: "Calculadora de Huellas: El Ritmo y Distancia Peatonal Real",
-        storyTitle: "La Medición en la Banqueta",
-        storyText: "Sustituyendo los gráficos fríos por un mapeo de pasos y huellas reales, evaluamos la caminabilidad física: la banqueta apenas otorga 1.2m de ancho, mientras que cruzar la calle requiere dar 24 pasos continuos antes de que el tráfico retome la marcha.",
-        insight: "Descubrimiento Clave: Un adulto mayor requiere dar 28 huellas/pasos constantes para cruzar; el semáforo corta el paso a las 18 huellas.",
-        k1_v: "1.2 m", k1_l: "Ancho Promedio Banqueta", k1_icon: "fa-ruler-horizontal",
-        k2_v: "15s", k2_l: "Tiempo Verde Peatonal Medido", k2_icon: "fa-stopwatch-20",
-        k3_v: "24 Pasos", k3_l: "Distancia Requerida en Calzada", k3_icon: "fa-shoe-prints",
-        vizMode: "creative",
-        creativeHtml: `
-          <div class="creative-viz-wrapper footprints-visual">
-            <div class="viz-controls-bar">
-              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan);"><i class="fa-solid fa-user"></i> SELECCIONAR PERFIL DE PEATÓN:</span>
-              <div style="display:flex; gap:8px;">
-                <button class="ctrl-btn active" onclick="setPedestrianProfile('joven')">Adulto Joven (1.2 m/s)</button>
-                <button class="ctrl-btn" onclick="setPedestrianProfile('mayor')">Adulto Mayor (0.7 m/s)</button>
-                <button class="ctrl-btn" onclick="setPedestrianProfile('reducida')">Movilidad Reducida (0.5 m/s)</button>
-              </div>
-            </div>
-
-            <div class="footprint-row">
-              <div class="footprint-info">1. Ancho Banqueta (1.2m)</div>
-              <div class="footprints-track">
-                <span class="footprint-item step-left"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-right"><i class="fa-solid fa-shoe-prints"></i></span>
-              </div>
-              <div class="footprint-value">2 Pasos (Muy Angosto)</div>
-            </div>
-            
-            <div class="footprint-row">
-              <div class="footprint-info">2. Cruce Calzada (14.5m)</div>
-              <div class="footprints-track" id="footprints-cross-track">
-                <span class="footprint-item step-left"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-right"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-left"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-right"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-left"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-right"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-left alert-step"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-right alert-step"><i class="fa-solid fa-shoe-prints"></i></span>
-              </div>
-              <div class="footprint-value" id="footprints-count-val">24 Pasos Requeridos</div>
-            </div>
-            
-            <div class="footprint-row">
-              <div class="footprint-info">3. Tiempo Verde Peatonal (15s)</div>
-              <div class="footprints-track">
-                <span class="footprint-item step-left"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-right"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-left"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item step-right"><i class="fa-solid fa-shoe-prints"></i></span>
-                <span class="footprint-item alert-step"><i class="fa-solid fa-triangle-exclamation"></i></span>
-              </div>
-              <div class="footprint-value" id="footprints-result-val" style="color:var(--accent-coral);">Corte a los 18 Pasos</div>
-            </div>
-          </div>
-        `
-      },
-      7: {
-        badge: "FUENTE PRINCIPAL: ANÁLISIS AMBIENTAL",
-        title: "7. Clima y Horarios — Factores Ambientales",
-        desc: "Análisis Visual Infográfico: El impacto del sol térmico de 38°C y la penumbra nocturna.",
-        author: "Christopher",
-        vizTitle: "Sol y Penumbra: El Simulador Ambiental Térmico y Nocturno",
-        storyTitle: "El Clima de Yucatán",
-        storyText: "En Mérida la temperatura alcanza los 38°C en verano. La gente evita las banquetas despejadas entre 12 PM y 4 PM por falta de sombra, volcando el flujo a la noche, cuando aumenta la oscuridad y la velocidad del tráfico.",
-        insight: "Descubrimiento Clave: El calor extremo desplaza los desplazamientos a pie hacia la noche, multiplicando el riesgo por falta de luz.",
-        k1_v: "38°C", k1_l: "Sensación Térmica Diurna", k1_icon: "fa-temperature-high",
-        k2_v: "7:00 PM", k2_l: "Cresta de Percepción de Riesgo", k2_icon: "fa-moon",
-        k3_v: "65%", k3_l: "Camina de Noche por Necesidad", k3_icon: "fa-lightbulb",
-        vizMode: "creative",
-        creativeHtml: `
-          <div class="creative-viz-wrapper ambient-visual-wrapper">
-            <div class="ambient-slider-box">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="font-size:0.9rem; font-weight:800; color:var(--accent-amber);"><i class="fa-solid fa-clock"></i> SIMULADOR DE HORA DEL DÍA:</span>
-                <span id="time-display-val" style="font-family:var(--font-mono); font-weight:800; color:var(--accent-cyan); font-size:1.05rem;">02:00 PM (Sol Máximo)</span>
-              </div>
-              <input type="range" min="6" max="23" value="14" class="ambient-slider" id="hourSlider" oninput="updateAmbientHour(this.value)">
-              <div style="display:flex; justify-content:space-between; font-size:0.78rem; color:var(--text-muted); font-weight:600;">
-                <span>6 AM (Amanecer)</span>
-                <span>12 PM (Zenit 38°C)</span>
-                <span>7 PM (Anochecer)</span>
-                <span>11 PM (Penumbra)</span>
-              </div>
-            </div>
-
-            <div class="info-card" id="ambient-card-display">
-              <div class="info-tag" id="ambient-tag">DILEMA 1: CALOR EXTREMO (12 PM - 4 PM)</div>
-              <div class="info-title" id="ambient-title"><i class="fa-solid fa-sun" style="color:#ffbe0b;"></i> Banquetas Desiertas a 38°C</div>
-              <div class="info-desc" id="ambient-desc">Sin árboles ni techumbres, la radiación solar vuelve inviable la caminata. Los peatones buscan refugio en sombras reducidas sobre la carpeta asfáltica.</div>
-            </div>
-          </div>
-        `
-      },
-      8: {
-        badge: "FUENTE PRINCIPAL: LiDAR 3D AULA (THREE.JS)",
-        title: "8. LiDAR en Aula — El Ojo Digital 3D",
-        desc: "Sensor Láser 3D: Nube de puntos de la maqueta del aula para detectar ángulos ciegos.",
-        author: "Rivaldo",
-        vizTitle: "Modelado Tridimensional: Visor LiDAR de Ángulos Ciegos",
-        storyTitle: "La Visión Tridimensional",
-        storyText: "Mediante el escaneo LiDAR realizado en el salón sobre la maqueta a escala 1:50, simulamos la perspectiva en 3D del peatón. Descubrimos que muros publicitarios y arbustos desbordados crean un punto ciego de 3.5 metros antes del cruce.",
-        insight: "Descubrimiento Clave: La simulación 3D LiDAR reveló que el 30% del campo visual del peatón es bloqueado por señalética mal ubicada.",
-        k1_v: "5,400", k1_l: "Puntos 3D XYZ+RGB (LiDAR)", k1_icon: "fa-cubes",
-        k2_v: ".PLY", k2_l: "Formato Tridimensional", k2_icon: "fa-file-code",
-        k3_v: "1:50", k3_l: "Escala de Maqueta en Aula", k3_icon: "fa-ruler-combined",
-        vizMode: "three"
-      },
-      9: {
-        badge: "FUENTE PRINCIPAL: SÍNTESIS INTEGRADA",
-        title: "9. Síntesis y Futuro — Matriz Integrada",
-        desc: "Conclusiones del Equipo: Recomendaciones de diseño urbano e integración de fuentes.",
-        author: "Equipo Completo",
-        vizTitle: "Hacia una Ciudad Humana: Matriz de Acción e Intervención Urbana",
-        storyTitle: "La Propuesta del Equipo",
-        storyText: "Conectando las 7 fuentes de datos mediante coordenadas comunes, concluimos el viaje. Proponemos un rediseño prioritario en 5 cruceros: ampliación de banquetas, semáforos con botón accesible e iluminación continua en paraderos.",
-        insight: "Descubrimiento Clave: La integración multiescalar demuestra que el rediseño físico de 5 cruces clave reduciría un 40% la percepción global de miedo en Mérida.",
-        k1_v: "100%", k1_l: "Fuentes Integradas por Coordenadas", k1_icon: "fa-diagram-project",
-        k2_v: "3", k2_l: "Propuestas de Intervención Urbana", k2_icon: "fa-pen-ruler",
-        k3_v: "Fase 1", k3_l: "Estatus Actual del Proyecto", k3_icon: "fa-flag-checkered",
-        vizMode: "creative",
-        creativeHtml: `
-          <div class="creative-viz-wrapper">
-            <div class="viz-controls-bar">
-              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan);"><i class="fa-solid fa-map-location-dot"></i> MATRIZ DE PROPUESTAS DE REDISEÑO URBANO:</span>
-            </div>
-            <div class="v9-matrix-grid">
-              <div class="v9-card">
-                <div class="v9-card-title"><i class="fa-solid fa-ruler-horizontal"></i> 1. Ampliación de Banquetas</div>
-                <div class="v9-card-body">Aumentar el ancho mínimo de 1.2m a 2.5m en paraderos del Periférico y zona escolar Canek.</div>
-              </div>
-              <div class="v9-card">
-                <div class="v9-card-title"><i class="fa-solid fa-traffic-light"></i> 2. Botón Peatonal e Iluminación</div>
-                <div class="v9-card-body">Instalar fases peatonales exclusivas de 25s con luminarias LED enfocadas al paso de cebra.</div>
-              </div>
-              <div class="v9-card">
-                <div class="v9-card-title"><i class="fa-solid fa-tree"></i> 3. Corredores de Sombra</div>
-                <div class="v9-card-body">Arbolado urbano endémico para mitigar la radiación de 38°C durante la caminata diurna.</div>
-              </div>
-            </div>
-            <div style="background:rgba(0,242,254,0.08); border:1px solid var(--border-glow); padding:14px 20px; border-radius:14px; font-size:0.9rem; color:#fff; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-              <span><i class="fa-solid fa-chart-pie" style="color:var(--accent-cyan);"></i> Prioridad Global de Intervención: <strong>95% Urgente</strong></span>
-              <span class="badge-pill badge-primary">Impacto Estimado: -40% Riesgo</span>
-            </div>
-          </div>
-        `
-      }
-    };
-
-    let currentChart = null;
-
-    function switchView(viewId) {
-      currentViewId = viewId;
-      const data = storyViews[viewId];
-      if (!data) return;
-
-      document.body.className = '';
-
-      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
-        btn.classList.toggle('active', idx === (viewId - 1));
-      });
-
-      document.getElementById('banner-badge').innerHTML = `<i class="fa-solid fa-database"></i> ${data.badge}`;
-      document.getElementById('banner-title').innerText = data.title;
-      document.getElementById('banner-desc').innerText = data.desc;
-      document.getElementById('banner-author').innerHTML = `<i class="fa-solid fa-user-astronaut"></i> ${data.author}`;
-      document.getElementById('viz-title').innerHTML = `<i class="fa-solid fa-chart-bar" style="color:var(--accent-cyan);"></i> ${data.vizTitle}`;
-      document.getElementById('story-title').innerText = data.storyTitle;
-      
-      const storyTextEl = document.getElementById('story-text');
-      if (storyTextEl) {
-        storyTextEl.innerText = data.storyText || "";
-      }
-
-      document.getElementById('story-insight').innerText = data.insight;
-
-      document.getElementById('kpi1-val').innerText = data.k1_v;
-      document.getElementById('kpi1-lbl').innerText = data.k1_l;
-      document.getElementById('kpi2-val').innerText = data.k2_v;
-      document.getElementById('kpi2-lbl').innerText = data.k2_l;
-      document.getElementById('kpi3-val').innerText = data.k3_v;
-      document.getElementById('kpi3-lbl').innerText = data.k3_l;
-
-      if (data.k1_icon) document.getElementById('kpi1-icon').className = `fa-solid ${data.k1_icon}`;
-      if (data.k2_icon) document.getElementById('kpi2-icon').className = `fa-solid ${data.k2_icon}`;
-      if (data.k3_icon) document.getElementById('kpi3-icon').className = `fa-solid ${data.k3_icon}`;
-
-      const chartCanvas = document.getElementById('mainChart');
-      const threeContainer = document.getElementById('threeContainer');
-      const mapContainer = document.getElementById('mapContainer');
-      const creativeContainer = document.getElementById('creativeContainer');
-
-      if (data.vizMode === 'three') {
-        chartCanvas.style.display = 'none';
-        creativeContainer.style.display = 'none';
-        mapContainer.style.display = 'none';
-        threeContainer.style.display = 'block';
-        initThreeJs();
-      } else if (data.vizMode === 'map') {
-        chartCanvas.style.display = 'none';
-        threeContainer.style.display = 'none';
-        creativeContainer.style.display = 'none';
-        mapContainer.style.display = 'block';
-        initLeafletMap();
-      } else if (data.vizMode === 'creative') {
-        chartCanvas.style.display = 'none';
-        threeContainer.style.display = 'none';
-        mapContainer.style.display = 'none';
-        creativeContainer.style.display = 'block';
-        creativeContainer.innerHTML = data.creativeHtml;
-      } else {
-        threeContainer.style.display = 'none';
-        creativeContainer.style.display = 'none';
-        mapContainer.style.display = 'none';
-        chartCanvas.style.display = 'block';
-        renderChart(data.chartType, data.chartData);
-      }
-    }
-
-    function prevView() {
-      if (currentViewId > 1) switchView(currentViewId - 1);
-    }
-
-    function nextView() {
-      if (currentViewId < 9) switchView(currentViewId + 1);
-    }
-
-    function renderChart(type, chartData) {
-      const ctx = document.getElementById('mainChart').getContext('2d');
-      if (currentChart) currentChart.destroy();
-
-      currentChart = new Chart(ctx, {
-        type: type,
-        data: chartData,
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { 
-            legend: { labels: { color: '#e2e8f0', font: { family: 'Outfit', size: 13, weight: '600' } } } 
-          },
-          scales: (type !== 'doughnut' && type !== 'polarArea' && type !== 'radar') ? {
-            x: { ticks: { color: '#94a3b8', font: { family: 'Inter', size: 12 } }, grid: { color: 'rgba(255,255,255,0.06)' } },
-            y: { ticks: { color: '#94a3b8', font: { family: 'Inter', size: 12 } }, grid: { color: 'rgba(255,255,255,0.06)' } }
-          } : {}
-        }
-      });
-    }
-
-    /* MAPA INTERACTIVO LEAFLET PARA VISTA 3 (GEOPORTAL MÉRIDA) */
-    let leafletMap = null;
-    function initLeafletMap() {
-      const container = document.getElementById('mapContainer');
-      if (!container) return;
-
-      if (leafletMap) {
-        setTimeout(() => leafletMap.invalidateSize(), 150);
-        return;
-      }
-
-      leafletMap = L.map('mapContainer').setView([20.9674, -89.6237], 12);
-
-      const osmStandard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        maxZoom: 19
-      });
-
-      const esriDark = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-        maxZoom: 16
-      });
-
-      // Agregar mapa base Esri Oscuro por defecto (100% Libre sin API Key ni marcas de agua)
-      esriDark.addTo(leafletMap);
-
-      const baseMaps = {
-        "Mapa Oscuro (Esri - Sin API Key)": esriDark,
-        "OpenStreetMap Estándar": osmStandard
-      };
-
-      L.control.layers(baseMaps).addTo(leafletMap);
-
-      const meridaNodes = [
-      {
-            "name": "Semáforo Nodo #1 (OSM 287136660)",
-            "lat": 20.968679,
-            "lng": -89.6228018,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #2 (OSM 287136734)",
-            "lat": 20.9635107,
-            "lng": -89.623809,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #3 (OSM 287137221)",
-            "lat": 20.966621,
-            "lng": -89.6244412,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #4 (OSM 287139288)",
-            "lat": 20.9891449,
-            "lng": -89.6219309,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #5 (OSM 287651447)",
-            "lat": 20.9709106,
-            "lng": -89.6223877,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #6 (OSM 287654174)",
-            "lat": 20.9697468,
-            "lng": -89.6157924,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #7 (OSM 287654175)",
-            "lat": 20.9621152,
-            "lng": -89.6175942,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #8 (OSM 287663257)",
-            "lat": 20.9844886,
-            "lng": -89.6120247,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #9 (OSM 287826552)",
-            "lat": 20.9707012,
-            "lng": -89.6211319,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #10 (OSM 287830781)",
-            "lat": 20.961363,
-            "lng": -89.6271118,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #11 (OSM 287830802)",
-            "lat": 20.9612669,
-            "lng": -89.6255396,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #12 (OSM 292283904)",
-            "lat": 20.9811828,
-            "lng": -89.618407,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #13 (OSM 292285918)",
-            "lat": 20.9867451,
-            "lng": -89.6243508,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #14 (OSM 292285946)",
-            "lat": 20.9811957,
-            "lng": -89.6185015,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #15 (OSM 292285954)",
-            "lat": 20.9817625,
-            "lng": -89.6182961,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #16 (OSM 292288427)",
-            "lat": 20.9913822,
-            "lng": -89.6114439,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #17 (OSM 297860865)",
-            "lat": 20.9680017,
-            "lng": -89.6257694,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #18 (OSM 297861993)",
-            "lat": 20.9860943,
-            "lng": -89.6175939,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #19 (OSM 297862024)",
-            "lat": 20.9857198,
-            "lng": -89.6176768,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #20 (OSM 297863305)",
-            "lat": 20.966197,
-            "lng": -89.6220566,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #21 (OSM 315232529)",
-            "lat": 20.962922,
-            "lng": -89.6292792,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #22 (OSM 315232546)",
-            "lat": 20.9615932,
-            "lng": -89.6294328,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #23 (OSM 315233877)",
-            "lat": 20.9641408,
-            "lng": -89.6183206,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #24 (OSM 315233884)",
-            "lat": 20.9613835,
-            "lng": -89.6190418,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #25 (OSM 315233886)",
-            "lat": 20.9654415,
-            "lng": -89.6180382,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #26 (OSM 315233889)",
-            "lat": 20.9699445,
-            "lng": -89.6170236,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #27 (OSM 315233936)",
-            "lat": 20.9647348,
-            "lng": -89.6210807,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #28 (OSM 315233937)",
-            "lat": 20.9659629,
-            "lng": -89.6208115,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #29 (OSM 315234540)",
-            "lat": 20.9753223,
-            "lng": -89.6198321,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #30 (OSM 317734720)",
-            "lat": 20.9979761,
-            "lng": -89.6214591,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #31 (OSM 317750377)",
-            "lat": 20.9978576,
-            "lng": -89.6215407,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #32 (OSM 324566561)",
-            "lat": 20.961078,
-            "lng": -89.6179327,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #33 (OSM 324566662)",
-            "lat": 20.9639256,
-            "lng": -89.6171389,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #34 (OSM 324566665)",
-            "lat": 20.9643976,
-            "lng": -89.6195442,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #35 (OSM 325167591)",
-            "lat": 20.960237,
-            "lng": -89.6273419,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #36 (OSM 325167731)",
-            "lat": 20.9611141,
-            "lng": -89.6242812,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #37 (OSM 325183626)",
-            "lat": 20.9864029,
-            "lng": -89.6218588,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #38 (OSM 325184312)",
-            "lat": 20.9938183,
-            "lng": -89.6283956,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #39 (OSM 325185747)",
-            "lat": 20.9874525,
-            "lng": -89.619642,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #40 (OSM 325186587)",
-            "lat": 20.993096,
-            "lng": -89.6208428,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #41 (OSM 327270484)",
-            "lat": 21.0026224,
-            "lng": -89.6287283,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #42 (OSM 327271088)",
-            "lat": 21.0031524,
-            "lng": -89.6223376,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #43 (OSM 327285900)",
-            "lat": 20.9980695,
-            "lng": -89.6114291,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #44 (OSM 327287448)",
-            "lat": 20.99775,
-            "lng": -89.6100501,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #45 (OSM 327307668)",
-            "lat": 20.9939255,
-            "lng": -89.6025693,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #46 (OSM 348201222)",
-            "lat": 20.96657,
-            "lng": -89.6301443,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #47 (OSM 348201228)",
-            "lat": 20.9649803,
-            "lng": -89.6222923,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #48 (OSM 348201255)",
-            "lat": 20.9635843,
-            "lng": -89.6250732,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #49 (OSM 348201342)",
-            "lat": 20.9630814,
-            "lng": -89.6306142,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #50 (OSM 356411409)",
-            "lat": 21.0041248,
-            "lng": -89.622692,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #51 (OSM 416337833)",
-            "lat": 21.0063571,
-            "lng": -89.6308136,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #52 (OSM 444882009)",
-            "lat": 20.9817773,
-            "lng": -89.6183885,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #53 (OSM 517317102)",
-            "lat": 20.9677315,
-            "lng": -89.6242051,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #54 (OSM 517317785)",
-            "lat": 20.9685075,
-            "lng": -89.6295875,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #55 (OSM 517317803)",
-            "lat": 20.9674927,
-            "lng": -89.623069,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #56 (OSM 517317950)",
-            "lat": 20.9668589,
-            "lng": -89.626013,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #57 (OSM 517318284)",
-            "lat": 20.9664183,
-            "lng": -89.6232663,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #58 (OSM 517318318)",
-            "lat": 20.9652249,
-            "lng": -89.6168076,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #59 (OSM 517318384)",
-            "lat": 20.9656738,
-            "lng": -89.6192738,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #60 (OSM 517318438)",
-            "lat": 20.9674848,
-            "lng": -89.6298951,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #61 (OSM 517318519)",
-            "lat": 20.9688611,
-            "lng": -89.6240199,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #62 (OSM 517318561)",
-            "lat": 20.9690892,
-            "lng": -89.6255437,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #63 (OSM 517319014)",
-            "lat": 20.9698727,
-            "lng": -89.6304566,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #64 (OSM 517319043)",
-            "lat": 20.969678,
-            "lng": -89.6291692,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #65 (OSM 517319258)",
-            "lat": 20.9687081,
-            "lng": -89.6308878,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #66 (OSM 517320715)",
-            "lat": 20.9699899,
-            "lng": -89.6238008,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #67 (OSM 517320786)",
-            "lat": 20.9707643,
-            "lng": -89.6278629,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #68 (OSM 517320962)",
-            "lat": 20.9696208,
-            "lng": -89.6213679,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #69 (OSM 517320963)",
-            "lat": 20.9698095,
-            "lng": -89.6226006,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #70 (OSM 517321177)",
-            "lat": 20.966402,
-            "lng": -89.6165255,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #71 (OSM 517321424)",
-            "lat": 20.9652223,
-            "lng": -89.6234865,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #72 (OSM 517331422)",
-            "lat": 20.977998,
-            "lng": -89.6356461,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #73 (OSM 517332362)",
-            "lat": 20.962339,
-            "lng": -89.6240191,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #74 (OSM 538891708)",
-            "lat": 21.009907,
-            "lng": -89.6032843,
-            "status": "safe",
-            "desc": "Semáforo con fase peatonal activa e iluminación nocturna",
-            "icon": "🟢"
-      },
-      {
-            "name": "Semáforo Nodo #75 (OSM 538891822)",
-            "lat": 21.0097997,
-            "lng": -89.6026782,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #76 (OSM 811397431)",
-            "lat": 21.0040486,
-            "lng": -89.6104078,
-            "status": "warning",
-            "desc": "Fase peatonal corta (15s) en zona de alto afluente",
-            "icon": "🟡"
-      },
-      {
-            "name": "Semáforo Nodo #77 (OSM 813035918)",
-            "lat": 20.9930597,
-            "lng": -89.616436,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #78 (OSM 831351607)",
-            "lat": 20.9861125,
-            "lng": -89.6197685,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #79 (OSM 831351655)",
-            "lat": 20.9908873,
-            "lng": -89.6166966,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      },
-      {
-            "name": "Semáforo Nodo #80 (OSM 831384126)",
-            "lat": 20.9847999,
-            "lng": -89.614135,
-            "status": "danger",
-            "desc": "Cruce desprotegido sin fase peatonal exclusiva",
-            "icon": "🔴"
-      }
-];
-
-      meridaNodes.forEach(node => {
-        let color = node.status === 'safe' ? '#10b981' : node.status === 'warning' ? '#ffbe0b' : '#ff5252';
-        let marker = L.circleMarker([node.lat, node.lng], {
-          radius: 10,
-          fillColor: color,
-          color: '#ffffff',
-          weight: 2,
-          opacity: 1,
-          fillOpacity: 0.85
-        }).addTo(leafletMap);
-
-        marker.bindPopup(`
-          <div style="font-family:'Outfit',sans-serif; color:#0f172a; padding:4px;">
-            <strong style="font-size:0.95rem; color:#0f172a;">${node.icon} ${node.name}</strong><br>
-            <span style="font-size:0.82rem; color:#475569;">${node.desc}</span><br>
-            <div style="margin-top:6px; font-weight:700; font-size:0.75rem; color:${color};">
-              ${node.status === 'safe' ? 'Fase Peatonal Activa' : node.status === 'warning' ? 'Fase Peatonal Corta' : 'CRUCE DESPROTEGIDO (SIN FASE PEATONAL)'}
-            </div>
-          </div>
-        `);
-      });
-
-      setTimeout(() => leafletMap.invalidateSize(), 300);
-    }
-
-    /* FUNCIONES INTERACTIVAS ESPECÍFICAS DE CADA VISTA */
-    function updateBusView(filter) {
-      const list = document.getElementById('bus-stops-list');
-      if (!list) return;
-      if (filter === 'periferico') {
-        list.innerHTML = `
-          <div class="bus-stop-card">
-            <i class="fa-solid fa-bus bus-stop-icon"></i>
-            <div style="flex:1;">
-              <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Salida Progreso (Periférico Norte)</div>
-              <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Sin puente peatonal en 450m • Velocidad: 90 km/h</div>
-              <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:90%;"></div></div>
-            </div>
-            <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-cyan);">90% Congestión</div>
-          </div>
-        `;
-      } else if (filter === 'kanasin') {
-        list.innerHTML = `
-          <div class="bus-stop-card">
-            <i class="fa-solid fa-bus bus-stop-icon" style="color:var(--accent-amber);"></i>
-            <div style="flex:1;">
-              <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Entronque Kanasín (Periférico Oriente)</div>
-              <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Cruce a nivel de calle • Tiempo espera promedio: 14 min</div>
-              <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:82%; background:linear-gradient(90deg, #ffbe0b, #ff5252);"></div></div>
-            </div>
-            <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-amber);">82% Congestión</div>
-          </div>
-        `;
-      } else {
-        switchView(2);
-      }
-    }
-
-    function filterLetters(cat) {
-      const container = document.getElementById('letters-container');
-      if (!container) return;
-      const cards = container.querySelectorAll('.letter-card');
-      cards.forEach(card => {
-        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    function showNewsTopic(topic) {
-      const box = document.getElementById('news-snippet-box');
-      if (!box) return;
-      const topics = {
-        'periferico': 'Noticia destacada: "Vecinos reportan que cruzar el Periférico de Mérida toma hasta 10 minutos esperando huecos en el tráfico vehicular."',
-        'luz': 'Noticia destacada: "Falta de alumbrado público en cruces secundarios incrementa percepción de inseguridad nocturna."',
-        'velocidad': 'Noticia destacada: "Exceso de velocidad en avenidas principales supera el límite permitido de 60 km/h."',
-        'banquetas': 'Noticia destacada: "Banquetas fracturadas e invadidas obligan a caminar sobre el arroyo vehicular en el centro."',
-        'semaforo': 'Noticia destacada: "Solicitan semáforos peatonales inteligentes con botón de activación en zonas escolares."',
-        'atropellamiento': 'Noticia destacada: "Registran 50 menciones de percances peatonales en notas locales durante el último trimestre."',
-        'cruceros': 'Noticia destacada: "Identifican los 5 cruceros con mayor penumbra y riesgo en la zona metropolitana."'
-      };
-      box.innerHTML = `<strong style="color:var(--accent-cyan);"><i class="fa-solid fa-newspaper"></i> RESUMEN PERIODÍSTICO:</strong> ${topics[topic] || "Información recopilada mediante scraping."}`;
-    }
-
-    function setPedestrianProfile(profile) {
-      const countVal = document.getElementById('footprints-count-val');
-      const resultVal = document.getElementById('footprints-result-val');
-      if (!countVal || !resultVal) return;
-
-      if (profile === 'joven') {
-        countVal.innerText = '24 Pasos Requeridos (12s)';
-        resultVal.innerText = 'Paso Seguro a los 12s';
-        resultVal.style.color = '#10b981';
-      } else if (profile === 'mayor') {
-        countVal.innerText = '28 Pasos Requeridos (20s)';
-        resultVal.innerText = 'Corte de Verde a los 18 Pasos (Exposicion 5s)';
-        resultVal.style.color = 'var(--accent-amber)';
-      } else {
-        countVal.innerText = '34 Pasos Requeridos (29s)';
-        resultVal.innerText = 'Riesgo Alto: Requiere 29s (Verde solo 15s)';
-        resultVal.style.color = '#ef4444';
-      }
-    }
-
-    function updateAmbientHour(val) {
-      const hour = parseInt(val);
-      const display = document.getElementById('time-display-val');
-      const tag = document.getElementById('ambient-tag');
-      const title = document.getElementById('ambient-title');
-      const desc = document.getElementById('ambient-desc');
-      
-      const formatted = (hour < 10 ? '0' + hour : hour) + ':00 ' + (hour >= 12 ? 'PM' : 'AM');
-      display.innerText = `${formatted} (${hour >= 11 && hour <= 16 ? 'Radiación Máxima 38°C' : hour >= 19 ? 'Penumbra Nocturna' : 'Clima Templado'})`;
-
-      if (hour >= 11 && hour <= 16) {
-        document.body.className = 'theme-day';
-        tag.innerText = 'DILEMA 1: CALOR EXTREMO (12 PM - 4 PM)';
-        title.innerHTML = '<i class="fa-solid fa-sun" style="color:#ffbe0b;"></i> Banquetas Desiertas a 38°C';
-        desc.innerText = 'Sin árboles ni techumbres, la radiación solar vuelve inviable la caminata. Los peatones buscan refugio en sombras reducidas sobre la carpeta asfáltica.';
-      } else if (hour >= 19 || hour <= 5) {
-        document.body.className = 'theme-night';
-        tag.innerText = 'DILEMA 2: PENUMBRA NOCTURNA (7 PM - 10 PM)';
-        title.innerHTML = '<i class="fa-solid fa-moon" style="color:#00f2fe;"></i> Concentración de Flujo en Oscuridad';
-        desc.innerText = 'La afluencia peatonal se vuelca al anochecer. La combinación de luminarias fundidas y vehículos a alta velocidad genera la máxima sensación de peligro.';
-      } else {
-        document.body.className = '';
-        tag.innerText = 'TRANSICIÓN: MOVILIDAD TEMPRANA (6 AM - 10 AM)';
-        title.innerHTML = '<i class="fa-solid fa-cloud-sun" style="color:var(--accent-cyan);"></i> Flujo Concurrente Escolar y Laboral';
-        desc.innerText = 'Horario de mayor densidad peatonal hacia paraderos. Las condiciones térmicas son moderadas pero el tráfico vehicular alcanza su cresta.';
-      }
-    }
-
-    /* VISOR 3D THREE.JS PARA VISTA 8 (LiDAR AULA) */
-    let threeInitialized = false;
-    let camera, scene, renderer, pointCloud;
-
-    function initThreeJs() {
-      if (threeInitialized) return;
-      threeInitialized = true;
-      const container = document.getElementById('threeContainer');
-      container.innerHTML = `
-        <div class="lidar-overlay-controls">
-          <button class="lidar-btn-ctrl" onclick="setLidarCamera('overview')"><i class="fa-solid fa-eye"></i> Vista Panorámica</button>
-          <button class="lidar-btn-ctrl" onclick="setLidarCamera('pedestrian')"><i class="fa-solid fa-person"></i> Perspectiva Peatón</button>
-          <button class="lidar-btn-ctrl" onclick="setLidarCamera('blindspot')"><i class="fa-solid fa-triangle-exclamation"></i> Ángulo Ciego (3.5m)</button>
-        </div>
-      `;
-
-      scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x060913);
-      camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
-      renderer = new THREE.WebGLRenderer({ antialias: true });
-      renderer.setSize(container.clientWidth, container.clientHeight);
-      container.appendChild(renderer.domElement);
-
-      const geometry = new THREE.BufferGeometry();
-      const count = 5400;
-      const positions = new Float32Array(count * 3);
-      const colors = new Float32Array(count * 3);
-
-      for (let i = 0; i < count; i++) {
-        const x = (Math.random() - 0.5) * 8;
-        const y = (Math.random() - 0.5) * 3;
-        const z = (Math.random() - 0.5) * 8;
-        positions[i*3] = x;
-        positions[i*3+1] = y;
-        positions[i*3+2] = z;
-
-        colors[i*3] = x > 0 ? 0.0 : 0.95;
-        colors[i*3+1] = 0.95;
-        colors[i*3+2] = x > 0 ? 0.99 : 0.6;
-      }
-
-      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
-      const material = new THREE.PointsMaterial({ size: 0.065, vertexColors: true });
-      pointCloud = new THREE.Points(geometry, material);
-      scene.add(pointCloud);
-
-      camera.position.set(5, 4.5, 7);
-      camera.lookAt(0, 0, 0);
-
-      function animate() {
-        requestAnimationFrame(animate);
-        pointCloud.rotation.y += 0.005;
-        renderer.render(scene, camera);
-      }
-      animate();
-    }
-
-    function setLidarCamera(preset) {
-      if (!camera) return;
-      if (preset === 'overview') {
-        camera.position.set(5, 4.5, 7);
-        camera.lookAt(0, 0, 0);
-      } else if (preset === 'pedestrian') {
-        camera.position.set(0, 0.6, 2.8);
-        camera.lookAt(0, 0, -2);
-      } else if (preset === 'blindspot') {
-        camera.position.set(-2.5, 0.9, 1.2);
-        camera.lookAt(1.2, 0, -1);
-      }
-    }
-
-    window.onload = () => switchView(1);
-  </script>
+  <!-- Modular Scripts Loaded in Order (Compatible with file:/// and http(s)://) -->
+  <script src="./js/data/viewsData.js"></script>
+  <script src="./js/modules/storytelling.js"></script>
+  <script src="./js/modules/gisMap.js"></script>
+  <script src="./js/modules/charts.js"></script>
+  <script src="./js/modules/forceGraph.js"></script>
+  <script src="./js/modules/threeVisuals.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>

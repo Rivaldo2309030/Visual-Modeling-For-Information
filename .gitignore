@@ -4,6 +4,7 @@
 *.pdf
 *.csv
 *.ply
+scratch/
 
 # Ignorar datos crudos en local pero permitir la estructura de carpetas
 data/*.csv
