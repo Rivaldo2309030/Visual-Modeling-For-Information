@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Storytelling: Sentir la Calle | Plataforma Interactiva de 9 Vistas</title>
+  <title>Data Storytelling: Sentir la Calle | Plataforma Vistosa e Interactiva de 9 Vistas</title>
   
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Chart.js & Three.js CDN -->
@@ -17,17 +17,19 @@
 
   <style>
     :root {
-      --bg-main: #0a0f1d;
-      --bg-card: rgba(15, 23, 42, 0.75);
-      --border-card: rgba(255, 255, 255, 0.08);
-      --border-glow: rgba(0, 242, 254, 0.3);
+      --bg-main: #060913;
+      --bg-card: rgba(15, 23, 42, 0.82);
+      --border-card: rgba(255, 255, 255, 0.12);
+      --border-glow: rgba(0, 242, 254, 0.5);
       --accent-cyan: #00f2fe;
-      --accent-blue: #4facfe;
-      --accent-coral: #ff7e5f;
-      --accent-amber: #feb47b;
+      --accent-blue: #3b82f6;
+      --accent-magenta: #ec4899;
+      --accent-coral: #ff5252;
+      --accent-amber: #ffbe0b;
       --accent-green: #10b981;
       --accent-purple: #a855f7;
-      --text-main: #f8fafc;
+      --accent-neon-cyan: #00f0ff;
+      --text-main: #ffffff;
       --text-muted: #94a3b8;
       --font-heading: 'Outfit', sans-serif;
       --font-body: 'Inter', sans-serif;
@@ -35,244 +37,313 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    
     body {
       background-color: var(--bg-main);
       background-image: 
-        radial-gradient(at 0% 0%, rgba(0, 242, 254, 0.08) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(255, 126, 95, 0.08) 0px, transparent 50%);
+        radial-gradient(at 10% 10%, rgba(0, 242, 254, 0.18) 0px, transparent 40%),
+        radial-gradient(at 90% 20%, rgba(236, 72, 153, 0.18) 0px, transparent 45%),
+        radial-gradient(at 50% 90%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+        radial-gradient(at 20% 80%, rgba(255, 190, 11, 0.12) 0px, transparent 40%);
+      background-attachment: fixed;
       color: var(--text-main);
       font-family: var(--font-body);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       overflow-x: hidden;
-      transition: background-color 0.5s ease;
+      transition: background 0.6s ease;
     }
 
     /* Temas Dinámicos Ambientales para Vista 7 */
     body.theme-day {
-      --bg-main: #1e1b18;
-      background-image: radial-gradient(at 50% 0%, rgba(254, 180, 123, 0.15) 0px, transparent 60%);
+      --bg-main: #181510;
+      background-image: 
+        radial-gradient(at 50% 0%, rgba(255, 190, 11, 0.35) 0px, transparent 60%),
+        radial-gradient(at 10% 90%, rgba(236, 72, 153, 0.2) 0px, transparent 50%);
     }
     body.theme-night {
-      --bg-main: #050811;
-      background-image: radial-gradient(at 50% 100%, rgba(168, 85, 247, 0.15) 0px, transparent 60%);
+      --bg-main: #030611;
+      background-image: 
+        radial-gradient(at 50% 100%, rgba(168, 85, 247, 0.3) 0px, transparent 60%),
+        radial-gradient(at 90% 10%, rgba(0, 242, 254, 0.25) 0px, transparent 50%);
     }
 
+    /* Estilos Glassmorphism Avanzado */
     .glass-panel {
       background: var(--bg-card);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--border-card);
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 1.5rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     }
-    .glass-panel:hover { border-color: var(--border-glow); }
+    .glass-panel:hover {
+      border-color: var(--border-glow);
+      box-shadow: 0 15px 50px -10px rgba(0, 242, 254, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    }
 
+    /* Header Estilizado Vibrant */
     header {
-      padding: 1rem 2rem;
-      border-bottom: 1px solid var(--border-card);
+      padding: 1.1rem 2.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(10, 15, 29, 0.92);
+      background: rgba(6, 9, 19, 0.88);
       position: sticky; top: 0; z-index: 100;
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     }
 
-    .brand-container { display: flex; align-items: center; gap: 12px; }
+    .brand-container { display: flex; align-items: center; gap: 14px; }
     .brand-logo {
-      width: 44px; height: 44px; border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      width: 48px; height: 48px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
       display: flex; align-items: center; justify-content: center;
-      font-size: 20px; color: #000; font-weight: 800;
-      box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+      font-size: 24px; color: #fff; font-weight: 900;
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
+      animation: logoGlow 3s infinite alternate;
     }
+    @keyframes logoGlow {
+      0% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.5); }
+      100% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.7); }
+    }
+
     .brand-title {
-      font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700;
-      background: linear-gradient(to right, #fff, #94a3b8);
+      font-family: var(--font-heading); font-size: 1.45rem; font-weight: 800;
+      background: linear-gradient(135deg, #ffffff 0%, #00f2fe 50%, #ec4899 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
     }
-    .brand-subtitle { font-size: 0.75rem; color: var(--accent-cyan); letter-spacing: 1px; text-transform: uppercase; font-family: var(--font-mono); }
+    .brand-subtitle { font-size: 0.78rem; color: var(--accent-cyan); letter-spacing: 1.2px; text-transform: uppercase; font-family: var(--font-mono); font-weight: 600; }
 
     .badge-pill {
-      display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px;
-      border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px;
+      border-radius: 30px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .badge-primary { background: rgba(0, 242, 254, 0.12); border: 1px solid var(--accent-cyan); color: var(--accent-cyan); }
-    .badge-purple { background: rgba(168, 85, 247, 0.15); border: 1px solid var(--accent-purple); color: #d8b4fe; }
+    .badge-primary {
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(59, 130, 246, 0.2));
+      border: 1px solid var(--accent-cyan); color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+    }
+    .badge-magenta {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(168, 85, 247, 0.2));
+      border: 1px solid var(--accent-magenta); color: #f472b6;
+      box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
+    }
 
+    /* Pestañas Navegación 9 Vistas */
     .tabs-nav-container {
-      background: rgba(15, 23, 42, 0.6);
-      padding: 0.75rem 2rem;
+      background: rgba(15, 23, 42, 0.75);
+      padding: 0.85rem 2rem;
       border-bottom: 1px solid var(--border-card);
       overflow-x: auto; white-space: nowrap;
+      backdrop-filter: blur(12px);
     }
-    .tabs-wrapper { display: inline-flex; gap: 8px; }
+    .tabs-wrapper { display: inline-flex; gap: 10px; }
     .tab-btn {
-      background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-card); color: var(--text-muted);
-      padding: 8px 16px; border-radius: 12px; font-family: var(--font-heading);
-      font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.25s ease;
-      display: flex; align-items: center; gap: 8px;
+      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-card); color: var(--text-muted);
+      padding: 10px 18px; border-radius: 14px; font-family: var(--font-heading);
+      font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease;
+      display: flex; align-items: center; gap: 9px;
     }
-    .tab-btn:hover { background: rgba(255, 255, 255, 0.08); color: var(--text-main); border-color: rgba(255,255,255,0.2); }
+    .tab-btn:hover {
+      background: rgba(255, 255, 255, 0.12); color: #fff; border-color: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
     .tab-btn.active {
-      background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(79, 172, 254, 0.15));
-      border-color: var(--accent-cyan); color: var(--accent-cyan);
-      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
-    }
-    .tab-btn.lidar-btn.active {
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
-      border-color: var(--accent-purple); color: #d8b4fe;
-      box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.25), rgba(236, 72, 153, 0.25));
+      border-color: var(--accent-cyan); color: #fff;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+      transform: translateY(-2px);
     }
 
     main {
-      flex: 1; padding: 1.5rem 2rem; max-width: 1600px; width: 100%; margin: 0 auto;
-      display: flex; flex-direction: column; gap: 1.5rem;
+      flex: 1; padding: 1.8rem 2.5rem; max-width: 1650px; width: 100%; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 1.8rem;
     }
 
+    /* Banner Fuente Principal */
     .source-banner {
       display: flex; justify-content: space-between; align-items: center;
-      padding: 1rem 1.5rem; border-left: 4px solid var(--accent-cyan);
+      padding: 1.2rem 1.8rem; border-left: 5px solid var(--accent-cyan);
       flex-wrap: wrap; gap: 1rem;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8));
     }
-    .source-title { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--accent-cyan); }
-    .source-desc { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+    .source-title { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--accent-cyan); }
+    .source-desc { font-size: 0.88rem; color: var(--text-muted); margin-top: 3px; }
 
     .view-content-grid {
-      display: grid; grid-template-columns: 1fr 380px; gap: 1.5rem; flex: 1;
+      display: grid; grid-template-columns: 1fr 400px; gap: 1.8rem; flex: 1;
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1150px) {
       .view-content-grid { grid-template-columns: 1fr; }
     }
 
+    /* Contenedor Visualización Izquierda */
     .viz-container {
-      display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem; min-height: 540px;
+      display: flex; flex-direction: column; gap: 1.2rem; padding: 1.8rem; min-height: 580px;
     }
-    .viz-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
-    .viz-title { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    .viz-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
+    .viz-title { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; display: flex; align-items: center; gap: 10px; color: #fff; }
 
     .viz-canvas-wrapper {
-      flex: 1; min-height: 440px; background: rgba(0, 0, 0, 0.35); border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.06); position: relative; overflow: hidden;
+      flex: 1; min-height: 460px; background: rgba(3, 7, 18, 0.6); border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08); position: relative; overflow: hidden;
       display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem;
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
     }
 
-    .story-panel { display: flex; flex-direction: column; gap: 1.25rem; padding: 1.5rem; }
-    .story-card-title { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--accent-coral); display: flex; align-items: center; gap: 8px; }
-    .story-text { font-size: 0.92rem; line-height: 1.65; color: #cbd5e1; }
+    /* Panel Lateral Storytelling */
+    .story-panel { display: flex; flex-direction: column; gap: 1.4rem; padding: 1.8rem; }
+    .story-card-title { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--accent-magenta); display: flex; align-items: center; gap: 10px; }
+    .story-text { font-size: 0.95rem; line-height: 1.7; color: #e2e8f0; font-weight: 400; }
 
-    .kpi-grid { display: flex; flex-direction: column; gap: 0.75rem; }
-    .kpi-card { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 1rem; transition: transform 0.2s ease; }
-    .kpi-card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.15); }
-    .kpi-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; background: rgba(255, 255, 255, 0.05); color: var(--accent-cyan); }
+    .kpi-grid { display: flex; flex-direction: column; gap: 0.9rem; }
+    .kpi-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+      border: 1px solid var(--border-card); border-radius: 14px; padding: 1.1rem;
+      display: flex; align-items: center; gap: 1.2rem; transition: all 0.3s ease;
+    }
+    .kpi-card:hover { transform: translateY(-3px); border-color: var(--accent-cyan); background: rgba(0, 242, 254, 0.06); }
+    .kpi-icon {
+      width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; background: rgba(255, 255, 255, 0.08); color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+    }
     .kpi-info { display: flex; flex-direction: column; }
-    .kpi-value { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; color: #fff; }
-    .kpi-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .kpi-value { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: #fff; }
+    .kpi-label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; font-weight: 600; }
 
-    footer { padding: 1rem 2rem; border-top: 1px solid var(--border-card); display: flex; justify-content: space-between; align-items: center; background: rgba(10, 15, 29, 0.92); flex-wrap: wrap; gap: 1rem; }
-    .nav-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-card); color: var(--text-main); padding: 8px 18px; border-radius: 10px; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s ease; }
-    .nav-btn:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--accent-cyan); color: var(--accent-cyan); }
+    footer {
+      padding: 1.2rem 2.5rem; border-top: 1px solid var(--border-card); display: flex;
+      justify-content: space-between; align-items: center; background: rgba(6, 9, 19, 0.9); flex-wrap: wrap; gap: 1rem;
+    }
+    .nav-btn {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+      border: 1px solid var(--border-card); color: var(--text-main); padding: 10px 22px; border-radius: 12px;
+      font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease;
+    }
+    .nav-btn:hover { background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); border-color: var(--accent-cyan); color: #000; box-shadow: 0 0 20px rgba(0, 242, 254, 0.4); }
 
-    .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan); animation: pulse 1.5s infinite; }
-    @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.7); } 70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(0, 242, 254, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); } }
+    .pulse-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent-cyan); box-shadow: 0 0 12px var(--accent-cyan); animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.8); } 70% { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(0, 242, 254, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); } }
 
-    /* ESTILOS DE VISUALIZACIONES METAFÓRICAS E INTERACTIVAS PARA TODAS LAS VISTAS */
-    .creative-viz-wrapper { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 1.2rem; }
+    /* ESTILOS DE COMPONENTES INTERACTIVOS MULTI-VISTA */
+    .creative-viz-wrapper { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 1.3rem; }
 
-    /* Controls Bar inside Viz Wrapper */
     .viz-controls-bar {
       width: 100%; display: flex; justify-content: space-between; align-items: center;
-      background: rgba(255,255,255,0.03); border: 1px solid var(--border-card);
-      padding: 0.5rem 1rem; border-radius: 8px; margin-bottom: 0.75rem; gap: 10px; flex-wrap: wrap;
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border-card);
+      padding: 0.6rem 1.2rem; border-radius: 12px; margin-bottom: 0.5rem; gap: 12px; flex-wrap: wrap;
     }
     .ctrl-btn {
-      background: rgba(255,255,255,0.05); border: 1px solid var(--border-card); color: var(--text-muted);
-      padding: 4px 12px; border-radius: 6px; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;
+      background: rgba(255,255,255,0.06); border: 1px solid var(--border-card); color: var(--text-muted);
+      padding: 6px 14px; border-radius: 8px; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.25s ease;
     }
-    .ctrl-btn:hover, .ctrl-btn.active { background: rgba(0,242,254,0.15); color: var(--accent-cyan); border-color: var(--accent-cyan); }
+    .ctrl-btn:hover, .ctrl-btn.active {
+      background: linear-gradient(135deg, rgba(0,242,254,0.25), rgba(236,72,153,0.25));
+      color: #fff; border-color: var(--accent-cyan); box-shadow: 0 0 12px rgba(0,242,254,0.3);
+    }
 
-    /* Vista 1: Radiografía e Índice de Riesgo */
-    .v1-risk-comparator { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; width: 100%; }
-    .v1-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border-card); border-radius: 12px; padding: 1.2rem; text-align: center; }
-    .v1-number { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--accent-cyan); margin: 6px 0; }
+    /* Vista 1: Radiografía e Índices */
+    .v1-risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; width: 100%; }
+    .v1-stat-card {
+      background: linear-gradient(135deg, rgba(0,242,254,0.08), rgba(255,255,255,0.02));
+      border: 1px solid var(--border-glow); border-radius: 16px; padding: 1.4rem; text-align: center;
+    }
+    .v1-stat-num { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; color: var(--accent-cyan); text-shadow: 0 0 15px rgba(0,242,254,0.4); margin: 6px 0; }
 
     /* Vista 2: Paraderos de Autobús */
-    .bus-stops-visual { display: flex; flex-direction: column; gap: 0.85rem; width: 100%; }
-    .bus-stop-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border-card); border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; transition: all 0.2s ease; }
-    .bus-stop-card:hover { background: rgba(255,255,255,0.05); border-color: var(--accent-cyan); }
-    .bus-stop-icon { font-size: 1.8rem; color: var(--accent-cyan); }
-    .bus-stop-bar-bg { flex: 1; height: 14px; background: rgba(255,255,255,0.05); border-radius: 8px; overflow: hidden; display: flex; }
-    .bus-stop-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); border-radius: 8px; transition: width 0.5s ease; }
+    .bus-stops-visual { display: flex; flex-direction: column; gap: 1rem; width: 100%; }
+    .bus-stop-card {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--border-card); border-radius: 14px; padding: 1.1rem 1.4rem;
+      display: flex; align-items: center; gap: 1.2rem; cursor: pointer; transition: all 0.25s ease;
+    }
+    .bus-stop-card:hover { background: rgba(0,242,254,0.08); border-color: var(--accent-cyan); transform: translateX(5px); }
+    .bus-stop-icon { font-size: 2rem; color: var(--accent-cyan); text-shadow: 0 0 12px var(--accent-cyan); }
+    .bus-stop-bar-bg { flex: 1; height: 16px; background: rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden; display: flex; }
+    .bus-stop-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta)); border-radius: 10px; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
 
-    /* Vista 3: Semáforo y Simulación de Fase */
-    .traffic-sim-container { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; width: 100%; }
-    .semaphore-box { background: #111625; border: 3px solid #1e293b; border-radius: 24px; padding: 1rem 1.5rem; display: flex; gap: 1.2rem; box-shadow: 0 0 30px rgba(0,0,0,0.8); }
-    .light-circle { width: 42px; height: 42px; border-radius: 50%; opacity: 0.25; transition: opacity 0.3s ease, box-shadow 0.3s ease; }
+    /* Vista 3: Semáforo y Cuenta Regresiva */
+    .traffic-sim-container { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; width: 100%; }
+    .semaphore-box { background: #0c101d; border: 4px solid #1e293b; border-radius: 28px; padding: 1.2rem 2rem; display: flex; gap: 1.5rem; box-shadow: 0 0 40px rgba(0,0,0,0.9), inset 0 0 15px rgba(255,255,255,0.05); }
+    .light-circle { width: 50px; height: 50px; border-radius: 50%; opacity: 0.2; transition: all 0.4s ease; }
     .light-red { background: #ef4444; }
-    .light-yellow { background: #f59e0b; }
+    .light-yellow { background: #ffbe0b; }
     .light-green { background: #10b981; }
-    .light-red.active { opacity: 1; box-shadow: 0 0 20px #ef4444; }
-    .light-yellow.active { opacity: 1; box-shadow: 0 0 20px #f59e0b; }
-    .light-green.active { opacity: 1; box-shadow: 0 0 20px #10b981; }
-    .timer-display { font-family: var(--font-mono); font-size: 2.2rem; font-weight: 700; color: var(--accent-cyan); text-shadow: 0 0 10px var(--accent-cyan); }
+    .light-red.active { opacity: 1; box-shadow: 0 0 25px #ef4444; transform: scale(1.1); }
+    .light-yellow.active { opacity: 1; box-shadow: 0 0 25px #ffbe0b; transform: scale(1.1); }
+    .light-green.active { opacity: 1; box-shadow: 0 0 25px #10b981; transform: scale(1.1); }
+    .timer-display { font-family: var(--font-mono); font-size: 2.8rem; font-weight: 800; color: var(--accent-cyan); text-shadow: 0 0 15px var(--accent-cyan); }
 
-    /* Vista 4: Buzón de Cartas / Transparencia */
-    .letters-visual { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; width: 100%; }
-    .letter-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 8px; border-left: 4px solid var(--accent-coral); cursor: pointer; transition: all 0.25s ease; }
-    .letter-card:hover { transform: translateY(-3px); border-color: var(--accent-coral); background: rgba(255,126,95,0.06); }
-    .letter-header { font-size: 0.78rem; font-family: var(--font-mono); color: var(--accent-coral); display: flex; justify-content: space-between; }
-    .letter-body { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
-    .letter-status { align-self: flex-start; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; text-transform: uppercase; background: rgba(255,255,255,0.08); color: var(--text-muted); }
+    /* Vista 4: Buzón PNT */
+    .letters-visual { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; width: 100%; }
+    .letter-card {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); border-radius: 16px; padding: 1.2rem;
+      display: flex; flex-direction: column; gap: 10px; border-left: 5px solid var(--accent-coral); cursor: pointer; transition: all 0.3s ease;
+    }
+    .letter-card:hover { transform: translateY(-4px); border-color: var(--accent-coral); background: rgba(255,82,82,0.1); box-shadow: 0 10px 30px rgba(255,82,82,0.2); }
+    .letter-header { font-size: 0.82rem; font-family: var(--font-mono); color: var(--accent-coral); display: flex; justify-content: space-between; font-weight: 700; }
+    .letter-body { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.5; }
 
-    /* Vista 5: Nube de Frases y Ticker Digital */
-    .news-cloud-visual { display: flex; flex-direction: column; gap: 1.2rem; width: 100%; }
-    .news-ticker { background: rgba(0,242,254,0.06); border: 1px solid var(--border-glow); border-radius: 8px; padding: 8px 16px; font-size: 0.85rem; color: var(--accent-cyan); display: flex; align-items: center; gap: 10px; overflow: hidden; }
-    .tags-container { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-content: center; }
-    .news-tag { padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; background: rgba(255,255,255,0.03); border: 1px solid var(--border-card); cursor: pointer; transition: all 0.2s ease; }
-    .news-tag:hover { transform: scale(1.05); }
-    .tag-large { font-size: 1.1rem; color: var(--accent-coral); border-color: var(--accent-coral); background: rgba(255,126,95,0.1); }
-    .tag-medium { font-size: 0.95rem; color: var(--accent-amber); border-color: var(--accent-amber); }
+    /* Vista 5: Nube de Titulares y News Ticker */
+    .news-cloud-visual { display: flex; flex-direction: column; gap: 1.4rem; width: 100%; }
+    .news-ticker {
+      background: linear-gradient(135deg, rgba(0,242,254,0.1), rgba(236,72,153,0.1));
+      border: 1px solid var(--border-glow); border-radius: 12px; padding: 10px 20px; font-size: 0.9rem; color: var(--accent-cyan);
+      display: flex; align-items: center; gap: 12px; font-weight: 600;
+    }
+    .tags-container { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-content: center; }
+    .news-tag { padding: 10px 20px; border-radius: 30px; font-size: 0.9rem; font-weight: 700; background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); cursor: pointer; transition: all 0.25s ease; }
+    .news-tag:hover { transform: scale(1.08); box-shadow: 0 0 15px rgba(0,242,254,0.3); }
+    .tag-large { font-size: 1.15rem; color: var(--accent-coral); border-color: var(--accent-coral); background: rgba(255,82,82,0.15); }
+    .tag-medium { font-size: 1rem; color: var(--accent-amber); border-color: var(--accent-amber); }
 
-    /* Vista 6: Metáfora de Huellas de Zapatos */
-    .footprints-visual { width: 100%; display: flex; flex-direction: column; gap: 1.1rem; justify-content: center; }
-    .footprint-row { display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border-card); padding: 1rem 1.2rem; border-radius: 12px; }
-    .footprint-info { width: 180px; font-size: 0.85rem; font-weight: 600; color: var(--text-main); }
-    .footprints-track { flex: 1; display: flex; align-items: center; gap: 10px; overflow-x: auto; padding: 4px 0; }
-    .footprint-item { font-size: 1.2rem; color: var(--accent-cyan); display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
-    .footprint-item.step-left { transform: rotate(-15deg); color: var(--accent-cyan); }
-    .footprint-item.step-right { transform: rotate(15deg) translateY(4px); color: var(--accent-amber); }
-    .footprint-item.alert-step { color: var(--accent-coral); font-size: 1.3rem; }
-    .footprint-value { font-family: var(--font-mono); font-weight: 700; font-size: 0.95rem; color: var(--accent-amber); margin-left: auto; }
+    /* Vista 6: Huellas de Zapatos */
+    .footprints-visual { width: 100%; display: flex; flex-direction: column; gap: 1.2rem; justify-content: center; }
+    .footprint-row { display: flex; align-items: center; gap: 1.2rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-card); padding: 1.2rem 1.5rem; border-radius: 16px; }
+    .footprint-info { width: 200px; font-size: 0.9rem; font-weight: 700; color: var(--text-main); }
+    .footprints-track { flex: 1; display: flex; align-items: center; gap: 12px; overflow-x: auto; padding: 6px 0; }
+    .footprint-item { font-size: 1.35rem; color: var(--accent-cyan); display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+    .footprint-item.step-left { transform: rotate(-15deg); color: var(--accent-cyan); filter: drop-shadow(0 0 8px var(--accent-cyan)); }
+    .footprint-item.step-right { transform: rotate(15deg) translateY(5px); color: var(--accent-amber); filter: drop-shadow(0 0 8px var(--accent-amber)); }
+    .footprint-item.alert-step { color: var(--accent-coral); font-size: 1.5rem; filter: drop-shadow(0 0 12px var(--accent-coral)); }
+    .footprint-value { font-family: var(--font-mono); font-weight: 800; font-size: 1rem; color: var(--accent-amber); margin-left: auto; }
 
-    /* Vista 7: Sol y Noche (Análisis Ambiental) */
-    .ambient-visual-wrapper { display: flex; flex-direction: column; gap: 1.2rem; width: 100%; }
-    .ambient-slider-box { background: rgba(255,255,255,0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 1rem 1.5rem; display: flex; flex-direction: column; gap: 10px; }
-    .ambient-slider { width: 100%; accent-color: var(--accent-cyan); cursor: pointer; }
-    .info-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border-card); padding: 1.2rem; border-radius: 12px; }
-    .info-tag { font-size: 0.72rem; color: var(--accent-amber); font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 4px; }
-    .info-title { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-    .info-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+    /* Vista 7: Sol y Noche Ambient Slider */
+    .ambient-visual-wrapper { display: flex; flex-direction: column; gap: 1.4rem; width: 100%; }
+    .ambient-slider-box { background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); border-radius: 16px; padding: 1.2rem 1.8rem; display: flex; flex-direction: column; gap: 12px; }
+    .ambient-slider { width: 100%; accent-color: var(--accent-cyan); height: 8px; cursor: pointer; border-radius: 4px; }
+    .info-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); padding: 1.4rem; border-radius: 16px; }
+    .info-tag { font-size: 0.78rem; color: var(--accent-amber); font-family: var(--font-mono); text-transform: uppercase; margin-bottom: 6px; font-weight: 700; }
+    .info-title { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+    .info-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; }
 
-    /* Vista 8: LiDAR 3D */
-    .lidar-overlay-controls { position: absolute; top: 12px; left: 12px; display: flex; gap: 8px; z-index: 10; }
-    .lidar-btn-ctrl { background: rgba(10,15,29,0.85); border: 1px solid var(--accent-purple); color: #d8b4fe; padding: 6px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600; cursor: pointer; backdrop-filter: blur(8px); }
-    .lidar-btn-ctrl:hover { background: var(--accent-purple); color: #fff; }
+    /* Vista 8: LiDAR Controls */
+    .lidar-overlay-controls { position: absolute; top: 16px; left: 16px; display: flex; gap: 10px; z-index: 10; }
+    .lidar-btn-ctrl {
+      background: rgba(6,9,19,0.9); border: 1px solid var(--accent-purple); color: #e9d5ff; padding: 8px 16px;
+      border-radius: 10px; font-size: 0.8rem; font-weight: 700; cursor: pointer; backdrop-filter: blur(10px); transition: all 0.25s ease;
+    }
+    .lidar-btn-ctrl:hover { background: var(--accent-purple); color: #fff; box-shadow: 0 0 15px rgba(168,85,247,0.5); }
 
-    /* Vista 9: Matriz de Acción Integrada */
-    .v9-matrix-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; width: 100%; }
-    .v9-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border-card); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 6px; }
-    .v9-card-title { font-size: 0.9rem; font-weight: 700; color: var(--accent-cyan); display: flex; align-items: center; gap: 6px; }
-    .v9-card-body { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
+    /* Vista 9: Matriz de Acción */
+    .v9-matrix-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; width: 100%; }
+    .v9-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border-card); border-radius: 16px; padding: 1.2rem; display: flex; flex-direction: column; gap: 8px; transition: all 0.3s ease; }
+    .v9-card:hover { transform: translateY(-3px); border-color: var(--accent-cyan); background: rgba(0,242,254,0.06); }
+    .v9-card-title { font-size: 0.98rem; font-weight: 800; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px; }
+    .v9-card-body { font-size: 0.86rem; color: var(--text-muted); line-height: 1.5; }
   </style>
 </head>
 <body>
 
-  <!-- Header Header -->
+  <!-- Header Interactivo de la Plataforma -->
   <header>
     <div class="brand-container">
       <div class="brand-logo"><i class="fa-solid fa-person-walking"></i></div>
@@ -281,13 +352,13 @@
         <div class="brand-subtitle">PLATAFORMA INTERACTIVA MULTIESCALAR — MÉRIDA 2026</div>
       </div>
     </div>
-    <div style="display:flex; gap:10px; align-items:center;">
+    <div style="display:flex; gap:12px; align-items:center;">
       <span class="badge-pill badge-primary"><i class="fa-solid fa-layer-group"></i> 9 VISTAS INTEGRADAS</span>
-      <span class="badge-pill badge-purple"><i class="fa-solid fa-book-open"></i> UPY DATAVIZ STYLE</span>
+      <span class="badge-pill badge-magenta"><i class="fa-solid fa-wand-magic-sparkles"></i> HIGH-IMPACT VIZ</span>
     </div>
   </header>
 
-  <!-- Pestañas de Navegación de las 9 Vistas -->
+  <!-- Navegación por Pestañas de las 9 Vistas -->
   <div class="tabs-nav-container">
     <div class="tabs-wrapper">
       <button class="tab-btn active" onclick="switchView(1)"><i class="fa-solid fa-globe"></i> 1. Panorama General</button>
@@ -303,28 +374,28 @@
   </div>
 
   <main>
-    <!-- Banner de Fuente Principal por Vista -->
+    <!-- Banner Principal con Información de la Fuente -->
     <div id="source-banner" class="glass-panel source-banner">
-      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <span id="banner-badge" class="badge-pill badge-primary" style="padding:6px 14px;"><i class="fa-solid fa-database"></i> FUENTE PRINCIPAL: INEGI ATUS</span>
+      <div style="display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap;">
+        <span id="banner-badge" class="badge-pill badge-primary" style="padding:8px 18px;"><i class="fa-solid fa-database"></i> FUENTE PRINCIPAL: INEGI ATUS</span>
         <div>
           <div id="banner-title" class="source-title">1. INEGI — Sombras en las Cifras Oficiales</div>
           <div id="banner-desc" class="source-desc">Fuente Nacional: Registros sobre el espacio urbano y comportamiento vial en Mérida.</div>
         </div>
       </div>
-      <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.82rem; color:var(--text-muted);">
+      <div style="display:flex; align-items:center; gap:0.6rem; font-size:0.85rem; color:var(--text-muted);">
         <span>Responsable:</span>
-        <span id="banner-author" class="badge-pill" style="background:rgba(255,255,255,0.06); border:1px solid var(--border-card); color:#fff;"><i class="fa-solid fa-user-astronaut"></i> Rivaldo</span>
+        <span id="banner-author" class="badge-pill" style="background:rgba(255,255,255,0.08); border:1px solid var(--border-card); color:#fff;"><i class="fa-solid fa-user-astronaut"></i> Rivaldo</span>
       </div>
     </div>
 
-    <!-- Contenido en 2 Columnas -->
+    <!-- Rejilla en 2 Columnas Principal -->
     <div class="view-content-grid">
-      <!-- Columna Izquierda: Visualizaciones Adaptativas Creativas -->
+      <!-- Columna Izquierda: Visualización Interactiva Adaptativa -->
       <div class="glass-panel viz-container">
         <div class="viz-header">
           <div id="viz-title" class="viz-title"><i class="fa-solid fa-chart-bar" style="color:var(--accent-cyan);"></i> 7,134 Historias Bajo la Lupa del Censo Nacional</div>
-          <div style="display:flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--accent-cyan);">
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.85rem; color:var(--accent-cyan); font-weight:700;">
             <div class="pulse-dot"></div> Componente Interactivo Activo
           </div>
         </div>
@@ -336,7 +407,7 @@
         </div>
       </div>
 
-      <!-- Columna Derecha: Panel Lateral de Storytelling con KPIs -->
+      <!-- Columna Derecha: Panel Lateral Narrativo y KPIs -->
       <div class="glass-panel story-panel">
         <div class="story-card-title"><i class="fa-solid fa-quote-left"></i> <span id="story-title">El Registro de la Ciudad</span></div>
         <p id="story-text" class="story-text">
@@ -367,27 +438,26 @@
           </div>
         </div>
 
-        <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--border-card); font-size:0.8rem; color:var(--accent-cyan); display:flex; align-items:center; gap:8px;">
-          <i class="fa-solid fa-lightbulb"></i> <span id="story-insight">Descubrimiento Clave: Las intersecciones sin semáforo peatonal concentran el mayor índice de riesgo percibido.</span>
+        <div style="margin-top:auto; padding-top:1.2rem; border-top:1px solid var(--border-card); font-size:0.85rem; color:var(--accent-cyan); display:flex; align-items:center; gap:10px; font-weight:600;">
+          <i class="fa-solid fa-lightbulb" style="font-size:1.1rem; color:var(--accent-amber);"></i> <span id="story-insight">Descubrimiento Clave: Las intersecciones sin semáforo peatonal concentran el mayor índice de riesgo percibido.</span>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Footer con Navegación y Créditos -->
+  <!-- Footer Narrativo -->
   <footer>
     <button class="nav-btn" onclick="prevView()"><i class="fa-solid fa-arrow-left"></i> Vista Anterior</button>
-    <div style="font-size:0.82rem; color:var(--text-muted); text-align:center;">
-      <i class="fa-solid fa-users"></i> Equipo del Proyecto: <strong style="color:#fff;">Rivaldo</strong> (Técnico/LiDAR) | <strong style="color:#fff;">Elisabeth</strong> (Institucional/PNT) | <strong style="color:#fff;">Christopher</strong> (Campo/Scraping)
+    <div style="font-size:0.88rem; color:var(--text-muted); text-align:center;">
+      <i class="fa-solid fa-users" style="color:var(--accent-cyan);"></i> Equipo del Proyecto: <strong style="color:#fff;">Rivaldo</strong> (Técnico/LiDAR) | <strong style="color:#fff;">Elisabeth</strong> (Institucional/PNT) | <strong style="color:#fff;">Christopher</strong> (Campo/Scraping)
     </div>
     <button class="nav-btn" onclick="nextView()">Siguiente Vista <i class="fa-solid fa-arrow-right"></i></button>
   </footer>
 
   <script>
     let currentViewId = 1;
-    let timerInterval = null;
 
-    // Configuración Completa de las 9 Vistas Narrativas con Visualizaciones Interactivas Personalizadas
+    // Configuración Completa de las 9 Vistas Narrativas con Visualizaciones Vistosas e Interactivas
     const storyViews = {
       1: {
         badge: "FUENTE PRINCIPAL: INEGI ATUS",
@@ -405,7 +475,10 @@
         chartType: "bar",
         chartData: {
           labels: ["2021", "2022", "2023"],
-          datasets: [{ label: "Eventos Registrados en Mérida", data: [2210, 2380, 2544], backgroundColor: "#00f2fe", borderRadius: 8 }]
+          datasets: [
+            { label: "Colisiones Vehículo-Peatón", data: [1436, 1547, 1653], backgroundColor: "#00f2fe", borderRadius: 8 },
+            { label: "Otros Siniestros en Cruces", data: [774, 833, 891], backgroundColor: "#ec4899", borderRadius: 8 }
+          ]
         }
       },
       2: {
@@ -424,40 +497,40 @@
         creativeHtml: `
           <div class="creative-viz-wrapper">
             <div class="viz-controls-bar">
-              <span style="font-size:0.8rem; font-weight:700; color:var(--accent-cyan);"><i class="fa-solid fa-sliders"></i> SELECCIÓN DE CORREDOR METROPOLITANO:</span>
-              <div style="display:flex; gap:6px;">
-                <button class="ctrl-btn active" onclick="updateBusView('all')">Todos</button>
-                <button class="ctrl-btn" onclick="updateBusView('periferico')">Periférico</button>
-                <button class="ctrl-btn" onclick="updateBusView('kanasin')">Kanasín</button>
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan);"><i class="fa-solid fa-sliders"></i> SELECCIÓN DE CORREDOR METROPOLITANO:</span>
+              <div style="display:flex; gap:8px;">
+                <button class="ctrl-btn active" onclick="updateBusView('all')">Todos los Paraderos</button>
+                <button class="ctrl-btn" onclick="updateBusView('periferico')">Periférico Norte</button>
+                <button class="ctrl-btn" onclick="updateBusView('kanasin')">Corredor Kanasín</button>
               </div>
             </div>
             <div class="bus-stops-visual" id="bus-stops-list">
               <div class="bus-stop-card">
                 <i class="fa-solid fa-bus bus-stop-icon"></i>
                 <div style="flex:1;">
-                  <div style="font-size:0.9rem; font-weight:700;">Paradero Salida Progreso (Periférico Norte)</div>
-                  <div style="font-size:0.75rem; color:var(--text-muted);">Sin puente peatonal a menos de 450m</div>
-                  <div class="bus-stop-bar-bg" style="margin-top:6px;"><div class="bus-stop-bar-fill" style="width:90%;"></div></div>
+                  <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Salida Progreso (Periférico Norte)</div>
+                  <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Sin puente peatonal en 450m • Velocidad: 90 km/h</div>
+                  <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:90%;"></div></div>
                 </div>
-                <div style="font-family:var(--font-mono); font-size:0.9rem; color:var(--accent-cyan);">90% Congestión</div>
+                <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-cyan);">90% Congestión</div>
               </div>
               <div class="bus-stop-card">
                 <i class="fa-solid fa-bus bus-stop-icon" style="color:var(--accent-amber);"></i>
                 <div style="flex:1;">
-                  <div style="font-size:0.9rem; font-weight:700;">Paradero Entronque Kanasín (Periférico Oriente)</div>
-                  <div style="font-size:0.75rem; color:var(--text-muted);">Velocidad promedio de vehículos: 95 km/h</div>
-                  <div class="bus-stop-bar-bg" style="margin-top:6px;"><div class="bus-stop-bar-fill" style="width:82%; background:var(--accent-amber);"></div></div>
+                  <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Entronque Kanasín (Periférico Oriente)</div>
+                  <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Cruce a nivel de calle • Tiempo espera promedio: 14 min</div>
+                  <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:82%; background:linear-gradient(90deg, #ffbe0b, #ff5252);"></div></div>
                 </div>
-                <div style="font-family:var(--font-mono); font-size:0.9rem; color:var(--accent-amber);">82% Congestión</div>
+                <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-amber);">82% Congestión</div>
               </div>
               <div class="bus-stop-card">
                 <i class="fa-solid fa-bus bus-stop-icon" style="color:var(--accent-coral);"></i>
                 <div style="flex:1;">
-                  <div style="font-size:0.9rem; font-weight:700;">Paradero Av. Caucel (Periférico Poniente)</div>
-                  <div style="font-size:0.75rem; color:var(--text-muted);">Espera promedio en hora pico: 18 min</div>
-                  <div class="bus-stop-bar-bg" style="margin-top:6px;"><div class="bus-stop-bar-fill" style="width:75%; background:var(--accent-coral);"></div></div>
+                  <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Av. Caucel (Periférico Poniente)</div>
+                  <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Afluencia escolar y laboral masiva a las 6:00 PM</div>
+                  <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:75%; background:linear-gradient(90deg, #ff5252, #ec4899);"></div></div>
                 </div>
-                <div style="font-family:var(--font-mono); font-size:0.9rem; color:var(--accent-coral);">75% Congestión</div>
+                <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-coral);">75% Congestión</div>
               </div>
             </div>
           </div>
@@ -478,27 +551,27 @@
         vizMode: "creative",
         creativeHtml: `
           <div class="creative-viz-wrapper traffic-sim-container">
-            <div class="viz-controls-bar" style="justify-content:center; gap:15px;">
+            <div class="viz-controls-bar" style="justify-content:center; gap:18px;">
               <button class="ctrl-btn active" onclick="setSignalPhase('red')"><i class="fa-solid fa-hand"></i> Fase Peatonal (Verde Peatón)</button>
               <button class="ctrl-btn" onclick="setSignalPhase('green')"><i class="fa-solid fa-car"></i> Fase Vehicular (Verde Autos)</button>
             </div>
             
-            <div style="display:flex; align-items:center; gap:2rem; margin:1rem 0;">
+            <div style="display:flex; align-items:center; gap:2.5rem; margin:1rem 0;">
               <div class="semaphore-box">
                 <div id="light-r" class="light-circle light-red active"></div>
                 <div id="light-y" class="light-circle light-yellow"></div>
                 <div id="light-g" class="light-circle light-green"></div>
               </div>
 
-              <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
-                <span style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Cuenta Regresiva Peatón</span>
+              <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+                <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Cuenta Regresiva Peatón</span>
                 <div id="sem-timer" class="timer-display">15s</div>
                 <span id="sem-status" class="badge-pill badge-primary"><i class="fa-solid fa-person-walking"></i> ¡Paso Seguro Peatonal!</span>
               </div>
             </div>
 
-            <div style="font-size:0.85rem; color:var(--text-muted); text-align:center; max-width:500px;">
-              <i class="fa-solid fa-circle-info" style="color:var(--accent-cyan);"></i> Haz clic en los botones superiores para alternar la fase del crucero y evaluar el comportamiento del flujo vehicular vs. peatonal.
+            <div style="font-size:0.88rem; color:var(--text-muted); text-align:center; max-width:520px; line-height:1.5;">
+              <i class="fa-solid fa-circle-info" style="color:var(--accent-cyan);"></i> Alterna las fases del crucero para simular la tensión en el semáforo entre el cruce a pie y la vuelta continua de automóviles.
             </div>
           </div>
         `
@@ -519,8 +592,8 @@
         creativeHtml: `
           <div class="creative-viz-wrapper">
             <div class="viz-controls-bar">
-              <span style="font-size:0.8rem; font-weight:700; color:var(--accent-cyan);"><i class="fa-solid fa-filter"></i> FILTRAR POR CATEGORÍA:</span>
-              <div style="display:flex; gap:6px;">
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan);"><i class="fa-solid fa-filter"></i> FILTRAR SOLICITUDES DE VECINOS:</span>
+              <div style="display:flex; gap:8px;">
                 <button class="ctrl-btn active" onclick="filterLetters('all')">Todas</button>
                 <button class="ctrl-btn" onclick="filterLetters('luz')">Alumbrado</button>
                 <button class="ctrl-btn" onclick="filterLetters('sem')">Semáforos</button>
@@ -529,23 +602,23 @@
             <div class="letters-visual" id="letters-container">
               <div class="letter-card" data-cat="luz">
                 <div class="letter-header"><span>FOLIO #PNT-9841</span> <span>12 MAR</span></div>
-                <div class="letter-body"><i class="fa-solid fa-lightbulb" style="color:var(--accent-amber);"></i> Solicitud de alumbrado continuo en paradero Salida Progreso.</div>
-                <span class="letter-status" style="border:1px solid #10b981; color:#10b981;">Aprobado en Cabildo</span>
+                <div class="letter-body"><i class="fa-solid fa-lightbulb" style="color:var(--accent-amber);"></i> Solicitud urgente de alumbrado continuo en paradero Salida Progreso.</div>
+                <span class="badge-pill" style="align-self:flex-start; background:rgba(16,185,129,0.15); border:1px solid #10b981; color:#10b981;">Aprobado en Cabildo</span>
               </div>
               <div class="letter-card" data-cat="sem">
                 <div class="letter-header"><span>FOLIO #PNT-7720</span> <span>04 ABR</span></div>
-                <div class="letter-body"><i class="fa-solid fa-person-walking-arrow-right" style="color:var(--accent-cyan);"></i> Petición de semáforo peatonal con botón en cruce Kanasín.</div>
-                <span class="letter-status" style="border:1px solid var(--accent-amber); color:var(--accent-amber);">En Dictamen Técnico</span>
+                <div class="letter-body"><i class="fa-solid fa-person-walking-arrow-right" style="color:var(--accent-cyan);"></i> Petición de semáforo peatonal accesible en cruce Kanasín.</div>
+                <span class="badge-pill" style="align-self:flex-start; background:rgba(255,190,11,0.15); border:1px solid var(--accent-amber); color:var(--accent-amber);">En Dictamen Técnico</span>
               </div>
               <div class="letter-card" data-cat="cam">
                 <div class="letter-header"><span>FOLIO #PNT-5412</span> <span>19 MAY</span></div>
-                <div class="letter-body"><i class="fa-solid fa-video" style="color:var(--accent-purple);"></i> Solicitud de cámara C5i por exceso de velocidad en Canek.</div>
-                <span class="letter-status" style="border:1px solid var(--accent-cyan); color:var(--accent-cyan);">Ingresado a C5i</span>
+                <div class="letter-body"><i class="fa-solid fa-video" style="color:var(--accent-purple);"></i> Instalación de cámara de vigilancia C5i por exceso de velocidad en Canek.</div>
+                <span class="badge-pill" style="align-self:flex-start; background:rgba(0,242,254,0.15); border:1px solid var(--accent-cyan); color:var(--accent-cyan);">Ingresado a C5i</span>
               </div>
               <div class="letter-card" data-cat="banqueta">
                 <div class="letter-header"><span>FOLIO #PNT-3309</span> <span>02 JUN</span></div>
-                <div class="letter-body"><i class="fa-solid fa-road" style="color:var(--accent-coral);"></i> Reparación de banquetas fracturadas en Circuito Colonias.</div>
-                <span class="letter-status" style="border:1px solid #ef4444; color:#ef4444;">Pendiente de Presupuesto</span>
+                <div class="letter-body"><i class="fa-solid fa-road" style="color:var(--accent-coral);"></i> Reparación de banquetas fracturadas e invadidas en Circuito Colonias.</div>
+                <span class="badge-pill" style="align-self:flex-start; background:rgba(255,82,82,0.15); border:1px solid #ef4444; color:#ef4444;">Pendiente Presupuesto</span>
               </div>
             </div>
           </div>
@@ -567,9 +640,9 @@
         creativeHtml: `
           <div class="creative-viz-wrapper news-cloud-visual">
             <div class="news-ticker">
-              <i class="fa-solid fa-bullhorn"></i>
-              <marquee scrollamount="6">
-                ÚLTIMA HORA SCRAPING: "Vecinos exigen alumbrado público en Periférico Sur" — "Aumentan reportes de cruces a ciegas en Av. Canek" — "Piden reductores de velocidad cerca de escuelas"
+              <i class="fa-solid fa-bullhorn" style="font-size:1.2rem; color:var(--accent-cyan);"></i>
+              <marquee scrollamount="7">
+                🚨 SCRAPING NOTICIAS EN VIVO: "Vecinos exigen alumbrado público en Periférico Sur" — "Aumentan reportes de cruces a ciegas en Av. Canek" — "Piden reductores de velocidad en zonas escolares de Mérida"
               </marquee>
             </div>
             
@@ -583,8 +656,8 @@
               <span class="news-tag tag-medium" onclick="showNewsTopic('cruceros')">#CrucerosOscuros (28)</span>
             </div>
 
-            <div id="news-snippet-box" style="background:rgba(255,255,255,0.03); border:1px solid var(--border-card); padding:10px 14px; border-radius:8px; font-size:0.85rem; color:var(--text-muted); text-align:center;">
-              <i class="fa-solid fa-hand-pointer" style="color:var(--accent-cyan);"></i> Haz clic en cualquiera de las etiquetas para ver el resumen de notas periodísticas extraídas.
+            <div id="news-snippet-box" style="background:rgba(255,255,255,0.04); border:1px solid var(--border-glow); padding:12px 18px; border-radius:12px; font-size:0.9rem; color:#cbd5e1; text-align:center;">
+              <i class="fa-solid fa-hand-pointer" style="color:var(--accent-cyan);"></i> Haz clic en cualquiera de las etiquetas para desplegar el resumen periodístico.
             </div>
           </div>
         `
@@ -605,8 +678,8 @@
         creativeHtml: `
           <div class="creative-viz-wrapper footprints-visual">
             <div class="viz-controls-bar">
-              <span style="font-size:0.8rem; font-weight:700; color:var(--accent-cyan);"><i class="fa-solid fa-user"></i> SELECCIONAR PERFIL DE PEATÓN:</span>
-              <div style="display:flex; gap:6px;">
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan);"><i class="fa-solid fa-user"></i> SELECCIONAR PERFIL DE PEATÓN:</span>
+              <div style="display:flex; gap:8px;">
                 <button class="ctrl-btn active" onclick="setPedestrianProfile('joven')">Adulto Joven (1.2 m/s)</button>
                 <button class="ctrl-btn" onclick="setPedestrianProfile('mayor')">Adulto Mayor (0.7 m/s)</button>
                 <button class="ctrl-btn" onclick="setPedestrianProfile('reducida')">Movilidad Reducida (0.5 m/s)</button>
@@ -638,7 +711,7 @@
             </div>
             
             <div class="footprint-row">
-              <div class="footprint-info">3. Tiempo de Verde Peatonal (15s)</div>
+              <div class="footprint-info">3. Tiempo Verde Peatonal (15s)</div>
               <div class="footprints-track">
                 <span class="footprint-item step-left"><i class="fa-solid fa-shoe-prints"></i></span>
                 <span class="footprint-item step-right"><i class="fa-solid fa-shoe-prints"></i></span>
@@ -668,11 +741,11 @@
           <div class="creative-viz-wrapper ambient-visual-wrapper">
             <div class="ambient-slider-box">
               <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="font-size:0.85rem; font-weight:700; color:var(--accent-amber);"><i class="fa-solid fa-clock"></i> CONTROL DE HORA DEL DÍA:</span>
-                <span id="time-display-val" style="font-family:var(--font-mono); font-weight:700; color:var(--accent-cyan);">02:00 PM (Sol Máximo)</span>
+                <span style="font-size:0.9rem; font-weight:800; color:var(--accent-amber);"><i class="fa-solid fa-clock"></i> SIMULADOR DE HORA DEL DÍA:</span>
+                <span id="time-display-val" style="font-family:var(--font-mono); font-weight:800; color:var(--accent-cyan); font-size:1.05rem;">02:00 PM (Sol Máximo)</span>
               </div>
               <input type="range" min="6" max="23" value="14" class="ambient-slider" id="hourSlider" oninput="updateAmbientHour(this.value)">
-              <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-muted);">
+              <div style="display:flex; justify-content:space-between; font-size:0.78rem; color:var(--text-muted); font-weight:600;">
                 <span>6 AM (Amanecer)</span>
                 <span>12 PM (Zenit 38°C)</span>
                 <span>7 PM (Anochecer)</span>
@@ -682,7 +755,7 @@
 
             <div class="info-card" id="ambient-card-display">
               <div class="info-tag" id="ambient-tag">DILEMA 1: CALOR EXTREMO (12 PM - 4 PM)</div>
-              <div class="info-title" id="ambient-title"><i class="fa-solid fa-sun" style="color:#feb47b;"></i> Banquetas Desiertas a 38°C</div>
+              <div class="info-title" id="ambient-title"><i class="fa-solid fa-sun" style="color:#ffbe0b;"></i> Banquetas Desiertas a 38°C</div>
               <div class="info-desc" id="ambient-desc">Sin árboles ni techumbres, la radiación solar vuelve inviable la caminata. Los peatones buscan refugio en sombras reducidas sobre la carpeta asfáltica.</div>
             </div>
           </div>
@@ -718,7 +791,7 @@
         creativeHtml: `
           <div class="creative-viz-wrapper">
             <div class="viz-controls-bar">
-              <span style="font-size:0.8rem; font-weight:700; color:var(--accent-cyan);"><i class="fa-solid fa-map-location-dot"></i> MATRIZ DE PROPUESTAS DE REDISEÑO URBANO:</span>
+              <span style="font-size:0.85rem; font-weight:800; color:var(--accent-cyan);"><i class="fa-solid fa-map-location-dot"></i> MATRIZ DE PROPUESTAS DE REDISEÑO URBANO:</span>
             </div>
             <div class="v9-matrix-grid">
               <div class="v9-card">
@@ -734,7 +807,7 @@
                 <div class="v9-card-body">Arbolado urbano endémico para mitigar la radiación de 38°C durante la caminata diurna.</div>
               </div>
             </div>
-            <div style="background:rgba(0,242,254,0.05); border:1px solid var(--border-glow); padding:12px; border-radius:10px; font-size:0.82rem; color:#fff; display:flex; justify-content:space-between; align-items:center;">
+            <div style="background:rgba(0,242,254,0.08); border:1px solid var(--border-glow); padding:14px 20px; border-radius:14px; font-size:0.9rem; color:#fff; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
               <span><i class="fa-solid fa-chart-pie" style="color:var(--accent-cyan);"></i> Prioridad Global de Intervención: <strong>95% Urgente</strong></span>
               <span class="badge-pill badge-primary">Impacto Estimado: -40% Riesgo</span>
             </div>
@@ -750,7 +823,6 @@
       const data = storyViews[viewId];
       if (!data) return;
 
-      // Resetear tema ambiental al cambiar de vista
       document.body.className = '';
 
       document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
@@ -823,17 +895,17 @@
           responsive: true,
           maintainAspectRatio: false,
           plugins: { 
-            legend: { labels: { color: '#94a3b8', font: { family: 'Inter' } } } 
+            legend: { labels: { color: '#e2e8f0', font: { family: 'Outfit', size: 13, weight: '600' } } } 
           },
           scales: (type !== 'doughnut' && type !== 'polarArea' && type !== 'radar') ? {
-            x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
-            y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+            x: { ticks: { color: '#94a3b8', font: { family: 'Inter', size: 12 } }, grid: { color: 'rgba(255,255,255,0.06)' } },
+            y: { ticks: { color: '#94a3b8', font: { family: 'Inter', size: 12 } }, grid: { color: 'rgba(255,255,255,0.06)' } }
           } : {}
         }
       });
     }
 
-    /* FUNCIONES INTERACTIVAS ESPECÍFICAS PARA VISTAS */
+    /* FUNCIONES INTERACTIVAS ESPECÍFICAS DE CADA VISTA */
     function updateBusView(filter) {
       const list = document.getElementById('bus-stops-list');
       if (!list) return;
@@ -842,10 +914,11 @@
           <div class="bus-stop-card">
             <i class="fa-solid fa-bus bus-stop-icon"></i>
             <div style="flex:1;">
-              <div style="font-size:0.9rem; font-weight:700;">Paradero Salida Progreso (Periférico Norte)</div>
-              <div class="bus-stop-bar-bg" style="margin-top:6px;"><div class="bus-stop-bar-fill" style="width:90%;"></div></div>
+              <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Salida Progreso (Periférico Norte)</div>
+              <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Sin puente peatonal en 450m • Velocidad: 90 km/h</div>
+              <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:90%;"></div></div>
             </div>
-            <div style="font-family:var(--font-mono); font-size:0.9rem; color:var(--accent-cyan);">90% Congestión</div>
+            <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-cyan);">90% Congestión</div>
           </div>
         `;
       } else if (filter === 'kanasin') {
@@ -853,10 +926,11 @@
           <div class="bus-stop-card">
             <i class="fa-solid fa-bus bus-stop-icon" style="color:var(--accent-amber);"></i>
             <div style="flex:1;">
-              <div style="font-size:0.9rem; font-weight:700;">Paradero Entronque Kanasín (Periférico Oriente)</div>
-              <div class="bus-stop-bar-bg" style="margin-top:6px;"><div class="bus-stop-bar-fill" style="width:82%; background:var(--accent-amber);"></div></div>
+              <div style="font-size:0.95rem; font-weight:800; color:#fff;">Paradero Entronque Kanasín (Periférico Oriente)</div>
+              <div style="font-size:0.78rem; color:var(--text-muted); margin-top:2px;">Cruce a nivel de calle • Tiempo espera promedio: 14 min</div>
+              <div class="bus-stop-bar-bg" style="margin-top:8px;"><div class="bus-stop-bar-fill" style="width:82%; background:linear-gradient(90deg, #ffbe0b, #ff5252);"></div></div>
             </div>
-            <div style="font-family:var(--font-mono); font-size:0.9rem; color:var(--accent-amber);">82% Congestión</div>
+            <div style="font-family:var(--font-mono); font-size:1rem; font-weight:800; color:var(--accent-amber);">82% Congestión</div>
           </div>
         `;
       } else {
@@ -886,7 +960,7 @@
         lg.className = 'light-circle light-green active';
         timer.innerText = '00s';
         status.className = 'badge-pill';
-        status.style.background = 'rgba(239, 68, 68, 0.2)';
+        status.style.background = 'rgba(239, 68, 68, 0.25)';
         status.style.color = '#ef4444';
         status.style.border = '1px solid #ef4444';
         status.innerHTML = '<i class="fa-solid fa-hand"></i> ¡Alto Peatonal! Tráfico Vehicular Avanzando';
@@ -910,7 +984,7 @@
       const box = document.getElementById('news-snippet-box');
       if (!box) return;
       const topics = {
-        'periferico': 'Noticia destacada: "Vecinos reportan que cruzar el Periférico de Mérida toma hasta 10 minutos esperando huecos en el tráfico."',
+        'periferico': 'Noticia destacada: "Vecinos reportan que cruzar el Periférico de Mérida toma hasta 10 minutos esperando huecos en el tráfico vehicular."',
         'luz': 'Noticia destacada: "Falta de alumbrado público en cruces secundarios incrementa percepción de inseguridad nocturna."',
         'velocidad': 'Noticia destacada: "Exceso de velocidad en avenidas principales supera el límite permitido de 60 km/h."',
         'banquetas': 'Noticia destacada: "Banquetas fracturadas e invadidas obligan a caminar sobre el arroyo vehicular en el centro."',
@@ -924,7 +998,6 @@
     function setPedestrianProfile(profile) {
       const countVal = document.getElementById('footprints-count-val');
       const resultVal = document.getElementById('footprints-result-val');
-      const track = document.getElementById('footprints-cross-track');
       if (!countVal || !resultVal) return;
 
       if (profile === 'joven') {
@@ -934,7 +1007,7 @@
       } else if (profile === 'mayor') {
         countVal.innerText = '28 Pasos Requeridos (20s)';
         resultVal.innerText = 'Corte de Verde a los 18 Pasos (Exposicion 5s)';
-        resultVal.style.color = 'var(--accent-coral)';
+        resultVal.style.color = 'var(--accent-amber)';
       } else {
         countVal.innerText = '34 Pasos Requeridos (29s)';
         resultVal.innerText = 'Riesgo Alto: Requiere 29s (Verde solo 15s)';
@@ -955,7 +1028,7 @@
       if (hour >= 11 && hour <= 16) {
         document.body.className = 'theme-day';
         tag.innerText = 'DILEMA 1: CALOR EXTREMO (12 PM - 4 PM)';
-        title.innerHTML = '<i class="fa-solid fa-sun" style="color:#feb47b;"></i> Banquetas Desiertas a 38°C';
+        title.innerHTML = '<i class="fa-solid fa-sun" style="color:#ffbe0b;"></i> Banquetas Desiertas a 38°C';
         desc.innerText = 'Sin árboles ni techumbres, la radiación solar vuelve inviable la caminata. Los peatones buscan refugio en sombras reducidas sobre la carpeta asfáltica.';
       } else if (hour >= 19 || hour <= 5) {
         document.body.className = 'theme-night';
@@ -987,43 +1060,43 @@
       `;
 
       scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x0a0f1d);
+      scene.background = new THREE.Color(0x060913);
       camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
       renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(container.clientWidth, container.clientHeight);
       container.appendChild(renderer.domElement);
 
       const geometry = new THREE.BufferGeometry();
-      const count = 4500;
+      const count = 5400;
       const positions = new Float32Array(count * 3);
       const colors = new Float32Array(count * 3);
 
       for (let i = 0; i < count; i++) {
-        const x = (Math.random() - 0.5) * 7;
-        const y = (Math.random() - 0.5) * 2.5;
-        const z = (Math.random() - 0.5) * 7;
+        const x = (Math.random() - 0.5) * 8;
+        const y = (Math.random() - 0.5) * 3;
+        const z = (Math.random() - 0.5) * 8;
         positions[i*3] = x;
         positions[i*3+1] = y;
         positions[i*3+2] = z;
 
-        colors[i*3] = x > 0 ? 0.0 : 0.9;
+        colors[i*3] = x > 0 ? 0.0 : 0.95;
         colors[i*3+1] = 0.95;
-        colors[i*3+2] = 0.99;
+        colors[i*3+2] = x > 0 ? 0.99 : 0.6;
       }
 
       geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
       geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
-      const material = new THREE.PointsMaterial({ size: 0.055, vertexColors: true });
+      const material = new THREE.PointsMaterial({ size: 0.065, vertexColors: true });
       pointCloud = new THREE.Points(geometry, material);
       scene.add(pointCloud);
 
-      camera.position.set(4.5, 4, 6.5);
+      camera.position.set(5, 4.5, 7);
       camera.lookAt(0, 0, 0);
 
       function animate() {
         requestAnimationFrame(animate);
-        pointCloud.rotation.y += 0.004;
+        pointCloud.rotation.y += 0.005;
         renderer.render(scene, camera);
       }
       animate();
@@ -1032,14 +1105,14 @@
     function setLidarCamera(preset) {
       if (!camera) return;
       if (preset === 'overview') {
-        camera.position.set(4.5, 4, 6.5);
+        camera.position.set(5, 4.5, 7);
         camera.lookAt(0, 0, 0);
       } else if (preset === 'pedestrian') {
-        camera.position.set(0, 0.5, 2.5);
+        camera.position.set(0, 0.6, 2.8);
         camera.lookAt(0, 0, -2);
       } else if (preset === 'blindspot') {
-        camera.position.set(-2, 0.8, 1);
-        camera.lookAt(1, 0, -1);
+        camera.position.set(-2.5, 0.9, 1.2);
+        camera.lookAt(1.2, 0, -1);
       }
     }
 
