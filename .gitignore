@@ -1,6 +1,11 @@
-# data y scripts quedan excluidos por ahora según solicitud del usuario
-data/
-scripts/
+# Archivos pesados y binarios excluidos del repositorio
 *.zip
 *.log
 *.pdf
+*.csv
+*.ply
+
+# Ignorar datos crudos en local pero permitir la estructura de carpetas
+data/*.csv
+data/*.zip
+data/*.ply
