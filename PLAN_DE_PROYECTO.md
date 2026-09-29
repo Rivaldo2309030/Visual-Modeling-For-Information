@@ -1,107 +1,53 @@
-# Plan del Proyecto: Análisis Espacial 3D y Seguridad Peatonal en Intersecciones Viales de Mérida
+# Plan del Proyecto: Sentir la Calle (Data Storytelling Peatonal en Mérida)
 
 ## 📌 Descripción General
-El objetivo de este proyecto es estudiar, modelar y visualizar la siniestralidad vial, accesibilidad peatonal y puntos críticos de conflicto vehicular en Mérida, Yucatán. Para lograrlo, integramos datos heterogéneos de escalas nacional, estatal, municipal, solicitudes de transparencia, web scraping, recolección en campo (self-produced) y modelado 3D mediante **LiDAR en aula**.
+"Sentir la Calle" es una propuesta de **Data Storytelling interactivo** diseñada para el libro colectivo de la materia. El proyecto aborda la percepción de seguridad, accesibilidad y confort del peatón en Mérida, Yucatán, mediante una narrativa dividida en **7 Vistas (Capítulos)** que conectan 7 fuentes de datos de distintas escalas y culminan con la visualización tridimensional mediante **LiDAR escaneado en el aula**.
 
 ---
 
-## 👥 Asignación de Roles y Responsabilidades
+## 🎭 Estructura Narrativa de las 7 Vistas (Storytelling)
 
-El equipo de trabajo está integrado por 3 integrantes con responsabilidades claras y complementarias:
+| Vista | Título del Capítulo / Fuente | Historia que Cuenta | Integrante Responsable |
+|---|---|---|---|
+| **1. La Red que nos Cuida** | INEGI (ATUS) — Nacional | Las cifras oficiales masivas de siniestralidad vial en Mérida y la magnitud del espacio urbano. | **Rivaldo** |
+| **2. Corredores de Vida** | SIEGEY — Estatal | El flujo constante de miles de usuarios en las rutas metropolitanas *Va y Ven* e *Ie-Tram*. | **Elisabeth** |
+| **3. Luces y Sombras** | Geoportal Mérida — Municipal | La presencia o ausencia de semáforos peatonales, alumbrado y banquetas en la ciudad. | **Elisabeth** |
+| **4. La Clama Ciudadana** | PNT / SSP Yucatán — Transparencia | Lo que los vecinos solicitan formalmente: alumbrado, botones de pánico y cruceros prioritarios. | **Elisabeth** |
+| **5. El Latido de la Prensa** | Web Scraping — Medios Locales | 192 publicaciones y testimonios en prensa sobre choques y la percepción cotidiana de riesgo. | **Christopher** |
+| **6. Pasos en el Terreno** | Self-Produced — Auditoría de Campo | El contraste directo: tiempos de semáforo verde medidos a pie vs. la velocidad del tráfico real. | **Christopher** |
+| **7. La Dimensión LiDAR 3D** | Sensor LiDAR — Captura en Aula | Inmersión 3D en la maqueta a escala del crucero para analizar **ángulos ciegos y campos de visión**. | **Rivaldo** |
 
-| Integrante | Rol Principal | Responsabilidades Clave |
+---
+
+## 👥 Asignación de Roles del Equipo
+
+| Integrante | Rol en la Historia | Responsabilidades Clave |
 |---|---|---|
-| **Rivaldo** | **Coordinador Técnico y Análisis Geoespacial / LiDAR** | • Arquitectura general de datos e indexación espacial (GIS / Coordenadas).<br>• Procesamiento de nubes de puntos 3D LiDAR (adquisición en aula y exportación).<br>• Gestión y mantenimiento del repositorio GitHub.<br>• Integración de datos a nivel Nacional (INEGI ATUS). |
-| **Elisabeth** | **Especialista en Datos Institucionales y Transparencia** | • Gestión y seguimiento de la solicitud de información pública (PNT / SSP Yucatán).<br>• Extracción, limpieza y estructuración de datos estatales (SIEGEY / Va y Ven).<br>• Catalogación de infraestructura semafórica y equipamiento vial del Geoportal de Mérida.<br>• Documentación y diccionarios de datos del proyecto. |
-| **Christopher** | **Especialista en Datos de Campo, Scraping y Visualización** | • Diseño y ejecución de la auditoría física de cruceros (Self-Produced Data).<br>• Desarrollo y mantenimiento del pipeline de web scraping de medios informativos locales.<br>• Creación de maquetas físicas o escenarios de prueba para escaneo LiDAR en aula.<br>• Diseño e implementación de dashboards y visualizaciones interactivas finales. |
+| **Rivaldo** | **Coordinador Técnico & LiDAR / INEGI** | • Procesamiento de la nube de puntos 3D LiDAR (Vista 7).<br>• Análisis de la fuente Nacional INEGI ATUS (Vista 1).<br>• Arquitectura general de datos e indexación geoespacial. |
+| **Elisabeth** | **Especialista Institucional & Transparencia** | • Extracción y seguimiento de peticiones PNT / SSP (Vista 4).<br>• Análisis de corredores SIEGEY Va y Ven (Vista 2).<br>• Mapeo de semáforos y banquetas en el Geoportal de Mérida (Vista 3). |
+| **Christopher** | **Especialista de Campo & Scraping** | • Scraper de noticias y testimonios en prensa local (Vista 5).<br>• Levantamiento presencial y encuesta de confort en campo (Vista 6).<br>• Diseño visual y maquetación de gráficos para el libro/web. |
 
 ---
 
-## 🗺️ Fases del Proyecto
+## 🗺️ Diagrama de Flujo del Storytelling Interactivo
 
 ```mermaid
 flowchart TD
-    subgraph FASE_1 ["Fase 1: Definición y Planificación (ACTUAL)"]
-        F1A[Definición de Problemática] --> F1B[Diseño de Arquitectura]
-        F1B --> F1C[Asignación de Roles]
-        F1C --> F1D[Estructuración del Repositorio]
+    subgraph STORY ["Narrativa en 7 Vistas (Storytelling)"]
+        V1["1. La Red que nos Cuida (INEGI ATUS)"] --> V2["2. Corredores de Vida (SIEGEY)"]
+        V2 --> V3["3. Luces y Sombras (Geoportal)"]
+        V3 --> V4["4. La Clama Ciudadana (PNT)"]
+        V4 --> V5["5. El Latido de la Prensa (Scraping)"]
+        V5 --> V6["6. Pasos en el Terreno (Self-produced)"]
+        V6 --> V7["7. La Dimensión LiDAR 3D (Aula)"]
     end
 
-    subgraph FASE_2 ["Fase 2: Adquisición y Extracción"]
-        F2A[Ingesta INEGI ATUS]
-        F2B[Ingesta SIEGEY / Geoportal]
-        F2C[Envío de Solicitud PNT]
-        F2D[Ejecución de Web Scraping]
-        F2E[Auditoría en Campo Self-produced]
-        F2F[Captura LiDAR en Aula]
-    end
-
-    subgraph FASE_3 ["Fase 3: Procesamiento e Indexación Espacial"]
-        F3A[Normalización de Coordenadas]
-        F3B[Buffer Espacial de 50-100m por Crucero]
-        F3C[Alineación de Nube 3D con Capas 2D]
-        F3D[Construcción del Dataset Maestro]
-    end
-
-    subgraph FASE_4 ["Fase 4: Modelado Visual y Dashboards"]
-        F4A[Visualización 3D de Cruceros LiDAR]
-        F4B[Mapa de Calor de Siniestros]
-        F4C[Dashboard Interactivo de Riesgo Peatonal]
-    end
-
-    subgraph FASE_5 ["Fase 5: Conclusiones y Entrega"]
-        F5A[Evaluación de Hallazgos]
-        F5B[Reporte Técnico Final]
-        F5C[Demostración Pública del Repositorio]
-    end
-
-    FASE_1 --> FASE_2
-    FASE_2 --> FASE_3
-    FASE_3 --> FASE_4
-    FASE_4 --> FASE_5
-
-    style FASE_1 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
-    style FASE_2 fill:#f5f5f5,stroke:#9e9e9e,stroke-width:1px;
-    style FASE_3 fill:#f5f5f5,stroke:#9e9e9e,stroke-width:1px;
-    style FASE_4 fill:#f5f5f5,stroke:#9e9e9e,stroke-width:1px;
-    style FASE_5 fill:#f5f5f5,stroke:#9e9e9e,stroke-width:1px;
+    style V1 fill:#00f2fe,stroke:#000,color:#000
+    style V6 fill:#feb47b,stroke:#000,color:#000
+    style V7 fill:#a855f7,stroke:#fff,color:#fff
 ```
 
-### Detalle de Fases:
-* **Fase 1: Definición y Planificación (📍 FASE ACTUAL)**
-  * Selección de la problemática (Seguridad en cruceros peatonales e intersecciones críticas en Mérida).
-  * Creación y configuración del repositorio oficial.
-  * Definición de metodologías de adquisición y criterios de indexación espacial.
-* **Fase 2: Adquisición y Extracción de Datos**
-  * Descarga masiva y filtrado municipal de datos oficiales.
-  * Ejecución de scrapers y captura de datos generados por el equipo.
-  * Realización del escaneo láser 3D (LiDAR) del modelo a escala en el salón.
-* **Fase 3: Limpieza, Procesamiento e Indexación**
-  * Homogeneización de formatos (GeoJSON, CSV, PLY).
-  * Georreferenciación y cruce espacial mediante radios de influencia por intersección vial.
-* **Fase 4: Visualización y Modelado**
-  * Generación de vistas interactivas (mapas geoespaciales 2D + nubes de puntos 3D).
-  * Correlación entre aforo, infraestructura semafórica y siniestros históricos.
-* **Fase 5: Documentación y Conclusiones**
-  * Redacción del reporte de resultados y sustentación del proyecto.
-
 ---
 
-## 📚 Principales Fuentes de Información
-
-| Nivel / Tipo de Fuente | Origen Oficial | Descripción y Propósito |
-|---|---|---|
-| **Nacional** | **INEGI - ATUS** (*Accidentes de Tránsito Terrestre en Zonas Urbanas y Suburbanas*) | Registro estadístico anual de accidentes, involucrados, tipos de impacto y víctimas por municipio. |
-| **Estatal** | **SIEGEY / Agencia de Transporte de Yucatán** | Datos operativos del sistema metropolitano *Va y Ven* y corredores de alta demanda (aforos, paraderos, rutas). |
-| **Municipal** | **Geoportal Mérida / Infraestructura Urbana** | Catálogo geoespacial de semáforos viales, cruces señalizados y jerarquía de vialidades de la ciudad. |
-| **Transparencia** | **PNT / SSP Yucatán (C5i)** | Solicitud formal de información sobre los cruceros con mayor índice de siniestralidad y reportes de atención del 911. |
-| **Web Scraping** | **Medios de Comunicación Locales** | Monitoreo en medios digitales de incidentes viales recientes en avenidas principales y Anillo Periférico. |
-| **Self-Produced** | **Auditoría Directa de Campo** | Levantamiento presencial de anchos de banqueta, tiempos de semáforo verde peatonal y aforos en horas pico. |
-| **LiDAR en Aula** | **Sensor Láser 3D** | Escaneo tridimensional de una maqueta física a escala representativa de una intersección conflictiva para analizar visibilidad y obstáculos. |
-
----
-
-## 🎯 Criterio de Indexación (Unión de Datos)
-Todas las fuentes se conectan mediante un **índice espacial unificado**:
-$$\text{Intersección Target} = (\text{Latitud}, \text{Longitud}) \pm \text{Buffer de Influencia (50m - 100m)}$$
-Esto permite que cada punto de análisis contenga simultáneamente su geometría 3D, su historial de choques oficiales, sus menciones en prensa, su estado en semaforización y su auditoría física.
+## 🌐 Prototipo Interactivo
+El sitio web interactivo al estilo UPY DataViz está disponible en el archivo [`index.html`](index.html), donde se puede navegar entre las 7 vistas con gráficos dinámicos en Chart.js y el visor 3D interactivo en Three.js.
