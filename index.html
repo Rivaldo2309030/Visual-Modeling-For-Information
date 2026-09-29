@@ -11,9 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Chart.js & Three.js CDN -->
+  <!-- Chart.js, Three.js & Leaflet.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <style>
     :root {
@@ -251,14 +253,6 @@
       color: #fff; border-color: var(--accent-cyan); box-shadow: 0 0 12px rgba(0,242,254,0.3);
     }
 
-    /* Vista 1: Radiografía e Índices */
-    .v1-risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; width: 100%; }
-    .v1-stat-card {
-      background: linear-gradient(135deg, rgba(0,242,254,0.08), rgba(255,255,255,0.02));
-      border: 1px solid var(--border-glow); border-radius: 16px; padding: 1.4rem; text-align: center;
-    }
-    .v1-stat-num { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; color: var(--accent-cyan); text-shadow: 0 0 15px rgba(0,242,254,0.4); margin: 6px 0; }
-
     /* Vista 2: Paraderos de Autobús */
     .bus-stops-visual { display: flex; flex-direction: column; gap: 1rem; width: 100%; }
     .bus-stop-card {
@@ -269,18 +263,6 @@
     .bus-stop-icon { font-size: 2rem; color: var(--accent-cyan); text-shadow: 0 0 12px var(--accent-cyan); }
     .bus-stop-bar-bg { flex: 1; height: 16px; background: rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden; display: flex; }
     .bus-stop-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta)); border-radius: 10px; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-
-    /* Vista 3: Semáforo y Cuenta Regresiva */
-    .traffic-sim-container { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; width: 100%; }
-    .semaphore-box { background: #0c101d; border: 4px solid #1e293b; border-radius: 28px; padding: 1.2rem 2rem; display: flex; gap: 1.5rem; box-shadow: 0 0 40px rgba(0,0,0,0.9), inset 0 0 15px rgba(255,255,255,0.05); }
-    .light-circle { width: 50px; height: 50px; border-radius: 50%; opacity: 0.2; transition: all 0.4s ease; }
-    .light-red { background: #ef4444; }
-    .light-yellow { background: #ffbe0b; }
-    .light-green { background: #10b981; }
-    .light-red.active { opacity: 1; box-shadow: 0 0 25px #ef4444; transform: scale(1.1); }
-    .light-yellow.active { opacity: 1; box-shadow: 0 0 25px #ffbe0b; transform: scale(1.1); }
-    .light-green.active { opacity: 1; box-shadow: 0 0 25px #10b981; transform: scale(1.1); }
-    .timer-display { font-family: var(--font-mono); font-size: 2.8rem; font-weight: 800; color: var(--accent-cyan); text-shadow: 0 0 15px var(--accent-cyan); }
 
     /* Vista 4: Buzón PNT */
     .letters-visual { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; width: 100%; }
@@ -363,7 +345,7 @@
     <div class="tabs-wrapper">
       <button class="tab-btn active" onclick="switchView(1)"><i class="fa-solid fa-globe"></i> 1. Panorama General</button>
       <button class="tab-btn" onclick="switchView(2)"><i class="fa-solid fa-bus"></i> 2. Flujos Metropolitanos</button>
-      <button class="tab-btn" onclick="switchView(3)"><i class="fa-solid fa-traffic-light"></i> 3. Anatomía del Barrio</button>
+      <button class="tab-btn" onclick="switchView(3)"><i class="fa-solid fa-map-location-dot"></i> 3. Anatomía del Barrio</button>
       <button class="tab-btn" onclick="switchView(4)"><i class="fa-solid fa-envelope-open-text"></i> 4. Cartas a la Ciudad</button>
       <button class="tab-btn" onclick="switchView(5)"><i class="fa-solid fa-newspaper"></i> 5. El Rumor Digital</button>
       <button class="tab-btn" onclick="switchView(6)"><i class="fa-solid fa-shoe-prints"></i> 6. Pasos en el Terreno</button>
@@ -403,6 +385,7 @@
         <div class="viz-canvas-wrapper">
           <canvas id="mainChart"></canvas>
           <div id="threeContainer" style="display:none; width:100%; height:100%; position:relative;"></div>
+          <div id="mapContainer" style="display:none; width:100%; height:100%; border-radius:14px; position:relative; z-index:1;"></div>
           <div id="creativeContainer" style="display:none; width:100%; height:100%;"></div>
         </div>
       </div>
@@ -539,42 +522,16 @@
       3: {
         badge: "FUENTE PRINCIPAL: GEOPORTAL MÉRIDA",
         title: "3. Geoportal Mérida — La Anatomía del Barrio",
-        desc: "Fuente Municipal: El mapa de banquetas, postes y semáforos que guían el paso.",
+        desc: "Fuente Municipal: El mapa interactivo de banquetas, semáforos y cruceros en Mérida.",
         author: "Elisabeth",
-        vizTitle: "Faros Urbanos: Mapeo y Simulador de Semáforos Peatonales",
+        vizTitle: "Geoportal Interactivo: Mapeo de Nodos Semaforizados y Cruceros",
         storyTitle: "La Geometría del Barrio",
-        storyText: "De 80 nodos semaforizados principales analizados en Mérida, solo el 42% incluye una fase explícita con semáforo peatonal. El 58% restante obliga al peatón a 'adivinar' cuándo girará un automóvil.",
-        insight: "Descubrimiento Clave: Más de la mitad de las intersecciones reguladas priorizan el flujo de autos sin dar un tiempo exclusivo a la persona a pie.",
-        k1_v: "80", k1_l: "Nodos Semaforizados Analizados", k1_icon: "fa-traffic-light",
+        storyText: "Geolocalizamos 80 nodos semaforizados en la mancha urbana de Mérida. Al hacer clic en cada marcador neón en el mapa, descubrirás qué cruces cuentan con fase peatonal exclusiva y cuáles obligan al peatón a arriesgarse.",
+        insight: "Descubrimiento Clave: El 58% de las intersecciones georreferenciadas carecen de fase peatonal activa, concentrándose en el anillo Periférico.",
+        k1_v: "80 Nodos", k1_l: "Cruceros Mapeados en Mérida", k1_icon: "fa-map-location-dot",
         k2_v: "42%", k2_l: "Con Fase Peatonal Activa", k2_icon: "fa-person-walking",
-        k3_v: "15s", k3_l: "Tiempo Promedio para Cruzar", k3_icon: "fa-stopwatch",
-        vizMode: "creative",
-        creativeHtml: `
-          <div class="creative-viz-wrapper traffic-sim-container">
-            <div class="viz-controls-bar" style="justify-content:center; gap:18px;">
-              <button class="ctrl-btn active" onclick="setSignalPhase('red')"><i class="fa-solid fa-hand"></i> Fase Peatonal (Verde Peatón)</button>
-              <button class="ctrl-btn" onclick="setSignalPhase('green')"><i class="fa-solid fa-car"></i> Fase Vehicular (Verde Autos)</button>
-            </div>
-            
-            <div style="display:flex; align-items:center; gap:2.5rem; margin:1rem 0;">
-              <div class="semaphore-box">
-                <div id="light-r" class="light-circle light-red active"></div>
-                <div id="light-y" class="light-circle light-yellow"></div>
-                <div id="light-g" class="light-circle light-green"></div>
-              </div>
-
-              <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
-                <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Cuenta Regresiva Peatón</span>
-                <div id="sem-timer" class="timer-display">15s</div>
-                <span id="sem-status" class="badge-pill badge-primary"><i class="fa-solid fa-person-walking"></i> ¡Paso Seguro Peatonal!</span>
-              </div>
-            </div>
-
-            <div style="font-size:0.88rem; color:var(--text-muted); text-align:center; max-width:520px; line-height:1.5;">
-              <i class="fa-solid fa-circle-info" style="color:var(--accent-cyan);"></i> Alterna las fases del crucero para simular la tensión en el semáforo entre el cruce a pie y la vuelta continua de automóviles.
-            </div>
-          </div>
-        `
+        k3_v: "58%", k3_l: "Sin Fase Peatonal Protegida", k3_icon: "fa-triangle-exclamation",
+        vizMode: "map"
       },
       4: {
         badge: "FUENTE PRINCIPAL: TRANSPARENCIA PNT",
@@ -856,21 +813,31 @@
 
       const chartCanvas = document.getElementById('mainChart');
       const threeContainer = document.getElementById('threeContainer');
+      const mapContainer = document.getElementById('mapContainer');
       const creativeContainer = document.getElementById('creativeContainer');
 
       if (data.vizMode === 'three') {
         chartCanvas.style.display = 'none';
         creativeContainer.style.display = 'none';
+        mapContainer.style.display = 'none';
         threeContainer.style.display = 'block';
         initThreeJs();
+      } else if (data.vizMode === 'map') {
+        chartCanvas.style.display = 'none';
+        threeContainer.style.display = 'none';
+        creativeContainer.style.display = 'none';
+        mapContainer.style.display = 'block';
+        initLeafletMap();
       } else if (data.vizMode === 'creative') {
         chartCanvas.style.display = 'none';
         threeContainer.style.display = 'none';
+        mapContainer.style.display = 'none';
         creativeContainer.style.display = 'block';
         creativeContainer.innerHTML = data.creativeHtml;
       } else {
         threeContainer.style.display = 'none';
         creativeContainer.style.display = 'none';
+        mapContainer.style.display = 'none';
         chartCanvas.style.display = 'block';
         renderChart(data.chartType, data.chartData);
       }
@@ -905,6 +872,60 @@
       });
     }
 
+    /* MAPA INTERACTIVO LEAFLET PARA VISTA 3 (GEOPORTAL MÉRIDA) */
+    let leafletMap = null;
+    function initLeafletMap() {
+      const container = document.getElementById('mapContainer');
+      if (!container) return;
+
+      if (leafletMap) {
+        setTimeout(() => leafletMap.invalidateSize(), 150);
+        return;
+      }
+
+      leafletMap = L.map('mapContainer').setView([20.9674, -89.6237], 12);
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
+        maxZoom: 19
+      }).addTo(leafletMap);
+
+      const meridaNodes = [
+        { name: "Salida Progreso (Periférico Norte)", lat: 21.0365, lng: -89.6152, status: "danger", desc: "Sin semáforo peatonal • Velocidad 90 km/h • 313 siniestros/año", icon: "🔴" },
+        { name: "Entronque Kanasín (Periférico Oriente)", lat: 20.9412, lng: -89.5701, status: "danger", desc: "Cruce a nivel de calle sin puente peatonal próximo", icon: "🔴" },
+        { name: "Av. Jacinto Canek x Calle 128", lat: 20.9785, lng: -89.6542, status: "warning", desc: "Zona escolar • Fase peatonal reducida a 15 segundos", icon: "🟡" },
+        { name: "Centro Histórico (Calle 60 x 61)", lat: 20.9670, lng: -89.6237, status: "safe", desc: "Semáforo con fase peatonal activa e iluminación nocturna", icon: "🟢" },
+        { name: "Paseo de Montejo x Calle 47", lat: 20.9754, lng: -89.6190, status: "safe", desc: "Crucero regulado con paso de cebra amplio y rampas", icon: "🟢" },
+        { name: "Circuito Colonias x Av. Itzaes", lat: 20.9620, lng: -89.6450, status: "danger", desc: "Falta botón de activación peatonal • Flujo pesado", icon: "🔴" },
+        { name: "Periférico Sur (Salida Umán)", lat: 20.9080, lng: -89.6590, status: "danger", desc: "Luminarias fundidas • Alta velocidad vehicular", icon: "🔴" },
+        { name: "Av. Tecnológico x Calle 21", lat: 21.0020, lng: -89.6180, status: "warning", desc: "Afluencia universitaria elevada en hora pico", icon: "🟡" }
+      ];
+
+      meridaNodes.forEach(node => {
+        let color = node.status === 'safe' ? '#10b981' : node.status === 'warning' ? '#ffbe0b' : '#ff5252';
+        let marker = L.circleMarker([node.lat, node.lng], {
+          radius: 10,
+          fillColor: color,
+          color: '#ffffff',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 0.85
+        }).addTo(leafletMap);
+
+        marker.bindPopup(`
+          <div style="font-family:'Outfit',sans-serif; color:#0f172a; padding:4px;">
+            <strong style="font-size:0.95rem; color:#0f172a;">${node.icon} ${node.name}</strong><br>
+            <span style="font-size:0.82rem; color:#475569;">${node.desc}</span><br>
+            <div style="margin-top:6px; font-weight:700; font-size:0.75rem; color:${color};">
+              ${node.status === 'safe' ? 'Fase Peatonal Activa' : node.status === 'warning' ? 'Fase Peatonal Corta' : 'CRUCE DESPROTEGIDO (SIN FASE PEATONAL)'}
+            </div>
+          </div>
+        `);
+      });
+
+      setTimeout(() => leafletMap.invalidateSize(), 300);
+    }
+
     /* FUNCIONES INTERACTIVAS ESPECÍFICAS DE CADA VISTA */
     function updateBusView(filter) {
       const list = document.getElementById('bus-stops-list');
@@ -935,35 +956,6 @@
         `;
       } else {
         switchView(2);
-      }
-    }
-
-    function setSignalPhase(phase) {
-      const lr = document.getElementById('light-r');
-      const ly = document.getElementById('light-y');
-      const lg = document.getElementById('light-g');
-      const timer = document.getElementById('sem-timer');
-      const status = document.getElementById('sem-status');
-
-      if (!lr || !ly || !lg) return;
-
-      if (phase === 'red') {
-        lr.className = 'light-circle light-red active';
-        ly.className = 'light-circle light-yellow';
-        lg.className = 'light-circle light-green';
-        timer.innerText = '15s';
-        status.className = 'badge-pill badge-primary';
-        status.innerHTML = '<i class="fa-solid fa-person-walking"></i> ¡Paso Seguro Peatonal!';
-      } else {
-        lr.className = 'light-circle light-red';
-        ly.className = 'light-circle light-yellow';
-        lg.className = 'light-circle light-green active';
-        timer.innerText = '00s';
-        status.className = 'badge-pill';
-        status.style.background = 'rgba(239, 68, 68, 0.25)';
-        status.style.color = '#ef4444';
-        status.style.border = '1px solid #ef4444';
-        status.innerHTML = '<i class="fa-solid fa-hand"></i> ¡Alto Peatonal! Tráfico Vehicular Avanzando';
       }
     }
 
