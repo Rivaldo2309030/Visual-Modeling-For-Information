@@ -1,21 +1,23 @@
 # Plan del Proyecto: Sentir la Calle (Data Storytelling Peatonal en Mérida)
 
 ## 📌 Descripción General
-"Sentir la Calle" es una propuesta de **Data Storytelling interactivo** diseñada para el libro colectivo de la materia. El proyecto aborda la percepción de seguridad, accesibilidad y confort del peatón en Mérida, Yucatán, mediante una narrativa dividida en **7 Vistas (Capítulos)** que conectan 7 fuentes de datos de distintas escalas y culminan con la visualización tridimensional mediante **LiDAR escaneado en el aula**.
+"Sentir la Calle" es una propuesta de **Data Storytelling interactivo** diseñada para el libro colectivo de la materia. El proyecto aborda la percepción de seguridad, accesibilidad y confort del peatón en Mérida, Yucatán, mediante una narrativa dividida en **9 Vistas (Capítulos)** que conectan 7 fuentes de datos de distintas escalas y culminan con la visualización tridimensional mediante **LiDAR escaneado en el aula**.
 
 ---
 
-## 🎭 Estructura Narrativa de las 7 Vistas (Storytelling)
+## 🎭 Estructura Narrativa de las 9 Vistas (Style UPY DataViz)
 
-| Vista | Título del Capítulo / Fuente | Historia que Cuenta | Integrante Responsable |
-|---|---|---|---|
-| **1. La Red que nos Cuida** | INEGI (ATUS) — Nacional | Las cifras oficiales masivas de siniestralidad vial en Mérida y la magnitud del espacio urbano. | **Rivaldo** |
-| **2. Corredores de Vida** | SIEGEY — Estatal | El flujo constante de miles de usuarios en las rutas metropolitanas *Va y Ven* e *Ie-Tram*. | **Elisabeth** |
-| **3. Luces y Sombras** | Geoportal Mérida — Municipal | La presencia o ausencia de semáforos peatonales, alumbrado y banquetas en la ciudad. | **Elisabeth** |
-| **4. La Clama Ciudadana** | PNT / SSP Yucatán — Transparencia | Lo que los vecinos solicitan formalmente: alumbrado, botones de pánico y cruceros prioritarios. | **Elisabeth** |
-| **5. El Latido de la Prensa** | Web Scraping — Medios Locales | 192 publicaciones y testimonios en prensa sobre choques y la percepción cotidiana de riesgo. | **Christopher** |
-| **6. Pasos en el Terreno** | Self-Produced — Auditoría de Campo | El contraste directo: tiempos de semáforo verde medidos a pie vs. la velocidad del tráfico real. | **Christopher** |
-| **7. La Dimensión LiDAR 3D** | Sensor LiDAR — Captura en Aula | Inmersión 3D en la maqueta a escala del crucero para analizar **ángulos ciegos y campos de visión**. | **Rivaldo** |
+| Vista | Título Único de la Vista | Fuente de Datos / Componente | La Historia que Cuenta | Integrante Responsable |
+|---|---|---|---|---|
+| **1. Panorama General** | INEGI (ATUS) — Nacional | `data/nacional/` | *Sombras en las Cifras Oficiales:* El marco masivo de siniestralidad oficial en Mérida. | **Rivaldo** |
+| **2. Flujos Metropolitanos** | SIEGEY — Estatal | `data/estatal/` | *El Ritmo del Va y Ven:* La movilidad en los paraderos de alta velocidad. | **Elisabeth** |
+| **3. Anatomía del Barrio** | Geoportal Mérida — Municipal | `data/municipal/` | *Faros y Sombras Urbanas:* El mapa de 80 semáforos y banquetas que protegen o desamparan. | **Elisabeth** |
+| **4. Cartas a la Ciudad** | PNT / SSP — Transparencia | `data/transparencia/` | *Voces en el Papel:* Las peticiones oficiales de los vecinos pidiendo iluminación y vigilancia. | **Elisabeth** |
+| **5. El Rumor Digital** | Web Scraping — Medios Locales | `data/scraping/` | *192 Noticias y Testimonios:* La conversación cotidiana sobre cruces peligrosos en redes. | **Christopher** |
+| **6. Pasos en el Terreno** | Self-Produced — Auditoría | `data/self_produced/` | *Caminando Mérida:* Tiempos de verde medidos a pie vs. la velocidad real de los coches. | **Christopher** |
+| **7. Clima y Horarios** | Análisis Ambiental | `data/ambiental/` | *Sol y Penumbra:* Cómo las temperaturas extremas y la noche modifican el caminar. | **Christopher** |
+| **8. El Ojo Digital 3D** | Sensor LiDAR — Captura Aula | `data/lidar/` | *Modelado Tridimensional:* Visor 3D de la nube de puntos `.PLY` para medir ángulos ciegos. | **Rivaldo** |
+| **9. Síntesis y Futuro** | Síntesis del Equipo | `PLAN_DE_PROYECTO.md` | *Hacia una Ciudad Humana:* Matriz integrada de hallazgos y recomendaciones de diseño urbano. | **Equipo** |
 
 ---
 
@@ -23,31 +25,11 @@
 
 | Integrante | Rol en la Historia | Responsabilidades Clave |
 |---|---|---|
-| **Rivaldo** | **Coordinador Técnico & LiDAR / INEGI** | • Procesamiento de la nube de puntos 3D LiDAR (Vista 7).<br>• Análisis de la fuente Nacional INEGI ATUS (Vista 1).<br>• Arquitectura general de datos e indexación geoespacial. |
+| **Rivaldo** | **Coordinador Técnico & LiDAR / INEGI** | • Procesamiento de la nube de puntos 3D LiDAR (Vista 8).<br>• Análisis de la fuente Nacional INEGI ATUS (Vista 1).<br>• Arquitectura general de datos e indexación geoespacial. |
 | **Elisabeth** | **Especialista Institucional & Transparencia** | • Extracción y seguimiento de peticiones PNT / SSP (Vista 4).<br>• Análisis de corredores SIEGEY Va y Ven (Vista 2).<br>• Mapeo de semáforos y banquetas en el Geoportal de Mérida (Vista 3). |
-| **Christopher** | **Especialista de Campo & Scraping** | • Scraper de noticias y testimonios en prensa local (Vista 5).<br>• Levantamiento presencial y encuesta de confort en campo (Vista 6).<br>• Diseño visual y maquetación de gráficos para el libro/web. |
-
----
-
-## 🗺️ Diagrama de Flujo del Storytelling Interactivo
-
-```mermaid
-flowchart TD
-    subgraph STORY ["Narrativa en 7 Vistas (Storytelling)"]
-        V1["1. La Red que nos Cuida (INEGI ATUS)"] --> V2["2. Corredores de Vida (SIEGEY)"]
-        V2 --> V3["3. Luces y Sombras (Geoportal)"]
-        V3 --> V4["4. La Clama Ciudadana (PNT)"]
-        V4 --> V5["5. El Latido de la Prensa (Scraping)"]
-        V5 --> V6["6. Pasos en el Terreno (Self-produced)"]
-        V6 --> V7["7. La Dimensión LiDAR 3D (Aula)"]
-    end
-
-    style V1 fill:#00f2fe,stroke:#000,color:#000
-    style V6 fill:#feb47b,stroke:#000,color:#000
-    style V7 fill:#a855f7,stroke:#fff,color:#fff
-```
+| **Christopher** | **Especialista de Campo & Scraping** | • Scraper de noticias y testimonios en prensa local (Vista 5).<br>• Levantamiento presencial y encuesta de confort en campo (Vista 6).<br>• Análisis ambiental de clima/horarios (Vista 7) y diseño visual. |
 
 ---
 
 ## 🌐 Prototipo Interactivo
-El sitio web interactivo al estilo UPY DataViz está disponible en el archivo [`index.html`](index.html), donde se puede navegar entre las 7 vistas con gráficos dinámicos en Chart.js y el visor 3D interactivo en Three.js.
+El sitio web interactivo de 9 Vistas al estilo UPY DataViz está disponible en [`index.html`](index.html).

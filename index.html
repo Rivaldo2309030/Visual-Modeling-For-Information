@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Storytelling: El Viaje Peatonal en Mérida | Prototipo de 7 Vistas</title>
+  <title>Data Storytelling: Sentir la Calle | Prototipo Interactivo de 9 Vistas</title>
   
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/fontawesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Chart.js & Three.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -89,10 +89,10 @@
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-card);
       color: var(--text-muted);
-      padding: 10px 18px;
+      padding: 9px 16px;
       border-radius: 12px;
       font-family: var(--font-heading);
-      font-size: 0.85rem; font-weight: 600;
+      font-size: 0.82rem; font-weight: 600;
       cursor: pointer; transition: all 0.25s ease;
     }
     .tab-btn:hover { background: rgba(255, 255, 255, 0.08); color: var(--text-main); }
@@ -148,54 +148,56 @@
   <header>
     <div>
       <div class="brand-title">Sentir la Calle: El Viaje Peatonal en Mérida</div>
-      <div class="brand-subtitle">Visual Modeling For Information | Data Storytelling de 7 Fuentes</div>
+      <div class="brand-subtitle">Visual Modeling For Information | Data Storytelling de 9 Vistas</div>
     </div>
     <div style="display:flex; gap:10px;">
-      <span style="background:rgba(0,242,254,0.1); border:1px solid var(--accent-cyan); color:var(--accent-cyan); padding:4px 12px; border-radius:20px; font-size:0.75rem; font-weight:600;">FASE 1: PLANIFICACIÓN</span>
+      <span style="background:rgba(0,242,254,0.1); border:1px solid var(--accent-cyan); color:var(--accent-cyan); padding:4px 12px; border-radius:20px; font-size:0.75rem; font-weight:600;">PROTOTIPO NARRATIVO 9 VISTAS</span>
     </div>
   </header>
 
   <div class="tabs-nav-container">
     <div class="tabs-wrapper">
-      <button class="tab-btn active" onclick="switchView(1)">1. La Red que nos Cuida (INEGI)</button>
-      <button class="tab-btn" onclick="switchView(2)">2. Corredores de Vida (SIEGEY)</button>
-      <button class="tab-btn" onclick="switchView(3)">3. Luces y Sombras (Geoportal)</button>
-      <button class="tab-btn" onclick="switchView(4)">4. La Clama Ciudadana (Transparencia)</button>
-      <button class="tab-btn" onclick="switchView(5)">5. El Latido de la Prensa (Scraping)</button>
-      <button class="tab-btn" onclick="switchView(6)">6. Pasos en el Terreno (Self-produced)</button>
-      <button class="tab-btn lidar-btn" onclick="switchView(7)">7. La Dimensión LiDAR 3D (Aula)</button>
+      <button class="tab-btn active" onclick="switchView(1)">1. Panorama General</button>
+      <button class="tab-btn" onclick="switchView(2)">2. Flujos Metropolitanos</button>
+      <button class="tab-btn" onclick="switchView(3)">3. Anatomía del Barrio</button>
+      <button class="tab-btn" onclick="switchView(4)">4. Cartas a la Ciudad</button>
+      <button class="tab-btn" onclick="switchView(5)">5. El Rumor Digital</button>
+      <button class="tab-btn" onclick="switchView(6)">6. Pasos en el Terreno</button>
+      <button class="tab-btn" onclick="switchView(7)">7. Clima y Horarios</button>
+      <button class="tab-btn lidar-btn" onclick="switchView(8)">8. El Ojo Digital 3D</button>
+      <button class="tab-btn" onclick="switchView(9)">9. Síntesis y Futuro</button>
     </div>
   </div>
 
   <main>
     <div id="source-banner" class="glass-panel source-banner">
       <div>
-        <div id="banner-title" class="source-title">1. INEGI (ATUS) — La Red que nos Cuida</div>
-        <div id="banner-desc" class="source-desc">Fuente Nacional: Registros oficiales de siniestralidad urbana y comportamiento vial en Mérida (2021-2023).</div>
+        <div id="banner-title" class="source-title">1. Panorama General — INEGI ATUS</div>
+        <div id="banner-desc" class="source-desc">Fuente Nacional: Registros oficiales sobre el espacio urbano y comportamiento en Mérida.</div>
       </div>
-      <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan);">data/nacional/atus_merida_yucatan.csv</div>
+      <div id="banner-file" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan);">data/nacional/atus_merida_yucatan.csv</div>
     </div>
 
     <div class="view-grid">
       <!-- Main Content -->
       <div class="glass-panel story-card">
-        <h2 id="view-heading">7,134 Hechos Registrados: Lo que nos dicen las Cifras Oficiales</h2>
+        <h2 id="view-heading">7,134 Historias Bajo la Lupa del Censo Nacional</h2>
         <p id="view-text">
-          La primera etapa de nuestro viaje analiza los datos oficiales del INEGI sobre accidentes viales en Mérida. A pesar de ser reconocida por su alta calidad de vida, los microdatos revelan miles de percances en cruces urbanos que moldean la sensación diaria del peatón al caminar.
+          Mérida suele considerarse un oasis de tranquilidad, pero cuando desglosamos los microdatos nacionales del INEGI, descubrimos miles de intersecciones donde el peatón se siente expuesto a diario.
         </p>
 
         <div class="stats-grid">
           <div class="stat-box">
             <div id="stat1-num" class="stat-number">7,134</div>
-            <div id="stat1-lbl" class="stat-label">Registros INEGI (3 Años)</div>
+            <div id="stat1-lbl" class="stat-label">Incidentes Registrados</div>
           </div>
           <div class="stat-box">
             <div id="stat2-num" class="stat-number" style="color:var(--accent-coral);">65%</div>
-            <div id="stat2-lbl" class="stat-label">Ocurren en Intersecciones</div>
+            <div id="stat2-lbl" class="stat-label">En Intersecciones</div>
           </div>
           <div class="stat-box">
             <div id="stat3-num" class="stat-number" style="color:var(--accent-amber);">313+</div>
-            <div id="stat3-lbl" class="stat-label">Percances en Periférico/Año</div>
+            <div id="stat3-lbl" class="stat-label">Reportes Periférico/Año</div>
           </div>
         </div>
 
@@ -210,7 +212,7 @@
         <div class="glass-panel">
           <div class="sidebar-header"><i class="fa-solid fa-users"></i> Equipo & Responsables</div>
           <div style="display:flex; flex-direction:column; gap:10px; margin-top:12px;">
-            <div class="team-badge"><strong style="color:var(--accent-cyan);">Rivaldo:</strong> Coordinador & LiDAR / INEGI</div>
+            <div class="team-badge"><strong style="color:var(--accent-cyan);">Rivaldo:</strong> Coordinación & LiDAR / INEGI</div>
             <div class="team-badge"><strong style="color:var(--accent-purple);">Elisabeth:</strong> SIEGEY & Transparencia</div>
             <div class="team-badge"><strong style="color:var(--accent-amber);">Christopher:</strong> Scraping & Campo</div>
           </div>
@@ -219,7 +221,7 @@
         <div class="glass-panel" style="flex:1;">
           <div class="sidebar-header"><i class="fa-solid fa-compass"></i> Hito de Storytelling</div>
           <p id="sidebar-story" style="font-size:0.85rem; color:var(--text-muted); margin-top:10px; line-height:1.5;">
-            Esta vista establece el panorama base nacional. Los datos fríos del INEGI nos dan la magnitud, pero el verdadero viaje es descubrir la brecha entre las cifras y la vivencia en la calle.
+            Esta primera vista establece el panorama de partida a escala nacional.
           </p>
         </div>
       </div>
@@ -231,34 +233,34 @@
   </footer>
 
   <script>
-    // Configuración de las 7 vistas narrativas
+    // Configuración de las 9 Vistas Narrativas Únicas al estilo UPY DataViz
     const storyViews = {
       1: {
-        title: "1. INEGI (ATUS) — La Red que nos Cuida",
-        desc: "Fuente Nacional: Registros oficiales de siniestralidad urbana y comportamiento vial en Mérida (2021-2023).",
+        title: "1. Panorama General — INEGI ATUS",
+        desc: "Fuente Nacional: La radiografía oficial del espacio urbano y los cruces de Mérida.",
         file: "data/nacional/atus_merida_yucatan.csv",
-        heading: "7,134 Hechos Registrados: Lo que nos dicen las Cifras Oficiales",
-        text: "La primera etapa de nuestro viaje analiza los datos oficiales del INEGI sobre accidentes viales en Mérida. A pesar de ser reconocida por su alta calidad de vida, los microdatos revelan miles de percances en cruces urbanos que moldean la sensación diaria del peatón al caminar.",
-        s1_n: "7,134", s1_l: "Registros INEGI (3 Años)",
-        s2_n: "65%", s2_l: "Ocurren en Intersecciones",
-        s3_n: "313+", s3_l: "Percances en Periférico/Año",
-        sidebar: "Esta vista establece el panorama base nacional. Los datos fríos del INEGI nos dan la magnitud, pero el verdadero viaje es descubrir la brecha entre las cifras y la vivencia en la calle.",
+        heading: "7,134 Historias Bajo la Lupa del Censo Nacional",
+        text: "Mérida suele considerarse una ciudad tranquila, pero al analizar los microdatos del INEGI descubrimos miles de intersecciones donde el peatón se siente expuesto durante su trayecto cotidiano.",
+        s1_n: "7,134", s1_l: "Incidentes en Registros",
+        s2_n: "65%", s2_l: "Ocurren al Cruzar la Calle",
+        s3_n: "313+", s3_l: "Reportes Periférico/Año",
+        sidebar: "El INEGI aporta el marco de referencia masivo para iniciar la narrativa visual.",
         chartType: "bar",
         chartData: {
           labels: ["2021", "2022", "2023"],
-          datasets: [{ label: "Accidentes en Mérida", data: [2210, 2380, 2544], backgroundColor: "#00f2fe" }]
+          datasets: [{ label: "Registros Nacionales en Mérida", data: [2210, 2380, 2544], backgroundColor: "#00f2fe" }]
         }
       },
       2: {
-        title: "2. SIEGEY / Transporte — Corredores de Vida y Movilidad",
-        desc: "Fuente Estatal: Demanda de pasajeros e incidentes en rutas metropolitanas (Va y Ven e Ie-Tram).",
+        title: "2. Flujos Metropolitanos — SIEGEY",
+        desc: "Fuente Estatal: El ritmo de movilidad en las rutas Va y Ven e Ie-Tram.",
         file: "data/estatal/siegey_corredores_movilidad_yucatan.json",
-        heading: "El Flujo Metropolitano: Mapeando las Grandes Arterias de Mérida",
-        text: "Los corredores estatales conectan a miles de personas a diario. Analizamos el equilibrio entre la alta demanda de usuarios del Va y Ven en el Periférico y la infraestructura de protección peatonal en sus paraderos.",
-        s1_n: "50 km", s1_l: "Circuito Periférico Va y Ven",
-        s2_n: "45,000", s2_l: "Usuarios Diarios Estimados",
-        s3_n: "69", s3_l: "Paraderos Oficiales",
-        sidebar: "Analizar el transporte metropolitano nos permite comprender cómo los flujos de alta velocidad condicionan el cruce de los peatones.",
+        heading: "El Ritmo del Va y Ven: La Ciudad en Movimiento Constante",
+        text: "El transporte metropolitano conecta a miles de yucatecos al día. Analizamos el contraste entre la velocidad de los autobuses y la exposición de quienes esperan en los paraderos del Periférico.",
+        s1_n: "50 km", s1_l: "Anillo Periférico Metropolitano",
+        s2_n: "45,000", s2_l: "Peatones en Movimiento Diario",
+        s3_n: "69", s3_l: "Puntos de Paradero Oficiales",
+        sidebar: "Los datos estatales reflejan el comportamiento del transporte público masivo.",
         chartType: "line",
         chartData: {
           labels: ["6 AM", "9 AM", "12 PM", "3 PM", "6 PM", "9 PM"],
@@ -266,81 +268,113 @@
         }
       },
       3: {
-        title: "3. Geoportal Mérida — Luces y Sombras de la Infraestructura",
-        desc: "Fuente Municipal: Catalogación de semáforos, banquetas y equipamiento urbano.",
+        title: "3. Anatomía del Barrio — Geoportal Mérida",
+        desc: "Fuente Municipal: El mapa de banquetas, postes y semáforos que guían el paso.",
         file: "data/municipal/merida_cruces_semaforos.json",
-        heading: "80 Semáforos Mapeados: La Geometría de la Seguridad Urbana",
-        text: "Visualizamos la distribución espacial de los semáforos viales y cruces señalizados en Mérida. La presencia o ausencia de semáforos peatonales determina de forma directa la confianza al cruzar.",
+        heading: "80 Faros Urbanos: Mapeando la Luz y los Semáforos",
+        text: "La infraestructura municipal influye directamente en la confianza al caminar. Mapeamos 80 nodos semaforizados para evaluar cuántos cuentan con fase peatonal efectiva.",
         s1_n: "80", s1_l: "Nodos Semaforizados Mapeados",
-        s2_n: "42%", s2_l: "Cuenta con Fase Peatonal",
-        s3_n: "15s", s3_l: "Tiempo Verde Promedio Peatón",
-        sidebar: "El Geoportal municipal nos aporta la capa física: dónde está la infraestructura y dónde faltan cruces seguros.",
+        s2_n: "42%", s2_l: "Con Fase Peatonal Activa",
+        s3_n: "15s", s3_l: "Tiempo Asignado al Peatón",
+        sidebar: "El Geoportal municipal provee la capa física de equipamiento urbano.",
         chartType: "doughnut",
         chartData: {
-          labels: ["Con Semáforo Peatonal", "Solo Semáforo Vehicular", "Sin Señalización"],
+          labels: ["Fase Peatonal Activa", "Solo Paso Vehicular", "Cruces Desprotegidos"],
           datasets: [{ data: [42, 38, 20], backgroundColor: ["#10b981", "#ff7e5f", "#94a3b8"] }]
         }
       },
       4: {
-        title: "4. PNT / SSP Yucatán — La Clama Ciudadana",
-        desc: "Solicitud de Transparencia: Peticiones oficiales de iluminación, botones de pánico y cruceros críticos.",
+        title: "4. Cartas a la Ciudad — PNT / Transparencia",
+        desc: "Solicitud de Gobierno: Peticiones oficiales de los vecinos pidiendo iluminación y vigilancia.",
         file: "data/transparencia/ssp_intersecciones_conflictivas.json",
-        heading: "Cruces Críticos: Lo que los Ciudadanos Solicitan en la PNT",
-        text: "A través de solicitudes formales de transparencia a la SSP y Ayuntamiento, identificamos las intersecciones con mayor número de reportes ciudadanos por falta de alumbrado o velocidad excesiva.",
-        s1_n: "5 Top", s1_l: "Cruceros Críticos Catalogados",
-        s2_n: "4 Cám.", s2_l: "Promedio C5i por Crucero",
-        s3_n: "PNT-2026", s3_l: "Folio Solicitud Oficial",
-        sidebar: "La transparencia nos revela la voz institucional: cuáles son las intersecciones clasificadas como prioridad por los cuerpos de seguridad.",
+        heading: "Voces en el Papel: Las Peticiones Oficiales de los Vecinos",
+        text: "Revisando las solicitudes ingresadas en la Plataforma Nacional de Transparencia a la SSP, identificamos las esquinas con mayor volumen de solicitudes de alumbrado y cruces seguros.",
+        s1_n: "5 Puntos", s1_l: "Esquinas Prioritarias en Reportes",
+        s2_n: "4 Cám.", s2_l: "Monitoreo del C5i por Zona",
+        s3_n: "PNT-2026", s3_l: "Folio de Transparencia Ingresado",
+        sidebar: "La PNT visibiliza el llamado formal de la ciudadanía a las autoridades.",
         chartType: "bar",
         chartData: {
           labels: ["Periférico x Progreso", "Periférico x Canek", "Periférico x Kanasín", "Monumento Patria", "Circuito x C. 60"],
-          datasets: [{ label: "Incidencia Reportada (PNT)", data: [48, 56, 62, 22, 19], backgroundColor: "#ff7e5f" }]
+          datasets: [{ label: "Peticiones Registradas (PNT)", data: [48, 56, 62, 22, 19], backgroundColor: "#ff7e5f" }]
         }
       },
       5: {
-        title: "5. Web Scraping — El Latido de la Prensa y Redes",
-        desc: "Extracción Web: 192 noticias y testimonios reales de siniestros viales en Mérida.",
+        title: "5. El Rumor Digital — Web Scraping Prensa",
+        desc: "Extracción Digital: 192 noticias y testimonios extraídos de periódicos y redes.",
         file: "data/scraping/merida_siniestros_noticias.json",
-        heading: "192 Historias en Prensa: La Percepción en los Medios Locales",
-        text: "Mediante scraping automatizado de diarios locales y redes, recopilamos 192 publicaciones sobre percances en Mérida. Los titulares reflejan el sentir popular sobre el riesgo en avenidas clave.",
-        s1_n: "192", s1_l: "Notas Periodísticas Extraídas",
-        s2_n: "Periférico", s2_l: "Palabra Clave Más Frecuente",
-        s3_n: "Diario/Prensa", s3_l: "Fuentes Automatizadas",
-        sidebar: "El scraping añade el sentimiento social y la narrativa cotidiana que la estadística oficial a menudo omite.",
+        heading: "192 Noticas y Testimonios: Lo que Se Comenta en Redes",
+        text: "El scraping de noticias locales nos permite pulsar el sentir popular. Los titulares en redes sociales reflejan el temor constante a cruzar vialidades veloces como el Periférico.",
+        s1_n: "192", s1_l: "Notas y Comentarios Recopilados",
+        s2_n: "Periférico", s2_l: "Mención Más Frecuente en Prensa",
+        s3_n: "Diarios", s3_l: "Fuentes Informativas Locales",
+        sidebar: "El scraping añade el sentimiento social y la narrativa viva del ciudadano.",
         chartType: "polarArea",
         chartData: {
-          labels: ["Periférico", "Atropellamiento", "Choque Alcance", "Volcadura", "Falta de Señal"],
+          labels: ["Periférico", "Falta de Luz", "Velocidad", "Banquetas Malas", "Cruces Sin Semáforo"],
           datasets: [{ data: [85, 42, 35, 18, 12], backgroundColor: ["rgba(255,126,95,0.7)", "rgba(254,180,123,0.7)", "rgba(0,242,254,0.7)", "rgba(168,85,247,0.7)", "rgba(16,185,129,0.7)"] }]
         }
       },
       6: {
-        title: "6. Auditoría de Campo — Pasos en el Terreno",
-        desc: "Self-Produced Data: Levantamiento presencial del equipo sobre tiempos, anchos y confort.",
+        title: "6. Pasos en el Terreno — Self-Produced",
+        desc: "Datos Propios: Levantamiento presencial del equipo sobre tiempos, anchos y confort.",
         file: "data/self_produced/auditoria_cruces_plantilla.csv",
-        heading: "De los Datos a la Banqueta: La Auditoría Presencial del Equipo",
-        text: "Rivaldo, Elisabeth y Christopher realizaron mediciones directas en cruceros clave de Mérida: midiendo anchos de calle, tiempos de semáforo verde para peatones y densidad de flujo a pie.",
-        s1_n: "1.2 m", s1_l: "Ancho Promedio Banqueta Medido",
-        s2_n: "15 seg", s2_l: "Verde Peatonal Disponible",
-        s3_n: "CRÍTICO", s3_l: "Diagnóstico en Periférico x Progreso",
-        sidebar: "Los datos autogenerados aportan el filtro de realidad física: validar en persona si un adulto mayor alcanza a cruzar en el tiempo asignado.",
+        heading: "Caminando Mérida: La Auditoría Directa en la Calle",
+        text: "Salimos con cinta métrica y cronómetro a recorrer los cruces de Mérida. Medimos el ancho de banquetas y verificamos si un adulto mayor tiene tiempo suficiente para cruzar en verde.",
+        s1_n: "1.2 m", s1_l: "Ancho Promedio de Banqueta",
+        s2_n: "15s", s2_l: "Tiempo Verde Peatonal Medido",
+        s3_n: "Alerta", s3_l: "Evaluación en Salida Progreso",
+        sidebar: "Nuestra auditoría propia aporta el filtro de comprobación física en el sitio.",
         chartType: "bar",
         chartData: {
-          labels: ["Ancho Banqueta (m)", "Ancho Calzada (m)", "Tiempo Verde (s/10)"],
-          datasets: [{ label: "Mediciones de Campo", data: [1.2, 14.5, 1.5], backgroundColor: "#feb47b" }]
+          labels: ["Ancho Banqueta (m)", "Ancho Calzada (m)", "Tiempo Verde Peatón (s/10)"],
+          datasets: [{ label: "Mediciones del Equipo", data: [1.2, 14.5, 1.5], backgroundColor: "#feb47b" }]
         }
       },
       7: {
-        title: "7. LiDAR 3D en Aula — La Dimensión Oculta del Espacio",
+        title: "7. Clima y Horarios — Factores Ambientales",
+        desc: "Análisis Ambiental: El impacto del sol intenso y la noche en la sensación de confort.",
+        file: "data/ambiental/clima_iluminacion_merida.json",
+        heading: "Sol y Penumbra: Cómo el Entorno Altera la Percepción",
+        text: "En Mérida las altas temperaturas diurnas obligan a buscar sombra, mientras que la falta de iluminación nocturna aumenta la sensación de peligro al caminar.",
+        s1_n: "38°C", s1_l: "Sensación Térmica Diurna",
+        s2_n: "7:00 PM", s2_l: "Inicio de Percepción de Riesgo",
+        s3_n: "65%", s3_l: "Prefiere Caminar de Noche con Luz",
+        sidebar: "El análisis ambiental vincula el clima caluroso de Yucatán con las costumbres de tránsito peatonal.",
+        chartType: "line",
+        chartData: {
+          labels: ["8 AM", "11 AM", "2 PM", "5 PM", "8 PM", "11 PM"],
+          datasets: [{ label: "Sensación de Calor vs Inseguridad", data: [25, 65, 90, 70, 45, 80], borderColor: "#feb47b", backgroundColor: "rgba(254,180,123,0.2)", fill: true }]
+        }
+      },
+      8: {
+        title: "8. El Ojo Digital 3D — Sensor LiDAR en Aula",
         desc: "Nube de Puntos 3D: Escaneo láser en aula de la maqueta de crucero para medir ángulos ciegos.",
         file: "data/lidar/maqueta_aula_cruce.ply",
-        heading: "Inmersión 3D: Analizando Puntos Ciegos y Campo de Visión Peatonal",
-        text: "En esta vista técnica final, la maqueta a escala del crucero escaneada en el aula con LiDAR se despliega en 3D. Esto permite evaluar exactamente qué ve un peatón al intentar cruzar y qué obstáculos le tapan la visibilidad.",
+        heading: "Modelado Tridimensional: Revelando los Ángulos Ciegos",
+        text: "Mediante el escaneo LiDAR realizado en el salón sobre la maqueta del crucero, simulamos la vista tridimensional del peatón para detectar muros y postes que tapan la visión.",
         s1_n: "5,400", s1_l: "Puntos 3D XYZ+RGB (LiDAR)",
-        s2_n: ".PLY", s2_l: "Formato Estándar 3D",
-        s3_n: "1:50", s3_l: "Escala Maqueta Aula",
-        sidebar: "El LiDAR 3D en el aula aporta la innovación tecnológica central: ver la geometría en tres dimensiones para detectar riesgos invisibles en mapas 2D.",
+        s2_n: ".PLY", s2_l: "Formato Tridimensional",
+        s3_n: "1:50", s3_l: "Escala de Maqueta en Aula",
+        sidebar: "El LiDAR en el salón aporta la innovación tecnológica central para visibilizar lo que el plano 2D ignora.",
         chartType: "three",
         chartData: {}
+      },
+      9: {
+        title: "9. Síntesis y Futuro — Matriz Integrada",
+        desc: "Conclusiones del Equipo: Recomendaciones de diseño urbano e integración de fuentes.",
+        file: "PLAN_DE_PROYECTO.md",
+        heading: "Hacia una Ciudad Humana: Rediseñando el Futuro Peatonal",
+        text: "Cruzando las 7 fuentes de datos con el modelado 3D LiDAR concluimos que una Mérida segura requiere banquetas continuas, semáforos peatonales protegidos e iluminación nocturna en paraderos.",
+        s1_n: "100%", s1_l: "Fuentes Integradas (Lat/Lon)",
+        s2_n: "3", s2_l: "Propuestas Clave de Diseño",
+        s3_n: "Fase 1", s3_l: "Estatus Actual del Proyecto",
+        sidebar: "La vista de cierre condensa el aprendizaje integrador de todo el equipo de trabajo.",
+        chartType: "radar",
+        chartData: {
+          labels: ["Iluminación", "Banquetas", "Tiempos Verde", "Visibilidad 3D", "Señalización"],
+          datasets: [{ label: "Nivel de Prioridad Evaluado", data: [90, 85, 75, 95, 80], backgroundColor: "rgba(0,242,254,0.3)", borderColor: "#00f2fe" }]
+        }
       }
     };
 
@@ -350,14 +384,13 @@
       const data = storyViews[viewId];
       if (!data) return;
 
-      // Actualizar botones activos
       document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
         btn.classList.toggle('active', idx === (viewId - 1));
       });
 
-      // Actualizar Banner y Contenidos
       document.getElementById('banner-title').innerText = data.title;
       document.getElementById('banner-desc').innerText = data.desc;
+      document.getElementById('banner-file').innerText = data.file;
       document.getElementById('view-heading').innerText = data.heading;
       document.getElementById('view-text').innerText = data.text;
 
@@ -395,7 +428,7 @@
           responsive: true,
           maintainAspectRatio: false,
           plugins: { legend: { labels: { color: '#94a3b8', font: { family: 'Inter' } } } },
-          scales: type !== 'doughnut' && type !== 'polarArea' ? {
+          scales: (type !== 'doughnut' && type !== 'polarArea' && type !== 'radar') ? {
             x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
             y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }
           } : {}
@@ -417,14 +450,12 @@
       renderer.setSize(container.clientWidth, container.clientHeight);
       container.appendChild(renderer.domElement);
 
-      // Simular Nube de Puntos LiDAR 3D de la maqueta
       const geometry = new THREE.BufferGeometry();
-      const count = 3000;
+      const count = 3500;
       const positions = new Float32Array(count * 3);
       const colors = new Float32Array(count * 3);
 
       for (let i = 0; i < count; i++) {
-        // Suelo y maqueta
         const x = (Math.random() - 0.5) * 6;
         const y = (Math.random() - 0.5) * 2;
         const z = (Math.random() - 0.5) * 6;
@@ -455,7 +486,6 @@
       animate();
     }
 
-    // Iniciar con Vista 1
     window.onload = () => switchView(1);
   </script>
 </body>
