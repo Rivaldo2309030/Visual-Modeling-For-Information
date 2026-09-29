@@ -6,6 +6,14 @@
 
 ---
 
+## 📑 Documentación del Proyecto (Estilo UPY DataViz)
+
+- 📄 **[Plan de Proyecto](PLAN_DE_PROYECTO.md):** Objetivos, roles de equipo (Rivaldo, Elisabeth, Christopher), cronograma y entregables.
+- 📂 **[Fuentes y Plan de Análisis](FUENTES_Y_PLAN_DE_ANALISIS.md):** Inventario de las 9 Vistas y sus 27 Fuentes de Datos Específicas (3 por vista).
+- 🎨 **[Prototipo y Wireframes UI/UX](PROTOTIPO_BORRADOR_WIREFRAMES.md):** Diseño de interfaz, sistema de componentes, paleta de colores y prototipo navegable.
+
+---
+
 ## 🌟 Descripción General del Proyecto
 
 Este proyecto es una plataforma interactiva de **Data Storytelling y Visualización Avanzada de Datos** centrada en la percepción de seguridad, accesibilidad, infraestructura y confort del peatón en Mérida, Yucatán.
@@ -13,6 +21,61 @@ Este proyecto es una plataforma interactiva de **Data Storytelling y Visualizaci
 Estructuramos la experiencia en **9 Vistas / Pestañas Temáticas de Visualización Interactiva**:
 - **7 Vistas guiadas por Fuentes de Datos Principales**, donde cada vista destaca una fuente titular enriquecida por fuentes complementarias.
 - **2 Apartados Tecnológicos Especiales** dedicados a experiencias inmersivas: **LiDAR 3D** (medición de ángulos ciegos) y **Realidad Aumentada (AR)** (modelado inmersivo de cruceros seguros).
+
+---
+
+## 📂 Arquitectura Modular de Carpetas de Datos (`data/`)
+
+El repositorio sigue una arquitectura estricta modular alineada 1:1 con el estándar de proyectos DataViz UPY:
+
+```
+data/
+├── 01_inegi_denue/              # Vista 1: Sombras en las Cifras Oficiales
+│   ├── 01_fuente_origen_inegi_atus/
+│   ├── 02_fuente_extra_denue_cruces/
+│   ├── 03_fuente_extra_censo_manzanas/
+│   └── README.md
+├── 02_datos_gob/                # Vista 2: La Curva de la Movilidad Peatonal
+│   ├── 01_fuente_origen_datos_gob_siniestros/
+│   ├── 02_fuente_extra_viales_abiertos/
+│   ├── 03_fuente_extra_registro_movilidad/
+│   └── README.md
+├── 03_siegey/                   # Vista 3: El Latido Metropolitano
+│   ├── 01_fuente_origen_va_y_ven_aty/
+│   ├── 02_fuente_extra_cohesion_territorial/
+│   ├── 03_fuente_extra_matriz_origen_destino/
+│   └── README.md
+├── 04_geoportal_merida/         # Vista 4: La Ciudad a Escala Humana
+│   ├── 01_fuente_origen_banquetas_gis/
+│   ├── 02_fuente_extra_semaforos_municipal/
+│   ├── 03_fuente_extra_osm_overpass_nodos/
+│   └── README.md
+├── 05_solicitud_pnt/            # Vista 5: Voces en el Papel
+│   ├── 01_fuente_origen_pnt_ssp_yucatan/
+│   ├── 02_fuente_extra_buzon_atencion_merida/
+│   ├── 03_fuente_extra_c5i_radares_camaras/
+│   └── README.md
+├── 06_web_scraping/             # Vista 6: El Rumor Digital
+│   ├── 01_fuente_origen_scraping_diario_yucatan/
+│   ├── 02_fuente_extra_scraping_por_esto/
+│   ├── 03_fuente_extra_redes_sociales_periferico/
+│   └── README.md
+├── 07_datos_campo/              # Vista 7: La Voz del Terreno
+│   ├── 01_fuente_origen_afluencia_conteo_pico/
+│   ├── 02_fuente_extra_ancho_efectivo_banquetas/
+│   ├── 03_fuente_extra_encuestas_confort_termico/
+│   └── README.md
+├── 08_lidar_3d/                 # Vista 8: El Ojo Digital 3D (LiDAR)
+│   ├── 01_fuente_origen_nube_puntos_ply/
+│   ├── 02_fuente_extra_angulos_ciegos_3d/
+│   ├── 03_fuente_extra_perfil_relieve_rampas/
+│   └── README.md
+└── 09_realidad_aumentada_ar/    # Vista 9: Inmersión Urbana (AR)
+    ├── 01_fuente_origen_modelo_holografico_3d/
+    ├── 02_fuente_extra_filtro_ar_webxr/
+    ├── 03_fuente_extra_matriz_calificacion_urbana/
+    └── README.md
+```
 
 ---
 
@@ -44,7 +107,7 @@ flowchart TD
 
 ---
 
-## 📊 Matriz de Visualizaciones por Vista
+## 📊 Matriz de Visualizaciones y 27 Fuentes Específicas
 
 | No. | Vista / Pestaña | Fuente Principal (Titular) | 3 Fuentes Complementarias Específicas | Experiencia Visual Compleja | Hilo de Storytelling |
 | :---: | :--- | :--- | :--- | :--- | :--- |
@@ -97,4 +160,4 @@ flowchart LR
 
 ## 🌐 Prototipo Web Interactivo
 Accede al prototipo navegable con **9 Vistas estilo UPY DataViz** en:  
-🔗 **[https://rivaldo2309030.github.io/Visual-Modeling-For-Information/](https://rivaldo2309030.github.io/Visual-Modeling-For-Information/)** o directamente en el archivo local [`index.html`](index.html).
+🔗 **[https://rivaldo2309030.github.io/Visual-Modeling-For-Information/](https://rivaldo2309030.github.io/Visual-Modeling-For-Information/)** o abre localmente [`index.html`](index.html).

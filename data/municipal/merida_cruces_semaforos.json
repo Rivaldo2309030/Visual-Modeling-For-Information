@@ -1,0 +1,789 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-28T02:16:18Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 287136660,
+      "lat": 20.968679,
+      "lon": -89.6228018,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287136734,
+      "lat": 20.9635107,
+      "lon": -89.623809,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287137221,
+      "lat": 20.966621,
+      "lon": -89.6244412,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287139288,
+      "lat": 20.9891449,
+      "lon": -89.6219309,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287651447,
+      "lat": 20.9709106,
+      "lon": -89.6223877,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287654174,
+      "lat": 20.9697468,
+      "lon": -89.6157924,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287654175,
+      "lat": 20.9621152,
+      "lon": -89.6175942,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287663257,
+      "lat": 20.9844886,
+      "lon": -89.6120247,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "backward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287826552,
+      "lat": 20.9707012,
+      "lon": -89.6211319,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287830781,
+      "lat": 20.961363,
+      "lon": -89.6271118,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 287830802,
+      "lat": 20.9612669,
+      "lon": -89.6255396,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 292283904,
+      "lat": 20.9811828,
+      "lon": -89.618407,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 292285918,
+      "lat": 20.9867451,
+      "lon": -89.6243508,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 292285946,
+      "lat": 20.9811957,
+      "lon": -89.6185015,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 292285954,
+      "lat": 20.9817625,
+      "lon": -89.6182961,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 292288427,
+      "lat": 20.9913822,
+      "lon": -89.6114439,
+      "tags": {
+        "button_operated": "no",
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "no",
+        "highway": "crossing",
+        "tactile_paving": "no",
+        "traffic_signals:direction": "forward",
+        "traffic_signals:sound": "yes",
+        "traffic_signals:vibration": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 297860865,
+      "lat": 20.9680017,
+      "lon": -89.6257694,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 297861993,
+      "lat": 20.9860943,
+      "lon": -89.6175939,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 297862024,
+      "lat": 20.9857198,
+      "lon": -89.6176768,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 297863305,
+      "lat": 20.966197,
+      "lon": -89.6220566,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315232529,
+      "lat": 20.962922,
+      "lon": -89.6292792,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315232546,
+      "lat": 20.9615932,
+      "lon": -89.6294328,
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315233877,
+      "lat": 20.9641408,
+      "lon": -89.6183206,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315233884,
+      "lat": 20.9613835,
+      "lon": -89.6190418,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315233886,
+      "lat": 20.9654415,
+      "lon": -89.6180382,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315233889,
+      "lat": 20.9699445,
+      "lon": -89.6170236,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315233936,
+      "lat": 20.9647348,
+      "lon": -89.6210807,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315233937,
+      "lat": 20.9659629,
+      "lon": -89.6208115,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 315234540,
+      "lat": 20.9753223,
+      "lon": -89.6198321,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 317734720,
+      "lat": 20.9979761,
+      "lon": -89.6214591,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 317750377,
+      "lat": 20.9978576,
+      "lon": -89.6215407,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 324566561,
+      "lat": 20.961078,
+      "lon": -89.6179327,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 324566662,
+      "lat": 20.9639256,
+      "lon": -89.6171389,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 324566665,
+      "lat": 20.9643976,
+      "lon": -89.6195442,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 325167591,
+      "lat": 20.960237,
+      "lon": -89.6273419,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 325167731,
+      "lat": 20.9611141,
+      "lon": -89.6242812,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 325183626,
+      "lat": 20.9864029,
+      "lon": -89.6218588,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 325184312,
+      "lat": 20.9938183,
+      "lon": -89.6283956,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 325185747,
+      "lat": 20.9874525,
+      "lon": -89.619642,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 325186587,
+      "lat": 20.993096,
+      "lon": -89.6208428,
+      "tags": {
+        "crossing": "unmarked",
+        "crossing:markings": "no",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 327270484,
+      "lat": 21.0026224,
+      "lon": -89.6287283,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 327271088,
+      "lat": 21.0031524,
+      "lon": -89.6223376,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 327285900,
+      "lat": 20.9980695,
+      "lon": -89.6114291,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 327287448,
+      "lat": 20.99775,
+      "lon": -89.6100501,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 327307668,
+      "lat": 20.9939255,
+      "lon": -89.6025693,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 348201222,
+      "lat": 20.96657,
+      "lon": -89.6301443,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 348201228,
+      "lat": 20.9649803,
+      "lon": -89.6222923,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 348201255,
+      "lat": 20.9635843,
+      "lon": -89.6250732,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 348201342,
+      "lat": 20.9630814,
+      "lon": -89.6306142,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 356411409,
+      "lat": 21.0041248,
+      "lon": -89.622692,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 416337833,
+      "lat": 21.0063571,
+      "lon": -89.6308136,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 444882009,
+      "lat": 20.9817773,
+      "lon": -89.6183885,
+      "tags": {
+        "crossing": "traffic_signals",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517317102,
+      "lat": 20.9677315,
+      "lon": -89.6242051,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517317785,
+      "lat": 20.9685075,
+      "lon": -89.6295875,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517317803,
+      "lat": 20.9674927,
+      "lon": -89.623069,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517317950,
+      "lat": 20.9668589,
+      "lon": -89.626013,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517318284,
+      "lat": 20.9664183,
+      "lon": -89.6232663,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517318318,
+      "lat": 20.9652249,
+      "lon": -89.6168076,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517318384,
+      "lat": 20.9656738,
+      "lon": -89.6192738,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517318438,
+      "lat": 20.9674848,
+      "lon": -89.6298951,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517318519,
+      "lat": 20.9688611,
+      "lon": -89.6240199,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517318561,
+      "lat": 20.9690892,
+      "lon": -89.6255437,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517319014,
+      "lat": 20.9698727,
+      "lon": -89.6304566,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517319043,
+      "lat": 20.969678,
+      "lon": -89.6291692,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517319258,
+      "lat": 20.9687081,
+      "lon": -89.6308878,
+      "tags": {
+        "button_operated": "no",
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517320715,
+      "lat": 20.9699899,
+      "lon": -89.6238008,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517320786,
+      "lat": 20.9707643,
+      "lon": -89.6278629,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517320962,
+      "lat": 20.9696208,
+      "lon": -89.6213679,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517320963,
+      "lat": 20.9698095,
+      "lon": -89.6226006,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517321177,
+      "lat": 20.966402,
+      "lon": -89.6165255,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517321424,
+      "lat": 20.9652223,
+      "lon": -89.6234865,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517331422,
+      "lat": 20.977998,
+      "lon": -89.6356461,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 517332362,
+      "lat": 20.962339,
+      "lon": -89.6240191,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 538891708,
+      "lat": 21.009907,
+      "lon": -89.6032843,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 538891822,
+      "lat": 21.0097997,
+      "lon": -89.6026782,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 811397431,
+      "lat": 21.0040486,
+      "lon": -89.6104078,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 813035918,
+      "lat": 20.9930597,
+      "lon": -89.616436,
+      "tags": {
+        "crossing:barrier": "no",
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 831351607,
+      "lat": 20.9861125,
+      "lon": -89.6197685,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 831351655,
+      "lat": 20.9908873,
+      "lon": -89.6166966,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 831384126,
+      "lat": 20.9847999,
+      "lon": -89.614135,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    }
+  ]
+}

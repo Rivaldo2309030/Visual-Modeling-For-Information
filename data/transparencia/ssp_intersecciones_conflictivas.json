@@ -1,0 +1,62 @@
+[
+  {
+    "id_interseccion": "SSP-MID-001",
+    "nombre": "Anillo Periférico Manuel Berzunza x Salida a Progreso (Distribuidor Vial)",
+    "tipo": "Distribuidor Vial a Desnivel / Bajo Puente",
+    "latitud": 21.0483,
+    "longitud": -89.6335,
+    "estatus_semaforo": "Control Centralizado C5i",
+    "camaras_vigilancia": 4,
+    "siniestralidad_historica_anual": 48,
+    "tipo_riesgo_predominante": "Colisión por alcance y cambio intempestivo de carril",
+    "nivel_prioridad": "Crítico"
+  },
+  {
+    "id_interseccion": "SSP-MID-002",
+    "nombre": "Glorieta Monumento a la Patria (Paseo de Montejo x Av. Colón)",
+    "tipo": "Glorieta Urbana con Intersección Rotatoria",
+    "latitud": 20.9888,
+    "longitud": -89.6186,
+    "estatus_semaforo": "Semaforización Inteligente con Cruce Peaton",
+    "camaras_vigilancia": 2,
+    "siniestralidad_historica_anual": 22,
+    "tipo_riesgo_predominante": "Invasión de glorieta y conflicto vehicular-peatonal",
+    "nivel_prioridad": "Alto"
+  },
+  {
+    "id_interseccion": "SSP-MID-003",
+    "nombre": "Periférico Poniente x Av. Jacinto Canek (Entronque Caucel)",
+    "tipo": "Cruce Semafórico a Nivel con Retornos",
+    "latitud": 20.9852,
+    "longitud": -89.6821,
+    "estatus_semaforo": "Control Fijo / Manual en Horas Pico",
+    "camaras_vigilancia": 3,
+    "siniestralidad_historica_anual": 56,
+    "tipo_riesgo_predominante": "Corte de circulación y saturación de transporte público",
+    "nivel_prioridad": "Crítico"
+  },
+  {
+    "id_interseccion": "SSP-MID-004",
+    "nombre": "Calle 60 Norte x Calle 21 (Colonia Buenavista / Circuito Colonias)",
+    "tipo": "Intersección Semaforizada de 4 Tiempos",
+    "latitud": 21.0025,
+    "longitud": -89.6208,
+    "estatus_semaforo": "Semaforización Centralizada",
+    "camaras_vigilancia": 2,
+    "siniestralidad_historica_anual": 19,
+    "tipo_riesgo_predominante": "Colisión frontal-lateral por vuelta izquierda",
+    "nivel_prioridad": "Medio"
+  },
+  {
+    "id_interseccion": "SSP-MID-005",
+    "nombre": "Periférico Oriente x Salida a Cancún / Kanasín",
+    "tipo": "Entronque de Alta Velocidad",
+    "latitud": 20.9410,
+    "longitud": -89.5720,
+    "estatus_semaforo": "Paso a desnivel y laterales reguladas",
+    "camaras_vigilancia": 3,
+    "siniestralidad_historica_anual": 62,
+    "tipo_riesgo_predominante": "Atropellamiento de peatones y choques de transporte de carga",
+    "nivel_prioridad": "Crítico"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "id_auditoria": "AUD-MID-001",
+  "nombre_cruce": "Paso Peatonal y Paradero frente a Facultad / Periférico Norte",
+  "coordenadas": {
+    "lat": 21.0425,
+    "lon": -89.6289
+  },
+  "fecha_levantamiento": "2026-09-22",
+  "hora_inicio": "12:00:00",
+  "hora_fin": "12:30:00",
+  "auditor_equipo": "Equipo Proyecto Vial",
+  "ancho_calzada_metros": 14.5,
+  "ancho_banqueta_metros": 1.2,
+  "rampa_discapacidad_presente": false,
+  "tiempo_semaforo_verde_peaton_seg": 15,
+  "conteo_vehiculos_30min": 420,
+  "conteo_peatones_30min": 85,
+  "conteo_ciclistas_30min": 14,
+  "observaciones_riesgo": [
+    "Falta de señalética vertical y pintura de paso de cebra borrada",
+    "Velocidad vehicular promedio estimada en 65 km/h en zona escolar/paradero",
+    "Banquetilla invadida por poste y maleza, obligando al peatón a bajar al arroyo vehicular"
+  ]
+}
