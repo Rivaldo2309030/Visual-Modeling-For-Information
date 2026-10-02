@@ -10,3 +10,13 @@ scratch/
 data/*.csv
 data/*.zip
 data/*.ply
+
+# Excluir script de ingesta del repositorio
+scripts/ingest_07.py
+
+# Archivos temporales de trabajo
+report.md
+revisar.md
+nueva tarea/
+
+
