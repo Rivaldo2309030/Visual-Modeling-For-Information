@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "folio_anonimizado": "PNT-9841",
+    "dependencia": "SSP Yucatán",
+    "categoria_infraestructura": "Alumbrado Periférico Norte",
+    "estatus": "Aprobado",
+    "fecha_solicitud": "2026-10-19",
+    "clasificacion_seguridad": "Pública (Sin datos personales)",
+    "procesado_en": "2026-10-19T21:37:40.358107+00:00"
+  },
+  {
+    "id": 2,
+    "folio_anonimizado": "PNT-7720",
+    "dependencia": "Ayuntamiento Mérida",
+    "categoria_infraestructura": "Semáforo Peatonal Kanasín",
+    "estatus": "En Dictamen",
+    "fecha_solicitud": "2026-10-19",
+    "clasificacion_seguridad": "Pública (Sin datos personales)",
+    "procesado_en": "2026-10-19T21:37:40.358133+00:00"
+  }
+]
