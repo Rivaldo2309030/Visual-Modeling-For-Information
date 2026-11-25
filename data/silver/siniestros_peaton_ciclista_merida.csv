@@ -1,0 +1,502 @@
+id,fecha,anio,mes,hora,diasemana_desc,tipaccid_desc,clase_desc,causaacci_desc,peatmuerto,peatherido,ciclmuerto,ciclherido,calle1,calle2,interseccion,cvegeo_ageb,latitud,longitud,cve_ent,cve_mun
+1011747-999-124,2021-01-07,2021,1,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,14 (16A),13,14 (16A) x 13,No especificado,21.0191398,-89.6289798,31,31050
+1011747-999-133,2021-01-08,2021,1,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,69,26,69 x 26,3105000012860,20.95341956,-89.59810708,31,31050
+1011747-999-86,2021-01-11,2021,1,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,10,23,10 x 23,3105000010188,20.99650335,-89.59510672,31,31050
+1011747-999-152,2021-01-14,2021,1,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,36,113,36 x 113,3105000011913,21.00273412,-89.64315822,31,31050
+1011747-999-109,2021-01-15,2021,1,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,21 (CIRCUITO COLONIAS),10,21 (CIRCUITO COLONIAS) x 10,3105000010826,20.93849202,-89.60274271,31,31050
+1011747-999-111,2021-01-15,2021,1,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,108,LICENCIADO MANUEL BERZUNZA,108 x LICENCIADO MANUEL BERZUNZA,3105000015935,20.89487781,-89.66900122,31,31050
+1011747-999-118,2021-01-18,2021,1,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CORREA RANCHO (6),15,CORREA RANCHO (6) x 15,3105000010120,21.00242269,-89.59439879,31,31050
+1011747-999-29,2021-01-25,2021,1,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CORREA RANCHO (6),5,CORREA RANCHO (6) x 5,3105000015259,20.99857122,-89.59875266,31,31050
+1011747-999-141,2021-01-28,2021,1,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,27,10A,27 x 10A,3105000013248,20.95580348,-89.56810015,31,31050
+1011747-999-143,2021-01-29,2021,1,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,10,69,10 x 69,3105000013483,20.91023622,-89.67300626,31,31050
+1011816-999-56,2021-02-09,2021,2,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,26,65A,26 x 65A,3105000013854,20.9581132,-89.68267845,31,31050
+1011816-999-65,2021-02-11,2021,2,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,ITZAES,90A,ITZAES x 90A,No especificado,20.97912797,-89.63987105,31,31050
+1011816-999-66,2021-02-12,2021,2,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,45,LICENCIADO MANUEL BERZUNZA,45 x LICENCIADO MANUEL BERZUNZA,3105000016149,20.91975397,-89.68533921,31,31050
+1011816-999-17,2021-02-13,2021,2,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,52,52,52 x 52,3105000010629,20.95632909,-89.62023177,31,31050
+1011816-999-5,2021-02-14,2021,2,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,QUETZALCÓATL (65),8E,QUETZALCÓATL (65) x 8E,3105000016399,20.95990419,-89.58248855,31,31050
+1011816-999-106,2021-02-16,2021,2,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,0,No especificado,0,3105000014566,21.04722619,-89.63730723,31,31050
+1011816-999-119,2021-02-22,2021,2,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,ITZAES (86B),61A,ITZAES (86B) x 61A,No especificado,20.970727,-89.64079792,31,31050
+1011816-999-13,2021-02-24,2021,2,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,70,21 DIAGONAL,70 x 21 DIAGONAL,No especificado,20.99942505,-89.65971806,31,31050
+1014600-999-51,2021-03-10,2021,3,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,52,53,52 x 53,3105000010455,20.9705516,-89.61689734,31,31050
+1014600-999-61,2021-03-12,2021,3,18,No especificado,No especificado,No especificado,No especificado,1,0,0,0,50,61,50 x 61,3105000010525,20.9672533,-89.61634177,31,31050
+1014600-999-66,2021-03-13,2021,3,15,No especificado,No especificado,No especificado,No especificado,0,1,0,0,11 (35 DIAGONAL),19 (35 DIAGONAL),11 (35 DIAGONAL) x 19 (35 DIAGONAL),No especificado,21.01560485,-89.65770985,31,31050
+1014600-999-126,2021-03-22,2021,3,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50 DIAGONAL (PROLONGACIÓN PASEO DE MONTEJO),46A,50 DIAGONAL (PROLONGACIÓN PASEO DE MONTEJO) x 46A,3105000012343,21.02518163,-89.6236706,31,31050
+1014600-999-133,2021-03-23,2021,3,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,52,35,52 x 35,3105000011542,21.02548055,-89.62108046,31,31050
+1019288-999-12,2021-04-03,2021,4,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,64,59,64 x 59,3105000010440,20.96908438,-89.62554995,31,31050
+1019288-999-20,2021-04-05,2021,4,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,8C,69,8C x 69,3105000013483,20.91024429,-89.67189769,31,31050
+1019288-999-21,2021-04-05,2021,4,14,No especificado,No especificado,No especificado,No especificado,0,0,0,1,44,71,44 x 71,3105000010525,20.95886229,-89.61466326,31,31050
+1019288-999-22,2021-04-05,2021,4,17,No especificado,No especificado,No especificado,No especificado,1,0,0,0,50,50,50 x 50,3105000010510,20.9632547,-89.61733055,31,31050
+1019288-999-34,2021-04-07,2021,4,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,21 (CIRCUITO COLONIAS),16 NORTE,21 (CIRCUITO COLONIAS) x 16 NORTE,3105000011650,20.93898952,-89.6022228,31,31050
+1019288-999-38,2021-04-08,2021,4,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,44,71,44 x 71,3105000010525,20.95886229,-89.61466326,31,31050
+1019288-999-80,2021-04-16,2021,4,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,22B,13A,22B x 13A,3105000012466,21.02021582,-89.63518117,31,31050
+1019288-999-101,2021-04-21,2021,4,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,173,50 x 173,3105000013074,20.90429926,-89.61878287,31,31050
+1019288-999-120,2021-04-25,2021,4,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,MÉRIDA 2000,73A,MÉRIDA 2000 x 73A,3105000014034,20.95616088,-89.66338227,31,31050
+1019288-999-126,2021-04-26,2021,4,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,128 (AVENIDA MÉRIDA 2000),No especificado,128 (AVENIDA MÉRIDA 2000),3105000013411,20.99825879,-89.66362166,31,31050
+1019288-999-139,2021-04-27,2021,4,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,74,65,74 x 65,3105000010493,20.9670472,-89.63306655,31,31050
+1019288-999-154,2021-04-30,2021,4,7,No especificado,No especificado,No especificado,No especificado,0,0,0,1,CORREA RANCHO (6),17,CORREA RANCHO (6) x 17,3105000015259,21.00153677,-89.59548666,31,31050
+1019452-999-79,2021-05-14,2021,5,7,No especificado,No especificado,No especificado,No especificado,0,0,0,1,16,36,16 x 36,No especificado,20.9145856,-89.67521088,31,31050
+1019452-999-93,2021-05-15,2021,5,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,70,87,70 x 87,3105000015827,20.98887583,-89.70083857,31,31050
+1019452-999-149,2021-05-30,2021,5,11,No especificado,No especificado,No especificado,No especificado,0,0,0,1,50,COLONIAS (111),50 x COLONIAS (111),No especificado,20.93811815,-89.6196916,31,31050
+1019452-999-151,2021-05-30,2021,5,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,71,MÉRIDA 2000,71 x MÉRIDA 2000,3105000014693,20.95828252,-89.66356868,31,31050
+1019452-999-153,2021-05-31,2021,5,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,60,51,60 x 51,3105000013746,21.03404959,-89.65289477,31,31050
+1023321-999-27,2021-06-07,2021,6,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,MÉRIDA 2000,47,MÉRIDA 2000 x 47,310500001263A,20.97252771,-89.66370033,31,31050
+1023321-999-50,2021-06-11,2021,6,19,No especificado,No especificado,No especificado,No especificado,0,3,0,0,PASEO DE MONTEJO,39,PASEO DE MONTEJO x 39,No especificado,21.00808675,-89.6141472,31,31050
+1023321-999-63,2021-06-15,2021,6,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,AVIACIÓN,94,AVIACIÓN x 94,3105000010597,20.94945281,-89.64886502,31,31050
+1023321-999-74,2021-06-17,2021,6,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,TECNOLÓGICO (CALLE60),35,TECNOLÓGICO (CALLE60) x 35,No especificado,21.00192311,-89.62222903,31,31050
+1023321-999-75,2021-06-17,2021,6,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,40,31,40 x 31,3105000012409,20.99803085,-89.62060106,31,31050
+1023321-999-82,2021-06-19,2021,6,15,No especificado,No especificado,No especificado,No especificado,0,1,0,0,36,21B,36 x 21B,3105000012201,21.01175433,-89.64660904,31,31050
+1023321-999-104,2021-06-23,2021,6,15,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20 CIRCUITO COLONIAS,25,20 CIRCUITO COLONIAS x 25,3105000010188,20.99236531,-89.59819391,31,31050
+1023321-999-110,2021-06-24,2021,6,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,55,108,55 x 108,No especificado,21.00093625,-89.71987738,31,31050
+1023321-999-136,2021-06-30,2021,6,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,177,94,177 x 94,3105000016030,20.90223439,-89.65204361,31,31050
+1026411-999-31,2021-07-07,2021,7,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,70,23,70 x 23,3105000754439,21.00678742,-89.69062043,31,31050
+1026411-999-65,2021-07-14,2021,7,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,88,88,88 x 88,3105000015808,20.99079412,-89.70511605,31,31050
+1031492-999-15,2021-08-03,2021,8,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,32,15,32 x 15,310502042,21.05343644,-89.68547065,31,31050
+1031492-999-38,2021-08-06,2021,8,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,JUAN PABLO II (65A),120A,JUAN PABLO II (65A) x 120A,No especificado,20.96121482,-89.66468462,31,31050
+1031492-999-93,2021-08-17,2021,8,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,MÉRIDA 2000 (128PONIENTE),67B,MÉRIDA 2000 (128PONIENTE) x 67B,3105000013765,20.97965424,-89.66396119,31,31050
+1031492-999-98,2021-08-18,2021,8,10,No especificado,No especificado,No especificado,No especificado,0,0,0,1,59,80,59 x 80,3105000010493,20.97061285,-89.63544538,31,31050
+1031492-999-128,2021-08-23,2021,8,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,59,74,59 x 74,3105000015475,21.06945555,-89.64496935,31,31050
+1031492-999-138,2021-08-26,2021,8,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,54,131,54 x 131,3105000011858,20.92402072,-89.62736597,31,31050
+1031492-999-142,2021-08-27,2021,8,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,15,42 (CIRCUITO COLONIAS),15 x 42 (CIRCUITO COLONIAS),3105000012714,20.99172055,-89.64312345,31,31050
+1031419-999-13,2021-09-04,2021,9,10,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20,15,20 x 15,No especificado,20.97316143,-89.6744912,31,31050
+1031419-999-19,2021-09-04,2021,9,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,52 (60),145 (151),52 (60) x 145 (151),No especificado,20.91529712,-89.62288963,31,31050
+1031419-999-40,2021-09-08,2021,9,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,No especificado,36,36,3105000014091,20.98874013,-89.63912824,31,31050
+1031419-999-72,2021-09-14,2021,9,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,42,COLONIAS (111),42 x COLONIAS (111),3105000013159,20.93776605,-89.6105427,31,31050
+1031419-999-74,2021-09-14,2021,9,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,70,59,70 x 59,No especificado,20.96964649,-89.62918109,31,31050
+1031419-999-98,2021-09-20,2021,9,0,No especificado,No especificado,No especificado,No especificado,0,1,0,0,59,72,59 x 72,3105000010436,20.97006741,-89.63195896,31,31050
+1031419-999-104,2021-09-21,2021,9,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,20,31A,20 x 31A,3105000013303,20.98926722,-89.57149183,31,31050
+1031419-999-114,2021-09-24,2021,9,10,No especificado,No especificado,No especificado,No especificado,0,0,0,1,90,185,90 x 185,3105000016030,20.89654405,-89.65499302,31,31050
+1031419-999-119,2021-09-24,2021,9,21,No especificado,No especificado,No especificado,No especificado,0,3,0,0,BENITO JUÁREZ AVIACIÓN,108,BENITO JUÁREZ AVIACIÓN x 108,3105000013055,20.94561028,-89.65490802,31,31050
+1034142-999-36,2021-10-05,2021,10,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,128,71D (29),128 x 71D (29),3105000011805,20.97401366,-89.66304118,31,31050
+1034142-999-43,2021-10-07,2021,10,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,24,21,24 x 21,3105000012358,21.00262866,-89.61251015,31,31050
+1034142-999-65,2021-10-13,2021,10,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,ITZAES (86B),90,ITZAES (86B) x 90,No especificado,20.95753806,-89.64262049,31,31050
+1034142-999-86,2021-10-16,2021,10,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,"RICARDO ""EL VATE"" LÓPEZ MÉNDEZ (6)",29,"RICARDO ""EL VATE"" LÓPEZ MÉNDEZ (6) x 29",3105000014566,21.04074061,-89.62868247,31,31050
+1034142-999-152,2021-10-25,2021,10,14,No especificado,No especificado,No especificado,No especificado,0,0,0,1,51,48,51 x 48,3105000013712,21.03149838,-89.64597725,31,31050
+1034142-999-163,2021-10-27,2021,10,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,30 (32),37A,30 (32) x 37A,3105000015009,21.02782818,-89.60465382,31,31050
+1034142-999-172,2021-10-28,2021,10,16,No especificado,No especificado,No especificado,No especificado,0,0,0,1,69,76,69 x 76,3105000010493,20.96346191,-89.63414538,31,31050
+1038452-999-17,2021-11-04,2021,11,10,No especificado,No especificado,No especificado,No especificado,0,0,0,1,50,51,50 x 51,3105000012593,20.98764782,-89.65478182,31,31050
+1038452-999-45,2021-11-08,2021,11,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,24,BENITO JUÁREZ (21),24 x BENITO JUÁREZ (21),No especificado,20.9298768,-89.67854763,31,31050
+1038452-999-48,2021-11-08,2021,11,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,127,127,127 x 127,3105000011843,20.92728586,-89.63189809,31,31050
+1038452-999-63,2021-11-11,2021,11,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,23A,24,23A x 24,3105000014000,20.92912563,-89.66663555,31,31050
+1038452-999-81,2021-11-13,2021,11,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,79,50 x 79,3105000010633,20.95388049,-89.61953162,31,31050
+1038452-999-85,2021-11-14,2021,11,13,No especificado,No especificado,No especificado,No especificado,0,0,0,1,19 (35 DIAGONAL),50,19 (35 DIAGONAL) x 50,No especificado,21.01517526,-89.65722194,31,31050
+1038452-999-162,2021-11-25,2021,11,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,MÉRIDA 2000 (128PONIENTE),67,MÉRIDA 2000 (128PONIENTE) x 67,3105000012625,20.98060182,-89.66397982,31,31050
+1038452-999-167,2021-11-26,2021,11,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,66,91,66 x 91,No especificado,20.95087055,-89.63576328,31,31050
+1038452-999-171,2021-11-26,2021,11,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,81,LICENCIADO MANUEL BERZUNZA x 81,3105000015494,20.94578587,-89.70052658,31,31050
+1038452-999-173,2021-11-26,2021,11,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,PASEO DE MONTEJO (54),PASEO DE MONTEJO (34),PASEO DE MONTEJO (54) x PASEO DE MONTEJO (34),No especificado,21.01402911,-89.61444866,31,31050
+1038452-999-183,2021-11-29,2021,11,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,20,41,20 x 41,310500001612A,20.9246578,-89.67977265,31,31050
+1040167-999-76,2021-12-11,2021,12,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,64C,103,64C x 103,3105000014138,20.94259238,-89.63621782,31,31050
+1040167-999-99,2021-12-14,2021,12,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,141,50 x 141,3105000015117,20.91812869,-89.62685342,31,31050
+1040167-999-160,2021-12-21,2021,12,11,No especificado,No especificado,No especificado,No especificado,0,0,0,1,26,21A,26 x 21A,3105000756577,21.0169972,-89.71228089,31,31050
+1040167-999-161,2021-12-21,2021,12,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,106,77,106 x 77,3105000013055,20.94906276,-89.65766237,31,31050
+1040167-999-203,2021-12-27,2021,12,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,62,55,62 x 55,3105000012593,20.98863968,-89.65773446,31,31050
+1040167-999-211,2021-12-28,2021,12,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA (159),48,LICENCIADO MANUEL BERZUNZA (159) x 48,3105000013074,20.91294335,-89.61839172,31,31050
+1040167-999-218,2021-12-29,2021,12,12,No especificado,No especificado,No especificado,No especificado,0,0,0,1,15,28-A,15 x 28-A,No especificado,21.01922062,-89.64051274,31,31050
+1040167-999-220,2021-12-29,2021,12,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,54,37,54 x 37,3105000015225,20.98190362,-89.61627255,31,31050
+1040167-999-230,2021-12-31,2021,12,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,15,50 x 15,3105000012714,20.99271015,-89.64707057,31,31050
+1064533-999-78,2022-07-22,2022,7,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,65,LICENCIADO MANUEL BERZUNZA x 65,3105000013248,20.96199,-89.56664,31,31050
+1070911-999-17,2022-09-04,2022,9,20,No especificado,No especificado,No especificado,No especificado,0,2,0,0,42,42,42 x 42,3105000010525,20.95793,-89.61367,31,31050
+1084212-999-55,2022-01-12,2022,1,14,No especificado,No especificado,No especificado,No especificado,0,2,0,0,50,55,50 x 55,3105000010332,20.96974,-89.61578,31,31050
+1084212-999-57,2022-01-12,2022,1,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,AVENIDA 114,31,AVENIDA 114 x 31,3105000016878,21.01026,-89.72467,31,31050
+1084212-999-84,2022-01-16,2022,1,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,16,35 DIAGONAL,16 x 35 DIAGONAL,310500001612A,20.92618,-89.67835,31,31050
+1084212-999-95,2022-01-17,2022,1,17,No especificado,No especificado,No especificado,No especificado,0,1,0,0,4,1,4 x 1,3105000013939,21.02263,-89.59834,31,31050
+1084212-999-100,2022-01-18,2022,1,14,No especificado,No especificado,No especificado,No especificado,0,3,0,0,86,183,86 x 183,3105000016064,20.89758,-89.65047,31,31050
+1084212-999-108,2022-01-20,2022,1,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,71,LICENCIADO MANUEL BERZUNZA x 71,3105000011824,20.94222,-89.5786,31,31050
+1084212-999-154,2022-01-28,2022,1,15,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,14,LICENCIADO MANUEL BERZUNZA x 14,3105000013445,21.03671,-89.59483,31,31050
+1084212-999-177,2022-01-31,2022,1,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,67 DIAGONAL,28,67 DIAGONAL x 28,3105000012998,20.95055,-89.60075,31,31050
+1050325-999-11,2022-02-02,2022,2,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,171,64,171 x 64,310500001516A,20.90588,-89.64037,31,31050
+1050325-999-26,2022-02-04,2022,2,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,56,23,56 x 23,3105000010224,20.99352,-89.61894,31,31050
+1050325-999-44,2022-02-06,2022,2,16,No especificado,No especificado,No especificado,No especificado,0,0,0,1,151,70,151 x 70,3105000015155,20.91469,-89.63898,31,31050
+1050325-999-51,2022-02-09,2022,2,1,No especificado,No especificado,No especificado,No especificado,0,0,0,1,17,20,17 x 20,3105000015583,21.02346,-89.58499,31,31050
+1050325-999-58,2022-02-10,2022,2,13,No especificado,No especificado,No especificado,No especificado,0,0,0,1,121,48,121 x 48,3105000013093,20.93114,-89.61856,31,31050
+1050325-999-62,2022-02-11,2022,2,12,No especificado,No especificado,No especificado,No especificado,0,0,0,1,PASEO DE MONTEJO (CALLE 56 A),31,PASEO DE MONTEJO (CALLE 56 A) x 31,3105000015210,20.98833,-89.61705,31,31050
+1050325-999-94,2022-02-15,2022,2,22,No especificado,No especificado,No especificado,No especificado,0,0,0,2,66,87,66 x 87,3105000015827,20.98846,-89.69714,31,31050
+1050325-999-98,2022-02-16,2022,2,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,WALMART CP 97314 ENTRE ANILLO PERIFERICO Y AVENIDA S.R.,LICENCIADO MANUEL BERZUNZA x WALMART CP 97314 ENTRE ANILLO PERIFERICO Y AVENIDA S.R.,3105000014937,20.99595,-89.6734,31,31050
+1050325-999-111,2022-02-18,2022,2,11,No especificado,No especificado,No especificado,No especificado,0,0,0,1,18,21,18 x 21,310502042,20.9748,-89.69602,31,31050
+1050325-999-125,2022-02-20,2022,2,3,No especificado,No especificado,No especificado,No especificado,0,1,0,0,30 (32),19A,30 (32) x 19A,310500001338A,21.01327,-89.64384,31,31050
+1050325-999-133,2022-02-20,2022,2,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,24,7B,24 x 7B,3105000013445,21.03945,-89.60202,31,31050
+1050325-999-141,2022-02-22,2022,2,18,No especificado,No especificado,No especificado,No especificado,0,2,0,0,REFORMA,37,REFORMA x 37,3105000010224,20.9824,-89.62595,31,31050
+1050325-999-181,2022-02-27,2022,2,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,34,34,34 x 34,3105000935653,21.10797,-89.66813,31,31050
+1088116-999-3,2022-03-01,2022,3,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,79,INDUSTRIAS NO CONTAMINANTES,79 x INDUSTRIAS NO CONTAMINANTES,3105000014477,21.05323,-89.64116,31,31050
+1088116-999-25,2022-03-04,2022,3,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,JUAN PABLO II (65A),120A,JUAN PABLO II (65A) x 120A,3105000012080,20.96121,-89.66468,31,31050
+1088116-999-48,2022-03-06,2022,3,17,No especificado,No especificado,No especificado,No especificado,0,0,0,2,4,85,4 x 85,3105000011824,20.9398,-89.58335,31,31050
+1088116-999-49,2022-03-06,2022,3,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,34,15,34 x 15,3105000012822,20.97898,-89.57219,31,31050
+1088116-999-83,2022-03-10,2022,3,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,22,25,22 x 25,310502038,21.1394,-89.58521,31,31050
+1088116-999-86,2022-03-11,2022,3,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,71,LICENCIADO MANUEL BERZUNZA x 71,3105000011824,20.94222,-89.5786,31,31050
+1088116-999-128,2022-03-18,2022,3,7,No especificado,No especificado,No especificado,No especificado,0,0,0,1,DZOYAXCHÉ - MOLAS,No especificado,DZOYAXCHÉ - MOLAS,310502061,20.80437,-89.60691,31,31050
+1088116-999-130,2022-03-18,2022,3,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,MANUEL BERZUNZA,LICENCIADO MANUEL BERZUNZA,MANUEL BERZUNZA x LICENCIADO MANUEL BERZUNZA,3105000013591,21.04898,-89.62581,31,31050
+1088116-999-131,2022-03-18,2022,3,17,No especificado,No especificado,No especificado,No especificado,0,1,0,0,ANDRÉS GARCÍA LAVÍN,39,ANDRÉS GARCÍA LAVÍN x 39,3105000016505,21.037,-89.60258,31,31050
+1088116-999-136,2022-03-19,2022,3,1,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,CAFETERIA MARI CAFE CP 97203 ENTRE 39-C Y AVENIDA 41,50 x CAFETERIA MARI CAFE CP 97203 ENTRE 39-C Y AVENIDA 41,3105000016524,21.03998,-89.64292,31,31050
+1088116-999-152,2022-03-22,2022,3,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,51,LICENCIADO MANUEL BERZUNZA x 51,3105000013746,21.03475,-89.65481,31,31050
+1088116-999-154,2022-03-22,2022,3,10,No especificado,No especificado,No especificado,No especificado,0,0,0,1,65B,98,65B x 98,3105000015085,20.96483,-89.64778,31,31050
+1088116-999-159,2022-03-23,2022,3,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,43,COLONIAS (30),43 x COLONIAS (30),3105000012447,20.99723,-89.63341,31,31050
+1088116-999-164,2022-03-23,2022,3,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,81,LICENCIADO MANUEL BERZUNZA x 81,3105000016613,20.94579,-89.70053,31,31050
+1088116-999-170,2022-03-25,2022,3,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,66,69,66 x 69,3105000014477,21.05915,-89.63527,31,31050
+1088116-999-177,2022-03-26,2022,3,0,No especificado,No especificado,No especificado,No especificado,0,1,0,0,95,60,95 x 60,3105000010667,20.94447,-89.62796,31,31050
+1088116-999-199,2022-03-28,2022,3,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,122 (AVENIDA ZAMNÁ),124D,122 (AVENIDA ZAMNÁ) x 124D,3105000011805,20.98001,-89.66143,31,31050
+1084213-999-6,2022-04-01,2022,4,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LEANDRO VALLE (69),32,LEANDRO VALLE (69) x 32,310500001053A,20.95765,-89.60696,31,31050
+1084213-999-9,2022-04-01,2022,4,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,48,97240 ENTRE 27 Y 29,48 x 97240 ENTRE 27 Y 29,310500001651A,21.04543,-89.63992,31,31050
+1084213-999-19,2022-04-02,2022,4,21,No especificado,No especificado,No especificado,No especificado,0,2,0,0,JUAN PABLO II,97246 ENTRE 18 Y 20-A,JUAN PABLO II x 97246 ENTRE 18 Y 20-A,310500001377A,20.95928,-89.67652,31,31050
+1084213-999-26,2022-04-03,2022,4,21,No especificado,No especificado,No especificado,No especificado,0,3,0,0,JACINTO CANEK (59A),124-C,JACINTO CANEK (59A) x 124-C,3105000012593,20.98747,-89.66028,31,31050
+1084213-999-29,2022-04-04,2022,4,14,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA (LATERAL),27,LICENCIADO MANUEL BERZUNZA (LATERAL) x 27,3105000013248,20.95601,-89.56794,31,31050
+1084213-999-34,2022-04-05,2022,4,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA (57),LICENCIADO MANUEL BERZUNZA,LICENCIADO MANUEL BERZUNZA (57) x LICENCIADO MANUEL BERZUNZA,3105000013214,20.93131,-89.59345,31,31050
+1084213-999-40,2022-04-05,2022,4,22,No especificado,No especificado,No especificado,No especificado,0,2,0,0,27C DIAGONAL,28A,27C DIAGONAL x 28A,3105000014636,20.99416,-89.57609,31,31050
+1084213-999-44,2022-04-06,2022,4,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,61,60,61 x 60,3105000010510,20.96744,-89.62243,31,31050
+1084213-999-58,2022-04-07,2022,4,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,39,CIRCUITO COLONIAS (CALLE 20),39 x CIRCUITO COLONIAS (CALLE 20),3105000010262,20.9806,-89.59737,31,31050
+1084213-999-62,2022-04-08,2022,4,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,136,73B,136 x 73B,3105000014689,20.95476,-89.67554,31,31050
+1084213-999-94,2022-04-13,2022,4,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20,15,20 x 15,3105000756562,21.02048,-89.70645,31,31050
+1084213-999-117,2022-04-16,2022,4,20,No especificado,No especificado,No especificado,No especificado,0,2,0,0,96,169,96 x 169,310500001078A,20.91443,-89.65498,31,31050
+1084213-999-139,2022-04-19,2022,4,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,8,21 (CIRCUITO COLONIAS),8 x 21 (CIRCUITO COLONIAS),3105000011650,20.93855,-89.60267,31,31050
+1084213-999-151,2022-04-21,2022,4,6,No especificado,No especificado,No especificado,No especificado,0,1,0,0,2 NORTE (2 SUR),43,2 NORTE (2 SUR) x 43,3105000013214,20.93535,-89.59605,31,31050
+1084213-999-176,2022-04-24,2022,4,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,54,117,54 x 117,3105000010807,20.93425,-89.62495,31,31050
+1084213-999-207,2022-04-28,2022,4,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,22,7-A1,22 x 7-A1,3105000013445,21.04228,-89.6001,31,31050
+1058270-999-1,2022-05-01,2022,5,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,54,135,54 x 135,3105000015117,20.92207,-89.62791,31,31050
+1058270-999-38,2022-05-04,2022,5,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,132,3G,132 x 3G,3105000015634,20.98399,-89.6704,31,31050
+1058270-999-54,2022-05-06,2022,5,14,No especificado,No especificado,No especificado,No especificado,0,0,0,1,14,59,14 x 59,3105000013483,20.9166,-89.6741,31,31050
+1058270-999-76,2022-05-08,2022,5,14,No especificado,No especificado,No especificado,No especificado,0,0,0,1,50,169,50 x 169,3105000013074,20.90579,-89.61859,31,31050
+1058270-999-79,2022-05-09,2022,5,16,No especificado,No especificado,No especificado,No especificado,0,0,0,1,23A,MÉRIDA 2000,23A x MÉRIDA 2000,3105000012269,21.00887,-89.65513,31,31050
+1058270-999-91,2022-05-11,2022,5,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,37 DIAGONAL,12A,37 DIAGONAL x 12A,310500001612A,20.92675,-89.675,31,31050
+1058270-999-98,2022-05-13,2022,5,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,64I,101 DIAGONAL,64I x 101 DIAGONAL,3105000014123,20.94572,-89.63935,31,31050
+1058270-999-197,2022-05-24,2022,5,15,No especificado,No especificado,No especificado,No especificado,0,0,0,2,153,96,153 x 96,3105000013619,20.91895,-89.6549,31,31050
+1058270-999-209,2022-05-26,2022,5,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA,19,LICENCIADO MANUEL BERZUNZA x 19,3105000012983,20.96335,-89.56644,31,31050
+1058270-999-210,2022-05-27,2022,5,1,No especificado,No especificado,No especificado,No especificado,0,1,0,0,23,PROLONG. PASEO MONTEJO,23 x PROLONG. PASEO MONTEJO,3105000012396,21.00217,-89.61534,31,31050
+1058270-999-213,2022-05-27,2022,5,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,17,4 (12),17 x 4 (12),3105000010120,21.00191,-89.59769,31,31050
+1058270-999-220,2022-05-28,2022,5,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,LATERAL,LICENCIADO MANUEL BERZUNZA x LATERAL,310500001587A,20.98083,-89.68322,31,31050
+1058270-999-225,2022-05-28,2022,5,23,No especificado,No especificado,No especificado,No especificado,0,0,0,1,MÉRIDA 2000 (128PONIENTE),59B,MÉRIDA 2000 (128PONIENTE) x 59B,3105000012625,20.98823,-89.66406,31,31050
+1061464-999-106,2022-06-13,2022,6,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,94,185,94 x 185,3105000013500,20.89649,-89.65886,31,31050
+1061464-999-109,2022-06-13,2022,6,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,25F,LICENCIADO MANUEL BERZUNZA x 25F,3105000014250,20.94587,-89.57361,31,31050
+1061464-999-186,2022-06-23,2022,6,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,86,177,86 x 177,3105000016064,20.90046,-89.64992,31,31050
+1061464-999-208,2022-06-26,2022,6,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,33,12 NORTE,33 x 12 NORTE,3105000011665,20.93794,-89.6,31,31050
+1061464-999-226,2022-06-29,2022,6,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,199,50 x 199,310500001562A,20.89104,-89.62287,31,31050
+1061464-999-230,2022-06-29,2022,6,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,60,41B,60 x 41B,3105000013905,21.04092,-89.64992,31,31050
+1064561-999-48,2022-07-07,2022,7,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,122 (AVENIDA ZAMNÁ),59C,122 (AVENIDA ZAMNÁ) x 59C,310500001509A,20.98419,-89.65852,31,31050
+1064561-999-122,2022-07-16,2022,7,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,MADERO (31),36,MADERO (31) x 36,310500001263A,20.97137,-89.65969,31,31050
+1064561-999-138,2022-07-19,2022,7,0,No especificado,No especificado,No especificado,No especificado,0,2,0,0,ARCO VIAL NORTE,No especificado,ARCO VIAL NORTE,3105000016793,21.02272,-89.68216,31,31050
+1064561-999-183,2022-07-24,2022,7,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,77,40,77 x 40,3105000014886,20.95063,-89.69334,31,31050
+1064561-999-204,2022-07-27,2022,7,15,No especificado,No especificado,No especificado,No especificado,0,1,0,0,56,69,56 x 69,3105000014284,21.06103,-89.6272,31,31050
+1064561-999-228,2022-07-30,2022,7,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,42,42,42 x 42,3105000013163,20.93689,-89.6103,31,31050
+1068150-999-0,2022-08-01,2022,8,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,127,127,127 x 127,310500001078A,20.92921,-89.63931,31,31050
+1068150-999-10,2022-08-02,2022,8,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,140 DIAGONAL,75,140 DIAGONAL x 75,3105000013943,20.95295,-89.68402,31,31050
+1068150-999-23,2022-08-04,2022,8,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,165,80,165 x 80,310500001516A,20.91185,-89.64261,31,31050
+1068150-999-45,2022-08-07,2022,8,15,No especificado,No especificado,No especificado,No especificado,0,0,0,1,136,79A,136 x 79A,3105000014689,20.95012,-89.67645,31,31050
+1068150-999-74,2022-08-12,2022,8,15,No especificado,No especificado,No especificado,No especificado,0,0,0,1,ABETO,CEDRO,ABETO x CEDRO,3105000842184,21.05141,-89.56114,31,31050
+1068150-999-101,2022-08-14,2022,8,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,86,173,86 x 173,3105000016045,20.90573,-89.64886,31,31050
+1068150-999-128,2022-08-20,2022,8,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,65,12,65 x 12,3105000010563,20.95841,-89.5963,31,31050
+1068150-999-137,2022-08-21,2022,8,13,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA,86,LICENCIADO MANUEL BERZUNZA x 86,3105000013500,20.89454,-89.65118,31,31050
+1068150-999-151,2022-08-22,2022,8,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,JACINTO CANEK (59A),120,JACINTO CANEK (59A) x 120,3105000012593,20.98457,-89.65562,31,31050
+1068150-999-187,2022-08-27,2022,8,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,82,84,82 x 84,3105000013286,20.92609,-89.64379,31,31050
+1068150-999-200,2022-08-29,2022,8,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,20 A,20,20 A x 20,310500001377A,20.96002,-89.67699,31,31050
+1071010-999-3,2022-09-01,2022,9,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,21 DIAGONAL,21,21 DIAGONAL x 21,3105000012292,21.0132,-89.64752,31,31050
+1071010-999-8,2022-09-01,2022,9,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,LATERAL,LICENCIADO MANUEL BERZUNZA x LATERAL,310502042,20.94466,-89.70002,31,31050
+1071010-999-18,2022-09-03,2022,9,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,74,85,74 x 85,310500001060A,20.95307,-89.63581,31,31050
+1071010-999-21,2022-09-03,2022,9,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,38,23,38 x 23,310500001295A,20.97559,-89.57388,31,31050
+1071010-999-41,2022-09-06,2022,9,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA,LATERAL,LICENCIADO MANUEL BERZUNZA x LATERAL,3105000015526,21.027,-89.65807,31,31050
+1071010-999-51,2022-09-08,2022,9,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA,2,LICENCIADO MANUEL BERZUNZA x 2,3105000014829,20.94994,-89.56933,31,31050
+1071010-999-68,2022-09-10,2022,9,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,46,61,46 x 61,3105000012339,21.0343,-89.62559,31,31050
+1071010-999-120,2022-09-17,2022,9,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,86,189-B,86 x 189-B,3105000013873,20.89123,-89.6516,31,31050
+1071010-999-124,2022-09-17,2022,9,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,37,28,37 x 28,3105000013303,20.9869,-89.57638,31,31050
+1071010-999-137,2022-09-19,2022,9,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,120A,67A,120A x 67A,3105000012080,20.95954,-89.66465,31,31050
+1071010-999-159,2022-09-22,2022,9,21,No especificado,No especificado,No especificado,No especificado,0,0,0,2,24,MÉRIDA - SAN JOSÉ TZAL,24 x MÉRIDA - SAN JOSÉ TZAL,310502057,20.86197,-89.65579,31,31050
+1071010-999-197,2022-09-28,2022,9,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,ANDRÉS GARCÍA LAVÍN,39,ANDRÉS GARCÍA LAVÍN x 39,3105000016505,21.03708,-89.60256,31,31050
+1071010-999-204,2022-09-29,2022,9,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,JUAN PABLO II (65A),102,JUAN PABLO II (65A) x 102,3105000015070,20.96364,-89.65007,31,31050
+1071010-999-205,2022-09-29,2022,9,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,JACINTO CANEK (59A),59C,JACINTO CANEK (59A) x 59C,3105000012733,20.98165,-89.65083,31,31050
+1084185-999-6,2022-10-01,2022,10,12,No especificado,No especificado,No especificado,No especificado,0,0,0,1,22,57,22 x 57,3105000014157,20.96979,-89.56985,31,31050
+1084185-999-19,2022-10-03,2022,10,15,No especificado,No especificado,No especificado,No especificado,0,0,0,1,64A,105,64A x 105,3105000010718,20.94063,-89.63366,31,31050
+1084185-999-74,2022-10-10,2022,10,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,40,35,40 x 35,3105000014119,20.9827,-89.60793,31,31050
+1084185-999-123,2022-10-16,2022,10,13,No especificado,No especificado,No especificado,No especificado,0,0,0,1,81,62,81 x 62,3105000015831,20.9891,-89.69261,31,31050
+1084185-999-133,2022-10-18,2022,10,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,64,67,64 x 67,3105000010506,20.96367,-89.62666,31,31050
+1084185-999-134,2022-10-18,2022,10,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,JUAN PABLO II (65A),114,JUAN PABLO II (65A) x 114,3105000014176,20.96246,-89.65752,31,31050
+1084185-999-142,2022-10-19,2022,10,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,72,59,72 x 59,3105000010436,20.96985,-89.63046,31,31050
+1084185-999-144,2022-10-19,2022,10,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,69,58,69 x 58,3105000010510,20.96213,-89.62205,31,31050
+1084185-999-164,2022-10-22,2022,10,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,15,26 DIAGONAL,15 x 26 DIAGONAL,3105000013017,20.99128,-89.5842,31,31050
+1084185-999-169,2022-10-23,2022,10,16,No especificado,No especificado,No especificado,No especificado,0,0,0,1,14,15,14 x 15,3105000012540,21.01277,-89.58703,31,31050
+1084185-999-172,2022-10-23,2022,10,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,59 A,LICENCIADO MANUEL BERZUNZA,59 A x LICENCIADO MANUEL BERZUNZA,3105000014937,20.99593,-89.67355,31,31050
+1084185-999-176,2022-10-24,2022,10,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,12 C,AVENIDA CIRCUITO C.,12 C x AVENIDA CIRCUITO C.,3105000012502,21.01506,-89.6029,31,31050
+1084185-999-179,2022-10-24,2022,10,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,28,16,28 x 16,3105000013182,20.94927,-89.6003,31,31050
+1084185-999-188,2022-10-26,2022,10,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,149,172,149 x 172,3105000016702,20.98206,-89.54925,31,31050
+1084185-999-192,2022-10-28,2022,10,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,22,55,22 x 55,3105000013784,20.9621,-89.67825,31,31050
+1084185-999-199,2022-10-28,2022,10,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,PROLONG. PASEO MONTEJO,45,PROLONG. PASEO MONTEJO x 45,3105000011453,21.02075,-89.62007,31,31050
+1077697-999-56,2022-11-07,2022,11,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,55,AREA RECREATIVA DEL PARQUE CP 97160 ENTRE 10 Y AVENIDA 14,55 x AREA RECREATIVA DEL PARQUE CP 97160 ENTRE 10 Y AVENIDA 14,3105000012926,20.96995,-89.58535,31,31050
+1077697-999-68,2022-11-09,2022,11,6,No especificado,No especificado,No especificado,No especificado,0,1,0,0,70,59,70 x 59,3105000015812,20.99559,-89.69736,31,31050
+1077697-999-80,2022-11-11,2022,11,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,19 (35 DIAGONAL),32,19 (35 DIAGONAL) x 32,3105000012269,21.00828,-89.64931,31,31050
+1077697-999-91,2022-11-12,2022,11,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,45,50 x 45,3105000010332,20.97543,-89.61434,31,31050
+1077697-999-122,2022-11-16,2022,11,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,25D,6,25D x 6,3105000014250,20.94893,-89.5748,31,31050
+1077697-999-123,2022-11-16,2022,11,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,59 A,LICENCIADO MANUEL BERZUNZA,59 A x LICENCIADO MANUEL BERZUNZA,3105000015761,21.00088,-89.68191,31,31050
+1077697-999-127,2022-11-17,2022,11,7,No especificado,No especificado,No especificado,No especificado,0,0,0,1,22,41,22 x 41,3105000013939,21.01804,-89.59844,31,31050
+1077697-999-161,2022-11-21,2022,11,2,No especificado,No especificado,No especificado,No especificado,0,1,0,0,86,171,86 x 171,3105000016045,20.90853,-89.64827,31,31050
+1077697-999-167,2022-11-22,2022,11,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CUPULES (33),14,CUPULES (33) x 14,310500001021A,20.99374,-89.62842,31,31050
+1077697-999-178,2022-11-22,2022,11,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,61,MÉRIDA 2000,61 x MÉRIDA 2000,3105000012678,20.9645,-89.66363,31,31050
+1077697-999-182,2022-11-23,2022,11,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,136,121,136 x 121,3105000016721,20.98925,-89.53179,31,31050
+1077697-999-200,2022-11-26,2022,11,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,50,95,50 x 95,3105000015314,20.94477,-89.6208,31,31050
+1080685-999-3,2022-12-01,2022,12,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CIRCUITO COLONIAS (CALLE 30),9,CIRCUITO COLONIAS (CALLE 30) x 9,3105000014087,20.99351,-89.63701,31,31050
+1080685-999-18,2022-12-03,2022,12,3,No especificado,No especificado,No especificado,No especificado,0,1,0,0,71,CIRCUITO COLONIAS (CALLE 6),71 x CIRCUITO COLONIAS (CALLE 6),3105000013002,20.94945,-89.59247,31,31050
+1080685-999-43,2022-12-06,2022,12,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,39,18K,39 x 18K,310500001669A,21.02697,-89.55398,31,31050
+1080685-999-101,2022-12-12,2022,12,14,No especificado,No especificado,No especificado,No especificado,0,0,0,1,23,42,23 x 42,310500001295A,20.97473,-89.57519,31,31050
+1080685-999-103,2022-12-12,2022,12,17,No especificado,No especificado,No especificado,No especificado,0,2,0,0,16,CIRCUITO COLONIAS (COLONIA MÉXICO CALLE 31),16 x CIRCUITO COLONIAS (COLONIA MÉXICO CALLE 31),3105000012362,20.9978,-89.60965,31,31050
+1080685-999-133,2022-12-17,2022,12,1,No especificado,No especificado,No especificado,No especificado,0,1,0,0,86,LICENCIADO MANUEL BERZUNZA,86 x LICENCIADO MANUEL BERZUNZA,3105000016030,20.89475,-89.65116,31,31050
+1080685-999-167,2022-12-19,2022,12,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,71B,128D,71B x 128D,3105000012663,20.97401,-89.66605,31,31050
+1080685-999-172,2022-12-19,2022,12,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,48,71,48 x 71,3105000012343,21.03205,-89.62554,31,31050
+1080685-999-175,2022-12-20,2022,12,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,4,REPÚBLICA DE COREA,4 x REPÚBLICA DE COREA,3105000012521,21.02618,-89.57244,31,31050
+1080685-999-182,2022-12-21,2022,12,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,151,50 x 151,3105000015121,20.91609,-89.62109,31,31050
+1080685-999-184,2022-12-21,2022,12,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,54,111B,54 x 111B,3105000010807,20.93697,-89.62462,31,31050
+1080685-999-185,2022-12-21,2022,12,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,77,26,77 x 26,3105000014706,20.95143,-89.6857,31,31050
+1080685-999-205,2022-12-23,2022,12,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,12,55,12 x 55,310500001377A,20.96135,-89.67369,31,31050
+1080685-999-231,2022-12-30,2022,12,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,11,LICENCIADO MANUEL BERZUNZA x 11,310500001345A,21.02843,-89.5733,31,31050
+1086130-999-16,2023-01-02,2023,1,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20,3 G,20 x 3 G,3105000015634,20.9838323,-89.67273463,31,31050
+1086130-999-19,2023-01-02,2023,1,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,16,31,16 x 31,3105000010169,20.99766872,-89.60967078,31,31050
+1086130-999-27,2023-01-05,2023,1,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,35,DAMASCO,35 x DAMASCO,3105000013695,20.99880895,-89.57015139,31,31050
+1086130-999-61,2023-01-10,2023,1,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,42,97,42 x 97,No especificado,20.94801312,-89.61361485,31,31050
+1086130-999-67,2023-01-12,2023,1,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,16,31,16 x 31,3105000015244,20.99679404,-89.60345279,31,31050
+1086130-999-69,2023-01-12,2023,1,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,SAN PEDRO,59 A,SAN PEDRO x 59 A,3105000015761,21.00085713,-89.68221972,31,31050
+1086130-999-81,2023-01-14,2023,1,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,22,37,22 x 37,3105000013799,20.96883312,-89.67755967,31,31050
+1086130-999-84,2023-01-15,2023,1,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,67 A,124,67 A x 124,3105000012080,20.95899028,-89.66782049,31,31050
+1086130-999-93,2023-01-17,2023,1,7,No especificado,No especificado,No especificado,No especificado,0,0,0,1,60,59,60 x 59,3105000015846,20.99457152,-89.68956323,31,31050
+1086130-999-122,2023-01-22,2023,1,0,No especificado,No especificado,No especificado,No especificado,0,1,0,0,64,167,64 x 167,3105000015422,20.90517624,-89.62567745,31,31050
+1086130-999-137,2023-01-25,2023,1,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,34 JOSÉ VASCONCELOS,23,34 JOSÉ VASCONCELOS x 23,3105000015028,21.00998114,-89.57759046,31,31050
+1086130-999-176,2023-01-30,2023,1,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,22,35,22 x 35,3105000013799,20.96904607,-89.67751968,31,31050
+1086130-999-183,2023-01-31,2023,1,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,39,ANDRÉS GARCÍA LAVÍN,39 x ANDRÉS GARCÍA LAVÍN,3105000016505,21.03598854,-89.60282256,31,31050
+1086130-999-188,2023-01-31,2023,1,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,41,LICENCIADO MANUEL BERZUNZA,41 x LICENCIADO MANUEL BERZUNZA,310500001384A,20.96987912,-89.68989935,31,31050
+1087159-999-55,2023-02-07,2023,2,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,114,67,114 x 67,3105000012080,20.96109966,-89.65726536,31,31050
+1087159-999-70,2023-02-10,2023,2,15,No especificado,No especificado,No especificado,No especificado,0,1,0,0,54 A,99,54 A x 99,3105000015314,20.94351834,-89.62482789,31,31050
+1087159-999-80,2023-02-11,2023,2,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,60,60,60 x 60,310500001516A,20.9009279,-89.63965542,31,31050
+1087159-999-96,2023-02-14,2023,2,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,8,63,8 x 63,3105000011773,20.96354406,-89.58290325,31,31050
+1087159-999-135,2023-02-19,2023,2,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,51,51,51 x 51,310500001637A,20.97020731,-89.57786453,31,31050
+1087159-999-137,2023-02-20,2023,2,6,No especificado,No especificado,No especificado,No especificado,0,1,0,0,26,27 (19),26 x 27 (19),3105000013426,21.00659756,-89.64670463,31,31050
+1087159-999-151,2023-02-22,2023,2,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,MÉRIDA 2000 (40),MÉRIDA 2000,MÉRIDA 2000 (40) x MÉRIDA 2000,3105000013341,21.01536666,-89.65205004,31,31050
+1087159-999-179,2023-02-26,2023,2,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,FUERZA AEREA(CALLE 111),AVIACIÓN,FUERZA AEREA(CALLE 111) x AVIACIÓN,310500001306A,20.94899492,-89.6495584,31,31050
+1095846-999-42,2023-03-06,2023,3,20,No especificado,No especificado,No especificado,No especificado,0,3,0,0,98,57,98 x 57,3105000015687,21.00484185,-89.71621168,31,31050
+1095846-999-44,2023-03-07,2023,3,8,No especificado,No especificado,No especificado,No especificado,0,2,0,0,140,61,140 x 61,No especificado,20.99261889,-89.67258205,31,31050
+1095846-999-48,2023-03-07,2023,3,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,63,50 x 63,3105000010510,20.9651843,-89.61688213,31,31050
+1095846-999-117,2023-03-17,2023,3,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,85,58,85 x 58,3105000010671,20.95192299,-89.62496428,31,31050
+1095846-999-118,2023-03-17,2023,3,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,60,37,60 x 37,No especificado,20.98196089,-89.62049412,31,31050
+1095846-999-122,2023-03-18,2023,3,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,86,171,86 x 171,3105000016045,20.90865296,-89.64822923,31,31050
+1095846-999-132,2023-03-19,2023,3,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,90 B,81 A,90 B x 81 A,3105000013267,20.95231962,-89.64368054,31,31050
+1095846-999-160,2023-03-24,2023,3,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,70,79,70 x 79,3105000015812,20.99060015,-89.69987952,31,31050
+1095846-999-170,2023-03-25,2023,3,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,LATERAL,LICENCIADO MANUEL BERZUNZA x LATERAL,3105000010277,20.92345654,-89.68764873,31,31050
+1095846-999-201,2023-03-30,2023,3,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,FIDEL VELÁZQUEZ (59),14,FIDEL VELÁZQUEZ (59) x 14,3105000011773,20.96478402,-89.58554331,31,31050
+1095846-999-207,2023-03-31,2023,3,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,39,62,39 x 62,3105000010347,20.97784379,-89.60364004,31,31050
+1124470-999-7,2023-04-01,2023,4,21,No especificado,No especificado,No especificado,No especificado,0,2,0,0,50,173,50 x 173,3105000013089,20.90382055,-89.61892508,31,31050
+1124470-999-21,2023-04-04,2023,4,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,YUCATÁN (17),LICENCIADO MANUEL BERZUNZA x YUCATÁN (17),3105000014975,21.02173577,-89.56626509,31,31050
+1124470-999-32,2023-04-06,2023,4,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,28,25,28 x 25,3105000842199,21.04052081,-89.56303438,31,31050
+1124470-999-61,2023-04-12,2023,4,15,No especificado,No especificado,No especificado,No especificado,0,0,0,1,100,66 C,100 x 66 C,3105000013267,20.94702786,-89.64281288,31,31050
+1124470-999-105,2023-04-20,2023,4,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,63,58,63 x 58,3105000010510,20.96605122,-89.62150361,31,31050
+1124470-999-126,2023-04-22,2023,4,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CIRCUITO COLONIAS (CALLE 4),QUETZALCÓATL (CALLE 65),CIRCUITO COLONIAS (CALLE 4) x QUETZALCÓATL (CALLE 65),3105000010563,20.95935812,-89.59182362,31,31050
+1124470-999-130,2023-04-22,2023,4,21,No especificado,No especificado,No especificado,No especificado,0,0,0,2,71,16,71 x 16,3105000016134,20.90921911,-89.67527364,31,31050
+1124470-999-149,2023-04-26,2023,4,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,191,50 x 191,3105000013089,20.89603277,-89.62141052,31,31050
+1124478-999-29,2023-05-06,2023,5,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,88 B,157,88 B x 157,3105000013619,20.91690803,-89.65092016,31,31050
+1124478-999-30,2023-05-06,2023,5,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,14,49,14 x 49,3105000013483,20.91771512,-89.67416839,31,31050
+1124478-999-49,2023-05-09,2023,5,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,75,108,75 x 108,3105000013055,20.94851032,-89.65907443,31,31050
+1124478-999-185,2023-05-26,2023,5,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,45 A,LICENCIADO MANUEL BERZUNZA,45 A x LICENCIADO MANUEL BERZUNZA,3105000010277,20.9190939,-89.6858074,31,31050
+1124501-999-70,2023-06-10,2023,6,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,ITZÁES,90 A,ITZÁES x 90 A,3105000010421,20.9791278,-89.63987139,31,31050
+1124501-999-97,2023-06-14,2023,6,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,3,60,3 x 60,3105000014566,21.04150232,-89.62895102,31,31050
+1124501-999-98,2023-06-14,2023,6,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,60,187 E,60 x 187 E,3105000014759,20.89490835,-89.63873241,31,31050
+1124501-999-130,2023-06-18,2023,6,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,28,61,28 x 61,3105000016134,20.91263527,-89.68120872,31,31050
+1124501-999-209,2023-06-29,2023,6,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,130,69,130 x 69,3105000014689,20.95919187,-89.67159343,31,31050
+1124501-999-216,2023-06-30,2023,6,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,49,52,49 x 52,3105000011561,21.01947793,-89.61756139,31,31050
+1124501-999-219,2023-06-30,2023,6,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,14,21,14 x 21,3105000774392,21.09564501,-89.57362936,31,31050
+1124511-999-4,2023-07-01,2023,7,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CALLE 181,CALLE 16,CALLE 181 x CALLE 16,310502057,20.90172123,-89.67253303,31,31050
+1124511-999-24,2023-07-03,2023,7,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,37,20,37 x 20,3105000013977,20.98640211,-89.57180381,31,31050
+1124511-999-42,2023-07-08,2023,7,3,No especificado,No especificado,No especificado,No especificado,0,0,0,1,12,22,12 x 22,3105000010563,20.95841825,-89.59626864,31,31050
+1124511-999-62,2023-07-11,2023,7,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,51,10,51 x 10,3105000013483,20.92043593,-89.66817549,31,31050
+1124511-999-107,2023-07-16,2023,7,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,FIDEL VELÁZQUEZ (59),16,FIDEL VELÁZQUEZ (59) x 16,3105000012979,20.96756804,-89.57024656,31,31050
+1124511-999-108,2023-07-16,2023,7,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,30 (32),37 A,30 (32) x 37 A,3105000011576,21.02782468,-89.60465143,31,31050
+1124511-999-122,2023-07-19,2023,7,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,ITZÁES (86 B),92 A,ITZÁES (86 B) x 92 A,3105000010597,20.95179078,-89.64606424,31,31050
+1124511-999-135,2023-07-21,2023,7,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,58,55,58 x 55,3105000013746,21.02904409,-89.65299598,31,31050
+1124511-999-138,2023-07-21,2023,7,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,22,47 A,22 x 47 A,3105000013784,20.96620935,-89.67787854,31,31050
+1124511-999-159,2023-07-25,2023,7,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,12 DIAGONAL,41,12 DIAGONAL x 41,3105000016365,20.9666806,-89.67248268,31,31050
+1124511-999-164,2023-07-26,2023,7,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,25,LICENCIADO MANUEL BERZUNZA,25 x LICENCIADO MANUEL BERZUNZA,310500001498A,21.01005573,-89.56187547,31,31050
+1124511-999-196,2023-07-31,2023,7,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,46,21 (47),46 x 21 (47),3105000012818,20.97569313,-89.57836675,31,31050
+1124526-999-15,2023-08-03,2023,8,1,No especificado,No especificado,No especificado,No especificado,0,0,0,1,JUAN PABLO II (65 A),122,JUAN PABLO II (65 A) x 122,3105000014161,20.961056,-89.66572761,31,31050
+1124526-999-56,2023-08-09,2023,8,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,108,55,108 x 55,3105000016632,21.07400442,-89.65926792,31,31050
+1124526-999-87,2023-08-14,2023,8,3,No especificado,No especificado,No especificado,No especificado,0,2,0,0,110 C-1,31,110 C-1 x 31,3105000016952,21.01078329,-89.72031133,31,31050
+1124526-999-118,2023-08-20,2023,8,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,16,65 A,16 x 65 A,3105000016134,20.91122492,-89.67518958,31,31050
+1124526-999-126,2023-08-21,2023,8,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,PASEO DE MONTEJO,5,PASEO DE MONTEJO x 5,3105000011472,21.00907866,-89.61395588,31,31050
+1124526-999-135,2023-08-24,2023,8,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,CALLE NINGUNO,LICENCIADO MANUEL BERZUNZA x CALLE NINGUNO,3105000013500,20.89436811,-89.66753622,31,31050
+1124526-999-145,2023-08-26,2023,8,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,108,39 A,108 x 39 A,3105000015672,21.0051589,-89.7177928,31,31050
+1124542-999-4,2023-09-01,2023,9,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,INTERNACIONAL,19,INTERNACIONAL x 19,No especificado,20.9207593,-89.6962713,31,31050
+1124542-999-19,2023-09-02,2023,9,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,No especificado,No especificado,No especificado,No especificado,20.90313019,-89.77863225,31,31050
+1124542-999-90,2023-09-13,2023,9,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,27,42,27 x 42,No especificado,20.90872047,-89.60134203,31,31050
+1124542-999-157,2023-09-23,2023,9,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,40,69,40 x 69,No especificado,20.94012212,-89.56960846,31,31050
+1124542-999-185,2023-09-28,2023,9,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,6,9,6 x 9,3105000012540,21.013306,-89.58372493,31,31050
+1124542-999-188,2023-09-29,2023,9,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,26,23,26 x 23,No especificado,20.93468427,-89.56179927,31,31050
+1124556-999-4,2023-10-01,2023,10,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,76,71,76 x 71,310500001181A,20.94565638,-89.586613,31,31050
+1124556-999-5,2023-10-01,2023,10,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,46,69,46 x 69,3105000012343,21.03267624,-89.62507462,31,31050
+1124556-999-28,2023-10-04,2023,10,19,No especificado,No especificado,No especificado,No especificado,0,3,0,0,84 A,169,84 A x 169,310500001605A,20.91082422,-89.64530069,31,31050
+1124556-999-46,2023-10-07,2023,10,4,No especificado,No especificado,No especificado,No especificado,0,1,0,0,VIA MONTEJO,60,VIA MONTEJO x 60,3105000014566,21.04450397,-89.62953736,31,31050
+1124556-999-50,2023-10-07,2023,10,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,96,171,96 x 171,3105000016045,20.91005098,-89.65510721,31,31050
+1124556-999-72,2023-10-11,2023,10,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,13,14,13 x 14,3105000010347,20.97687905,-89.59887119,31,31050
+1124556-999-85,2023-10-12,2023,10,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,21,LICENCIADO MANUEL BERZUNZA x 21,3105000014335,20.97474589,-89.68963817,31,31050
+1124556-999-93,2023-10-14,2023,10,1,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20 A,23,20 A x 23,3105000774388,21.0948747,-89.57783957,31,31050
+1124556-999-98,2023-10-15,2023,10,0,No especificado,No especificado,No especificado,No especificado,0,1,0,0,86 A,86 A,86 A x 86 A,3105000013873,20.89007841,-89.65296442,31,31050
+1124556-999-103,2023-10-15,2023,10,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,59 A,PERIFERICO LICENCIADO MANUEL BERZUNZA,59 A x PERIFERICO LICENCIADO MANUEL BERZUNZA,3105000014937,20.99594618,-89.67340386,31,31050
+1124556-999-105,2023-10-15,2023,10,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,47,16,47 x 16,3105000016149,20.91855578,-89.67528787,31,31050
+1124556-999-119,2023-10-19,2023,10,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,2,39 C,2 x 39 C,3105000012945,20.97879557,-89.58862236,31,31050
+1124556-999-153,2023-10-23,2023,10,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,SAN PEDRO,59 A,SAN PEDRO x 59 A,3105000015761,21.00111669,-89.68219208,31,31050
+1124556-999-172,2023-10-26,2023,10,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,59 B DIAGONAL,MÉRIDA 2000,59 B DIAGONAL x MÉRIDA 2000,3105000012625,20.98628754,-89.66406222,31,31050
+1124556-999-182,2023-10-27,2023,10,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,22,47,22 x 47,3105000013784,20.96575589,-89.67792202,31,31050
+1113592-999-3,2023-11-01,2023,11,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,AVIACIÓN,COLONIAS (96),AVIACIÓN x COLONIAS (96),310500001306A,20.94901882,-89.64952628,31,31050
+1113592-999-7,2023-11-02,2023,11,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,47,50 x 47,3105000013712,21.03514731,-89.64482698,31,31050
+1113592-999-34,2023-11-07,2023,11,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,32,77,32 x 77,3105000014960,21.055778,-89.61019379,31,31050
+1113592-999-51,2023-11-11,2023,11,2,No especificado,No especificado,No especificado,No especificado,0,1,0,0,140,59 B,140 x 59 B,3105000012610,20.99372949,-89.6717944,31,31050
+1113592-999-56,2023-11-11,2023,11,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,20,21,20 x 21,3105001114405,20.82504676,-89.66044717,31,31050
+1113592-999-61,2023-11-11,2023,11,21,No especificado,No especificado,No especificado,No especificado,0,2,0,0,14,CALLE 14,14 x CALLE 14,3105000012926,20.97001234,-89.58559795,31,31050
+1113592-999-96,2023-11-16,2023,11,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,MÉRIDA 2000,BENITO JUÁREZ AVIACIÓN,MÉRIDA 2000 x BENITO JUÁREZ AVIACIÓN,3105000015390,20.94470767,-89.65632114,31,31050
+1113592-999-104,2023-11-17,2023,11,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,FIDEL VELÁZQUEZ (59),20,FIDEL VELÁZQUEZ (59) x 20,3105000014142,20.96721437,-89.57247405,31,31050
+1113592-999-137,2023-11-21,2023,11,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,BENITO JUÁREZ 21,LICENCIADO MANUEL BERZUNZA x BENITO JUÁREZ 21,3105000015386,20.9248822,-89.68827597,31,31050
+1113592-999-145,2023-11-23,2023,11,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,CIRCUITO COLONIAS (98),65 B,CIRCUITO COLONIAS (98) x 65 B,3105000015085,20.96460862,-89.64824189,31,31050
+1113592-999-154,2023-11-24,2023,11,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CALLE 40,23,CALLE 40 x 23,3105000014180,21.00441086,-89.58093799,31,31050
+1113592-999-170,2023-11-27,2023,11,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,16,JUAN PABLO II,16 x JUAN PABLO II,310500001377A,20.95972509,-89.6740727,31,31050
+1113592-999-174,2023-11-28,2023,11,12,No especificado,No especificado,No especificado,No especificado,0,0,0,1,114,59 K,114 x 59 K,310500001039A,20.97510768,-89.6543868,31,31050
+1117487-999-5,2023-12-01,2023,12,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,62,85,62 x 85,3105000015831,20.98820683,-89.69278996,31,31050
+1117487-999-28,2023-12-05,2023,12,1,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20 A,23,20 A x 23,3105000774388,21.09487345,-89.57784091,31,31050
+1117487-999-32,2023-12-06,2023,12,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,JACINTO CANEK (59 A),ITZÁES (CALLE 86 B),JACINTO CANEK (59 A) x ITZÁES (CALLE 86 B),3105000010421,20.97523508,-89.64036478,31,31050
+1117487-999-35,2023-12-07,2023,12,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,ITZÁES (86 B),65 A,ITZÁES (86 B) x 65 A,3105000010489,20.9651681,-89.64141591,31,31050
+1117487-999-41,2023-12-08,2023,12,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,CALLE NINGUNO,LICENCIADO MANUEL BERZUNZA x CALLE NINGUNO,310500001085A,20.93860144,-89.69636021,31,31050
+1117487-999-43,2023-12-08,2023,12,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,40 (MÉRIDA 2000),11,40 (MÉRIDA 2000) x 11,3105000012254,21.01053563,-89.65383625,31,31050
+1117487-999-84,2023-12-14,2023,12,16,No especificado,No especificado,No especificado,No especificado,0,0,0,1,128,49,128 x 49,3105000012593,20.99209866,-89.6635247,31,31050
+1117487-999-96,2023-12-15,2023,12,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,22,29,22 x 29,3105000014157,20.9711846,-89.56992335,31,31050
+1117487-999-152,2023-12-21,2023,12,1,No especificado,No especificado,No especificado,No especificado,0,2,0,0,60 A,COLONIAS (111),60 A x COLONIAS (111),3105000010718,20.93795178,-89.62983212,31,31050
+1117487-999-167,2023-12-23,2023,12,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,41,16,41 x 16,310500001612A,20.92146047,-89.67530604,31,31050
+1117487-999-206,2023-12-29,2023,12,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,74,165,74 x 165,310500001516A,20.91183738,-89.64247135,31,31050
+1161706-999-9,2024-01-01,2024,1,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,62,73,62 x 73,3105000010614,20.9600137,-89.62583058,31,31050
+1161706-999-24,2024-01-06,2024,1,1,No especificado,No especificado,No especificado,No especificado,0,1,0,0,11 D,26,11 D x 26,3105000014496,21.0223507,-89.6385375,31,31050
+1161706-999-60,2024-01-15,2024,1,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,86,86,86 x 86,3105000016045,20.91424347,-89.64705469,31,31050
+1161706-999-74,2024-01-17,2024,1,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,21 A,No especificado,21 A,3105000012269,21.0086889,-89.6527362,31,31050
+1161706-999-94,2024-01-20,2024,1,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,JUAN PABLO II (65 A),106,JUAN PABLO II (65 A) x 106,3105000014176,20.96307492,-89.65373505,31,31050
+1161706-999-105,2024-01-22,2024,1,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,PASEO DE MONTEJO (CALLE 30),31,PASEO DE MONTEJO (CALLE 30) x 31,3105000012358,20.9988712,-89.6159586,31,31050
+1161706-999-134,2024-01-27,2024,1,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,7,37,7 x 37,No especificado,21.00271994,-89.69311889,31,31050
+1161706-999-144,2024-01-27,2024,1,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,42,77 C,42 x 77 C,3105000014890,20.94886664,-89.69530406,31,31050
+1161706-999-155,2024-01-29,2024,1,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,28,LICENCIADO MANUEL BERZUNZA x 28,3105000016149,20.91968747,-89.68548694,31,31050
+1161706-999-161,2024-01-30,2024,1,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,117,60 A,117 x 60 A,3105000015348,20.9347547,-89.6294363,31,31050
+1161706-999-164,2024-01-31,2024,1,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,38,81,38 x 81,3105000014890,20.9471815,-89.6920956,31,31050
+1169228-999-175,2024-02-02,2024,2,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,47 DIAGONAL,88,47 DIAGONAL x 88,3105000010309,20.98080684,-89.63982512,31,31050
+1169228-999-177,2024-02-02,2024,2,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,46 C,131 A,46 C x 131 A,3105000013515,20.92720954,-89.61624272,31,31050
+1169228-999-26,2024-02-08,2024,2,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,96,77,96 x 77,3105000015795,20.99324857,-89.71081634,31,31050
+1169228-999-84,2024-02-12,2024,2,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,42,63,42 x 63,3105000010525,20.96419275,-89.61165492,31,31050
+1169228-999-114,2024-02-17,2024,2,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,16,19,16 x 19,3105000010826,20.93617054,-89.60530839,31,31050
+1169228-999-66,2024-02-24,2024,2,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CORREA RACHÓ (6),15,CORREA RACHÓ (6) x 15,3105000010120,21.00241729,-89.59439476,31,31050
+1169228-999-146,2024-02-26,2024,2,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,58 A,58 A,58 A x 58 A,310500001473A,20.91286288,-89.62794442,31,31050
+1169228-999-148,2024-02-26,2024,2,16,No especificado,No especificado,No especificado,No especificado,0,0,0,1,29,COLONIAS,29 x COLONIAS,3105000013197,20.93989729,-89.60086532,31,31050
+1169228-999-151,2024-02-26,2024,2,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,63 B,COLONIAS (4),63 B x COLONIAS (4),3105000010563,20.96157537,-89.59163099,31,31050
+1169228-999-141,2024-02-27,2024,2,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,175,50 x 175,3105000013089,20.90286017,-89.61923342,31,31050
+1169228-999-167,2024-02-28,2024,2,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,79 D,79 D,79 D x 79 D,310500001306A,20.95190003,-89.64987926,31,31050
+1178583-999-200,2024-03-05,2024,3,23,No especificado,No especificado,No especificado,No especificado,0,0,0,1,JACINTO CANEK CALLE 59 A,MÉRIDA 2000,JACINTO CANEK CALLE 59 A x MÉRIDA 2000,3105000012593,20.98939551,-89.6634232,31,31050
+1178583-999-86,2024-03-06,2024,3,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LEANDRO VALLE (69),16,LEANDRO VALLE (69) x 16,3105000012875,20.95067713,-89.59344811,31,31050
+1178583-999-197,2024-03-09,2024,3,15,No especificado,No especificado,No especificado,No especificado,0,0,0,1,51,No especificado,51,3105000015526,21.03707922,-89.66123292,31,31050
+1178583-999-87,2024-03-11,2024,3,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,7,26,7 x 26,3105000015013,21.01474947,-89.58321548,31,31050
+1178583-999-199,2024-03-12,2024,3,14,No especificado,No especificado,No especificado,No especificado,0,0,0,1,50,161 B,50 x 161 B,3105000013074,20.90964863,-89.61965546,31,31050
+1178583-999-198,2024-03-14,2024,3,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,49,30,49 x 30,3105000012502,21.02177858,-89.60317443,31,31050
+1178583-999-196,2024-03-17,2024,3,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,6,37,6 x 37,No especificado,20.98196089,-89.62049412,31,31050
+1178583-999-83,2024-03-17,2024,3,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,41,16,41 x 16,310500001199A,20.99569125,-89.55368229,31,31050
+1178583-999-88,2024-03-19,2024,3,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CIRCUITO COLONIAS (COLONIA MÉXICO CALLE 31),No especificado,CIRCUITO COLONIAS (COLONIA MÉXICO CALLE 31),3105000012358,20.99855039,-89.61419489,31,31050
+1178583-999-84,2024-03-19,2024,3,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,63 B,COLONIAS (4),63 B x COLONIAS (4),3105000010563,20.96156082,-89.59169033,31,31050
+1178583-999-85,2024-03-20,2024,3,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CHABLEKAL - TEMOZÓN NORTE,No especificado,CHABLEKAL - TEMOZÓN NORTE,310502038,21.08274961,-89.58304103,31,31050
+1170914-999-101,2024-04-01,2024,4,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,22,47 A,22 x 47 A,3105000013784,20.96621246,-89.67787839,31,31050
+1170914-999-135,2024-04-08,2024,4,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20,17,20 x 17,3105000016473,21.01553973,-89.63199346,31,31050
+1170914-999-157,2024-04-13,2024,4,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,22,63,22 x 63,3105000016505,21.03663331,-89.61305486,31,31050
+1170914-999-170,2024-04-14,2024,4,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,60,59,60 x 59,3105000015846,20.99456452,-89.68956449,31,31050
+1170914-999-182,2024-04-17,2024,4,15,No especificado,No especificado,No especificado,No especificado,0,1,0,0,37,42,37 x 42,3105000012343,21.0241909,-89.6224731,31,31050
+1170914-999-185,2024-04-17,2024,4,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,41,50 x 41,3105000016524,21.03957991,-89.64279482,31,31050
+1170914-999-191,2024-04-18,2024,4,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,LICENCIADO MANUEL BERZUNZA,LICENCIADO MANUEL BERZUNZA x LICENCIADO MANUEL BERZUNZA,3105000013591,21.04897108,-89.62391454,31,31050
+1170914-999-50,2024-04-24,2024,4,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,7,LICENCIADO MANUEL BERZUNZA x 7,No especificado,20.98187508,-89.56376491,31,31050
+1170914-999-52,2024-04-25,2024,4,10,No especificado,No especificado,No especificado,No especificado,0,0,0,1,36 DIAGONAL,27 (103 DIAGONAL),36 DIAGONAL x 27 (103 DIAGONAL),3105000011913,21.00508306,-89.64391256,31,31050
+1170914-999-85,2024-04-29,2024,4,2,No especificado,No especificado,No especificado,No especificado,0,1,0,0,66 A,97,66 A x 97,3105000013267,20.9467454,-89.6407282,31,31050
+1170914-999-86,2024-04-29,2024,4,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,MÉRIDA 2000 (48 A),61,MÉRIDA 2000 (48 A) x 61,3105000012288,21.02339761,-89.64971851,31,31050
+1170914-999-95,2024-04-30,2024,4,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,8,45,8 x 45,3105000012856,20.97585679,-89.58436252,31,31050
+1175531-999-3,2024-05-01,2024,5,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,CIRCUITO COLONIAS (31),65 B,CIRCUITO COLONIAS (31) x 65 B,3105000015070,20.96438444,-89.64871749,31,31050
+1175531-999-32,2024-05-05,2024,5,5,No especificado,No especificado,No especificado,No especificado,0,1,0,0,ITZÁES 32,23,ITZÁES 32 x 23,3105000010281,20.98814026,-89.63878512,31,31050
+1175531-999-33,2024-05-06,2024,5,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,28,LICENCIADO MANUEL BERZUNZA x 28,3105000016134,20.91268371,-89.68143322,31,31050
+1175531-999-34,2024-05-06,2024,5,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,64 E,COLONIAS (111),64 E x COLONIAS (111),3105000010718,20.9379079,-89.6377405,31,31050
+1175531-999-53,2024-05-09,2024,5,8,No especificado,No especificado,No especificado,No especificado,0,0,0,1,94,181,94 x 181,3105000013500,20.8987272,-89.6542518,31,31050
+1175531-999-62,2024-05-10,2024,5,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA,12,LICENCIADO MANUEL BERZUNZA x 12,3105000012964,20.9702539,-89.5654396,31,31050
+1175531-999-65,2024-05-10,2024,5,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,28,22,28 x 22,3105000012998,20.95189772,-89.60123891,31,31050
+1175531-999-77,2024-05-11,2024,5,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,23 A,LICENCIADO MANUEL BERZUNZA x 23 A,310500001466A,21.00472099,-89.56102059,31,31050
+1175531-999-92,2024-05-14,2024,5,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,JACINTO CANEK (59 A),JACINTO CANEK (59 A),JACINTO CANEK (59 A) x JACINTO CANEK (59 A),3105000010402,20.9816721,-89.6508985,31,31050
+1175531-999-94,2024-05-14,2024,5,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,MÉRIDA - PROGRESO,No especificado,MÉRIDA - PROGRESO,3105000016242,21.06594683,-89.63298791,31,31050
+1175531-999-99,2024-05-16,2024,5,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,48,65,48 x 65,3105000012339,21.0334061,-89.6263188,31,31050
+1175531-999-129,2024-05-19,2024,5,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,70,135,70 x 135,3105000011843,20.9239367,-89.635114,31,31050
+1175531-999-136,2024-05-21,2024,5,0,No especificado,No especificado,No especificado,No especificado,0,2,0,0,64 A,105,64 A x 105,3105000010718,20.94063169,-89.6336583,31,31050
+1175531-999-157,2024-05-23,2024,5,15,No especificado,No especificado,No especificado,No especificado,0,1,0,0,90,181,90 x 181,3105000016030,20.8987336,-89.6522232,31,31050
+1175531-999-179,2024-05-25,2024,5,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,28,19,28 x 19,3105000014091,20.98856573,-89.63641703,31,31050
+1175531-999-216,2024-05-30,2024,5,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA,4,LICENCIADO MANUEL BERZUNZA x 4,3105000011824,20.9386871,-89.5836352,31,31050
+1175531-999-224,2024-05-31,2024,5,15,No especificado,No especificado,No especificado,No especificado,0,1,0,0,59,114,59 x 114,3105000016469,21.0693936,-89.66204245,31,31050
+1171098-999-43,2024-06-04,2024,6,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,82,82,82 x 82,310500001060A,20.95922097,-89.64023989,31,31050
+1171098-999-72,2024-06-07,2024,6,20,No especificado,No especificado,No especificado,No especificado,0,0,0,2,12,25,12 x 25,3105000010296,20.98556021,-89.62919643,31,31050
+1171098-999-82,2024-06-08,2024,6,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,72,LICENCIADO MANUEL BERZUNZA x 72,3105000014725,20.90532563,-89.63057773,31,31050
+1171098-999-93,2024-06-09,2024,6,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,LICENCIADO MANUEL BERZUNZA,LICENCIADO MANUEL BERZUNZA x LICENCIADO MANUEL BERZUNZA,3105000015047,20.9822342,-89.563862,31,31050
+1171098-999-116,2024-06-15,2024,6,3,No especificado,No especificado,No especificado,No especificado,0,1,0,0,64 E,113,64 E x 113,3105000015333,20.93781,-89.6379548,31,31050
+1171098-999-137,2024-06-21,2024,6,16,No especificado,No especificado,No especificado,No especificado,0,1,0,0,59 A,No especificado,59 A,3105000015776,21.00403909,-89.68679166,31,31050
+1171098-999-140,2024-06-22,2024,6,1,No especificado,No especificado,No especificado,No especificado,0,1,0,0,49,48,49 x 48,3105000011561,21.0199735,-89.61550172,31,31050
+1171098-999-143,2024-06-22,2024,6,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,128,55,128 x 55,310500001270A,20.99254956,-89.66352779,31,31050
+1175256-999-29,2024-07-03,2024,7,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,LICENCIADO MANUEL BERZUNZA,LICENCIADO MANUEL BERZUNZA x LICENCIADO MANUEL BERZUNZA,3105000015386,20.92518362,-89.68849367,31,31050
+1175256-999-42,2024-07-06,2024,7,20,No especificado,No especificado,No especificado,No especificado,0,3,0,0,122 A,71 B,122 A x 71 B,3105000014693,20.95609397,-89.66774006,31,31050
+1175256-999-49,2024-07-07,2024,7,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,7,LICENCIADO MANUEL BERZUNZA x 7,3105000014975,21.02695894,-89.57159154,31,31050
+1175256-999-90,2024-07-15,2024,7,12,No especificado,No especificado,No especificado,No especificado,0,1,0,0,86,185,86 x 185,3105000016030,20.89653528,-89.65089308,31,31050
+1175256-999-103,2024-07-18,2024,7,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,"RICARDO ""EL VATE"" LÓPEZ MÉNDEZ (6)",37,"RICARDO ""EL VATE"" LÓPEZ MÉNDEZ (6) x 37",3105000012324,21.03911811,-89.62829594,31,31050
+1175256-999-122,2024-07-22,2024,7,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,86,165,86 x 165,3105000016045,20.91265675,-89.64733209,31,31050
+1175256-999-151,2024-07-26,2024,7,23,No especificado,No especificado,No especificado,No especificado,0,0,0,1,7 B,12:00 A. M.,7 B x 12:00 A. M.,3105000013445,21.03896025,-89.59172727,31,31050
+1175256-999-156,2024-07-27,2024,7,13,No especificado,No especificado,No especificado,No especificado,0,0,0,1,44,42,44 x 42,3105000012254,21.01342762,-89.65540394,31,31050
+1175256-999-158,2024-07-27,2024,7,14,No especificado,No especificado,No especificado,No especificado,0,0,0,2,37,62,37 x 62,3105000015757,21.00058338,-89.68882096,31,31050
+1171492-999-23,2024-08-01,2024,8,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,135 A,46,135 A x 46,3105000015136,20.9255475,-89.61188762,31,31050
+1171492-999-26,2024-08-02,2024,8,2,No especificado,No especificado,No especificado,No especificado,0,0,0,1,73 A,71 B,73 A x 71 B,3105000014034,20.95604242,-89.66338371,31,31050
+1171492-999-30,2024-08-02,2024,8,14,No especificado,No especificado,No especificado,No especificado,0,0,0,1,28,23,28 x 23,3105000012216,21.01021445,-89.64040843,31,31050
+1171492-999-39,2024-08-03,2024,8,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LEANDRO VALLE (69),14,LEANDRO VALLE (69) x 14,3105000012875,20.9499559,-89.59239574,31,31050
+1171492-999-41,2024-08-04,2024,8,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,126,71,126 x 71,3105000011805,20.97501464,-89.66241956,31,31050
+1171492-999-85,2024-08-12,2024,8,7,No especificado,No especificado,No especificado,No especificado,0,0,0,1,16 A,27,16 A x 27,310500001612A,20.9284788,-89.67748727,31,31050
+1171492-999-100,2024-08-15,2024,8,9,No especificado,No especificado,No especificado,No especificado,0,0,0,1,29,22,29 x 22,3105000013799,20.97029585,-89.67671127,31,31050
+1171492-999-101,2024-08-15,2024,8,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20,20,20 x 20,3105000012413,21.00735172,-89.63105675,31,31050
+1171492-999-112,2024-08-17,2024,8,23,No especificado,No especificado,No especificado,No especificado,0,0,0,1,48,95,48 x 95,3105000010633,20.94586045,-89.61938946,31,31050
+1171492-999-116,2024-08-18,2024,8,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,12 B,LICENCIADO MANUEL BERZUNZA x 12 B,3105000014602,21.03655854,-89.59441501,31,31050
+1171492-999-151,2024-08-26,2024,8,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,84,127,84 x 127,3105000013125,20.92984173,-89.64179534,31,31050
+1171492-999-162,2024-08-28,2024,8,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,TECNOLÓGICO (6),9,TECNOLÓGICO (6) x 9,3105000016488,21.0177169,-89.624918,31,31050
+1171650-999-32,2024-09-01,2024,9,12,No especificado,No especificado,No especificado,No especificado,0,0,0,1,PEDRO SÁINZ DE BARANDA (20),19,PEDRO SÁINZ DE BARANDA (20) x 19,3105000015390,20.93252604,-89.67411536,31,31050
+1171650-999-39,2024-09-02,2024,9,16,No especificado,No especificado,No especificado,No especificado,0,2,0,0,MÉRIDA 2000,JACINTO CANEK CALLE 59 A,MÉRIDA 2000 x JACINTO CANEK CALLE 59 A,3105000012593,20.9895706,-89.66347258,31,31050
+1171650-999-54,2024-09-05,2024,9,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,26 A,BENITO JUÁREZ (21),26 A x BENITO JUÁREZ (21),3105000015386,20.92742731,-89.68322779,31,31050
+1171650-999-66,2024-09-07,2024,9,6,No especificado,No especificado,No especificado,No especificado,0,1,0,0,LICENCIADO MANUEL BERZUNZA,BENITO JUÁREZ (21),LICENCIADO MANUEL BERZUNZA x BENITO JUÁREZ (21),3105000015386,20.92679883,-89.68954822,31,31050
+1171650-999-77,2024-09-08,2024,9,3,No especificado,No especificado,No especificado,No especificado,0,2,0,0,94,181,94 x 181,3105000013500,20.89872718,-89.65425176,31,31050
+1171650-999-84,2024-09-09,2024,9,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,56,69,56 x 69,3105000010510,20.96203196,-89.62127461,31,31050
+1171650-999-85,2024-09-09,2024,9,22,No especificado,No especificado,No especificado,No especificado,0,1,0,0,20,33,20 x 33,3105000013303,20.98818345,-89.57171243,31,31050
+1171650-999-94,2024-09-12,2024,9,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,83,50,83 x 50,3105000010633,20.95208915,-89.61990213,31,31050
+1171650-999-130,2024-09-17,2024,9,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,5 B (SALVADOR ALVARADO),60,5 B (SALVADOR ALVARADO) x 60,3105000012451,21.03241028,-89.62766242,31,31050
+1171650-999-151,2024-09-21,2024,9,16,No especificado,No especificado,No especificado,No especificado,0,0,0,1,21,28,21 x 28,3105000013426,21.00663822,-89.64784899,31,31050
+1171650-999-164,2024-09-24,2024,9,7,No especificado,No especificado,No especificado,No especificado,0,2,0,0,14,17,14 x 17,3105000010120,21.00248886,-89.60137873,31,31050
+1171650-999-169,2024-09-25,2024,9,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,66 C,99,66 C x 99,3105000013267,20.94345954,-89.64465317,31,31050
+1171650-999-174,2024-09-27,2024,9,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,26 A,BENITO JUÁREZ (21),26 A x BENITO JUÁREZ (21),3105000015386,20.9274225,-89.68322668,31,31050
+1171650-999-175,2024-09-27,2024,9,14,No especificado,No especificado,No especificado,No especificado,0,1,0,0,20 A,3 C,20 A x 3 C,3105000014566,21.0378523,-89.63254853,31,31050
+1171650-999-182,2024-09-28,2024,9,15,No especificado,No especificado,No especificado,No especificado,0,1,0,0,85,62,85 x 62,3105000010667,20.95236746,-89.62745058,31,31050
+1171650-999-188,2024-09-29,2024,9,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,67,60,67 x 60,3105000010510,20.9634908,-89.62382824,31,31050
+1171650-999-195,2024-09-30,2024,9,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,50,15,50 x 15,3105000012606,20.9937745,-89.65053731,31,31050
+1171784-999-50,2024-10-04,2024,10,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,18,61,18 x 61,3105000010544,20.96473552,-89.59871628,31,31050
+1171784-999-107,2024-10-15,2024,10,19,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA,63 A,LICENCIADO MANUEL BERZUNZA x 63 A,3105000014871,21.02354355,-89.65923699,31,31050
+1171784-999-110,2024-10-16,2024,10,7,No especificado,No especificado,No especificado,No especificado,0,1,0,0,10,CIRCUITO COLONIAS (COLONIA MÉXICO CALLE 31),10 x CIRCUITO COLONIAS (COLONIA MÉXICO CALLE 31),3105000012362,20.99733138,-89.60698082,31,31050
+1171784-999-118,2024-10-17,2024,10,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,46 (10 DE MAYO),107,46 (10 DE MAYO) x 107,3105000010756,20.94192011,-89.61380879,31,31050
+1171784-999-135,2024-10-20,2024,10,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,BENITO JUÁREZ (AVIACIÓN),14,BENITO JUÁREZ (AVIACIÓN) x 14,3105000015390,20.93637877,-89.66922481,31,31050
+1171784-999-177,2024-10-28,2024,10,17,No especificado,No especificado,No especificado,No especificado,0,0,0,1,50,185,50 x 185,3105000013089,20.89806585,-89.62072823,31,31050
+1171784-999-30,2024-10-28,2024,10,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,73 C,138,73 C x 138,3105000013943,20.95424277,-89.67794982,31,31050
+1171784-999-189,2024-10-31,2024,10,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,16 A,BENITO JUÁREZ (21),16 A x BENITO JUÁREZ (21),310500001612A,20.92987881,-89.67827399,31,31050
+1171932-999-24,2024-11-01,2024,11,15,No especificado,No especificado,No especificado,No especificado,0,0,0,1,104,104,104 x 104,3105000014208,20.96175197,-89.65254218,31,31050
+1171932-999-34,2024-11-03,2024,11,19,No especificado,No especificado,No especificado,No especificado,0,1,0,0,64,187 D,64 x 187 D,3105000014759,20.89646267,-89.64058245,31,31050
+1171932-999-48,2024-11-06,2024,11,10,No especificado,No especificado,No especificado,No especificado,0,0,0,1,47,18,47 x 18,3105000016149,20.91857564,-89.67552112,31,31050
+1171932-999-50,2024-11-06,2024,11,17,No especificado,No especificado,No especificado,No especificado,0,1,0,0,TECNOLÓGICO (60),COLONIAS,TECNOLÓGICO (60) x COLONIAS,3105000012409,20.99838826,-89.62168422,31,31050
+1171932-999-51,2024-11-07,2024,11,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,64,COLONIAS (111),64 x COLONIAS (111),3105000010718,20.93793994,-89.6325981,31,31050
+1171932-999-55,2024-11-08,2024,11,9,No especificado,No especificado,No especificado,No especificado,0,1,0,0,26 A,BENITO JUÁREZ (21),26 A x BENITO JUÁREZ (21),3105000015386,20.9274227,-89.68322773,31,31050
+1171932-999-67,2024-11-09,2024,11,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,58,73,58 x 73,3105000010510,20.95954241,-89.62329163,31,31050
+1171932-999-77,2024-11-11,2024,11,13,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20,7,20 x 7,3105000014617,21.00763151,-89.60189349,31,31050
+1171932-999-81,2024-11-11,2024,11,23,No especificado,No especificado,No especificado,No especificado,0,1,0,0,108,49,108 x 49,3105000016897,21.08313325,-89.660193,31,31050
+1171932-999-126,2024-11-20,2024,11,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,20,31,20 x 31,3105000010169,20.99620687,-89.61033825,31,31050
+1171932-999-132,2024-11-20,2024,11,22,No especificado,No especificado,No especificado,No especificado,0,0,0,1,LICENCIADO MANUEL BERZUNZA,28,LICENCIADO MANUEL BERZUNZA x 28,3105000010474,20.91458813,-89.682532,31,31050
+1171932-999-144,2024-11-22,2024,11,21,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,149,50 x 149,3105000015121,20.9177413,-89.62101083,31,31050
+1172073-999-42,2024-12-02,2024,12,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,38,117,38 x 117,3105000011913,21.00048554,-89.64294088,31,31050
+1172073-999-51,2024-12-02,2024,12,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,02:00 A. M.,31,02:00 A. M. x 31,3105000012428,21.00536607,-89.63115067,31,31050
+1172073-999-55,2024-12-03,2024,12,11,No especificado,No especificado,No especificado,No especificado,0,1,0,0,70,15,70 x 15,3105000014231,20.99719623,-89.66062055,31,31050
+1172073-999-84,2024-12-10,2024,12,8,No especificado,No especificado,No especificado,No especificado,0,1,0,0,BENITO JUÁREZ (21),21,BENITO JUÁREZ (21) x 21,310500001612A,20.92956299,-89.67885313,31,31050
+1172073-999-87,2024-12-10,2024,12,18,No especificado,No especificado,No especificado,No especificado,0,1,0,0,27,LICENCIADO MANUEL BERZUNZA,27 x LICENCIADO MANUEL BERZUNZA,3105000013657,21.00268007,-89.56054272,31,31050
+1172073-999-98,2024-12-12,2024,12,18,No especificado,No especificado,No especificado,No especificado,0,0,0,1,84,84,84 x 84,3105000013500,20.89270389,-89.65030808,31,31050
+1172073-999-104,2024-12-13,2024,12,17,No especificado,No especificado,No especificado,No especificado,0,1,0,0,149,6,149 x 6,No especificado,20.98176287,-89.55888679,31,31050
+1172073-999-113,2024-12-15,2024,12,10,No especificado,No especificado,No especificado,No especificado,0,1,0,0,64 C,64 C,64 C x 64 C,3105000010718,20.93792097,-89.63577991,31,31050
+1172073-999-132,2024-12-19,2024,12,13,No especificado,No especificado,No especificado,No especificado,0,1,0,0,MADERO (31),36,MADERO (31) x 36,310500001263A,20.97136839,-89.6596866,31,31050
+1172073-999-135,2024-12-19,2024,12,17,No especificado,No especificado,No especificado,No especificado,0,1,0,0,100,BENITO JUÁREZ (AVIACIÓN),100 x BENITO JUÁREZ (AVIACIÓN),310500001306A,20.94851646,-89.65034103,31,31050
+1172073-999-151,2024-12-21,2024,12,14,No especificado,No especificado,No especificado,No especificado,0,0,0,1,10,No especificado,10,3105000013248,20.95604101,-89.56797061,31,31050
+1172073-999-160,2024-12-22,2024,12,20,No especificado,No especificado,No especificado,No especificado,0,1,0,0,50,169,50 x 169,3105000013074,20.90578738,-89.61858746,31,31050
+1172073-999-161,2024-12-23,2024,12,20,No especificado,No especificado,No especificado,No especificado,0,0,0,1,MÉRIDA 2000 (128 PONIENTE),69 B,MÉRIDA 2000 (128 PONIENTE) x 69 B,3105000013765,20.97596455,-89.6639796,31,31050
+1172073-999-162,2024-12-24,2024,12,0,No especificado,No especificado,No especificado,No especificado,0,0,0,1,36,31 DIAGONAL,36 x 31 DIAGONAL,3105000012292,21.01154965,-89.65055185,31,31050
+1172073-999-193,2024-12-30,2024,12,21,No especificado,No especificado,No especificado,No especificado,0,0,0,1,ALEMÁN (4),COLONIAS,ALEMÁN (4) x COLONIAS,3105000015263,20.99471408,-89.60018184,31,31050

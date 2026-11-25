@@ -1,0 +1,27 @@
+tipo_registro,nodo_origen,nodo_destino,frecuencia,pct_sobre_corpus
+TOPICO,Transporte Va-y-Ven / Paraderos,Transporte Va-y-Ven / Paraderos,104,30.77
+TOPICO,Periférico de Mérida,Periférico de Mérida,96,28.4
+TOPICO,Siniestro / Choque Vial,Siniestro / Choque Vial,67,19.82
+TOPICO,Peatón / Atropellamiento,Peatón / Atropellamiento,58,17.16
+TOPICO,Semáforos y Señalización,Semáforos y Señalización,42,12.43
+TOPICO,Obras y Baches,Obras y Baches,26,7.69
+TOPICO,Banquetas y Cruces,Banquetas y Cruces,15,4.44
+COOCURRENCIA,Periférico de Mérida,Siniestro / Choque Vial,43,12.72
+COOCURRENCIA,Peatón / Atropellamiento,Periférico de Mérida,19,5.62
+COOCURRENCIA,Banquetas y Cruces,Peatón / Atropellamiento,9,2.66
+COOCURRENCIA,Periférico de Mérida,Semáforos y Señalización,9,2.66
+COOCURRENCIA,Peatón / Atropellamiento,Siniestro / Choque Vial,8,2.37
+COOCURRENCIA,Obras y Baches,Peatón / Atropellamiento,6,1.78
+COOCURRENCIA,Obras y Baches,Semáforos y Señalización,5,1.48
+COOCURRENCIA,Semáforos y Señalización,Siniestro / Choque Vial,4,1.18
+COOCURRENCIA,Siniestro / Choque Vial,Transporte Va-y-Ven / Paraderos,4,1.18
+COOCURRENCIA,Periférico de Mérida,Transporte Va-y-Ven / Paraderos,4,1.18
+COOCURRENCIA,Obras y Baches,Periférico de Mérida,3,0.89
+COOCURRENCIA,Semáforos y Señalización,Transporte Va-y-Ven / Paraderos,3,0.89
+COOCURRENCIA,Peatón / Atropellamiento,Transporte Va-y-Ven / Paraderos,2,0.59
+COOCURRENCIA,Obras y Baches,Transporte Va-y-Ven / Paraderos,2,0.59
+COOCURRENCIA,Banquetas y Cruces,Obras y Baches,1,0.3
+COOCURRENCIA,Peatón / Atropellamiento,Semáforos y Señalización,1,0.3
+COOCURRENCIA,Banquetas y Cruces,Semáforos y Señalización,1,0.3
+COOCURRENCIA,Banquetas y Cruces,Periférico de Mérida,1,0.3
+COOCURRENCIA,Banquetas y Cruces,Siniestro / Choque Vial,1,0.3

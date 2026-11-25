@@ -1,0 +1,563 @@
+osm_id,tipo_equipamiento,shelter,lit,backrest,nombre,latitud,longitud,cve_mun,cvegeo_ageb,cve_ent
+3044903645,bus_stop,No especificado,No especificado,No especificado,"66 Ibérica Av. 42, Av. 61 y Av. 58",20.965024,-89.619398,31050,3105000010510,31
+3765884227,shelter,No especificado,No especificado,No especificado,Albergue Animal AFAD,21.030305,-89.568341,31050,310500001345A,31
+4293125694,bus_stop,No especificado,No especificado,No especificado,Paradero Alemán Ruta 2,20.964781,-89.620488,31050,3105000010510,31
+4803875232,bus_stop,No especificado,No especificado,No especificado,Paradero Situr,20.941461,-89.611582,31050,3105000010760,31
+4803875531,bus_stop,No especificado,No especificado,No especificado,No especificado,20.935042,-89.606368,31050,3105000010826,31
+5033156921,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Gran Plaza_2795,21.029836,-89.626308,31050,3105000012343,31
+5043874722,bus_stop,No especificado,No especificado,No especificado,Combis a homún,20.962374,-89.618308,31050,3105000010510,31
+5052432257,bus_stop,No especificado,No especificado,No especificado,Mérida  Calle 50 60,21.04509,-89.640646,31050,310500001651A,31
+5106325926,bench,No especificado,No especificado,no,No especificado,21.000191,-89.651245,31050,3105000013430,31
+5112074990,bench,No especificado,No especificado,No especificado,No especificado,21.000666,-89.656474,31050,3105000014227,31
+5190147425,bus_stop,No especificado,No especificado,No especificado,65 Periférico,20.965763,-89.619883,31050,3105000010510,31
+5280710221,bus_stop,No especificado,No especificado,No especificado,Francisco Villa Oriente,20.965825,-89.620103,31050,3105000010510,31
+5307549721,bus_stop,No especificado,No especificado,No especificado,Taxis Maxcanú,20.962202,-89.626958,31050,3105000010506,31
+5307549723,bus_stop,No especificado,No especificado,No especificado,Taxis Hunucmá,20.965117,-89.626494,31050,3105000010506,31
+5408923922,bus_stop,no,No especificado,No especificado,SITUR,20.964026,-89.617445,31050,3105000010510,31
+5502377321,bus_stop,No especificado,No especificado,No especificado,Tapetes,20.967638,-89.621837,31050,3105000010455,31
+5502381021,bus_stop,No especificado,No especificado,No especificado,Gran Museo del Mundo Maya,21.032971,-89.627205,31050,3105000012339,31
+5994111587,bus_stop,No especificado,No especificado,No especificado,San Lucas,20.968598,-89.62027,31050,3105000010455,31
+5994138685,bus_stop,No especificado,No especificado,No especificado,Gran Plaza ruta 2,20.96853,-89.620282,31050,3105000010455,31
+5994138885,bus_stop,No especificado,No especificado,No especificado,Carranza,20.968743,-89.620251,31050,3105000010455,31
+6022349489,bus_stop,no,No especificado,No especificado,Paradero  R28 Kanasín – Naranjos 2,20.963859,-89.619199,31050,3105000010510,31
+6045097985,bus_stop,No especificado,No especificado,No especificado,No especificado,20.96223,-89.617948,31050,3105000010510,31
+6205913486,bus_stop,yes,No especificado,No especificado,Autobus para Uxmal y Chichen Itza,20.96281,-89.630297,31050,3105000010506,31
+6572697586,bus_stop,No especificado,No especificado,No especificado,San Pedro ruta II,20.963313,-89.619868,31050,3105000010510,31
+6581626289,bus_stop,No especificado,No especificado,No especificado,Camiones al centro,21.004733,-89.580747,31050,3105000014180,31
+6581626387,bus_stop,No especificado,No especificado,No especificado,Aleman Pinos,21.003482,-89.578819,31050,3105000014180,31
+6581626388,bus_stop,No especificado,No especificado,No especificado,Paradero Situr ir a Gran Plaza,21.002861,-89.576574,31050,3105000014180,31
+6581626489,bus_stop,No especificado,No especificado,No especificado,Pinos Tulias,21.000418,-89.578559,31050,3105000015066,31
+6581627090,bus_stop,No especificado,No especificado,No especificado,Aleman Ruta 2,21.004626,-89.581073,31050,3105000014180,31
+6981820287,bus_stop,No especificado,No especificado,No especificado,No especificado,20.993103,-89.603077,31050,3105000015263,31
+6981820586,bus_stop,No especificado,No especificado,No especificado,No especificado,20.993031,-89.603274,31050,3105000015263,31
+7055938850,bus_stop,No especificado,No especificado,No especificado,Colectivo to cikit,20.963209,-89.623855,31050,3105000010510,31
+7351456951,bus_stop,No especificado,No especificado,No especificado,Terminal Autobuses de Oriente Caucel,20.99958,-89.680838,31050,3105000015761,31
+8079589789,bus_stop,No especificado,No especificado,No especificado,No especificado,21.047145,-89.644014,31050,3105000014477,31
+8079589790,bus_stop,No especificado,No especificado,No especificado,No especificado,21.047082,-89.644618,31050,3105000014477,31
+8079589791,bus_stop,No especificado,No especificado,No especificado,No especificado,21.04916,-89.640126,31050,3105000014477,31
+8079589792,bus_stop,No especificado,No especificado,No especificado,No especificado,21.047506,-89.640312,31050,3105000014477,31
+8280210817,bus_stop,No especificado,No especificado,No especificado,Collectivo El progresso 2020,20.96414,-89.623564,31050,3105000010510,31
+8577075317,bus_stop,No especificado,No especificado,No especificado,arret de bus Turibus,20.969767,-89.622104,31050,3105000010455,31
+8587033317,bus_stop,No especificado,No especificado,No especificado,Combis a Chablekal,20.969851,-89.62306,31050,3105000010440,31
+8587033417,bus_stop,No especificado,No especificado,No especificado,Colectivos a Dzibilchaltún,20.969838,-89.622962,31050,3105000010440,31
+8812925270,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Preparatoria Estatal No. 8_1121,21.033975,-89.652317,31050,3105000013727,31
+8812925271,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Glorieta La Mestiza_1036,21.031069,-89.646629,31050,310500001231A,31
+8812925272,bus_stop,yes,No especificado,No especificado,No especificado,21.030131,-89.640851,31050,3105000013360,31
+9359567317,bus_stop,No especificado,No especificado,No especificado,No especificado,20.96937,-89.620115,31050,3105000010455,31
+9933934417,bus_stop,No especificado,No especificado,No especificado,Collectivo á Cuzamá,20.961609,-89.617898,31050,3105000010510,31
+10181640917,bus_stop,No especificado,No especificado,No especificado,collectivo para Celestun,20.964438,-89.617146,31050,3105000010510,31
+10720190905,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Aeropuerto_2102,20.934524,-89.663495,31050,310500001078A,31
+10720191005,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Tame 68_2103,20.962703,-89.629331,31050,3105000010506,31
+10720191105,bus_stop,no,No especificado,No especificado,Paradero Va y Ven: Aeropuerto_2104,20.970964,-89.622796,31050,3105000010440,31
+10724223705,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Siglo XXI_1003,21.033432,-89.627814,31050,3105000014566,31
+10724223905,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Siglo XXI_900,21.03453,-89.627596,31050,3105000012339,31
+10724911705,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Tame 69_2107,20.962934,-89.629924,31050,3105000010506,31
+11097940405,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R72 C-63 x 56 Col. Centro,20.966012,-89.621204,31050,3105000010510,31
+11276576139,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R95 C-67 x 64 y 62 Col. Centro_2702,20.96359,-89.625413,31050,3105000010506,31
+11579840943,bus_stop,yes,No especificado,No especificado,Plaza Gran Santa Fe 91,21.005185,-89.68835,31050,3105000015776,31
+11579840944,bus_stop,yes,No especificado,No especificado,Chedraui Ciudad Caucel 91,21.005561,-89.68959,31050,3105000015757,31
+11971213081,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Plaza Oriente_524,20.959602,-89.591005,31050,3105000011773,31
+11971213117,bus_stop,no,No especificado,No especificado,Combis Mayapán,20.965844,-89.619288,31050,3105000010510,31
+11971213118,bus_stop,no,No especificado,No especificado,Combis Brisas,20.965985,-89.619253,31050,3105000010510,31
+11989438680,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven:  R7 C-54 x 67 y 69 Col. Centro,20.962232,-89.620149,31050,3105000010510,31
+11989472807,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Unidad Deportiva Fernando Valenzuela,20.917362,-89.629211,31050,3105000011843,31
+11989472808,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Unidad Deportiva Fernando Valenzuela,20.917287,-89.629014,31050,3105000015117,31
+12079027369,bus_stop,No especificado,No especificado,No especificado,No especificado,21.023761,-89.625812,31050,3105000011453,31
+12088506648,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Kanasín_2460,20.943467,-89.577578,31050,3105000014250,31
+12120618981,bus_stop,No especificado,No especificado,No especificado,Parada Va-y-ven,20.928895,-89.638326,31050,3105000013286,31
+12159720985,bench,No especificado,No especificado,No especificado,No especificado,20.975321,-89.612335,31050,3105000010332,31
+12193766175,bus_stop,No especificado,No especificado,No especificado,Parada Va-y-Ven,20.937498,-89.667301,31050,310500001078A,31
+12198350233,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: T1 IMSS_3273,20.977889,-89.603452,31050,3105000010347,31
+12254678555,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-10-A x 53 Fracc Tixcacal Paseos de Mérida_1772,20.9325,-89.708086,31050,3105000010154,31
+12254678556,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-51 x 8 Fracc. Tixcacal Paseos de Mérida_1771,20.933235,-89.705693,31050,3105000010154,31
+12346114839,bus_stop,yes,No especificado,No especificado,Parada Ex-Fuente Maya,20.949423,-89.591303,31050,310500001288A,31
+12386632402,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Fco. de Montejo IV,21.045323,-89.6416,31050,310500001651A,31
+12386632403,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-48 x 33 Fracc. Fco. de Montejo V_1158,21.04384,-89.640628,31050,310500001651A,31
+12386632404,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-36 x 33 Fracc. Fco de Montejo V,21.043781,-89.638398,31050,3105000014566,31
+12508729639,bus_stop,No especificado,No especificado,No especificado,Bodega Aurrerá Los Héroes,20.983615,-89.540881,31050,3105000016774,31
+12542800692,bench,No especificado,No especificado,yes,No especificado,20.987752,-89.632911,31050,3105000010296,31
+12542800693,bench,No especificado,No especificado,yes,No especificado,20.987786,-89.632856,31050,3105000010296,31
+12542800694,bench,No especificado,No especificado,yes,No especificado,20.98773,-89.632807,31050,3105000010296,31
+12542800695,bench,No especificado,No especificado,yes,No especificado,20.987686,-89.632859,31050,3105000010296,31
+12542824709,bench,No especificado,No especificado,yes,No especificado,20.98782,-89.632814,31050,3105000010296,31
+12542824710,bench,No especificado,No especificado,yes,No especificado,20.987758,-89.632762,31050,3105000010296,31
+12542824712,bench,No especificado,No especificado,yes,No especificado,20.987582,-89.632811,31050,3105000010296,31
+12542824718,street_lamp,No especificado,No especificado,No especificado,No especificado,20.98755,-89.632763,31050,3105000010296,31
+12574965104,bus_stop,No especificado,No especificado,No especificado,Real Montejo,21.0359,-89.654755,31050,3105000016098,31
+12574965105,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: CRIT_1199,21.04145,-89.652569,31050,3105000016098,31
+12579579282,bus_stop,No especificado,No especificado,No especificado,Combi a Yucalpetén SEP,20.963789,-89.622546,31050,3105000010510,31
+12583400267,bus_stop,No especificado,No especificado,No especificado,No especificado,20.973975,-89.624417,31050,3105000010440,31
+12586027981,bus_stop,no,no,No especificado,Paradero para mercado (piñatas),20.997071,-89.591302,31050,3105000011716,31
+12586243570,bench,No especificado,No especificado,No especificado,No especificado,21.008848,-89.582565,31050,3105000015028,31
+12586243571,bench,No especificado,No especificado,No especificado,No especificado,21.008838,-89.58259,31050,3105000015028,31
+12586243572,bench,No especificado,No especificado,No especificado,No especificado,21.008809,-89.582618,31050,3105000015028,31
+12586243573,bench,No especificado,No especificado,No especificado,No especificado,21.008837,-89.582534,31050,3105000015028,31
+12586243574,bench,No especificado,No especificado,No especificado,No especificado,21.008814,-89.582509,31050,3105000015028,31
+12586243575,bench,No especificado,No especificado,No especificado,No especificado,21.008768,-89.582504,31050,3105000015028,31
+12586243576,bench,No especificado,No especificado,No especificado,No especificado,21.008739,-89.582539,31050,3105000015028,31
+12586243577,bench,No especificado,No especificado,No especificado,No especificado,21.009254,-89.583002,31050,3105000015028,31
+12586243578,bench,No especificado,No especificado,No especificado,No especificado,21.009223,-89.583042,31050,3105000015028,31
+12588066106,shelter,No especificado,No especificado,No especificado,No especificado,20.952146,-89.602916,31050,3105000010652,31
+12599814219,bus_stop,No especificado,No especificado,No especificado,Colectivos y Urbanos a la IMSS T1,20.964924,-89.619455,31050,3105000010510,31
+12599846632,bench,No especificado,No especificado,No especificado,No especificado,20.983013,-89.600252,31050,3105000010262,31
+12599846633,bench,No especificado,No especificado,No especificado,No especificado,20.983118,-89.600236,31050,3105000010262,31
+12599846634,bench,No especificado,No especificado,No especificado,No especificado,20.983217,-89.600217,31050,3105000010262,31
+12679591610,bus_stop,no,No especificado,No especificado,Paradero Va y Ven: Mercado Lucas de Gálvez_2793,20.964576,-89.621057,31050,3105000010510,31
+12679591631,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R92 C-67 x 62 y 60 Col. Centro,20.963501,-89.624033,31050,3105000010506,31
+12683926829,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: C-48 x 51 Col. Centro_971,20.971439,-89.613916,31050,3105000010332,31
+12683926834,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Museo del Ferrocarril_973,20.976533,-89.612354,31050,3105000010332,31
+12685282026,bus_stop,No especificado,No especificado,No especificado,Parada Parque La Plancha,20.978606,-89.613414,31050,3105000010332,31
+12685282027,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque La Plancha_746,20.978486,-89.613612,31050,3105000015225,31
+12685282028,bus_stop,No especificado,No especificado,No especificado,Parada C-42 x 41 Col. Lourdes Industrial,20.978117,-89.609514,31050,3105000010332,31
+12685282029,bus_stop,yes,No especificado,No especificado,Estación IE-TRAM (Va y Ven): La Plancha_975,20.979072,-89.609772,31050,3105000010332,31
+12685734079,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: SAT,21.022963,-89.625623,31050,3105000011453,31
+12685734080,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: SAT,21.023373,-89.626057,31050,3105000012470,31
+12695425340,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R35 C-63 x 56 y 54 Col. Centro,20.965883,-89.620603,31050,3105000010510,31
+12695425341,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R26 C-63 x 56 y 54 Col. Centro,20.965842,-89.620372,31050,3105000010510,31
+12695425342,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R32 C-63 x 56 y 54 Col. Centro,20.965744,-89.619891,31050,3105000010510,31
+12695425343,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R31 C-63 x 56 y 54 Col. Centro,20.965734,-89.619795,31050,3105000010510,31
+12695425344,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R33 C-63 x 56 y 54 Col. Centro,20.965775,-89.62004,31050,3105000010510,31
+12695429965,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Jacinto Canek x Av. Zamná_1406,20.985754,-89.657685,31050,310500001509A,31
+12695429966,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Jacinto Canek x 58-A_1336,20.986073,-89.657713,31050,3105000012593,31
+12695431585,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centro de Atención Múltiple,21.06253,-89.610466,31050,3105000014960,31
+12695431586,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centro de Atención Múltiple,21.062579,-89.610881,31050,310502038,31
+12695449353,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque La Amistad,20.99782,-89.595527,31050,3105000011716,31
+12695449354,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque La Amistad,20.997947,-89.595669,31050,3105000011716,31
+12695469739,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: SEGEY,20.98726,-89.64165,31050,3105000010281,31
+12695469740,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Hospital Regional Benito Juarez IMSS,20.987158,-89.639073,31050,3105000010281,31
+12695469741,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Hospital Regional Benito Juarez IMSS,20.987586,-89.638764,31050,3105000010281,31
+12706424185,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza 300,21.061353,-89.6121,31050,3105000014960,31
+12706424186,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza 300,21.061876,-89.611907,31050,3105000014284,31
+12706424187,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: La Gas Temozón,21.059442,-89.613226,31050,3105000014960,31
+12706424188,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Simca,21.059835,-89.613156,31050,3105000014284,31
+12706435806,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Paseo Temozón,21.055198,-89.615848,31050,3105000014960,31
+12706435807,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Paseo Temozón,21.055121,-89.616002,31050,3105000014284,31
+12710981337,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R96 C-67 x 62 y 60 Col. Centro_1491,20.963498,-89.623979,31050,3105000010506,31
+12710981338,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R91 C-67 x 64 y 62 Col. Centro,20.963576,-89.625183,31050,3105000010506,31
+12710981339,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R94 C-67 x 64 y 62 Col. Centro,20.963579,-89.625229,31050,3105000010506,31
+12710981340,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R88 C-67 x 62 y 60 Col. Centro,20.963527,-89.624425,31050,3105000010506,31
+12712158356,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Juzgados Civiles,20.917473,-89.632034,31050,3105000011843,31
+12712158357,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Juzgados Civiles,20.917336,-89.631973,31050,3105000014725,31
+12712302219,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R73 C-63 x 56 Col. Centro,20.966049,-89.621476,31050,3105000010510,31
+12727081554,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R107 C-102-A x 67-C Col. Mulsay,20.959424,-89.651183,31050,3105000014208,31
+12727081555,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R107 Mercado de Mulsay,20.962373,-89.651226,31050,3105000014208,31
+12727081556,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R107 Mercado de Mulsay,20.962154,-89.651945,31050,3105000014208,31
+12727081561,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R107 C-69 x 58 y 60 Col. Centro,20.962315,-89.623427,31050,3105000010510,31
+12745300829,bus_stop,No especificado,No especificado,No especificado,No especificado,21.008668,-89.577283,31050,3105000014195,31
+12746031361,bus_stop,No especificado,No especificado,No especificado,Taxis Ticul-Merida,20.944554,-89.656726,31050,3105000015390,31
+12784980017,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: CRIT_1196,21.042052,-89.651502,31050,3105000013905,31
+12784981058,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Real Montejo_1195,21.035199,-89.654278,31050,3105000013905,31
+12837567474,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Chedraui Selecto Kalia_772,21.019417,-89.596248,31050,3105000012589,31
+12837567475,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Chedraui Selecto Kalia_785,21.019408,-89.59581,31050,3105000015598,31
+12837567476,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Glorieta Kalia_786,21.020409,-89.598048,31050,3105000013939,31
+12837567477,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Glorieta Kalia_771,21.020417,-89.598609,31050,3105000013939,31
+12837578362,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R61 C-52 x 65 y 63 Col. Centro_750,20.965149,-89.618066,31050,3105000010510,31
+12856649841,bench,No especificado,No especificado,No especificado,No especificado,20.972345,-89.613208,31050,3105000010332,31
+12856649842,bench,No especificado,No especificado,No especificado,No especificado,20.972641,-89.613248,31050,3105000010332,31
+12856649843,bench,No especificado,No especificado,No especificado,No especificado,20.972657,-89.612992,31050,3105000010332,31
+12856649844,bench,No especificado,No especificado,No especificado,No especificado,20.972315,-89.613098,31050,3105000010332,31
+12856649845,bench,No especificado,No especificado,No especificado,No especificado,20.972998,-89.613227,31050,3105000010332,31
+12856649846,bench,No especificado,No especificado,No especificado,No especificado,20.977639,-89.612982,31050,3105000010332,31
+12856649847,bench,No especificado,No especificado,No especificado,No especificado,20.977875,-89.613037,31050,3105000010332,31
+12856649848,bench,No especificado,No especificado,No especificado,No especificado,20.979317,-89.612064,31050,3105000010332,31
+12856649849,bench,No especificado,No especificado,No especificado,No especificado,20.979394,-89.612184,31050,3105000010332,31
+12856649850,bench,No especificado,No especificado,No especificado,No especificado,20.979529,-89.612089,31050,3105000010332,31
+12856649851,bench,No especificado,No especificado,No especificado,No especificado,20.979458,-89.611959,31050,3105000010332,31
+12856800820,bus_stop,yes,No especificado,No especificado,Parada C-58 x 51 Col. Reparto Granjas,20.935009,-89.59279,31050,3105000011345,31
+12856800821,bus_stop,yes,No especificado,No especificado,Parada C-58 x 16 Col. Reparto Granjas,20.934893,-89.592908,31050,3105000011345,31
+12856800824,bus_stop,yes,No especificado,No especificado,Parada Ex-Fuente Maya,20.94952,-89.591847,31050,310500001181A,31
+12875769930,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R87 C-67 x 62 y 60 Col. Centro,20.963524,-89.624373,31050,3105000010506,31
+12888071471,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Villas La Hacienda_856,21.019766,-89.619062,31050,3105000011561,31
+12888071472,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Peninsula_878,21.020399,-89.619874,31050,3105000011453,31
+12888071473,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Villas Hacienda_793,21.018755,-89.618504,31050,3105000011468,31
+12888071474,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Cámara de Comercio x Prol. Paseo Montejo_764,21.019261,-89.617986,31050,3105000011699,31
+12888071484,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Villas Hacienda_763,21.018471,-89.617981,31050,3105000011699,31
+12890245446,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R64 C-52 x 63 y 61 Col. Centro_851,20.966363,-89.617774,31050,3105000010510,31
+12890245447,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R63 C-52 x 63 y 61 Col. Centro_804,20.966104,-89.617829,31050,3105000010510,31
+12890245448,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59 x 50 Col. Centro_2794,20.967655,-89.616737,31050,3105000010455,31
+12890245449,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Mejorada_749,20.968515,-89.61613,31050,3105000010455,31
+12890273188,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Circuito Colonias Norte_802,20.996485,-89.616353,31050,3105000012409,31
+12890273192,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Circuito Colonias Norte_753,20.9975,-89.615967,31050,3105000010169,31
+12917903522,bus_stop,No especificado,No especificado,No especificado,Taxis Ticul-Merida,20.929676,-89.678598,31050,310500001612A,31
+12917903561,bus_stop,No especificado,No especificado,No especificado,Taxis Ticul-Merida,20.948192,-89.650635,31050,310500001078A,31
+12917903562,bus_stop,No especificado,No especificado,No especificado,Taxis Ticul-Merida,20.950639,-89.647181,31050,3105000013267,31
+12917903565,bus_stop,No especificado,No especificado,No especificado,Taxis Ticul-Merida,20.954001,-89.644149,31050,3105000013267,31
+12917903574,bus_stop,No especificado,No especificado,No especificado,Taxis Ticul-Merida,20.960624,-89.641764,31050,310500001060A,31
+12917903575,bus_stop,No especificado,No especificado,No especificado,Taxis Ticul-Merida,20.961754,-89.630915,31050,3105000010493,31
+12948862228,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-63-A x Anillo Periférico_1249,21.022813,-89.658226,31050,3105000013356,31
+12948862229,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-63 A x 54 Fracc. Camara de la Construccion_1236,21.022044,-89.656907,31050,3105000013746,31
+12948862230,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Preparatoria Estatal No. 8_1139,21.033736,-89.652315,31050,3105000013746,31
+12948862231,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Carr. San Antonio Ool x Anillo Periférico_1122,21.033905,-89.656731,31050,3105000015526,31
+12948862232,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Carr. San Antonio Ool x Anillo Periférico_1138,21.03351,-89.656483,31050,3105000015526,31
+12949418243,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Glorieta La Mestiza_2550,21.030829,-89.646526,31050,310500001231A,31
+12949819733,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R82 C-58 x 59 y 61 Col. Centro_2740,20.96804,-89.621709,31050,3105000010455,31
+12949819734,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R75 C-58 x 59 y 61 Col. Centro_2736,20.967634,-89.621789,31050,3105000010455,31
+12949819735,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R67 C-58 x 59 y 61 Col.Centro_2735,20.967695,-89.621776,31050,3105000010455,31
+12949819736,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R76 C-58 x 59 y 61 Col. Centro_2737,20.96778,-89.621759,31050,3105000010455,31
+12949819737,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R77 C-58 x 59 y 61 Col. Centro_2738,20.967881,-89.621737,31050,3105000010455,31
+12949863934,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: La Chaya Maya_950,20.970087,-89.624233,31050,3105000010440,31
+12955340604,bus_stop,No especificado,No especificado,No especificado,Paradero Ex Facultad de Psicología,20.964785,-89.620391,31050,3105000010510,31
+13016580958,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: IMSS 42 Sur_2576,20.92787,-89.607984,31050,3105000013106,31
+13016580959,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: IMSS 42 Sur_352,20.928224,-89.607776,31050,3105000011684,31
+13016580960,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: IMSS UMF No.58_325,20.928305,-89.607925,31050,3105000013106,31
+13016580961,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R18 C-54 x 65 y 67 Col. Centro_2734,20.963996,-89.619675,31050,3105000010510,31
+13016580962,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R20 C-54 x 65 y 67 Col. Centro_2733,20.963881,-89.619694,31050,3105000010510,31
+13016580963,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R16 C-54 x 65 y 67 Col. Centro_2732,20.963734,-89.619725,31050,3105000010510,31
+13019353557,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Unidad Habitacional Militar_326,20.926172,-89.607286,31050,3105000015140,31
+13019353558,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Unidad Habitacional Militar_351,20.925615,-89.606997,31050,3105000011684,31
+13019533666,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-17 x 28 Col. Itzimna_752,20.9946,-89.616035,31050,3105000010169,31
+13020277508,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Monumento A la Patria_853,20.98842,-89.616973,31050,3105000015210,31
+13020277509,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Pan Montejo_854,20.990559,-89.616556,31050,3105000015210,31
+13020277510,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Porsche Centre Merida_2797,20.991135,-89.616682,31050,3105000010224,31
+13020277511,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-58-A x 31 Col. Centro_3027,20.988042,-89.618693,31050,3105000010224,31
+13020277512,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Paseo Montejo x 29_2798,20.988774,-89.617157,31050,3105000010224,31
+13021449882,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Walmart Paseo de Montejo_852,20.985623,-89.616544,31050,3105000015210,31
+13021449883,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-42 x 41 Col. Lourdes Industrial_974,20.978859,-89.609413,31050,3105000010332,31
+13021449884,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Paseo Montejo x Av. Colon_2799,20.985274,-89.617817,31050,3105000010224,31
+13021449885,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Ford Montejo_2796,20.992777,-89.616613,31050,3105000010224,31
+13021449886,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Prol. Paseo de Montejo x 19_855,20.993591,-89.616373,31050,3105000010169,31
+13021561556,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Oriente_486,20.959404,-89.591091,31050,3105000012894,31
+13021561557,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: SEMUJERES Cto. Colonias_2217,20.958478,-89.591901,31050,3105000012875,31
+13021561558,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: SEMUJERES Cto. Colonias_2200,20.95826,-89.591741,31050,310500001288A,31
+13021561565,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Oriente C-63-C_485,20.960618,-89.592643,31050,3105000010563,31
+13023935027,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Animaya_1516,20.982645,-89.691993,31050,310500001587A,31
+13023935031,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-60 x 95 Animaya_1517,20.985252,-89.691503,31050,310500001587A,31
+13023935032,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Animaya_1502,20.983532,-89.692162,31050,3105000015884,31
+13023935035,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-64-A x 95 Fracc. Ciudad Caucel_1504,20.986159,-89.696105,31050,3105000015831,31
+13026013611,bus_stop,no,No especificado,No especificado,Paradero Va y Ven: Hospital General Agustin O´Horan_1410,20.975273,-89.640684,31050,3105000010421,31
+13026013612,bus_stop,no,No especificado,No especificado,Paradero Va y Ven: Hospital General Agustin O´Horan_1363,20.976041,-89.641445,31050,3105000010421,31
+13026013613,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Tribunal Superior de Justicia_1364,20.977638,-89.64399,31050,3105000012748,31
+13026013614,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque de la Paz_1328,20.973001,-89.640676,31050,3105000010421,31
+13026013615,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: CEUM_1357,20.971325,-89.639995,31050,3105000010421,31
+13026013616,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centenario_1362,20.969852,-89.640821,31050,3105000010489,31
+13026013617,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Escuela Primaria Eligio Ancona_1359,20.970529,-89.635016,31050,3105000010493,31
+13026013618,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Super Akí Centenario_1358,20.970952,-89.637653,31050,3105000010489,31
+13026013619,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Super Aki Centenario C-84_1326,20.970962,-89.638883,31050,3105000010489,31
+13026013620,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-80 x 59 Col. Centro_1494,20.970469,-89.636187,31050,3105000010493,31
+13026016251,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Tribunal Superior de Justicia_1409,20.977718,-89.644399,31050,3105000010417,31
+13026016252,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Abogada Antonia Jimenez Trava x 43_1296,20.981848,-89.642862,31050,3105000010309,31
+13030315482,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R90 C-67 x 64 y 62 Col. Centro_3057,20.963654,-89.626295,31050,3105000010506,31
+13030315483,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 68 Col. Centro_1285,20.966107,-89.627546,31050,3105000010506,31
+13030315484,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-66 x 63 Col. Centro_1321,20.967924,-89.627084,31050,3105000010506,31
+13030318966,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R93 C-67 x 64 y 62 Col. Centro_2741,20.963649,-89.626277,31050,3105000010506,31
+13030318968,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R98 C-67 x 64 y 62 Col. Centro_2743,20.963624,-89.625846,31050,3105000010506,31
+13030454305,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Cbtis 95_2191,20.939861,-89.597948,31050,3105000011665,31
+13030454306,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Kukulcán Alamo_2192,20.939862,-89.596283,31050,3105000011345,31
+13030454307,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Poliforum Zamná_2193,20.939859,-89.594606,31050,310500001181A,31
+13030454308,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Poliforum Zamná_2224,20.94004,-89.595115,31050,3105000013002,31
+13030454309,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Kukulcán_2194,20.941265,-89.592743,31050,310500001181A,31
+13030454310,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Complejo Deportivo Kukulcán_2195,20.94397,-89.592639,31050,310500001181A,31
+13030454311,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Estadio Carlos Iturralde_2196,20.945778,-89.592524,31050,310500001181A,31
+13030454312,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Módulo Médico Cto. Colonias_2197,20.947088,-89.592473,31050,310500001181A,31
+13030454313,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: JAPAY Pozo Kukulkan_2220,20.94776,-89.592616,31050,3105000013002,31
+13030454314,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Estadio Carlos Iturralde_2221,20.94536,-89.59278,31050,3105000013002,31
+13030454315,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Complejo Deportivo Kukulcán_2222,20.943444,-89.592862,31050,3105000013002,31
+13030454316,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Kukulcán_2223,20.941067,-89.592976,31050,3105000013002,31
+13030454317,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Kukulcán Alamo_2225,20.940006,-89.596619,31050,3105000013002,31
+13030454318,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Kukulcán Álamo_445,20.940417,-89.596882,31050,3105000013002,31
+13030454319,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Kukulcán Álamo_407,20.940619,-89.597097,31050,3105000013182,31
+13030454320,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-28 x 16 Ote. Fracc. Unidad Morelos_406,20.942654,-89.597874,31050,3105000013182,31
+13030454321,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Cbtis 95_2226,20.940009,-89.598284,31050,3105000013197,31
+13030555786,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R23 C-71 x 54 y 52 Col. Centro_398,20.960418,-89.620131,31050,3105000010510,31
+13030555787,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Instituto Municipal de la Mujer_165,20.959943,-89.618506,31050,3105000010510,31
+13030555797,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-69 x 50 Col. Centro_362,20.960978,-89.617476,31050,3105000010525,31
+13030566020,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R21 C-54 x 67 y 69 Col. Centro_2677,20.962495,-89.620077,31050,3105000010510,31
+13030566021,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R25 C-54 x 67 y 69 Col. Centro_2679,20.962588,-89.620054,31050,3105000010510,31
+13030566022,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R22 C-54 x 67 y 69 Col. Centro_2678,20.962348,-89.620119,31050,3105000010510,31
+13030566023,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R12 C-54 x 67 y 69 Col. Centro_2676,20.962098,-89.62017,31050,3105000010510,31
+13030566024,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R10 C-54 x 67 y 69 Col. Centro_209,20.961912,-89.620228,31050,3105000010510,31
+13030566025,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parada Circuito Enlace 2_2837,20.96187,-89.620592,31050,3105000010510,31
+13030566026,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R108 C-56 x 71 y 69 Col. Centro_164,20.961842,-89.621342,31050,3105000010510,31
+13030566027,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R114 C-56 x 71 y 69 Col. Centro_2697,20.961709,-89.62136,31050,3105000010510,31
+13030566028,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R115 C-56 x 71 y 69 Col. Centro_255,20.961589,-89.621392,31050,3105000010510,31
+13030566029,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R111 C-54 x 63 y 65-A Col. Centro_3149,20.964694,-89.619521,31050,3105000010510,31
+13030566030,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R47 C-54 x 63 y 65-A Col. Centro_3232,20.965104,-89.619424,31050,3105000010510,31
+13030566031,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Unidad Medica de Alta Especialidad UMAE IMSS_3241,20.979672,-89.602332,31050,3105000010347,31
+13030566032,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Escuela Tecnica No. 1 Silvio Zavala Vallado_3240,20.977782,-89.602391,31050,3105000010347,31
+13030566033,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: T1 IMSS x C-30 Fracc. El Fenix_3272,20.978069,-89.602676,31050,3105000010347,31
+13030566034,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Club Preparatoriano_3239,20.977313,-89.599626,31050,3105000010347,31
+13030566035,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centro Institucional de Lenguas (CIL) - UADY_2918,20.977584,-89.59863,31050,3105000010347,31
+13030566036,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-41-A x 30 Col. Industrial_3238,20.976788,-89.603247,31050,3105000010347,31
+13030566037,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-30 x 35 Fracc. San Luis_3271,20.981681,-89.602022,31050,3105000010262,31
+13030566038,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Adolfo López Mateos_3245,20.983393,-89.599909,31050,3105000010262,31
+13030566039,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Adolfo López Mateos_3270,20.983092,-89.600054,31050,3105000010262,31
+13030566040,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Sendero_2909,20.977308,-89.598343,31050,3105000015297,31
+13030607973,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza The Harbor_928,21.046367,-89.629952,31050,3105000014566,31
+13030640399,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-40 x 39 Fracc. Fco. de Montejo III_1156,21.04188,-89.639802,31050,3105000014566,31
+13030640400,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-50 x 29 Fracc. Fco. de Montejo_1016,21.045652,-89.64037,31050,310500001651A,31
+13030648701,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-50 x 29 Fracc. Fco. de Montejo_1032,21.045725,-89.640528,31050,310500001651A,31
+13030650394,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza The Harbor_902,21.045354,-89.629357,31050,3105000016492,31
+13033939660,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Walmart Caucel_1370,20.996525,-89.674639,31050,3105000014937,31
+13033939661,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Walmart Caucel_1400,20.996387,-89.674961,31050,3105000015761,31
+13033939662,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Jacinto Canek_2447,20.99447,-89.673537,31050,3105000013572,31
+13033939663,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Jacinto Canek_1246,20.996619,-89.672974,31050,3105000014937,31
+13033940490,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Jacinto Canek x 59_1369,20.994388,-89.671216,31050,3105000012697,31
+13033940491,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Monumento Jacinto Canek_1401,20.993863,-89.670758,31050,3105000012625,31
+13033940492,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-140 x 59-B Fracc. Nora Quintana_1571,20.994026,-89.671802,31050,3105000012610,31
+13034929711,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Walmart Express Campestre_759,21.013841,-89.614167,31050,3105000014833,31
+13034929712,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Prol. Paseo de Montejo x 23_760,21.014505,-89.614724,31050,3105000011699,31
+13034929713,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Campestre_795,21.014514,-89.614996,31050,3105000011472,31
+13034929714,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: BAIC Campestre_762,21.017761,-89.617374,31050,3105000011699,31
+13034929715,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Club Campestre de Yucatan_794,21.016481,-89.616616,31050,3105000011472,31
+13034974888,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Instituto Tecnológico de Mérida_895,21.012076,-89.62378,31050,3105000011468,31
+13034974889,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Tecnológico x 19-A_937,21.01282,-89.624205,31050,3105000016488,31
+13034974890,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Tecnológico x 15_896,21.015756,-89.6244,31050,3105000011468,31
+13034974891,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Instituto Tecnológico de Mérida_936,21.015383,-89.624658,31050,3105000016488,31
+13034974892,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Walmart Tecnológico_894,21.00932,-89.623362,31050,3105000011472,31
+13034974893,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Walmart Tecnológico_938,21.009227,-89.623615,31050,3105000012413,31
+13036262578,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R68 C-61 x 54 Col. Centro_969,20.967068,-89.620213,31050,3105000010455,31
+13036580796,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centro Internacional de Congresos_945,20.98669,-89.62193,31050,3105000010224,31
+13036580797,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-62 x 29 Col. Alcala Martin_944,20.989761,-89.622065,31050,3105000011504,31
+13036580798,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Estadio Gral. Salvador Alvarado_943,20.993379,-89.622833,31050,3105000011504,31
+13036580799,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-16 x 23 Col. Yucatán_942,20.995877,-89.621654,31050,3105000011504,31
+13036580800,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Polifuncional IDEY_888,20.994547,-89.620841,31050,3105000011504,31
+13036649001,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centro Internacional de Congresos_2161,20.988474,-89.620859,31050,3105000010224,31
+13036649002,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centro Internacional de Congresos_2106,20.988724,-89.621445,31050,3105000010224,31
+13036649024,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: ADO TAME_1647,20.961772,-89.631081,31050,3105000010493,31
+13036649025,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: ADO TAME_1605,20.96316,-89.631067,31050,3105000010493,31
+13036649026,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-69 x 66 Col. Centro_1604,20.962781,-89.627821,31050,3105000010506,31
+13039741135,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Itzimná_803,20.99151,-89.614439,31050,3105000010169,31
+13039741136,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Itzimná_976,20.991567,-89.614399,31050,3105000010169,31
+13039907633,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Camara del Comercio x 13_775,21.01634,-89.589727,31050,3105000012540,31
+13039907634,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Altabrisa_783,21.015034,-89.5871,31050,3105000015598,31
+13039907635,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Instituto Cumbres_774,21.017081,-89.591065,31050,3105000012589,31
+13039907638,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Instituto Cumbres_784,21.017264,-89.590971,31050,3105000015598,31
+13039911292,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Clemente Lopez Trujillo_318,20.952531,-89.614882,31050,3105000010633,31
+13040328294,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Toyota Merida_877,21.021206,-89.620559,31050,3105000011453,31
+13040328295,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Toyota Merida_857,21.021431,-89.620438,31050,3105000011561,31
+13040328297,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Mg SEMINUEVOS_876,21.022467,-89.621602,31050,3105000011453,31
+13044596791,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Mejorada_2791,20.9689,-89.616181,31050,3105000010455,31
+13044596792,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Gran Corredor Turistico-Gastronomico_747,20.974417,-89.614691,31050,3105000015225,31
+13044623416,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Paseo 60_2068,20.98366,-89.61994,31050,3105000010224,31
+13044623417,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque de Santa Ana_2070,20.97643,-89.621398,31050,3105000010328,31
+13044808313,bus_stop,yes,No especificado,No especificado,Estación Va y Ven: Quetzalcóatl_652,20.956565,-89.567898,31050,3105000013248,31
+13046650848,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque de Santiago_1320,20.969756,-89.629885,31050,3105000010436,31
+13047646040,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Pérez Ponce_677,20.986932,-89.611477,31050,3105000015210,31
+13048245989,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Díaz Bolio_800,21.002439,-89.615336,31050,3105000012396,31
+13048245990,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Díaz Bolio_755,21.002433,-89.61511,31050,3105000012358,31
+13048245991,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Glorieta de La Paz _754,20.999846,-89.615602,31050,3105000012358,31
+13048245992,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Glorieta de La Paz _801,20.999385,-89.615933,31050,3105000012409,31
+13048330206,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Sodzil _927,21.048496,-89.621024,31050,3105000014284,31
+13048330207,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Cordemex_929,21.039333,-89.628838,31050,3105000014566,31
+13048330208,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Cordemex_901,21.039167,-89.628394,31050,3105000014566,31
+13048330209,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Suzuki Siglo XXI _931,21.03159,-89.627489,31050,3105000012451,31
+13048330210,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Tesla Center_899,21.031723,-89.627176,31050,3105000012451,31
+13048330211,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Bostons Pizza Montejo _859,21.027239,-89.624924,31050,3105000012343,31
+13048330212,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Gonzalo Guerrero_875,21.024777,-89.623485,31050,3105000011453,31
+13048330213,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Gonzalo Guerrero_858,21.024283,-89.622814,31050,3105000012343,31
+13048330214,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Campestre _761,21.015306,-89.615373,31050,3105000011699,31
+13048330215,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Suzuki Prol. Paseo de Montejo _758,21.012735,-89.613474,31050,3105000014833,31
+13048330216,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parisina Campestre _796,21.012293,-89.61368,31050,3105000011472,31
+13048330217,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Autozone Campestre _797,21.011577,-89.61363,31050,3105000011472,31
+13048330218,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Prol. Paseo de Montejo x 35 _757,21.009713,-89.613704,31050,3105000014848,31
+13048330219,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Bajaj Campestre _798,21.009384,-89.614019,31050,3105000011472,31
+13048330220,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Prol. Paseo de Montejo x 13 _799,21.006785,-89.61452,31050,3105000012396,31
+13048330221,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Arbol _756,21.005959,-89.614457,31050,3105000012377,31
+13050447215,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Estación Fac. de Ingeniería UADY_2027,21.046944,-89.638706,31050,3105000014566,31
+13051093636,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Aeropuerto_2245,20.936483,-89.669038,31050,3105000014000,31
+13051093639,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Aeropuerto_2240,20.93814,-89.666568,31050,3105000015390,31
+13051093640,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Nueva Mulsay_01_2806,20.952351,-89.657093,31050,3105000014049,31
+13051093641,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Sambulá_01_2810,20.959867,-89.646809,31050,310500001306A,31
+13051093642,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Sambulá_01_2805,20.959949,-89.646866,31050,3105000014212,31
+13051093643,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Nueva Mulsay_02_2809,20.951725,-89.657769,31050,3105000013055,31
+13051137749,bus_stop,yes,yes,No especificado,Paradero IE-TRAM (Va y Ven): Mayapán_2789,20.980698,-89.594868,31050,3105000010262,31
+13051137750,bus_stop,yes,yes,No especificado,Paradero IE-TRAM (Va y Ven): Circuito Colonias Oriente_2788,20.981115,-89.584103,31050,3105000011631,31
+13051137754,bus_stop,yes,yes,No especificado,Paradero IE-TRAM (Va y Ven): Circuito Colonias Oriente_2783,20.980969,-89.585505,31050,3105000013021,31
+13051137755,bus_stop,yes,yes,No especificado,Paradero IE-TRAM (Va y Ven): Mayapán_2782,20.980663,-89.593793,31050,3105000012930,31
+13051137756,bus_stop,yes,yes,No especificado,Estación IE-TRAM: Fénix Hospitales_2781,20.980113,-89.605461,31050,3105000010347,31
+13051137760,bus_stop,No especificado,No especificado,No especificado,Paradero IE-TRAM (Va y Ven): Metropolitano Oriente_2777,20.981487,-89.572441,31050,3105000012822,31
+13051487833,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven (Ie-Tram): Aviación_2239,20.944782,-89.656189,31050,3105000013055,31
+13051487834,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven (Ie-Tram): Aviación_2246,20.946251,-89.653751,31050,310500001078A,31
+13051487835,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: CONALEP 02_2522,20.947704,-89.657034,31050,3105000013055,31
+13051487836,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: CONALEP 02_2818,20.947879,-89.657104,31050,3105000013055,31
+13051487837,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Nva Sambulá_02 _2819,20.950158,-89.659899,31050,3105000013055,31
+13051487838,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Nva Sambulá_01 _2817,20.950342,-89.659782,31050,3105000014049,31
+13051487839,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Amp. NVA Mulsay_02_2820,20.955373,-89.65286,31050,310500001306A,31
+13051487840,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Amp. NVA Mulsay_01 _2816,20.955491,-89.652883,31050,3105000014208,31
+13051487841,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Jardín TUMBEN-LOL_02 _2821,20.957614,-89.649891,31050,3105000014208,31
+13051487842,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Jardín TUMBEN-LOL_01 _2815,20.957806,-89.649766,31050,3105000014208,31
+13051487843,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Parque San Marcial_01 _2814,20.963919,-89.643829,31050,3105000014212,31
+13051487844,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Parque San Marcial_02 _2822,20.964043,-89.643727,31050,3105000010489,31
+13051487845,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Centenario_02_2823,20.966111,-89.643907,31050,3105000010489,31
+13051487852,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tram: Centenario_01 _2813,20.967047,-89.644131,31050,3105000015085,31
+13051487853,bus_stop,yes,No especificado,No especificado,Paradero Ie-Tram (Va y Ven): Caidivy_1329,20.972719,-89.643249,31050,3105000010421,31
+13051487854,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-61 x 72 Col. Centro _1492,20.968685,-89.630624,31050,3105000010493,31
+13051487855,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centro Cultural Olimpo_2812,20.967903,-89.624862,31050,3105000010440,31
+13051576773,bus_stop,No especificado,No especificado,No especificado,Estación Va y Ven: Cetram Umán_1779,20.921625,-89.687457,31050,3105000010277,31
+13051576780,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven (Ie-Tram): Industrial_2241,20.930984,-89.676658,31050,3105000015386,31
+13051576781,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven (Ie-Tram): Industrial_2244,20.930598,-89.677054,31050,310500001612A,31
+13055285146,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Fiesta Americana_2105,20.98678,-89.619539,31050,3105000010224,31
+13057340079,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Secretaría de Gobernación _748,20.972137,-89.615245,31050,3105000010455,31
+13057340080,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: C-50 x 35 Fracc. La Huerta _745,20.982232,-89.612713,31050,3105000015210,31
+13057340081,bus_stop,yes,No especificado,No especificado,Paradero Va y Ven: Pérez Ponce_744,20.986927,-89.611604,31050,3105000015210,31
+13057340082,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Rectoria Villa Guadalupe _874,21.026771,-89.623776,31050,3105000012343,31
+13057340083,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-42 x 75 Col. Montes de Amé _873,21.031297,-89.623286,31050,3105000012343,31
+13057340084,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-40 x 73 Col. Montes de Ame _872,21.032092,-89.622243,31050,3105000011523,31
+13057340085,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-67 x 38 Col. Montes de Ame _871,21.034931,-89.621936,31050,3105000011523,31
+13057340086,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-32 x 67 Col. Montes de Amé _870,21.035336,-89.618456,31050,3105000011523,31
+13057340087,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-28 x 63 Col. Ampliación Sodzil _869,21.037105,-89.617926,31050,3105000016505,31
+13057340088,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Super Akí San Angelo _868,21.037842,-89.614423,31050,3105000016505,31
+13057340089,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-39 x 18 Col. Montes de Amé _867,21.037611,-89.611064,31050,3105000016505,31
+13057340090,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-14 x 67 Col. Montes de Amé _866,21.036229,-89.608655,31050,3105000016505,31
+13057340091,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-29 x 36-A San Ramón Norte _865,21.032746,-89.608668,31050,3105000011557,31
+13057340092,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-73 x 22 Col. Montes de Amé _864,21.032521,-89.611681,31050,3105000011557,31
+13057340093,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Escuela Primaria Elda M. Campos Navarrete _863,21.032303,-89.614793,31050,3105000011557,31
+13057340094,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-36 x 73 Montes de Amé _862,21.031932,-89.619906,31050,3105000011523,31
+13057340095,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Sears Gran Plaza _860,21.029873,-89.626335,31050,3105000012343,31
+13057340096,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Gran Plaza_861,21.030652,-89.625507,31050,3105000012343,31
+13057340097,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-52 x Av. Perez Ponce Col. Centro _676,20.983745,-89.614255,31050,3105000015210,31
+13057340098,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-52 x 37 Fracc. La Huerta _675,20.980676,-89.614835,31050,3105000015225,31
+13057340099,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Harinera Bola Roja _674,20.979417,-89.615101,31050,3105000015225,31
+13057340100,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-52 x 43 Col. Centro _673,20.976661,-89.615526,31050,3105000015225,31
+13057421001,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Gran Corredor Turistico-Gastronomico _672,20.974847,-89.6159,31050,3105000015225,31
+13057421002,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-52 x 51 Col. Centro _671,20.972379,-89.616408,31050,3105000010455,31
+13057421003,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Policia Municipal _670,20.969809,-89.617007,31050,3105000010455,31
+13059644876,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-4 x 19 Fracc. Paseos de Vergel_630,20.951481,-89.569796,31050,3105000014814,31
+13060819482,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 54 Col. Centro_533,20.964347,-89.619225,31050,3105000010510,31
+13060819483,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 50 Col. Centro_532,20.963979,-89.616927,31050,3105000010525,31
+13060819484,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 1º de Mayo Col. Centro_531,20.963443,-89.614474,31050,3105000010525,31
+13060819485,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 38 Col.Centro_530,20.962004,-89.609672,31050,310500001053A,31
+13060819486,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 32 Col.Centro_529,20.960997,-89.60681,31050,310500001053A,31
+13060819487,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 24 Col.Centro_528,20.959801,-89.603511,31050,3105000010563,31
+13060819488,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 24 Col.Centro_527,20.959026,-89.601221,31050,3105000010563,31
+13060819489,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 14 Col.Cortes Sarmiento_526,20.958238,-89.597731,31050,3105000010563,31
+13060819490,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-65 x 8 Col.Cortes sarmiento_525,20.958902,-89.594339,31050,3105000010563,31
+13060819492,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Quetzalcoatl x 18_523,20.959777,-89.58792,31050,3105000011773,31
+13060819493,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Quetzalcoatl x 12_522,20.959906,-89.584993,31050,3105000011773,31
+13060819494,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Cruz Roja Oriente_521,20.960066,-89.580771,31050,3105000016399,31
+13060819495,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Bodega Aurrera Quetzalcóatl_520,20.960151,-89.579223,31050,3105000016399,31
+13060819496,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-24 x 25 Col. Nueva Chichen Itza_491,20.960154,-89.575809,31050,3105000013233,31
+13060819497,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-8-B x 15-B Fracc. Vergel 65_634,20.958295,-89.579588,31050,3105000012786,31
+13060819498,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-8-B x 15-H Col. San Antonio Kaua_618,20.955627,-89.580022,31050,3105000012786,31
+13060819499,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parroquia Santa María Goretti_617,20.953271,-89.579909,31050,3105000012771,31
+13060819500,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-8-B x 25-A Fracc. Vergel III CTM_616,20.950884,-89.579814,31050,3105000012771,31
+13060852001,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-6-D x 25-B Fracc. Vergel IV_633,20.950718,-89.577351,31050,3105000014829,31
+13060852002,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Jardín de Niños Laura Riojas de Colosio_632,20.950914,-89.574447,31050,3105000014829,31
+13060852003,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: JAPAY Pozo San Pablo Oriente_631,20.952408,-89.571777,31050,3105000014814,31
+13060852004,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-4 x 19 Fracc. Paseos de Vergel_630,20.951458,-89.569806,31050,3105000014814,31
+13060852005,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-19-A x 4 Fracc. Paseos de Vergel_629,20.950859,-89.57052,31050,3105000014829,31
+13060852006,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-4-B x 19-A Fracc. Paseos de Vergel_628,20.951251,-89.572328,31050,3105000014829,31
+13060852007,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-4 x 25-B Fracc. Vergel IV_627,20.948224,-89.572694,31050,3105000014250,31
+13060852008,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque La Zarigueya C-25_626,20.948081,-89.575381,31050,3105000014250,31
+13060852009,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-8-A-1 x 25-B Fracc. Vergel III CTM_625,20.950853,-89.578151,31050,3105000012771,31
+13060852010,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Bodas de Plata_624,20.953459,-89.580031,31050,3105000012771,31
+13060852011,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-8-B x 15-H Col. San Antonio Kaua_623,20.955999,-89.580078,31050,3105000012786,31
+13060852012,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-8-A x 15-C Fracc. Vergel 65_622,20.957866,-89.578131,31050,3105000012786,31
+13060852013,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Bodega Aurrera Quetzalcóatl_490,20.959917,-89.578845,31050,3105000014814,31
+13060852014,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Cruz Roja Oriente_489,20.95988,-89.580733,31050,3105000012786,31
+13060852015,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Quetzalcoatl x 10-C_488,20.959789,-89.584152,31050,3105000012894,31
+13060852016,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Quetzalcoatl x 12_487,20.959634,-89.587812,31050,3105000012894,31
+13060852019,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-63-C x 10 Col. Cortes Sarmiento_484,20.960739,-89.595361,31050,3105000010563,31
+13060852020,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque de los Enamorados_483,20.961496,-89.59886,31050,3105000010563,31
+13060852021,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Los Mangos_482,20.961903,-89.602003,31050,3105000010563,31
+13060852022,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-63 x 30 Col. Centro_481,20.962088,-89.604646,31050,310500001053A,31
+13060852023,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-63 x 36 Col. Centro_480,20.962927,-89.607916,31050,310500001053A,31
+13060852024,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-63 x 40 Col. Centro_479,20.96401,-89.610908,31050,3105000010525,31
+13060852025,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-63 x Av. 1o. De Mayo Col. Centro_478,20.964755,-89.614613,31050,3105000010525,31
+13061211762,bus_stop,No especificado,No especificado,No especificado,Paradero Ie-Tramn: Palacio de la Música_2824,20.96857,-89.622298,31050,3105000010455,31
+13061211763,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven ( Ie-Tram): Facultad de Odontología UADY_1356,20.970841,-89.642254,31050,3105000010489,31
+13062529007,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Paseo de las Fuentes_1408,20.979972,-89.648127,31050,3105000010417,31
+13062529008,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Paseo de las Fuentes_1365,20.980193,-89.648103,31050,3105000012748,31
+13062529009,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59-A x 84 Col. Centro_1495,20.973922,-89.637988,31050,3105000010421,31
+13062529010,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-61 x 76 Col. Centro_1493,20.969096,-89.633761,31050,3105000010493,31
+13062529011,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: The Home Depot Canek_1405,20.987095,-89.659846,31050,310500001509A,31
+13062529012,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Canek_1404,20.988768,-89.662572,31050,3105000012625,31
+13062529013,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Corralón Canek_1403,20.991658,-89.667152,31050,3105000012625,31
+13062529014,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Jacinto Canek x 140 Fracc. Yucalpetèn_1402,20.992933,-89.669386,31050,3105000012625,31
+13062529015,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Carl's Jr. Ciudad Caucel_1399,20.999801,-89.680329,31050,3105000015761,31
+13062529016,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. 59 x Av. San Pedro Fracc. La Ciudadela_1398,21.001629,-89.683248,31050,3105000015761,31
+13062529017,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-62 x 25 Fracc. Ciudad Caucel_1523,21.002688,-89.687083,31050,3105000015846,31
+13062529018,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-62 x 37 Fracc. Ciudad Caucel_1522,20.99939,-89.688938,31050,3105000015846,31
+13062529019,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-60 x 59 Fracc. Ciudad Caucel_1520,20.995183,-89.68939,31050,3105000015761,31
+13062529020,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Parque Arqueo-Botánico Anikabil_1519,20.990916,-89.69043,31050,3105000015850,31
+13062529021,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-60 x 83 Fracc. Ciudad Caucel_1518,20.98805,-89.69094,31050,310500001587A,31
+13062529022,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-60 x 87 Fracc. Ciudad Caucel_1501,20.98758,-89.69137,31050,3105000015831,31
+13062529023,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-60 x 71 Fracc. Ciudad Caucel_1500,20.991374,-89.69064,31050,3105000015846,31
+13062529024,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-60 x 57 Fracc. Ciudad Caucel_1499,20.995192,-89.689476,31050,3105000015846,31
+13062529025,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-62 x 39-A Fracc. Pedregales_1498,20.999367,-89.689274,31050,3105000015757,31
+13062529026,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Pollo Brujo C-62 Ciudad Caucel_1497,21.000686,-89.688537,31050,3105000015757,31
+13062529027,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-62 x 27 Fracc. Ciudad Caucel_1496,21.003166,-89.68714,31050,3105000015757,31
+13062529028,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. 59 x Av. Gran Santa Fé Fracc. Gran Santa Fé_1372,21.001918,-89.683224,31050,3105000015776,31
+13062529029,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Carl's Jr. Ciudad Caucel_1371,21.00036,-89.680735,31050,3105000014937,31
+13062529030,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av Jacinto Canek x 134-A_1368,20.993049,-89.669005,31050,310500001270A,31
+13062529031,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Corralón Canek_1367,20.992267,-89.667756,31050,310500001270A,31
+13062529032,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Canek_1339,20.989161,-89.662638,31050,3105000012593,31
+13062529033,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza Paseo Canek_1338,20.987847,-89.660684,31050,3105000012593,31
+13062529034,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: The Home Depot Canek_1337,20.986958,-89.65921,31050,3105000012593,31
+13062529035,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Atlantida_1335,20.984526,-89.655164,31050,3105000012593,31
+13062529036,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: UPP_1407,20.981791,-89.65118,31050,3105000010402,31
+13062529037,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Jacinto Canek x Circuito Colonias_1349,20.983738,-89.654354,31050,310500001039A,31
+13062529038,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: UPP_1366,20.981883,-89.650922,31050,3105000012733,31
+13062529039,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-64-A x 97 Fracc. Ciudad Caucel_1514,20.986067,-89.696214,31050,3105000015884,31
+13062529040,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-64 x 87 Fracc. Ciudad Caucel_1513,20.988494,-89.69576,31050,3105000015827,31
+13062529041,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-64-A x 73 Fracc. Ciudad Caucel_1512,20.991781,-89.695136,31050,3105000015831,31
+13062529042,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Esc Sec N° 15 Sara Molina Font_1511,20.99426,-89.693859,31050,3105000015846,31
+13062529043,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Esc Sec Nº 15 Sara Molina Font C-59 Ciudad Caucel_1510,20.994914,-89.693896,31050,3105000015846,31
+13062529044,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59 x Glorieta Central Ciudad Caucel_1509,20.995148,-89.696269,31050,3105000015846,31
+13062529045,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Bodega Aurrera Ciudad Caucel_1441,20.99589,-89.698469,31050,3105000015812,31
+13062529046,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59 x 88 Fracc. Los Almendros_1440,20.996862,-89.704342,31050,3105000015795,31
+13062529047,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Chedraui C-59 Ciudad Caucel_1439,20.997679,-89.709192,31050,3105000015795,31
+13062529048,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59 x 100 Fracc. Ciudad Caucel_1438,20.998354,-89.713271,31050,3105000015780,31
+13062529049,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59 x 104 Fracc. Ciudad Caucel_1437,20.998748,-89.71604,31050,3105000015780,31
+13062529050,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Prepa 10_1421,20.999357,-89.716644,31050,3105000015691,31
+13062529051,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59 x 100 Fracc. Ciudad Caucel_1420,20.998639,-89.712392,31050,3105000015704,31
+13062529052,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Chedraui C-59 Ciudad Caucel_1419,20.998012,-89.70866,31050,3105000015719,31
+13062529053,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59 x 90 Fracc. Ciudad Caucel_1418,20.997421,-89.705178,31050,3105000015723,31
+13062529054,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59 x 88 Fracc. Los Almendros_1417,20.99713,-89.703414,31050,3105000015723,31
+13062529055,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Bodega Aurrera Ciudad Caucel_1416,20.99628,-89.698342,31050,3105000015738,31
+13062529056,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-59 x Glorieta Central Ciudad Caucel_1508,20.995483,-89.696058,31050,3105000015846,31
+13062529057,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Esc Sec N° 15 Sara Molina Font_1507,20.995269,-89.693228,31050,3105000015846,31
+13062529058,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-64-A x 67 Fracc. Ciudad Caucel_1506,20.993593,-89.694131,31050,3105000015846,31
+13062529059,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-64-A x 79 Fracc. Ciudad Caucel_1505,20.98979,-89.695408,31050,3105000015831,31
+13062529061,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-105 x 64 Fracc. Ciudad Caucel_1515,20.983828,-89.69527,31050,3105000015884,31
+13062529062,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-107 x 64 Fracc. Ciudad Caucel_1503,20.983387,-89.694996,31050,3105000015884,31
+13062797980,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-49-A x 62 Fracc. Ciudad Caucel_1521,20.996337,-89.691508,31050,3105000015846,31
+13937965901,bus_stop,No especificado,No especificado,No especificado,Parada Va y Ven: Calle 54 x89 y 89A Centro,20.948277,-89.623237,31050,3105000010671,31
+14020378899,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centros de Estudios CTM,20.965287,-89.589685,31050,3105000012926,31
+14020451597,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Cupules x 22,20.99371,-89.628171,31050,3105000011504,31
+14020458220,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Hospital Juárez,20.9889,-89.63954,31050,3105000014091,31
+14020482713,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Atlantida,20.985855,-89.656012,31050,3105000012593,31
+14023629378,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Walmart Pensiones C-60,20.994235,-89.653629,31050,3105000012593,31
+14024522259,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Fidel Velázquez x 14,20.964915,-89.585278,31050,3105000012926,31
+14024629597,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-14 x 25-B Benito Juárez Oriente,20.959589,-89.570387,31050,3105000013233,31
+14024638130,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Macroplaza,20.999421,-89.572028,31050,3105000013708,31
+14024638131,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Plaza fiesta_2153,20.999111,-89.596883,31050,3105000015259,31
+14024664427,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Galletera DONDÉ,20.989559,-89.638804,31050,3105000014091,31
+14024715545,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-18 x 23 Col. Yucatán_1205,20.993528,-89.625936,31050,3105000011504,31
+14024715546,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-22 x 23 Col. Yucatán_1118,20.994138,-89.628058,31050,3105000011504,31
+14024715547,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-22 x Circuito Colonias Col. Yucatán_1189,20.996954,-89.625734,31050,3105000011504,31
+14024715548,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: C-15 x 20 Col. Yucatán_1204,20.996499,-89.625321,31050,3105000011504,31
+14024715549,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: R79 C-58 x 63 y 65 Col. Centro_2739,20.965781,-89.622157,31050,3105000010510,31
+14024715550,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: IMSS No. 52_1215,20.968695,-89.625559,31050,3105000010440,31
+14024724708,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centro de Servicios Yucatán SSP_1050,21.037521,-89.63232,31050,3105000014566,31
+14024724709,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Centro de Servicios Yucatán SSP_1084,21.037474,-89.632526,31050,3105000014566,31
+14024724710,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Glorieta Siglo XXI_1049,21.034125,-89.631754,31050,3105000014566,31
+14024724711,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Glorieta Siglo XXI_1085,21.034266,-89.63198,31050,3105000014566,31
+14024724712,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Suites Mérida_1048,21.032735,-89.63004,31050,3105000014566,31
+14024724713,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Suites Mérida_1086,21.032508,-89.630295,31050,3105000012451,31
+14024985871,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Polifuncional IDEY_889,20.995321,-89.620963,31050,3105000011504,31
+14024985872,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Circuito Colonias_941,20.997007,-89.621361,31050,310500001249A,31
+14027832315,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Yucatán x 13 _2151,21.001263,-89.591064,31050,3105000011716,31
+14027832316,bus_stop,No especificado,No especificado,No especificado,Paradero Va y Ven: Av. Yucatán x 60 _2188,21.001001,-89.591072,31050,3105000011716,31
+14324248813,bus_stop,yes,No especificado,No especificado,Campus UADY,21.027625,-89.559006,31050,310500001669A,31
+14324248814,bus_stop,yes,No especificado,No especificado,Facultad de Antropología UADY,21.026667,-89.559466,31050,3105000014975,31
+14324248815,bus_stop,no,No especificado,No especificado,Facultad de Antropología UADY,21.026542,-89.559289,31050,310500001669A,31
+14324248816,bus_stop,yes,No especificado,No especificado,Facultad de Economía UADY,21.024239,-89.559371,31050,3105000014975,31
+14324248817,bus_stop,yes,No especificado,No especificado,Facultad de Educación UADY,21.023543,-89.558631,31050,310500001669A,31
+14324248818,bus_stop,yes,No especificado,No especificado,Facultad de Contaduría y Administración,21.020815,-89.558388,31050,3105000014975,31
+14324248819,bus_stop,no,No especificado,No especificado,Facultad de Contaduría y Administración,21.02062,-89.557721,31050,310500001669A,31
+14324248820,bus_stop,yes,No especificado,No especificado,Facultad de Derecho UADY,21.021606,-89.55511,31050,310500001669A,31
+14324248821,bus_stop,no,No especificado,No especificado,Super Aki Gran San Pedro Cholul,21.027584,-89.559559,31050,3105000014975,31
+14324248822,bus_stop,No especificado,No especificado,No especificado,Super AKi Cholul,21.028949,-89.558801,31050,310500001669A,31
+14324248823,bus_stop,No especificado,No especificado,No especificado,Carretera Mérida Motul x 22,21.028757,-89.559701,31050,310502038,31
+14325735600,bus_stop,yes,No especificado,No especificado,CETRAM Norte Int.,21.02232,-89.567568,31050,3105000012521,31
+14325737901,bus_stop,yes,No especificado,No especificado,Motul,21.021451,-89.565456,31050,3105000014975,31
+14325737902,bus_stop,No especificado,No especificado,No especificado,Carretera Mérida-Motul x Anillo Periférico,21.022619,-89.565573,31050,3105000014975,31
+14325737903,bus_stop,yes,No especificado,No especificado,Proalmex,21.023313,-89.56457,31050,3105000014975,31
+14325737904,bus_stop,no,No especificado,No especificado,Av. Yucatán x Periférico,21.020884,-89.567225,31050,3105000012521,31
+14363554532,bus_stop,yes,No especificado,No especificado,Plaza Las Américas,20.993251,-89.64922,31050,3105000012606,31
+14363554533,bus_stop,no,No especificado,No especificado,Plaza Las Américas,20.99341,-89.649164,31050,3105000012235,31
+14363554534,bus_stop,yes,No especificado,No especificado,Plaza Las Américas,20.991262,-89.650256,31050,3105000012606,31
+14363554535,bus_stop,yes,No especificado,No especificado,Plaza Las Américas,20.990774,-89.649945,31050,3105000012606,31
+14363554536,bus_stop,yes,No especificado,No especificado,Plaza Las Américas,20.990788,-89.648351,31050,3105000012606,31
+14363554537,bus_stop,yes,No especificado,No especificado,Plaza Las Américas,20.991004,-89.648037,31050,3105000012714,31

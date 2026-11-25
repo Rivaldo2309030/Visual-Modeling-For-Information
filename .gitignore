@@ -1,21 +1,27 @@
-# Archivos pesados y binarios excluidos del repositorio
+# Entorno virtual local y cachés de Python
+.venv/
+__pycache__/
+*.pyc
+
+# Binarios pesados crudos y credenciales excluidos del repositorio
 *.zip
+*.tif
+*.tiff
+*.bil
+*.las
+*.laz
 *.log
 *.pdf
-*.csv
-*.ply
+.env
+.env.*
+
+# Directorios locales temporales o ajenos al proyecto
 scratch/
-
-# Ignorar datos crudos en local pero permitir la estructura de carpetas
-data/*.csv
-data/*.zip
-data/*.ply
-
-# Archivos temporales de trabajo
+dash/
+nueva tarea/
+Vm team resources/
 report.md
 revisar.md
-nueva tarea/
-dash/
 
-
-
+# Mantener datos sintéticos de prueba separados y fuera del Data Mart real
+data/07_self_produced_upy/synthetic/

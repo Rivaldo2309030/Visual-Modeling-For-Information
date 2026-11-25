@@ -1,0 +1,495 @@
+name,ref,route,highway,public_transport,operator,network,shelter,bench,lit,cve_ent,cve_mun
+R901 - Estación Tren Maya Teya => IE-TRAM Plancha,1,bus,No especificado,No especificado,Mobility ADO,IE-TRAM,No especificado,No especificado,No especificado,31,31050
+R905 - Estación Tren Maya Umán => IE-TRAM Centro,R905,bus,No especificado,No especificado,ADO Mobility,No especificado,No especificado,No especificado,No especificado,31,31050
+R902 - Kanasín => IE-TRAM Plancha,2,bus,No especificado,No especificado,Mobility ADO,No especificado,No especificado,No especificado,No especificado,31,31050
+R903 - Facultad de Ingeniería => IE-TRAM Plancha,R903,bus,No especificado,No especificado,Mobility ADO,IE-TRAM,No especificado,No especificado,No especificado,31,31050
+R701 Centro Internacional de Congresos => Aeropuerto,R701,bus,No especificado,No especificado,Mobility ADO,No especificado,No especificado,No especificado,No especificado,31,31050
+R701 Aeropuerto => Centro Internacional de Congresos,R701,bus,No especificado,No especificado,Mobility ADO,No especificado,No especificado,No especificado,No especificado,31,31050
+R901 - IE-TRAM Plancha => Estación Tren Maya Teya,1,bus,No especificado,No especificado,Mobility ADO,IE-TRAM,No especificado,No especificado,No especificado,31,31050
+R902 - IE-TRAM Plancha => Kanasín,2,bus,No especificado,No especificado,Mobility ADO,No especificado,No especificado,No especificado,No especificado,31,31050
+R903 - IE-TRAM Plancha => Facultad de Ingeniería,R903,bus,No especificado,No especificado,Mobility ADO,IE-TRAM,No especificado,No especificado,No especificado,31,31050
+R905 - IE-TRAM Centro => Estación Tren Maya Umán,R905,bus,No especificado,No especificado,ADO Mobility,No especificado,No especificado,No especificado,No especificado,31,31050
+R33 - JAPAY Pozo San Pablo Oriente => Centro,R33,bus,No especificado,No especificado,Mobility ADO (MU),No especificado,No especificado,No especificado,No especificado,31,31050
+R33 - Centro => JAPAY Pozo San Pablo Oriente,R33,bus,No especificado,No especificado,Mobility ADO (MU),No especificado,No especificado,No especificado,No especificado,31,31050
+R64 - Montes Amé (Super Akí Angelo) => Centro,R64,bus,No especificado,No especificado,Movibus Mérida (MM),No especificado,No especificado,No especificado,No especificado,31,31050
+R64 - Centro => Montes Amé (Super Akí Angelo),R64,bus,No especificado,No especificado,Movibus Mérida (MM),No especificado,No especificado,No especificado,No especificado,31,31050
+R906 - IE-TRAM Centro => IMSS Umán,R906,bus,No especificado,No especificado,ADO Mobility,No especificado,No especificado,No especificado,No especificado,31,31050
+R906 - IMSS Umán => IE-TRAM Centro,R906,bus,No especificado,No especificado,ADO Mobility,No especificado,No especificado,No especificado,No especificado,31,31050
+R96 - Animaya-Bicentenario (Centro => Ciudad Caucel),R96,bus,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+R96 - Animaya-Bicentenario (Ciudad Caucel => Centro),R96,bus,No especificado,No especificado,Mobility Mérida (MO),No especificado,No especificado,No especificado,No especificado,31,31050
+No especificado,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+"66 Ibérica Av. 42, Av. 61 y Av. 58",RUTA 70,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Kanasin - Naranjos,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+No especificado,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Parada de autobuses,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Alemán Ruta 2,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Situr,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero,No especificado,No especificado,bus_stop,No especificado,varios,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Gran Plaza_2795,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Combis a homún,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Mérida  Calle 50 60,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+65 Periférico,No especificado,No especificado,bus_stop,platform,Alianza de Camioneros de Yucatán,No especificado,No especificado,No especificado,No especificado,31,31050
+Francisco Villa Oriente,No especificado,No especificado,bus_stop,platform,Alianza de Camioneros de Yucatán (A.C.Y.),No especificado,No especificado,No especificado,No especificado,31,31050
+Taxis Maxcanú,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Taxis Hunucmá,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+SITUR,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,no,no,No especificado,31,31050
+Tapetes,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Gran Museo del Mundo Maya,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+San Lucas,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Gran Plaza ruta 2,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Carranza,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero  R28 Kanasín – Naranjos 2,1,No especificado,bus_stop,platform,Turismaya,Va-y-Ven,no,No especificado,No especificado,31,31050
+No especificado,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Autobus para Uxmal y Chichen Itza,No especificado,No especificado,bus_stop,platform,"sur,  ado",No especificado,yes,yes,No especificado,31,31050
+San Pedro ruta II,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Camiones al centro,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Aleman Pinos,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Situr ir a Gran Plaza,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Pinos Tulias,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Aleman Ruta 2,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Colectivo to cikit,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Terminal Autobuses de Oriente Caucel,No especificado,No especificado,bus_stop,platform,ADO,No especificado,No especificado,No especificado,No especificado,31,31050
+Collectivo El progresso 2020,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+arret de bus Turibus,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Combis a Chablekal,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Colectivos a Dzibilchaltún,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Preparatoria Estatal No. 8_1121,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Glorieta La Mestiza_1036,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+No especificado,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,yes,No especificado,31,31050
+Collectivo á Cuzamá,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+collectivo para Celestun,No especificado,No especificado,bus_stop,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Aeropuerto_2102,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Tame 68_2103,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Aeropuerto_2104,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,no,No especificado,No especificado,31,31050
+Paradero Va y Ven: Siglo XXI_1003,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Siglo XXI_900,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Tame 69_2107,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R72 C-63 x 56 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R95 C-67 x 64 y 62 Col. Centro_2702,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Plaza Gran Santa Fe 91,No especificado,No especificado,bus_stop,platform,Va y Ven,No especificado,yes,yes,No especificado,31,31050
+Chedraui Ciudad Caucel 91,No especificado,No especificado,bus_stop,platform,Va y Ven,No especificado,yes,yes,No especificado,31,31050
+Paradero Va y Ven: Plaza Oriente_524,No especificado,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán,Sistema de Movilidad Amable y Sostenible Va-y-Ven,yes,No especificado,No especificado,31,31050
+Combis Mayapán,No especificado,No especificado,bus_stop,platform,Frente Único de Trabajadores al Volante F.U.T.V.,No especificado,no,No especificado,No especificado,31,31050
+Combis Brisas,No especificado,No especificado,bus_stop,platform,Frente Único de Trabajadores al Volante F.U.T.V.,No especificado,no,No especificado,No especificado,31,31050
+Paradero Va y Ven:  R7 C-54 x 67 y 69 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Unidad Deportiva Fernando Valenzuela,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Los Héroes Exterior,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Kanasín_2460,No especificado,No especificado,bus_stop,platform,Mobilty ADO,"Ie-tram, Va-y-Ven",yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Kanasín II_2435,No especificado,No especificado,bus_stop,platform,Mobilty ADO,Ie-tram,yes,No especificado,No especificado,31,31050
+Kanasín Périferico Exterior,No especificado,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Va-y-Ven,yes,No especificado,No especificado,31,31050
+Parada Va-y-ven,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Parada Va-y-Ven,No especificado,No especificado,bus_stop,platform,No especificado,Va-y-Ven,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: T1 IMSS_3273,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Parada Ex-Fuente Maya,589,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Sistema Metropolitano de Movilidad Amable y Sostenible Va-y-Ven,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Fco. de Montejo IV,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-48 x 33 Fracc. Fco. de Montejo V_1158,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-36 x 33 Fracc. Fco de Montejo V,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Bodega Aurrerá Los Héroes,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Real Montejo,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: CRIT_1199,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Combi a Yucalpetén SEP,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero para mercado (piñatas),No especificado,No especificado,bus_stop,platform,No especificado,No especificado,no,no,no,31,31050
+Colectivos y Urbanos a la IMSS T1,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Mercado Lucas de Gálvez_2793,No especificado,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán,IE-Tram,no,No especificado,No especificado,31,31050
+Paradero Va y Ven: R92 C-67 x 62 y 60 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-48 x 51 Col. Centro_971,No especificado,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Sistema de Movilidad Amable y Sostenible Va-y-Ven,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Museo del Ferrocarril_973,No especificado,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Sistema de Transporte Amable y Sostenible Va-y-Ven,yes,No especificado,No especificado,31,31050
+Parada Parque La Plancha,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque La Plancha_746,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Parada C-42 x 41 Col. Lourdes Industrial,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Estación IE-TRAM (Va y Ven): La Plancha_975,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: SAT,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero IE-TRAM: Estación Teya_2779,No especificado,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Sistema de Metropolitano de Movilidad Amable y Sostenible Va-y-Ven,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: R35 C-63 x 56 y 54 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R26 C-63 x 56 y 54 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R32 C-63 x 56 y 54 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R31 C-63 x 56 y 54 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R33 C-63 x 56 y 54 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Jacinto Canek x Av. Zamná_1406,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Jacinto Canek x 58-A_1336,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque La Amistad,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: SEGEY,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Hospital Regional Benito Juarez IMSS,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R96 C-67 x 62 y 60 Col. Centro_1491,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R91 C-67 x 64 y 62 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R94 C-67 x 64 y 62 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R88 C-67 x 62 y 60 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Juzgados Civiles,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R73 C-63 x 56 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R107 C-102-A x 67-C Col. Mulsay,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R107 Mercado de Mulsay,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R107 C-69 x 58 y 60 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Taxis Ticul-Merida,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: CRIT_1196,No especificado,No especificado,bus_stop,platform,Va y Ven (ATY),"Ruta 78, Ruta 82, Ruta Circuito Periférico Interior",No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Real Montejo_1195,No especificado,No especificado,bus_stop,platform,Va y Ven (ATY),"Ruta 78, Ruta 82 y Circuito Periférico Interior 10002",No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Chedraui Selecto Kalia_772,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Chedraui Selecto Kalia_785,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Glorieta Kalia_786,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Glorieta Kalia_771,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R61 C-52 x 65 y 63 Col. Centro_750,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Parada C-58 x 51 Col. Reparto Granjas,443,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Sistema Metropolitano de Movilidad Amable y Sostenible Va-y-Vem,yes,No especificado,No especificado,31,31050
+Parada C-58 x 16 Col. Reparto Granjas,410,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Sistema Metropolitano de Movilidad Amable y Sostenible Va-y-Vem,yes,No especificado,No especificado,31,31050
+Parada C-58 x Anillo Periférico,411,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Sistema Metropolitano de Movilidad Amable y Sostenible Va-y-Ven,no,No especificado,No especificado,31,31050
+Parada C-58 x Anillo Periférico,442,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Sistema Metropolitano de Movilidad Amable y Sostenible Va-y-Ven,no,No especificado,No especificado,31,31050
+Parada Ex-Fuente Maya,540,No especificado,bus_stop,platform,Agencia de Transporte de Yucatán ATY,Sistema Metropolitano de Movilidad Amable y Sostenible Va-y-Ven,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: R87 C-67 x 62 y 60 Col. Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Villas La Hacienda_856,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Peninsula_878,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Villas Hacienda_793,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Cámara de Comercio x Prol. Paseo Montejo_764,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Villas Hacienda_763,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R64 C-52 x 63 y 61 Col. Centro_851,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R63 C-52 x 63 y 61 Col. Centro_804,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-59 x 50 Col. Centro_2794,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Mejorada_749,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Circuito Colonias Norte_802,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Circuito Colonias Norte_753,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-63-A x Anillo Periférico_1249,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-63 A x 54 Fracc. Camara de la Construccion_1236,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Preparatoria Estatal No. 8_1139,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Carr. San Antonio Ool x Anillo Periférico_1122,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Carr. San Antonio Ool x Anillo Periférico_1138,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Glorieta La Mestiza_2550,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: R82 C-58 x 59 y 61 Col. Centro_2740,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R75 C-58 x 59 y 61 Col. Centro_2736,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R67 C-58 x 59 y 61 Col.Centro_2735,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R76 C-58 x 59 y 61 Col. Centro_2737,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R77 C-58 x 59 y 61 Col. Centro_2738,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: La Chaya Maya_950,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ex Facultad de Psicología,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: IMSS 42 Sur_2576,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: IMSS 42 Sur_352,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: IMSS UMF No.58_325,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R18 C-54 x 65 y 67 Col. Centro_2734,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R20 C-54 x 65 y 67 Col. Centro_2733,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R16 C-54 x 65 y 67 Col. Centro_2732,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Unidad Habitacional Militar_326,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Unidad Habitacional Militar_351,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-17 x 28 Col. Itzimna_752,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Monumento A la Patria_853,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Pan Montejo_854,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Porsche Centre Merida_2797,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-58-A x 31 Col. Centro_3027,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Paseo Montejo x 29_2798,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Walmart Paseo de Montejo_852,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-42 x 41 Col. Lourdes Industrial_974,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Paseo Montejo x Av. Colon_2799,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Ford Montejo_2796,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Prol. Paseo de Montejo x 19_855,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Oriente_486,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: SEMUJERES Cto. Colonias_2217,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: SEMUJERES Cto. Colonias_2200,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Oriente C-63-C_485,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Animaya_1516,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-60 x 95 Animaya_1517,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Animaya_1502,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-64-A x 95 Fracc. Ciudad Caucel_1504,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Hospital General Agustin O´Horan_1410,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,no,No especificado,No especificado,31,31050
+Paradero Va y Ven: Hospital General Agustin O´Horan_1363,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,no,No especificado,No especificado,31,31050
+Paradero Va y Ven: Tribunal Superior de Justicia_1364,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque de la Paz_1328,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: CEUM_1357,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Centenario_1362,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Escuela Primaria Eligio Ancona_1359,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Super Akí Centenario_1358,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Super Aki Centenario C-84_1326,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-80 x 59 Col. Centro_1494,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Tribunal Superior de Justicia_1409,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Abogada Antonia Jimenez Trava x 43_1296,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R90 C-67 x 64 y 62 Col. Centro_3057,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 68 Col. Centro_1285,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-66 x 63 Col. Centro_1321,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R93 C-67 x 64 y 62 Col. Centro_2741,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R98 C-67 x 64 y 62 Col. Centro_2743,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Cbtis 95_2191,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Kukulcán Alamo_2192,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Poliforum Zamná_2193,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Poliforum Zamná_2224,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Kukulcán_2194,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Complejo Deportivo Kukulcán_2195,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Estadio Carlos Iturralde_2196,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Módulo Médico Cto. Colonias_2197,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: JAPAY Pozo Kukulkan_2220,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Estadio Carlos Iturralde_2221,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Complejo Deportivo Kukulcán_2222,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Kukulcán_2223,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Kukulcán Alamo_2225,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Kukulcán Álamo_445,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Kukulcán Álamo_407,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-28 x 16 Ote. Fracc. Unidad Morelos_406,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Cbtis 95_2226,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R23 C-71 x 54 y 52 Col. Centro_398,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Instituto Municipal de la Mujer_165,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-69 x 50 Col. Centro_362,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R21 C-54 x 67 y 69 Col. Centro_2677,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R25 C-54 x 67 y 69 Col. Centro_2679,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R22 C-54 x 67 y 69 Col. Centro_2678,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R12 C-54 x 67 y 69 Col. Centro_2676,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R10 C-54 x 67 y 69 Col. Centro_209,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parada Circuito Enlace 2_2837,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R108 C-56 x 71 y 69 Col. Centro_164,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R114 C-56 x 71 y 69 Col. Centro_2697,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R115 C-56 x 71 y 69 Col. Centro_255,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R111 C-54 x 63 y 65-A Col. Centro_3149,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R47 C-54 x 63 y 65-A Col. Centro_3232,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Unidad Medica de Alta Especialidad UMAE IMSS_3241,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Escuela Tecnica No. 1 Silvio Zavala Vallado_3240,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: T1 IMSS x C-30 Fracc. El Fenix_3272,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Club Preparatoriano_3239,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Centro Institucional de Lenguas (CIL) - UADY_2918,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-41-A x 30 Col. Industrial_3238,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-30 x 35 Fracc. San Luis_3271,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Adolfo López Mateos_3245,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Adolfo López Mateos_3270,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Sendero_2909,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza The Harbor_928,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-40 x 39 Fracc. Fco. de Montejo III_1156,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-50 x 29 Fracc. Fco. de Montejo_1016,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-50 x 29 Fracc. Fco. de Montejo_1032,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza The Harbor_902,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Walmart Caucel_1370,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Walmart Caucel_1400,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Jacinto Canek_2447,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Jacinto Canek_1246,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Jacinto Canek x 59_1369,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Monumento Jacinto Canek_1401,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-140 x 59-B Fracc. Nora Quintana_1571,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Walmart Express Campestre_759,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Prol. Paseo de Montejo x 23_760,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Campestre_795,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: BAIC Campestre_762,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Club Campestre de Yucatan_794,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Instituto Tecnológico de Mérida_895,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Tecnológico x 19-A_937,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Tecnológico x 15_896,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Instituto Tecnológico de Mérida_936,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Walmart Tecnológico_894,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Walmart Tecnológico_938,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R68 C-61 x 54 Col. Centro_969,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Centro Internacional de Congresos_945,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-62 x 29 Col. Alcala Martin_944,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Estadio Gral. Salvador Alvarado_943,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-16 x 23 Col. Yucatán_942,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Polifuncional IDEY_888,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Centro Internacional de Congresos_2161,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Centro Internacional de Congresos_2106,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: ADO TAME_1647,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: ADO TAME_1605,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-69 x 66 Col. Centro_1604,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Itzimná_803,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Itzimná_976,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Camara del Comercio x 13_775,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Altabrisa_783,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Instituto Cumbres_774,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Instituto Cumbres_784,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Clemente Lopez Trujillo_318,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Toyota Merida_877,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Toyota Merida_857,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Mg SEMINUEVOS_876,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Mejorada_2791,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Gran Corredor Turistico-Gastronomico_747,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Paseo 60_2068,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque de Santa Ana_2070,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Estación Va y Ven: Quetzalcóatl_653,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Estación Va y Ven: Quetzalcóatl_652,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque de Santiago_1320,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Kanasín_2785,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Pérez Ponce_677,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Díaz Bolio_800,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Díaz Bolio_755,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Glorieta de La Paz _754,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Glorieta de La Paz _801,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Sodzil _927,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Cordemex_929,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Cordemex_901,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Suzuki Siglo XXI _931,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Tesla Center_899,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Bostons Pizza Montejo _859,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Gonzalo Guerrero_875,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Gonzalo Guerrero_858,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Campestre _761,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Suzuki Prol. Paseo de Montejo _758,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parisina Campestre _796,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Autozone Campestre _797,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Prol. Paseo de Montejo x 35 _757,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Bajaj Campestre _798,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Prol. Paseo de Montejo x 13 _799,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Arbol _756,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Estación Fac. de Ingeniería UADY_2027,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Aeropuerto_2245,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Aeropuerto_2240,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Nueva Mulsay_01_2806,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Sambulá_01_2810,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Sambulá_01_2805,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Nueva Mulsay_02_2809,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero IE-TRAM (Va y Ven): Mayapán_2789,No especificado,No especificado,bus_stop,platform,Mobility ADO,Ie-tram,yes,yes,yes,31,31050
+Paradero IE-TRAM (Va y Ven): Circuito Colonias Oriente_2788,No especificado,No especificado,bus_stop,platform,Mobilty ADO,Ie-Tram,yes,yes,yes,31,31050
+Paradero IE-TRAM (Va y Ven): Circuito Colonias Oriente_2783,4,No especificado,bus_stop,platform,Mobilty ADO,Ie-Tram,yes,yes,yes,31,31050
+Paradero IE-TRAM (Va y Ven): Mayapán_2782,No especificado,No especificado,bus_stop,platform,Mobility ADO,Ie-tram,yes,yes,yes,31,31050
+Estación IE-TRAM: Fénix Hospitales_2781,1,No especificado,bus_stop,platform,Mobility ADO,Ie-Tram,yes,yes,yes,31,31050
+Estación IE-TRAM (Va y Ven): CETRAM Oriente_513,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero IE-TRAM (Va y Ven): Metropolitano Oriente_2777,No especificado,No especificado,bus_stop,platform,Mobilty ADO,Ie-tram,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven (Ie-Tram): Aviación_2239,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven (Ie-Tram): Aviación_2246,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: CONALEP 02_2522,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: CONALEP 02_2818,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Nva Sambulá_02 _2819,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Nva Sambulá_01 _2817,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Amp. NVA Mulsay_02_2820,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Amp. NVA Mulsay_01 _2816,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Jardín TUMBEN-LOL_02 _2821,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Jardín TUMBEN-LOL_01 _2815,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Parque San Marcial_01 _2814,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Parque San Marcial_02 _2822,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Centenario_02_2823,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram: Centenario_01 _2813,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tram (Va y Ven): Caidivy_1329,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,yes,No especificado,31,31050
+Paradero Va y Ven: C-61 x 72 Col. Centro _1492,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Centro Cultural Olimpo_2812,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Estación Va y Ven: Cetram Umán_1779,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven (Ie-Tram): Industrial_2241,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven (Ie-Tram): Industrial_2244,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Fiesta Americana_2105,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Secretaría de Gobernación _748,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-50 x 35 Fracc. La Huerta _745,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Pérez Ponce_744,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,yes,No especificado,No especificado,31,31050
+Paradero Va y Ven: Rectoria Villa Guadalupe _874,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-42 x 75 Col. Montes de Amé _873,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-40 x 73 Col. Montes de Ame _872,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-67 x 38 Col. Montes de Ame _871,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-32 x 67 Col. Montes de Amé _870,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-28 x 63 Col. Ampliación Sodzil _869,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Super Akí San Angelo _868,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-39 x 18 Col. Montes de Amé _867,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-14 x 67 Col. Montes de Amé _866,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-29 x 36-A San Ramón Norte _865,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-73 x 22 Col. Montes de Amé _864,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Escuela Primaria Elda M. Campos Navarrete _863,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-36 x 73 Montes de Amé _862,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Sears Gran Plaza _860,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Gran Plaza_861,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-52 x Av. Perez Ponce Col. Centro _676,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-52 x 37 Fracc. La Huerta _675,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Harinera Bola Roja _674,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-52 x 43 Col. Centro _673,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Gran Corredor Turistico-Gastronomico _672,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-52 x 51 Col. Centro _671,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Policia Municipal _670,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-4 x 19 Fracc. Paseos de Vergel_630,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 54 Col. Centro_533,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 50 Col. Centro_532,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 1º de Mayo Col. Centro_531,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 38 Col.Centro_530,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 32 Col.Centro_529,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 24 Col.Centro_528,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 24 Col.Centro_527,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 14 Col.Cortes Sarmiento_526,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-65 x 8 Col.Cortes sarmiento_525,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Quetzalcoatl x 18_523,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Quetzalcoatl x 12_522,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Cruz Roja Oriente_521,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Bodega Aurrera Quetzalcóatl_520,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-24 x 25 Col. Nueva Chichen Itza_491,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-8-B x 15-B Fracc. Vergel 65_634,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-8-B x 15-H Col. San Antonio Kaua_618,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parroquia Santa María Goretti_617,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-8-B x 25-A Fracc. Vergel III CTM_616,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-6-D x 25-B Fracc. Vergel IV_633,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Jardín de Niños Laura Riojas de Colosio_632,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: JAPAY Pozo San Pablo Oriente_631,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-19-A x 4 Fracc. Paseos de Vergel_629,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-4-B x 19-A Fracc. Paseos de Vergel_628,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-4 x 25-B Fracc. Vergel IV_627,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque La Zarigueya C-25_626,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-8-A-1 x 25-B Fracc. Vergel III CTM_625,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Bodas de Plata_624,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-8-B x 15-H Col. San Antonio Kaua_623,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-8-A x 15-C Fracc. Vergel 65_622,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Bodega Aurrera Quetzalcóatl_490,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Cruz Roja Oriente_489,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Quetzalcoatl x 10-C_488,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Quetzalcoatl x 12_487,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-63-C x 10 Col. Cortes Sarmiento_484,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque de los Enamorados_483,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Los Mangos_482,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-63 x 30 Col. Centro_481,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-63 x 36 Col. Centro_480,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-63 x 40 Col. Centro_479,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-63 x Av. 1o. De Mayo Col. Centro_478,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Ie-Tramn: Palacio de la Música_2824,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven ( Ie-Tram): Facultad de Odontología UADY_1356,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Paseo de las Fuentes_1408,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Paseo de las Fuentes_1365,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-59-A x 84 Col. Centro_1495,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-61 x 76 Col. Centro_1493,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: The Home Depot Canek_1405,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Canek_1404,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Corralón Canek_1403,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Jacinto Canek x 140 Fracc. Yucalpetèn_1402,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Carl's Jr. Ciudad Caucel_1399,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. 59 x Av. San Pedro Fracc. La Ciudadela_1398,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-62 x 25 Fracc. Ciudad Caucel_1523,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-62 x 37 Fracc. Ciudad Caucel_1522,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-60 x 59 Fracc. Ciudad Caucel_1520,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Parque Arqueo-Botánico Anikabil_1519,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-60 x 83 Fracc. Ciudad Caucel_1518,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-60 x 87 Fracc. Ciudad Caucel_1501,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-60 x 71 Fracc. Ciudad Caucel_1500,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-60 x 57 Fracc. Ciudad Caucel_1499,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-62 x 39-A Fracc. Pedregales_1498,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Pollo Brujo C-62 Ciudad Caucel_1497,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-62 x 27 Fracc. Ciudad Caucel_1496,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. 59 x Av. Gran Santa Fé Fracc. Gran Santa Fé_1372,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Carl's Jr. Ciudad Caucel_1371,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av Jacinto Canek x 134-A_1368,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Corralón Canek_1367,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Canek_1339,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza Paseo Canek_1338,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: The Home Depot Canek_1337,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Atlantida_1335,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: UPP_1407,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Jacinto Canek x Circuito Colonias_1349,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: UPP_1366,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-64-A x 97 Fracc. Ciudad Caucel_1514,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-64 x 87 Fracc. Ciudad Caucel_1513,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-64-A x 73 Fracc. Ciudad Caucel_1512,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Esc Sec N° 15 Sara Molina Font_1511,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Esc Sec Nº 15 Sara Molina Font C-59 Ciudad Caucel_1510,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-59 x Glorieta Central Ciudad Caucel_1509,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Bodega Aurrera Ciudad Caucel_1441,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Bodega Aurrera Ciudad Caucel_1416,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-59 x Glorieta Central Ciudad Caucel_1508,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Esc Sec N° 15 Sara Molina Font_1507,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-64-A x 67 Fracc. Ciudad Caucel_1506,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-64-A x 79 Fracc. Ciudad Caucel_1505,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-105 x 64 Fracc. Ciudad Caucel_1515,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-107 x 64 Fracc. Ciudad Caucel_1503,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-49-A x 62 Fracc. Ciudad Caucel_1521,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Parada Va y Ven: Calle 54 x89 y 89A Centro,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Centros de Estudios CTM,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Cupules x 22,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Hospital Juárez,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Atlantida,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Walmart Pensiones C-60,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Fidel Velázquez x 14,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-14 x 25-B Benito Juárez Oriente,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Macroplaza,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Plaza fiesta_2153,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Galletera DONDÉ,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-18 x 23 Col. Yucatán_1205,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-22 x 23 Col. Yucatán_1118,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-22 x Circuito Colonias Col. Yucatán_1189,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: C-15 x 20 Col. Yucatán_1204,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: R79 C-58 x 63 y 65 Col. Centro_2739,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: IMSS No. 52_1215,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Centro de Servicios Yucatán SSP_1050,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Centro de Servicios Yucatán SSP_1084,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Glorieta Siglo XXI_1049,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Glorieta Siglo XXI_1085,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Suites Mérida_1048,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Suites Mérida_1086,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Polifuncional IDEY_889,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Circuito Colonias_941,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Yucatán x 13 _2151,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+Paradero Va y Ven: Av. Yucatán x 60 _2188,No especificado,No especificado,bus_stop,platform,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050
+No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,No especificado,31,31050

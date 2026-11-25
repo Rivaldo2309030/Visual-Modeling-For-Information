@@ -1,0 +1,191 @@
+osm_id,highway,crossing,traffic_signals_direction,sound,vibration,button_operated,nombre_interseccion,latitud,longitud,cve_mun_geo,cvegeo_ageb,id_colonia,colonia,cve_ent,cve_mun
+287021104,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.961257,-89.641895,31050,3105000010489,348.0,"COL. SAMBULA, MERIDA",31,31050
+287136660,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.968679,-89.622802,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+287136734,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.963511,-89.623809,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+287137221,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.966621,-89.624441,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+287139136,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.962331,-89.641649,31050,3105000010489,1.0,"COL. CENTRO, MERIDA",31,31050
+287139288,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.989145,-89.621931,31050,3105000010224,1.0,"COL. CENTRO, MERIDA",31,31050
+287651447,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.970911,-89.622388,31050,3105000010455,1.0,"COL. CENTRO, MERIDA",31,31050
+287654174,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.969747,-89.615792,31050,3105000010455,1.0,"COL. CENTRO, MERIDA",31,31050
+287654175,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.962115,-89.617594,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+287661690,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.965203,-89.641469,31050,3105000010489,1.0,"COL. CENTRO, MERIDA",31,31050
+287663257,traffic_signals,unspecified,backward,no,no,unspecified,No especificado,20.984489,-89.612025,31050,3105000015210,231.0,"COL. JESUS CARRANZA, MERIDA",31,31050
+287667164,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.938176,-89.619639,31050,3105000015329,65.0,"COL. DOLORES OTERO, MERIDA",31,31050
+287671411,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.983491,-89.639429,31050,3105000010309,209.0,"COL. GARCIA GINERES, MERIDA",31,31050
+287686116,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.944474,-89.627938,31050,3105000010671,1.0,"COL. CENTRO, MERIDA",31,31050
+287697151,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.026294,-89.624678,31050,3105000011453,650.0,"FRACC. GONZALO GUERRERO, MERIDA",31,31050
+287826552,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.970701,-89.621132,31050,3105000010455,1.0,"COL. CENTRO, MERIDA",31,31050
+287830781,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.961363,-89.627112,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+287830802,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.961267,-89.62554,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+289678340,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.970837,-89.64086,31050,3105000010421,1.0,"COL. CENTRO, MERIDA",31,31050
+289679547,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.948995,-89.649581,31050,310500001306A,307.0,"COL. OBRERA, MERIDA",31,31050
+289685904,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.041404,-89.629077,31050,3105000014566,341.0,"COL. REVOLUCION, MERIDA",31,31050
+292283904,traffic_signals,traffic_signals,No especificado,no,no,unspecified,No especificado,20.981183,-89.618407,31050,3105000015225,1.0,"COL. CENTRO, MERIDA",31,31050
+292284657,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.026388,-89.624577,31050,3105000011453,650.0,"FRACC. GONZALO GUERRERO, MERIDA",31,31050
+292285918,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.986745,-89.624351,31050,3105000010224,1.0,"COL. CENTRO, MERIDA",31,31050
+292285946,traffic_signals,traffic_signals,No especificado,no,no,unspecified,No especificado,20.981196,-89.618501,31050,3105000010328,1.0,"COL. CENTRO, MERIDA",31,31050
+292285954,traffic_signals,traffic_signals,No especificado,no,no,unspecified,No especificado,20.981762,-89.618296,31050,3105000015225,1.0,"COL. CENTRO, MERIDA",31,31050
+297860865,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.968002,-89.625769,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+297861993,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.986094,-89.617594,31050,3105000010224,1.0,"COL. CENTRO, MERIDA",31,31050
+297862024,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.98572,-89.617677,31050,3105000010224,1.0,"COL. CENTRO, MERIDA",31,31050
+297863305,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.966197,-89.622057,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+305708321,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.94912,-89.649604,31050,310500001306A,300.0,"COL. NUEVA SAMBULA, MERIDA",31,31050
+315232529,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.962922,-89.629279,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+315233877,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.964141,-89.618321,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+315233884,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.961384,-89.619042,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+315233886,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.965442,-89.618038,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+315233889,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.969945,-89.617024,31050,3105000010455,1.0,"COL. CENTRO, MERIDA",31,31050
+315233936,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.964735,-89.621081,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+315233937,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.965963,-89.620812,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+317656544,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.986952,-89.638933,31050,3105000010281,209.0,"COL. GARCIA GINERES, MERIDA",31,31050
+317656636,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.988011,-89.633611,31050,3105000014091,209.0,"COL. GARCIA GINERES, MERIDA",31,31050
+317734005,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.034877,-89.654434,31050,3105000013905,110.0,"FRACC. FRANCISCO DE MONTEJO II, MERIDA",31,31050
+317734720,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.997976,-89.621459,31050,3105000012409,36.0,"COL. BUENAVISTA, MERIDA",31,31050
+317750377,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.997858,-89.621541,31050,310500001249A,59.0,"COL. CHUBURNA DE HIDALGO, MERIDA",31,31050
+324566561,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.961078,-89.617933,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+324566662,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.963926,-89.617139,31050,3105000010525,1.0,"COL. CENTRO, MERIDA",31,31050
+324566665,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.964398,-89.619544,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+324568808,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.937986,-89.628837,31050,3105000010718,63.0,"COL. DELIO MORENO CANTON, MERIDA",31,31050
+325167538,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.959776,-89.62453,31050,3105000010629,1.0,"COL. CENTRO, MERIDA",31,31050
+325167591,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.960237,-89.627342,31050,3105000010614,1.0,"COL. CENTRO, MERIDA",31,31050
+325167731,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.961114,-89.624281,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+325183626,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.986403,-89.621859,31050,3105000010224,1.0,"COL. CENTRO, MERIDA",31,31050
+325184312,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.993818,-89.628396,31050,3105000011504,426.0,"COL. YUCATAN, MERIDA",31,31050
+325185747,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.987452,-89.619642,31050,3105000010224,1.0,"COL. CENTRO, MERIDA",31,31050
+327270484,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.002622,-89.628728,31050,3105000012428,310.0,"FRACC. PEDREGALES DE TANLUM, MERIDA",31,31050
+327271088,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.003152,-89.622338,31050,3105000012396,96.0,"FRACC. CAMPESTRE, MERIDA",31,31050
+327272575,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.010912,-89.608992,31050,3105000014833,141.0,"COL. MEXICO NORTE, MERIDA",31,31050
+327272624,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.016399,-89.60799,31050,3105000014833,141.0,"COL. MEXICO NORTE, MERIDA",31,31050
+327285900,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.998069,-89.611429,31050,3105000012362,269.0,"COL. MEXICO, MERIDA",31,31050
+327287448,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.99775,-89.61005,31050,3105000012362,269.0,"COL. MEXICO, MERIDA",31,31050
+348201222,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.96657,-89.630144,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+348201228,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.96498,-89.622292,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+348201255,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.963584,-89.625073,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+348201342,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.963081,-89.630614,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+356404944,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.0177,-89.624825,31050,3105000011468,23.0,"COL. AMPLIACION PLAN DE AYALA, MERIDA",31,31050
+356405065,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.017747,-89.625005,31050,3105000016488,77.0,"COL. FELIPE CARRILLO PUERTO, MERIDA",31,31050
+356409606,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.014851,-89.624504,31050,3105000016488,77.0,"COL. FELIPE CARRILLO PUERTO, MERIDA",31,31050
+356409660,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.015569,-89.632006,31050,3105000016473,59.0,"COL. CHUBURNA DE HIDALGO, MERIDA",31,31050
+356409861,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.01103,-89.623851,31050,3105000012413,59.0,"COL. CHUBURNA DE HIDALGO, MERIDA",31,31050
+356409897,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.011767,-89.632065,31050,3105000012413,59.0,"COL. CHUBURNA DE HIDALGO, MERIDA",31,31050
+356411409,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.004125,-89.622692,31050,3105000012428,139.0,"FRACC. MALAGA, MERIDA",31,31050
+356414418,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.025076,-89.605371,31050,3105000011576,392.0,"COL. SAN RAMON NORTE, MERIDA",31,31050
+356414928,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.026009,-89.605152,31050,3105000011576,392.0,"COL. SAN RAMON NORTE, MERIDA",31,31050
+356936039,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.016927,-89.607078,31050,3105000014833,353.0,"COL. SAN ANTONIO CUCUL, MERIDA",31,31050
+416327345,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.017454,-89.633663,31050,3105000016473,59.0,"COL. CHUBURNA DE HIDALGO, MERIDA",31,31050
+416337833,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.006357,-89.630814,31050,3105000012413,59.0,"COL. CHUBURNA DE HIDALGO, MERIDA",31,31050
+443597422,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.04102,-89.628759,31050,3105000016492,19.0,"COL. AMPLIACION REVOLUCION, MERIDA",31,31050
+444882009,traffic_signals,traffic_signals,No especificado,no,no,unspecified,No especificado,20.981777,-89.618388,31050,3105000010224,1.0,"COL. CENTRO, MERIDA",31,31050
+444884413,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.986971,-89.639063,31050,3105000010281,209.0,"COL. GARCIA GINERES, MERIDA",31,31050
+517317102,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.967731,-89.624205,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+517317785,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.968508,-89.629587,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+517317803,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.967493,-89.623069,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+517317950,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.966859,-89.626013,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+517318284,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.966418,-89.623266,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+517318318,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.965225,-89.616808,31050,3105000010525,1.0,"COL. CENTRO, MERIDA",31,31050
+517318384,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.965674,-89.619274,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+517318438,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.967485,-89.629895,31050,3105000010506,1.0,"COL. CENTRO, MERIDA",31,31050
+517318519,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.968861,-89.62402,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+517318561,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.969089,-89.625544,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+517319014,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.969873,-89.630457,31050,3105000010436,1.0,"COL. CENTRO, MERIDA",31,31050
+517319043,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.969678,-89.629169,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+517319258,traffic_signals,unspecified,No especificado,no,no,no,No especificado,20.968708,-89.630888,31050,3105000010493,1.0,"COL. CENTRO, MERIDA",31,31050
+517320715,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.96999,-89.623801,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+517320786,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.970764,-89.627863,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+517320962,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.969621,-89.621368,31050,3105000010455,1.0,"COL. CENTRO, MERIDA",31,31050
+517320963,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.96981,-89.622601,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+517321177,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.966402,-89.616525,31050,3105000010525,1.0,"COL. CENTRO, MERIDA",31,31050
+517321424,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.965222,-89.623486,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+517331017,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.97525,-89.640239,31050,3105000010421,1.0,"COL. CENTRO, MERIDA",31,31050
+517331056,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.975312,-89.640357,31050,3105000010421,1.0,"COL. CENTRO, MERIDA",31,31050
+517331422,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.977998,-89.635646,31050,3105000010309,1.0,"COL. CENTRO, MERIDA",31,31050
+517331555,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.982211,-89.639574,31050,3105000010309,1.0,"COL. CENTRO, MERIDA",31,31050
+517331557,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.982187,-89.639441,31050,3105000010309,1.0,"COL. CENTRO, MERIDA",31,31050
+517332362,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.962339,-89.624019,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+533710822,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.058141,-89.642167,31050,3105000014903,645.0,"COL. DZITYA POLIGONO CHUBURNA, MERIDA",31,31050
+533713467,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.027055,-89.604785,31050,3105000016539,649.0,"FRACC. MONTEBELLO, MERIDA",31,31050
+537518965,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.025845,-89.594769,31050,3105000015600,649.0,"FRACC. MONTEBELLO, MERIDA",31,31050
+537518966,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.025853,-89.594864,31050,3105000014602,649.0,"FRACC. MONTEBELLO, MERIDA",31,31050
+811397431,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.004049,-89.610408,31050,3105000012377,269.0,"COL. MEXICO, MERIDA",31,31050
+813035918,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.99306,-89.616436,31050,3105000010169,219.0,"COL. ITZIMNA, MERIDA",31,31050
+823455578,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.932449,-89.67398,31050,3105000015390,48.0,"COL. CIUDAD INDUSTRIAL, MERIDA",31,31050
+823455662,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.932345,-89.674183,31050,3105000015386,48.0,"COL. CIUDAD INDUSTRIAL, MERIDA",31,31050
+823456062,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.937093,-89.668017,31050,310500001078A,48.0,"COL. CIUDAD INDUSTRIAL, MERIDA",31,31050
+828103914,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.965227,-89.641334,31050,3105000010489,1.0,"COL. CENTRO, MERIDA",31,31050
+828103932,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.961274,-89.641775,31050,3105000010489,1.0,"COL. CENTRO, MERIDA",31,31050
+828103935,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.962285,-89.641784,31050,3105000010489,1.0,"COL. CENTRO, MERIDA",31,31050
+828103960,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.966457,-89.641203,31050,3105000010489,1.0,"COL. CENTRO, MERIDA",31,31050
+828104004,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.966455,-89.641344,31050,3105000010489,1.0,"COL. CENTRO, MERIDA",31,31050
+830392084,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.036056,-89.602694,31050,3105000016543,649.0,"FRACC. MONTEBELLO, MERIDA",31,31050
+831351607,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.986113,-89.619769,31050,3105000010224,1.0,"COL. CENTRO, MERIDA",31,31050
+831384126,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.9848,-89.614135,31050,3105000015210,1.0,"COL. CENTRO, MERIDA",31,31050
+831384135,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.987101,-89.611468,31050,3105000015210,231.0,"COL. JESUS CARRANZA, MERIDA",31,31050
+831575353,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.938071,-89.619671,31050,3105000013159,46.0,"COL. CINCO COLONIAS, MERIDA",31,31050
+831621764,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.957582,-89.642658,31050,3105000010597,348.0,"COL. SAMBULA, MERIDA",31,31050
+831688709,traffic_signals,unspecified,backward,no,no,unspecified,No especificado,20.983468,-89.639297,31050,3105000010309,209.0,"COL. GARCIA GINERES, MERIDA",31,31050
+837978356,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.004033,-89.610309,31050,3105000012381,269.0,"COL. MEXICO, MERIDA",31,31050
+838852502,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980013,-89.626897,31050,3105000010313,1.0,"COL. CENTRO, MERIDA",31,31050
+1589058860,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.040823,-89.629005,31050,3105000014566,341.0,"COL. REVOLUCION, MERIDA",31,31050
+1729196352,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.932239,-89.673952,31050,310500001402A,48.0,"COL. CIUDAD INDUSTRIAL, MERIDA",31,31050
+2026802552,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.03596,-89.602818,31050,3105000015009,392.0,"COL. SAN RAMON NORTE, MERIDA",31,31050
+2028724230,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.011047,-89.623693,31050,3105000011468,314.0,"COL. PLAN DE AYALA, MERIDA",31,31050
+2028779191,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.026193,-89.624594,31050,3105000011453,650.0,"FRACC. GONZALO GUERRERO, MERIDA",31,31050
+2028873633,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.034995,-89.655051,31050,3105000016098,0.0,No especificado,31,31050
+2061052691,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.986755,-89.624426,31050,310500001021A,1.0,"COL. CENTRO, MERIDA",31,31050
+2118093271,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,21.026285,-89.624494,31050,3105000011453,650.0,"FRACC. GONZALO GUERRERO, MERIDA",31,31050
+2146030836,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.016515,-89.607896,31050,3105000011699,141.0,"COL. MEXICO NORTE, MERIDA",31,31050
+2540733163,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.033181,-89.655741,31050,3105000015526,0.0,No especificado,31,31050
+3731080068,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.033036,-89.655167,31050,3105000013746,110.0,"FRACC. FRANCISCO DE MONTEJO II, MERIDA",31,31050
+3782781860,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.937313,-89.69578,31050,3105000016740,0.0,No especificado,31,31050
+3813196713,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.97083,-89.640738,31050,3105000010489,1.0,"COL. CENTRO, MERIDA",31,31050
+3813320092,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.987149,-89.61156,31050,3105000015210,219.0,"COL. ITZIMNA, MERIDA",31,31050
+3970726693,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.975252,-89.640364,31050,3105000010421,1.0,"COL. CENTRO, MERIDA",31,31050
+5051164387,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.985697,-89.617548,31050,3105000015210,1.0,"COL. CENTRO, MERIDA",31,31050
+5051164397,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.98607,-89.617496,31050,3105000015210,1.0,"COL. CENTRO, MERIDA",31,31050
+5051745751,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.003024,-89.622514,31050,3105000012428,59.0,"COL. CHUBURNA DE HIDALGO, MERIDA",31,31050
+6226664528,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.02707,-89.604874,31050,3105000011576,392.0,"COL. SAN RAMON NORTE, MERIDA",31,31050
+6226702943,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.997993,-89.611517,31050,3105000012358,269.0,"COL. MEXICO, MERIDA",31,31050
+6229018108,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.025051,-89.605267,31050,3105000013939,353.0,"COL. SAN ANTONIO CUCUL, MERIDA",31,31050
+6381060464,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.010824,-89.609081,31050,3105000014848,141.0,"COL. MEXICO NORTE, MERIDA",31,31050
+6384024901,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.016896,-89.607168,31050,3105000011699,177.0,"FRACC. SAN RAMON, MERIDA",31,31050
+6453145541,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.99782,-89.60993,31050,3105000012362,269.0,"COL. MEXICO, MERIDA",31,31050
+8215153358,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980371,-89.601518,31050,3105000010262,260.0,"COL. MAXIMO ANCONA, MERIDA",31,31050
+8229079034,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.984765,-89.614144,31050,3105000015210,1.0,"COL. CENTRO, MERIDA",31,31050
+8238624140,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,21.025985,-89.605049,31050,3105000013939,353.0,"COL. SAN ANTONIO CUCUL, MERIDA",31,31050
+8238929442,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.939994,-89.596756,31050,3105000013002,283.0,"COL. MORELOS ORIENTE, MERIDA",31,31050
+8361317674,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.984416,-89.611314,31050,3105000014104,231.0,"COL. JESUS CARRANZA, MERIDA",31,31050
+8403740547,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.975202,-89.640246,31050,3105000010421,1.0,"COL. CENTRO, MERIDA",31,31050
+8433761273,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.939901,-89.596813,31050,3105000011665,347.0,"COL. SALVADOR ALVARADO SUR, MERIDA",31,31050
+11752771275,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.969766,-89.622562,31050,3105000010455,1.0,"COL. CENTRO, MERIDA",31,31050
+11758828148,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.96986,-89.622553,31050,3105000010455,1.0,"COL. CENTRO, MERIDA",31,31050
+11773909643,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.969861,-89.622625,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+11775466365,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.969784,-89.622661,31050,3105000010440,1.0,"COL. CENTRO, MERIDA",31,31050
+11874968643,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981791,-89.563611,31050,3105000012822,0.0,No especificado,31,31050
+11874968650,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.981769,-89.564085,31050,3105000012822,265.0,"COL. MELCHOR OCAMPO II, MERIDA",31,31050
+11874968652,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.981747,-89.563543,31050,3105000012822,0.0,No especificado,31,31050
+11874968658,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981728,-89.564092,31050,3105000012822,265.0,"COL. MELCHOR OCAMPO II, MERIDA",31,31050
+11874968659,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.981997,-89.563504,31050,310500001199A,0.0,No especificado,31,31050
+11874968664,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981991,-89.563951,31050,3105000015047,0.0,No especificado,31,31050
+11874968665,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981744,-89.563627,31050,3105000012822,0.0,No especificado,31,31050
+11874968666,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.98199,-89.564053,31050,3105000015047,0.0,No especificado,31,31050
+11959385710,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980339,-89.60245,31050,3105000010262,260.0,"COL. MAXIMO ANCONA, MERIDA",31,31050
+11967419595,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.971475,-89.640698,31050,3105000010421,1.0,"COL. CENTRO, MERIDA",31,31050
+12046749575,traffic_signals,unspecified,backward,no,no,unspecified,No especificado,20.987523,-89.611559,31050,3105000015210,219.0,"COL. ITZIMNA, MERIDA",31,31050
+12061031443,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.987928,-89.611488,31050,3105000010169,219.0,"COL. ITZIMNA, MERIDA",31,31050
+12088506478,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980665,-89.594474,31050,3105000010262,262.0,"COL. MAYAPAN, MERIDA",31,31050
+12088506484,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981176,-89.580904,31050,3105000011631,297.0,"COL. NUEVA PACABTUN, MERIDA",31,31050
+12088506488,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981419,-89.575344,31050,3105000015047,253.0,"COL. LOS REYES, MERIDA",31,31050
+12088506491,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.98156,-89.572102,31050,3105000015047,253.0,"COL. LOS REYES, MERIDA",31,31050
+12088506509,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980061,-89.608175,31050,3105000010347,469.0,"COL. FERROCARRILERA HECTOR VICTORIA AGUILAR, MERIDA",31,31050
+12088506510,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980118,-89.607083,31050,3105000010347,67.0,"FRACC. EL FENIX, MERIDA",31,31050
+12088506514,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980206,-89.604893,31050,3105000010347,67.0,"FRACC. EL FENIX, MERIDA",31,31050
+12088506516,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980357,-89.602273,31050,3105000010262,260.0,"COL. MAXIMO ANCONA, MERIDA",31,31050
+12088506535,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980535,-89.597345,31050,3105000010262,260.0,"COL. MAXIMO ANCONA, MERIDA",31,31050
+12088506569,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.980849,-89.589551,31050,3105000010262,262.0,"COL. MAYAPAN, MERIDA",31,31050
+12088506590,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981035,-89.585044,31050,3105000013021,256.0,"COL. AVILA CAMACHO, MERIDA",31,31050
+12088506645,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981875,-89.564069,31050,3105000015047,0.0,No especificado,31,31050
+12113426683,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.959915,-89.618229,31050,3105000010510,1.0,"COL. CENTRO, MERIDA",31,31050
+12284605577,traffic_signals,unspecified,forward,no,no,unspecified,No especificado,20.937244,-89.695911,31050,3105000016740,0.0,No especificado,31,31050
+12685282017,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981691,-89.612758,31050,3105000015225,205.0,"FRACC. SANTA CECILIA, MERIDA",31,31050
+12685282019,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.987127,-89.611592,31050,3105000015210,219.0,"COL. ITZIMNA, MERIDA",31,31050
+12685282025,traffic_signals,unspecified,No especificado,no,no,unspecified,No especificado,20.981272,-89.612853,31050,3105000015225,205.0,"FRACC. SANTA CECILIA, MERIDA",31,31050

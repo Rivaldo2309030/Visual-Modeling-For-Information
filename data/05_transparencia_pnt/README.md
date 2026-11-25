@@ -1,32 +1,15 @@
-# Vista 5: Voces en el Papel (PNT / Transparencia)
+# Subtema 5: Infraestructura Pública y Equipamiento Urbano Municipal
 
 ## 📌 Información del Módulo
-* **Subtema:** 5. Voces en el Papel (Peticiones Vecinales e Infraestructura Pública)
-* **Fuente Principal (Titular):** Plataforma Nacional de Transparencia (PNT / SISAI 2.0) & Transparencia Ayuntamiento de Mérida
-* **Responsable:** Elisabeth
+* **Subtema:** 5. Infraestructura Pública Municipal (Alumbrado, Mobiliario Peatonal y Capas de Obra Pública)
+* **Fuentes de Referencia:** Portales de Transparencia del Ayuntamiento de Mérida, Catálogo SIG de Obras Públicas y OpenStreetMap
+* **Responsable:** Rivaldo
 
 ---
 
-## 📖 Descripción del Módulo
-Gestión y seguimiento de solicitudes formales de información pública relativas a infraestructura peatonal, padrón de semáforos, fases de cruce y peticiones ciudadanas de seguridad vial ante la Secretaría de Seguridad Pública (SSP) y el Ayuntamiento de Mérida.
-
----
-
-## 🔒 Gobernanza de Datos y Protección de Datos Personales (LGPDPPSO)
-* **Anonimización Estricta:** Ningún registro contiene nombres, correos electrónicos, números telefónicos ni domicilios particulares de solicitantes.
-* **Trazabilidad:** Cada solicitud se procesa mediante identificadores de folio anonimizados (`PNT-...`) y clasificación temática exclusiva de infraestructura vial y movilidad.
-* **Procesamiento Automatizado:** Script disponible en [`scripts/process_transparencia_pnt.py`](../../scripts/process_transparencia_pnt.py).
-
----
-
-## 📂 Estructura de Subcarpetas de Datos (3 Fuentes):
-* **`01_fuente_origen_pnt/`**: Solicitudes de información pública anonimizadas procesadas desde la PNT y SISAI 2.0.
-* **`02_fuente_extra_datos_gob/`**: Datasets complementarios abiertos de infraestructura federal y estatal.
-* **`03_fuente_extra_denue/`**: Cruce con unidades económicas y equipamiento urbano (INEGI DENUE).
-
----
-
-## 📡 Pipeline de Ingesta & Data Lake
-* **Protocolo de Ingesta:** Carga normalizada hacia la zona Raw del Data Lake en `/raw/team_rivaldo/05_transparencia/`.
-* **Procesamiento:** Transformación mediante `scripts/process_transparencia_pnt.py` generando archivos estructurados JSON para la interfaz de visualización interactiva.
-
+## 🔒 Nota de Gobernanza y Acceso Técnico
+1. **Exclusión de Solicitudes PAE / PNT:** Por acuerdo del equipo, se descartó el uso de solicitudes pendientes ante PNT/PAE para trabajar exclusivamente con datos públicos abiertos y verificables.
+2. **Restricción por CAPTCHA en descarga automatizada:** Los portales municipales `infraestructuraAbierta.php`, `infociudadana.php` y `contrato_umap.php` presentan protección activa **Radware Captcha Page** ante scripts automatizados. Respetando los controles del sitio, el pipeline automatizado consolida tres insumos públicos abiertos verificados:
+   - **`merida_equipamiento_alumbrado_peatonal_osm.geojson` (562 registros en `EPSG:4326`):** Luminarias viales (`street_lamp`), bancas (`bench`), refugios peatonales (`shelter`) y paradas dentro del límite municipal de Mérida (`31050`), cruzadas por `cvegeo` de AGEB.
+   - **`merida_catalogo_capas_infraestructura_municipal.csv` (66 capas SIG):** Subconjunto oficial de capas de Obras Públicas, Vialidad, Alumbrado, Drenaje Pluvial y Transporte del GeoPortal de Mérida.
+   - **`merida_actividad_urbana_municipal_resumen.csv` (38 filas):** Serie histórica anual (2015–2026) de licencias de funcionamiento y actividad urbana municipal en el Centro de Mérida.

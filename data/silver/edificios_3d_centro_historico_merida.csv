@@ -1,0 +1,106 @@
+osm_id,nombre,uso_edificio,niveles_osm,altura_estimada_m,cota_terreno_inegi_msnm,cve_ent,cve_mun
+31296521,Catedral de San Ildefonso,church,0.0,5.2,8.46,31,31050
+161291004,Teatro Peón Contreras,yes,0.0,5.2,7.81,31,31050
+197058107,I. N. P. El Divino Salvador,church,0.0,5.2,8.43,31,31050
+197059195,Plaza de la Tecnología,retail,0.0,5.2,8.25,31,31050
+322979758,Plaza Diamante Mérida,retail,0.0,5.2,8.49,31,31050
+377814445,Armando Manzanero,yes,0.0,5.2,8.25,31,31050
+377923809,Pemex,roof,0.0,5.2,8.27,31,31050
+393012918,"Museo de la ciudad de Mérida, Antiguo Edifico de Correos",yes,3.0,10.8,8.48,31,31050
+454524556,Gran Chapur,yes,0.0,5.2,8.18,31,31050
+454524557,Cuidado con el Perro,yes,0.0,5.2,8.25,31,31050
+474179410,No especificado,hotel,0.0,5.2,8.29,31,31050
+474179412,No especificado,hotel,0.0,5.2,8.27,31,31050
+474179414,No especificado,hotel,0.0,5.2,8.15,31,31050
+474179415,No especificado,hotel,0.0,5.2,8.17,31,31050
+534614774,Palacio de la Música,yes,0.0,5.2,7.92,31,31050
+551667895,No especificado,yes,0.0,5.2,8.28,31,31050
+551667902,No especificado,yes,0.0,5.2,8.01,31,31050
+551667903,No especificado,yes,0.0,5.2,7.9,31,31050
+699554845,Café La Habana,yes,0.0,5.2,8.24,31,31050
+883871120,Pemex,roof,0.0,5.2,8.61,31,31050
+885508165,Del Sol,yes,0.0,5.2,8.52,31,31050
+896760922,No especificado,roof,0.0,5.2,8.27,31,31050
+896760923,No especificado,roof,0.0,5.2,8.24,31,31050
+896760924,No especificado,roof,0.0,5.2,8.25,31,31050
+896760926,No especificado,roof,0.0,5.2,8.15,31,31050
+1043498104,No especificado,hotel,0.0,5.2,8.22,31,31050
+1043500886,No especificado,hotel,0.0,5.2,8.25,31,31050
+1131038702,Colegio San Agustín,school,3.0,10.8,8.04,31,31050
+1152562031,Gran Hotel,yes,0.0,5.2,7.99,31,31050
+1152562033,Iglesia y Rectoría El Jesús de la Tercera Orden,yes,0.0,5.2,7.6,31,31050
+1248815306,Hotel Medio Mundo,yes,0.0,5.2,8.07,31,31050
+1248815307,No especificado,yes,0.0,5.2,8.07,31,31050
+1248815308,No especificado,retail,0.0,5.2,8.1,31,31050
+1248929347,No especificado,yes,0.0,5.2,8.7,31,31050
+1248929348,No especificado,yes,0.0,5.2,8.42,31,31050
+1248929349,No especificado,yes,0.0,5.2,8.58,31,31050
+1248929350,No especificado,yes,0.0,5.2,8.46,31,31050
+1248929351,Elektra,yes,0.0,5.2,8.3,31,31050
+1248929352,No especificado,yes,0.0,5.2,8.27,31,31050
+1248929353,No especificado,yes,0.0,5.2,8.41,31,31050
+1248929354,Teatro Daniel Ayala,yes,0.0,5.2,7.98,31,31050
+1248929355,No especificado,yes,0.0,5.2,8.14,31,31050
+1270658975,No especificado,roof,0.0,5.2,8.5,31,31050
+1270658978,Archivo General del Arzobispado,yes,0.0,5.2,8.18,31,31050
+1270658979,No especificado,yes,0.0,5.2,8.2,31,31050
+1270658980,Capilla de El Divino Maestro,yes,0.0,5.2,8.16,31,31050
+1270658981,Templo San Juan de Dios,yes,0.0,5.2,7.89,31,31050
+1270658982,No especificado,yes,0.0,5.2,7.96,31,31050
+1270658983,Gorditas Doña Tora,yes,0.0,5.2,8.16,31,31050
+1270658984,Tours,yes,0.0,5.2,8.25,31,31050
+1270658985,Hotel La Catedral,yes,0.0,5.2,8.28,31,31050
+1270658986,Oxxo,yes,0.0,5.2,8.29,31,31050
+1270658987,Canto Morell,yes,0.0,5.2,8.16,31,31050
+1270658991,Librería Buena Prensa,yes,0.0,5.2,7.75,31,31050
+1270658992,No especificado,yes,0.0,5.2,7.96,31,31050
+1272335792,Plaza Internacional,yes,0.0,5.2,8.11,31,31050
+1275502371,Mercado Garcia Rejón,yes,0.0,5.2,8.17,31,31050
+1282434224,No especificado,yes,0.0,5.2,7.95,31,31050
+1298938504,No especificado,yes,0.0,5.2,8.01,31,31050
+1298999096,Columna de la Tercera Orden,yes,0.0,5.2,7.8,31,31050
+1299017083,Pinacoteca de Mérida Juan Gamboa Guzmán,yes,0.0,5.2,7.68,31,31050
+1299017084,No especificado,yes,0.0,5.2,7.8,31,31050
+1299165239,Antigua Entrada al Parque Cepeda Peraza,yes,0.0,5.2,7.81,31,31050
+1299165240,Antigua Entrada al Parque Cepeda Peraza,yes,0.0,5.2,7.77,31,31050
+1299165241,Antigua Entrada al Parque Cepeda Peraza,yes,0.0,5.2,7.83,31,31050
+1299165242,Antigua Entrada al Parque Cepeda Peraza,yes,0.0,5.2,7.88,31,31050
+1299189422,Iglesia Santa Lucía,yes,0.0,5.2,7.74,31,31050
+1299189437,No especificado,yes,0.0,5.2,7.67,31,31050
+1299189444,No especificado,yes,0.0,5.2,7.62,31,31050
+1299253496,No especificado,yes,0.0,5.2,7.96,31,31050
+1299253497,No especificado,roof,0.0,5.2,7.97,31,31050
+1299253498,No especificado,yes,0.0,5.2,7.95,31,31050
+1299271974,No especificado,yes,0.0,30.0,8.56,31,31050
+1304377700,No especificado,roof,0.0,5.2,8.72,31,31050
+1304377701,No especificado,yes,0.0,5.2,8.49,31,31050
+1306944129,No especificado,yes,0.0,5.2,8.49,31,31050
+1306944132,Palacio Municipal de Mérida,yes,2.0,7.2,8.59,31,31050
+1306944135,Planetario Arcadio Poveda Ricalde,yes,0.0,5.2,8.86,31,31050
+1306944136,No especificado,yes,0.0,5.2,8.83,31,31050
+1306944143,No especificado,yes,0.0,5.2,8.49,31,31050
+1311162750,No especificado,roof,0.0,5.2,8.25,31,31050
+1311162751,No especificado,roof,0.0,5.2,8.23,31,31050
+1311162752,No especificado,yes,0.0,5.2,8.28,31,31050
+1311162753,No especificado,yes,0.0,5.2,8.27,31,31050
+1311162755,No especificado,roof,0.0,5.2,8.25,31,31050
+1311162756,No especificado,roof,0.0,5.2,8.2,31,31050
+1311162757,No especificado,yes,0.0,5.2,8.24,31,31050
+1323704592,No especificado,yes,0.0,5.2,8.25,31,31050
+1323704593,PIzza Messina's Centro,yes,0.0,5.2,8.19,31,31050
+1323704594,Educación y Patria,school,0.0,5.2,8.3,31,31050
+1369002030,No especificado,commercial,2.0,6.0,8.76,31,31050
+1369002033,No especificado,yes,0.0,5.2,8.32,31,31050
+1369002034,No especificado,yes,0.0,5.2,8.27,31,31050
+1369002035,No especificado,yes,0.0,5.2,8.59,31,31050
+1376340990,"Biblíoteca Central Estatal ""Manuel Cepeda Peraza""",yes,0.0,5.2,8.19,31,31050
+1390261668,Casa del Lagarto,yes,0.0,5.2,8.6,31,31050
+1411233449,No especificado,hospital,0.0,5.2,8.26,31,31050
+1421421687,Tecnomundo,retail,0.0,5.2,8.37,31,31050
+1422674194,No especificado,retail,0.0,5.2,8.49,31,31050
+1422674195,Banco Santander,retail,0.0,5.2,8.44,31,31050
+1422674197,No especificado,roof,0.0,5.2,8.5,31,31050
+1424440712,Hotel Gran Centenario,yes,0.0,5.2,8.32,31,31050
+1424440713,No especificado,yes,0.0,5.2,8.28,31,31050
+1424440714,No especificado,roof,0.0,5.2,7.94,31,31050
+1451719098,No especificado,yes,0.0,5.2,8.26,31,31050

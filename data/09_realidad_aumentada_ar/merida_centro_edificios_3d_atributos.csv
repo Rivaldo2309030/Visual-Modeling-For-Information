@@ -1,0 +1,106 @@
+osm_id,nombre,uso_edificio,niveles_osm,altura_estimada_m,cota_terreno_inegi_msnm
+31296521,Catedral de San Ildefonso,church,,5.2,8.46
+161291004,Teatro Peón Contreras,yes,,5.2,7.81
+197058107,I. N. P. El Divino Salvador,church,,5.2,8.43
+197059195,Plaza de la Tecnología,retail,,5.2,8.25
+322979758,Plaza Diamante Mérida,retail,,5.2,8.49
+377814445,Armando Manzanero,yes,,5.2,8.25
+377923809,Pemex,roof,,5.2,8.27
+393012918,"Museo de la ciudad de Mérida, Antiguo Edifico de Correos",yes,3,10.8,8.48
+454524556,Gran Chapur,yes,,5.2,8.18
+454524557,Cuidado con el Perro,yes,,5.2,8.25
+474179410,,hotel,,5.2,8.29
+474179412,,hotel,,5.2,8.27
+474179414,,hotel,,5.2,8.15
+474179415,,hotel,,5.2,8.17
+534614774,Palacio de la Música,yes,,5.2,7.92
+551667895,,yes,,5.2,8.28
+551667902,,yes,,5.2,8.01
+551667903,,yes,,5.2,7.9
+699554845,Café La Habana,yes,,5.2,8.24
+883871120,Pemex,roof,,5.2,8.61
+885508165,Del Sol,yes,,5.2,8.52
+896760922,,roof,,5.2,8.27
+896760923,,roof,,5.2,8.24
+896760924,,roof,,5.2,8.25
+896760926,,roof,,5.2,8.15
+1043498104,,hotel,,5.2,8.22
+1043500886,,hotel,,5.2,8.25
+1131038702,Colegio San Agustín,school,3,10.8,8.04
+1152562031,Gran Hotel,yes,,5.2,7.99
+1152562033,Iglesia y Rectoría El Jesús de la Tercera Orden,yes,,5.2,7.6
+1248815306,Hotel Medio Mundo,yes,,5.2,8.07
+1248815307,,yes,,5.2,8.07
+1248815308,,retail,,5.2,8.1
+1248929347,,yes,,5.2,8.7
+1248929348,,yes,,5.2,8.42
+1248929349,,yes,,5.2,8.58
+1248929350,,yes,,5.2,8.46
+1248929351,Elektra,yes,,5.2,8.3
+1248929352,,yes,,5.2,8.27
+1248929353,,yes,,5.2,8.41
+1248929354,Teatro Daniel Ayala,yes,,5.2,7.98
+1248929355,,yes,,5.2,8.14
+1270658975,,roof,,5.2,8.5
+1270658978,Archivo General del Arzobispado,yes,,5.2,8.18
+1270658979,,yes,,5.2,8.2
+1270658980,Capilla de El Divino Maestro,yes,,5.2,8.16
+1270658981,Templo San Juan de Dios,yes,,5.2,7.89
+1270658982,,yes,,5.2,7.96
+1270658983,Gorditas Doña Tora,yes,,5.2,8.16
+1270658984,Tours,yes,,5.2,8.25
+1270658985,Hotel La Catedral,yes,,5.2,8.28
+1270658986,Oxxo,yes,,5.2,8.29
+1270658987,Canto Morell,yes,,5.2,8.16
+1270658991,Librería Buena Prensa,yes,,5.2,7.75
+1270658992,,yes,,5.2,7.96
+1272335792,Plaza Internacional,yes,,5.2,8.11
+1275502371,Mercado Garcia Rejón,yes,,5.2,8.17
+1282434224,,yes,,5.2,7.95
+1298938504,,yes,,5.2,8.01
+1298999096,Columna de la Tercera Orden,yes,,5.2,7.8
+1299017083,Pinacoteca de Mérida Juan Gamboa Guzmán,yes,,5.2,7.68
+1299017084,,yes,,5.2,7.8
+1299165239,Antigua Entrada al Parque Cepeda Peraza,yes,,5.2,7.81
+1299165240,Antigua Entrada al Parque Cepeda Peraza,yes,,5.2,7.77
+1299165241,Antigua Entrada al Parque Cepeda Peraza,yes,,5.2,7.83
+1299165242,Antigua Entrada al Parque Cepeda Peraza,yes,,5.2,7.88
+1299189422,Iglesia Santa Lucía,yes,,5.2,7.74
+1299189437,,yes,,5.2,7.67
+1299189444,,yes,,5.2,7.62
+1299253496,,yes,,5.2,7.96
+1299253497,,roof,,5.2,7.97
+1299253498,,yes,,5.2,7.95
+1299271974,,yes,,30.0,8.56
+1304377700,,roof,,5.2,8.72
+1304377701,,yes,,5.2,8.49
+1306944129,,yes,,5.2,8.49
+1306944132,Palacio Municipal de Mérida,yes,2,7.2,8.59
+1306944135,Planetario Arcadio Poveda Ricalde,yes,,5.2,8.86
+1306944136,,yes,,5.2,8.83
+1306944143,,yes,,5.2,8.49
+1311162750,,roof,,5.2,8.25
+1311162751,,roof,,5.2,8.23
+1311162752,,yes,,5.2,8.28
+1311162753,,yes,,5.2,8.27
+1311162755,,roof,,5.2,8.25
+1311162756,,roof,,5.2,8.2
+1311162757,,yes,,5.2,8.24
+1323704592,,yes,,5.2,8.25
+1323704593,PIzza Messina's Centro,yes,,5.2,8.19
+1323704594,Educación y Patria,school,,5.2,8.3
+1369002030,,commercial,2,6.0,8.76
+1369002033,,yes,,5.2,8.32
+1369002034,,yes,,5.2,8.27
+1369002035,,yes,,5.2,8.59
+1376340990,"Biblíoteca Central Estatal ""Manuel Cepeda Peraza""",yes,,5.2,8.19
+1390261668,Casa del Lagarto,yes,,5.2,8.6
+1411233449,,hospital,,5.2,8.26
+1421421687,Tecnomundo,retail,,5.2,8.37
+1422674194,,retail,,5.2,8.49
+1422674195,Banco Santander,retail,,5.2,8.44
+1422674197,,roof,,5.2,8.5
+1424440712,Hotel Gran Centenario,yes,,5.2,8.32
+1424440713,,yes,,5.2,8.28
+1424440714,,roof,,5.2,7.94
+1451719098,,yes,,5.2,8.26

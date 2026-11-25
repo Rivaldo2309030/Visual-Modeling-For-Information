@@ -1,73 +1,74 @@
-# Data Storytelling: Sentir la Calle
-### *Un viaje interactivo desde la seguridad, el confort y la infraestructura peatonal en Mérida*
+# Data Storytelling & Data Mart 04: Sentir la Calle
+### *Seguridad vial, accesibilidad e infraestructura peatonal en Mérida, Yucatán*
 
 > 🌐 **Plataforma Web Interactiva (GitHub Pages):**  
-> 👉 **[https://rivaldo2309030.github.io/Visual-Modeling-For-Information/](https://rivaldo2309030.github.io/Visual-Modeling-For-Information/)**
+> 👉 **[https://rivaldo2309030.github.io/Visual-Modeling-For-Information/](https://rivaldo2309030.github.io/Visual-Modeling-For-Information/)**  
+> 📦 **Data Mart 04 (Listo para Supabase / PostGIS & BI):** [`datamart/`](datamart/README.md)  
+> 📋 **Catálogo de Activos y Calidad (29 archivos verificados con SHA-256):** [`datamart/CATALOGO_ACTIVOS_Y_CALIDAD.csv`](datamart/CATALOGO_ACTIVOS_Y_CALIDAD.csv)
 
 ---
 
-## 🌟 Descripción General del Proyecto
+## 🌟 Resumen Ejecutivo y Estado de Datos Reales
 
-Este proyecto es una plataforma interactiva de **Data Storytelling y Visualización Avanzada de Datos** centrada en la accesibilidad, seguridad vial, confort térmico e infraestructura del peatón en Mérida, Yucatán.
+Este repositorio consolida las fuentes abiertas, capas geoespaciales (`EPSG:4326`), activos 3D (`.ply`, `.glb`, `CityJSON v2.0`), scripts ETL reproducibles y el **Data Mart 04** del Equipo 4 (*Rivaldo, Elisabeth y Christopher*).
 
-La plataforma se estructura en **9 Vistas / Pestañas Temáticas de Visualización Interactiva**:
-- **7 Vistas guiadas por Fuentes de Datos Principales**, analizando datasets específicos enriquecidos por fuentes secundarias.
-- **2 Módulos Tecnológicos e Inmersivos** dedicados a la volumetría 3D y la síntesis urbana: **LiDAR 3D** (escaneo de elevación y ángulos ciegos) y **Realidad Aumentada (AR)** (proyección holográfica WebXR de rediseño urbano basada en CityJSON Rotterdam y datasets 3D urbanos).
+Todos los archivos de prueba (`sample_*`) fueron eliminados y sustituidos por **29 activos de datos 100% reales y trazables** (~6.8 MB curados en total), homologados sobre la llave territorial oficial del grupo (**550 AGEBs de Mérida — Marco Geoestadístico INEGI dic 2025** y **500 colonias del GeoPortal Municipal**):
+
+| Subtema | Carpeta | Activos Reales Integrados | Volumen Verificado |
+| :---: | :--- | :--- | :--- |
+| **01** | [`data/01_inegi_denue/`](data/01_inegi_denue) | Siniestros viales ATUS Mérida (2021–2024), incidentes peatonales/ciclistas y exposición comercial DENUE + Censo 2020 por AGEB | **8,815** accidentes totales · **501** peatón/ciclista · **56,908** comercios DENUE |
+| **02** | [`data/02_datos_gob/`](data/02_datos_gob) | Serie histórica de Tránsito Diario Promedio Anual (TDPA) y mezcla vehicular SICT/IMT en accesos a Mérida vs. Yucatán | **4,169** aforos (2013–2024) · **277** estaciones georreferenciadas |
+| **03** | [`data/03_siegy_yucatan/`](data/03_siegy_yucatan) | Catálogo oficial de rutas ATY (Va-y-Ven e IE-TRAM), red espacial de paraderos e indicadores SIEGY | **110** rutas oficiales ATY · **565** trazas/paraderos GIS · **6** indicadores SIEGY |
+| **04** | [`data/04_geoportal_merida/`](data/04_geoportal_merida) | Polígonos oficiales de colonias, Centro Histórico, zonas patrimoniales y nodos reales semaforizados en Mérida | **500** colonias · **74** zonas patrimoniales · **190** semáforos reales (`OSM`) |
+| **05** | [`data/05_transparencia_pnt/`](data/05_transparencia_pnt) | Infraestructura pública abierta: luminarias, bancas y refugios peatonales, catálogo de capas SIG de Obras Públicas y serie urbana municipal *(sin solicitudes PAE/PNT)* | **562** elementos de mobiliario/alumbrado · **66** capas SIG Obras Públicas |
+| **06** | [`data/06_web_scraping/`](data/06_web_scraping) | Corpus hemerográfico real (*Diario de Yucatán*, *Novedades Yucatán*, *Sala de Prensa* y RSS local) y red de co-ocurrencia | **338** notas periodísticas únicas · **26** relaciones semánticas |
+| **07** | [`data/07_self_produced_upy/`](data/07_self_produced_upy) | Red peatonal real (banquetas, andadores y escaleras) y cruces peatonales con atributos de accesibilidad en Mérida (`OpenStreetMap`) | **4,092** cruces peatonales · **9,857** tramos (**697.6 km** de red peatonal) |
+| **08** | [`data/08_lidar_3d/`](data/08_lidar_3d) | Estadísticas zonales reales de elevación y pendiente sobre **29 teselas INEGI MDT 1.5 m**, nube `.ply` del Centro Histórico y huellas LiDAR aéreo **NASA G-LiHT 2013** | **550/550** AGEBs con elevación/pendiente · **11,554** pts `.ply` · **369** polígonos G-LiHT |
+| **09** | [`data/09_realidad_aumentada_ar/`](data/09_realidad_aumentada_ar) | Modelo urbano 3D real del Centro Histórico de Mérida extruido desde huellas OSM sobre cotas INEGI 1.5 m en `.glb` y `CityJSON v2.0` + benchmark `cityjson.org` | **105** edificios reales en `.glb` (**121.8 KB**) y `CityJSON v2.0` |
 
 ---
 
-## 🧭 Arquitectura de las 9 Vistas de Visualización
+## 🏗️ Arquitectura de Integración al Data Warehouse (Supabase / PostGIS)
 
 ```mermaid
-flowchart TD
-    subgraph DataStorytelling ["Arquitectura de las 9 Vistas Interactivas (Style UPY)"]
-        direction TB
-        
-        subgraph Fuentes ["7 Vistas por Fuente de Datos Principal"]
-            V1["1. Vista INEGI ATUS & DENUE<br><i>Sombras en las Cifras Oficiales</i>"]
-            V2["2. Vista Datos.gob.mx (SICT/IMT)<br><i>Presión Vehicular y Conectividad Vial</i>"]
-            V3["3. Vista SIEGY & ATY Va-y-Ven<br><i>El Latido Metropolitano</i>"]
-            V4["4. Vista GeoPortal Mérida & OSM<br><i>La Ciudad a Escala Humana (Semáforos)</i>"]
-            V5["5. Vista Transparencia Mérida Obras<br><i>Infraestructura Pública y Desarrollo</i>"]
-            V6["6. Vista Web Scraping Prensa<br><i>El Rumor Digital (Diario Yucatán & Por Esto!)</i>"]
-            V7["7. Vista OSM Footways & Campo UPY<br><i>Infraestructura y Movilidad Peatonal</i>"]
-        end
-        
-        subgraph Inmersivas ["2 Módulos de Visualización Volumétrica 3D e Inmersiva"]
-            V8["8. Vista LiDAR 3D & INEGI CEM<br><i>El Ojo Digital 3D (Ángulos Ciegos .PLY)</i>"]
-            V9["9. Vista Modelado 3D & AR WebXR<br><i>Inmersión Urbana (CityJSON & OpenCityModel)</i>"]
-        end
-        
-        V1 --> V2 --> V3 --> V4 --> V5 --> V6 --> V7 --> V8 --> V9
+flowchart LR
+    subgraph Fuentes ["9 Bloques de Fuentes Abiertas Reales"]
+        F1["01-03: INEGI ATUS/DENUE,<br>SICT TDPA, ATY & SIEGY"]
+        F2["04-07: GeoPortal Colonias,<br>OSM Semáforos/Cruces/Banquetas,<br>Infraestructura & Prensa"]
+        F3["08-09: 29 Teselas MDT 1.5m,<br>NASA G-LiHT LiDAR,<br>Edificios 3D (.glb / CityJSON)"]
     end
+
+    subgraph ETL ["Pipeline Reproducible"]
+        P["scripts/build_datamart_sentir_la_calle.py"]
+    end
+
+    subgraph DM ["Data Mart 04 (/datamart)"]
+        D1["dim_ageb_merida (550 AGEBs EPSG:4326)<br>dim_colonia_merida (500 colonias)"]
+        D2["fact_caminabilidad_seguridad_ageb<br>fact_siniestros_serie_mensual<br>fact_presion_vial_sict_anual<br>fact_prensa_topicos_merida"]
+        D3["Activos 3D Web (.glb 122 KB, .ply 355 KB)<br>+ CATALOGO_ACTIVOS_Y_CALIDAD.csv"]
+    end
+
+    Fuentes --> P --> DM
 ```
 
 ---
 
-## 📊 Matriz de Visualizaciones por Vista
+## ⚙️ Reproducibilidad
 
-| No. | Vista / Pestaña | Fuente Principal (Origen) | Fuentes Secundarias de Apoyo | Experiencia Visual Compleja | Hilo de Storytelling |
-| :---: | :--- | :--- | :--- | :--- | :--- |
-| **1** | **INEGI ATUS & DENUE** | **INEGI** (ATUS Accidentes & DENUE Comercio) | Microdatos ATUS Mérida, DENUE Cruces, Censo Manzanas | **Explorador Cartográfico con Clusters Dinámicos** | *Sombras en las Cifras Oficiales:* Radiografía de 7,134 percances en zonas comerciales expuestas. |
-| **2** | **SICT / IMT Viales** | **Datos.gob.mx** (SICT Datos Viales & IMT) | Base Viales Abiertos SICT, Red Nacional Caminos | **Diagrama de Sankey Dinámico + Curva de Tendencias** | *Presión Vehicular y Conectividad:* Flujos vehiculares vs. infraestructura peatonal. |
-| **3** | **SIEGY Yucatán** | **SIEGY Yucatán & ATY** (Rutas Va-y-Ven) | Traza Va-y-Ven ATY, Cohesión SIEGY, Matriz Periférico | **Radar Multidimensional & Mapa de Paraderos Va-y-Ven** | *El Latido Metropolitano:* Tiempos de caminata y cobertura de sombra en paraderos del sistema metropolitano. |
-| **4** | **GeoPortal Mérida** | **GeoPortal Mérida & OpenStreetMap** | Capa GIS Banquetas, Inventario Semáforos, Nodos OSM | **Mapa Cartográfico Interactivo Leaflet de Semáforos** | *La Ciudad a Escala Humana:* Tiempos verdes en semáforos (14 seg promedio) y velocidad requerida para cruzar. |
-| **5** | **Infraestructura Mérida** | **Ayuntamiento de Mérida** (Infraestructura Abierta & Obras) | Infraestructura Abierta Mérida, Obras Realizadas, Contratos | **Raincloud Plots & Matriz de Contrataciones Abiertas** | *Infraestructura Pública:* Análisis de contratos y ejecución de obras viales municipales. |
-| **6** | **Web Scraping** | **Prensa Local (Hemerografía)** (Diario de Yucatán, Por Esto!) | Minería Diario de Yucatán, Mining Por Esto!, Boletines Prensa | **Red de Co-ocurrencia Semántica (D3 Force) & Sentimiento** | *El Rumor Digital:* Minería semántica de notas periodísticas y percepción ciudadana sobre cruces críticos. |
-| **7** | **Movilidad Peatonal** | **OpenStreetMap Overpass & Auditoría UPY** | OSM Footways Mérida, OSM Crossings Mérida, Campo UPY | **Calculadora de Huella Peatonal & Medidor Térmico** | *Infraestructura y Movilidad Peatonal:* Red espacial de banquetas, cruces y validación física a pie. |
-| **8** | **LiDAR 3D** | **INEGI CEM LiDAR + Waymo / ApolloScape** | INEGI MDE 1.5m, Waymo Open Perception, ApolloScape LiDAR | **Maqueta 3D Volumétrica Interactiva (Three.js WebGL)** | *El Ojo Digital 3D:* Simulación láser del cono de visión del conductor y bloqueos por elementos urbanos. |
-| **9** | **Modelado 3D & AR**| **DLR Urban Intersection + CityJSON Rotterdam** | DLR Zenodo Intersection, CityJSON 3D Cities, OpenCityModel 3D | **Holograma Interactivo 3D y Experiencia WebXR en AR** | *Inmersión Urbana:* Proyección en Realidad Aumentada de un cruce re-diseñado a escala 1:1 sobre el escritorio. |
+Para regenerar todas las capas limpias, métricas espaciales, archivos 3D y tablas del Data Mart:
+
+```bash
+python scripts/build_datamart_sentir_la_calle.py
+```
+
+Las especificaciones de las 27 URLs originales entregadas en la Semana 1 se conservan intactas en [`ENTREGABLE_SEMANA_1_FUENTES.md`](ENTREGABLE_SEMANA_1_FUENTES.md).
 
 ---
 
-> ⚠️ **Nota sobre Subtema 7 (`07_self_produced_upy`):** Los datos de `07_self_produced` en `synthetic/` son simulados y se usan solo para validar el pipeline. Serán sustituidos por las respuestas reales del formulario.
+## 👥 Equipo y Responsabilidades
 
----
-
-## 👥 Asignaciones del Equipo para Carga de Datos (`/data`)
-
-| Integrante | Módulos Asignados | Carpetas del Repositorio | Tipos de Datos Soportados |
-| :--- | :--- | :--- | :--- |
-| **Elisabeth** | 1. INEGI ATUS & DENUE<br>2. Presión Vehicular SICT/IMT<br>3. SIEGY Yucatán & ATY | [`data/01_inegi_denue/`](data/01_inegi_denue)<br>[`data/02_datos_gob/`](data/02_datos_gob)<br>[`data/03_siegy_yucatan/`](data/03_siegy_yucatan) | `CSV`, `GeoJSON`, `API REST`, `XLSX` |
-| **Christopher** | 4. GeoPortal Mérida & OSM<br>6. Web Scraping Prensa<br>7. OSM Footways & Campo UPY | [`data/04_geoportal_merida/`](data/04_geoportal_merida)<br>[`data/06_web_scraping/`](data/06_web_scraping)<br>[`data/07_self_produced_upy/`](data/07_self_produced_upy) | `GeoJSON`, `Shapefile`, `JSON`, `CSV` |
-| **Rivaldo** | 5. Infraestructura Pública Mérida<br>8. LiDAR 3D & CEM INEGI<br>9. Modelado 3D & AR WebXR | [`data/05_transparencia_pnt/`](data/05_transparencia_pnt)<br>[`data/08_lidar_3d/`](data/08_lidar_3d)<br>[`data/09_realidad_aumentada_ar/`](data/09_realidad_aumentada_ar) | `CSV`, `GeoTIFF`, `PLY/XYZ`, `CityJSON`, `JSON` |
+| Integrante | Subtemas en Equipo 4 | Rol Transversal Final |
+| :--- | :--- | :--- |
+| **Rivaldo** | 05 (Infraestructura Municipal), 08 (Elevación/LiDAR 3D), 09 (Modelos 3D `.glb` / CityJSON) | **Spatial Data Team** (LiDAR, Modelos 3D y Capas Espaciales) |
+| **Elisabeth** | 01 (INEGI ATUS/DENUE/Censo), 02 (SICT/IMT), 03 (ATY Va-y-Ven & SIEGY) | **Spatial Data Team** (Extracción Documental/PDFs y Validación) |
+| **Christopher** | 04 (GeoPortal & Semáforos OSM), 06 (Scraping Prensa), 07 (Red Peatonal & Cruces OSM) | **Structured Data Team** ( Tablas Bronze/Silver/Gold y ETL ) |
