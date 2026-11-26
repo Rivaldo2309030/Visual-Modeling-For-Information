@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escena 1 · Semáforos y cruces peatonales en Mérida</title>
+  <link rel="stylesheet" href="estilo_booklet.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+</head>
+<body>
+  <main class="booklet-page">
+    <article class="escena-card">
+      <div class="escena-rotulo">Capítulo 04 · Caminar Mérida · Escena 1</div>
+      <h1 class="escena-titulo">El Centro concentra 46.3 % de los 190 semáforos de Mérida y solo 1.4 % de los cruces están marcados o semaforizados</h1>
+      <p class="escena-subtitulo">Distribución espacial de los 190 semáforos mapeados y clasificación de los 4,092 cruces peatonales en el municipio de Mérida (clave 31050).</p>
+      <div id="grafica-escena-1" class="svg-contenedor"></div>
+      <p class="escena-lectura"><strong>Cómo leer esta escena:</strong> Cada punto morado marca un semáforo dentro de la colonia Centro (88 nodos) y cada punto oro señala uno en el resto del municipio (102 nodos repartidos en apenas 41 colonias). A la derecha, tres de cada cuatro cruces mapeados en OpenStreetMap aparecen sin marca en pavimento o sin semáforo.</p>
+      <footer class="escena-fuente">
+        <span>Fuente: OpenStreetMap (Overpass API, corte nov 2026), GeoPortal Mérida y Marco Geoestadístico INEGI (dic 2025).</span>
+        <span>Datos: <code>booklet/datos/escena-1.csv</code></span>
+      </footer>
+    </article>
+  </main>
+  <script src="escena-1.js"></script>
+</body>
+</html>

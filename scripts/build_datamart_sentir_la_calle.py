@@ -29,11 +29,11 @@ from pyproj import Transformer
 import rasterio
 from rasterio.enums import Resampling
 
-REPO_ROOT = Path(r"C:\Users\Rivaldo\Documents\UPY\2026-3 Sep-Dic\Visual Modeling - Vic\Proyecto Sentir la Calle")
+REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = REPO_ROOT / "data"
 DM_DIR = REPO_ROOT / "datamart"
-REPOS_CACHE = Path(r"C:\Users\Rivaldo\.gemini\antigravity\brain\999b7876-e956-435d-b83d-b976f21d2c6a\scratch\repos")
-RAW_CACHE = Path(r"C:\Users\Rivaldo\.gemini\antigravity\brain\999b7876-e956-435d-b83d-b976f21d2c6a\scratch\eq4_raw_cache")
+REPOS_CACHE = Path(os.environ.get("VM_REPOS_CACHE", str(REPO_ROOT / "scratch" / "repos")))
+RAW_CACHE = Path(os.environ.get("VM_RAW_CACHE", str(REPO_ROOT / "scratch" / "eq4_raw_cache")))
 
 NOW_ISO = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 CATALOG_RECORDS = []

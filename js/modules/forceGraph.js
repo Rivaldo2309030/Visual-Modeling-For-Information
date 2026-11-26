@@ -1,106 +1,135 @@
 /**
- * Módulo de Grafo de Fuerzas Semántico Dinámico (Vista 6 - Web Scraping)
+ * Red semántica determinista en D3 v7.9.0 de co-ocurrencia en prensa local de Mérida.
+ * Lee directamente data/gold/ind_peatonal_prensa_coocurrencia.csv.
+ * Cero valores aleatorios y cero nodos de COVID/salud.
  */
 window.DataStoryApp = window.DataStoryApp || {};
 
-window.DataStoryApp.forceGraph = (function() {
-  let forceNodes = [];
-  let forceGraphAnimId = null;
-
-  function renderForceGraph() {
-    const container = document.getElementById('interactiveCustomSurface');
-    if (!container) return;
-
-    container.innerHTML = `
-      <canvas id="forceGraphCanvas" style="width: 100%; height: 100%;"></canvas>
-    `;
-
-    const canvas = document.getElementById('forceGraphCanvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = container.clientWidth || 800;
-    canvas.height = container.clientHeight || 440;
-
-    forceNodes = [
-      { id: 1, text: "Vacunación Masiva", r: 36, color: "#00f2fe", x: canvas.width * 0.5, y: canvas.height * 0.45, vx: 0, vy: 0 },
-      { id: 2, text: "Solidaridad UPY", r: 30, color: "#10b981", x: canvas.width * 0.35, y: canvas.height * 0.3, vx: 0, vy: 0 },
-      { id: 3, text: "Reapertura Segura", r: 26, color: "#a855f7", x: canvas.width * 0.65, y: canvas.height * 0.35, vx: 0, vy: 0 },
-      { id: 4, text: "Héroes de Blanco", r: 28, color: "#ff7e5f", x: canvas.width * 0.38, y: canvas.height * 0.7, vx: 0, vy: 0 },
-      { id: 5, text: "Ciencia & Salud", r: 24, color: "#4facfe", x: canvas.width * 0.62, y: canvas.height * 0.65, vx: 0, vy: 0 },
-      { id: 6, text: "Comunidad Maya", r: 25, color: "#feb47b", x: canvas.width * 0.2, y: canvas.height * 0.5, vx: 0, vy: 0 },
-      { id: 7, text: "Espacios Públicos", r: 22, color: "#ec4899", x: canvas.width * 0.8, y: canvas.height * 0.5, vx: 0, vy: 0 }
-    ];
-
-    const links = [
-      { source: 0, target: 1 }, { source: 0, target: 2 }, { source: 0, target: 3 },
-      { source: 0, target: 4 }, { source: 1, target: 4 }, { source: 3, target: 4 },
-      { source: 1, target: 5 }, { source: 2, target: 6 }
-    ];
-
-    function animateForce() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Enlaces
-      ctx.strokeStyle = "rgba(255, 255, 255, 0.12)";
-      ctx.lineWidth = 1.5;
-      links.forEach(l => {
-        const s = forceNodes[l.source];
-        const t = forceNodes[l.target];
-        if (s && t) {
-          ctx.beginPath();
-          ctx.moveTo(s.x, s.y);
-          ctx.lineTo(t.x, t.y);
-          ctx.stroke();
-        }
-      });
-
-      // Nodos
-      forceNodes.forEach(node => {
-        node.x += Math.sin(Date.now() * 0.002 + node.id) * 0.3;
-        node.y += Math.cos(Date.now() * 0.002 + node.id) * 0.3;
-
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-        ctx.fillStyle = node.color;
-        ctx.shadowColor = node.color;
-        ctx.shadowBlur = 12;
-        ctx.fill();
-        ctx.shadowBlur = 0;
-
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.6)";
-        ctx.stroke();
-
-        ctx.fillStyle = "#050811";
-        ctx.font = "bold 11px Outfit";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText(node.text, node.x, node.y);
-      });
-
-      forceGraphAnimId = requestAnimationFrame(animateForce);
-    }
-    animateForce();
-  }
-
-  function scrambleForceNodes() {
-    forceNodes.forEach(node => {
-      node.x += (Math.random() - 0.5) * 60;
-      node.y += (Math.random() - 0.5) * 60;
-    });
-    const showToast = window.DataStoryApp.storytelling?.showToast || console.log;
-    showToast("Reajuste de fuerzas semánticas completado");
-  }
-
-  function stopForceGraph() {
-    if (forceGraphAnimId) {
-      cancelAnimationFrame(forceGraphAnimId);
-      forceGraphAnimId = null;
-    }
-  }
-
-  return {
-    renderForceGraph,
-    scrambleForceNodes,
-    stopForceGraph
+window.DataStoryApp.ForceGraphModule = (function () {
+  const P = {
+    morado: "#600d8b",
+    oro: "#ed9f22",
+    oroOscuro: "#b45309",
+    gris: "#9ca3af",
+    tinta: "#0d0d0d",
+    borde: "#e5e7eb"
   };
+
+  function getTooltip() {
+    let tt = d3.select("body").select(".main-tooltip");
+    if (tt.empty()) tt = d3.select("body").append("div").attr("class", "main-tooltip");
+    return tt;
+  }
+
+  function renderPressNetwork(containerSelector, topicos, edges, focusTopic = null) {
+    const container = d3.select(containerSelector);
+    container.html("");
+    const tt = getTooltip();
+
+    const w = 880, h = 410;
+    const svg = container.append("svg").attr("viewBox", `0 0 ${w} ${h}`);
+    const cx = w * 0.38;
+    const cy = h * 0.52;
+    const rx = 208;
+    const ry = 138;
+
+    svg.append("text")
+      .attr("x", 18).attr("y", 24).attr("font-size", 13).attr("font-weight", 700).attr("fill", P.tinta)
+      .text("Co-ocurrencia entre temas de movilidad y peatones en 338 notas de prensa local");
+
+    // Distribución elíptica determinista (coordenadas exactas por índice)
+    const nodes = topicos.map((t, i) => {
+      const angle = (i / topicos.length) * 2 * Math.PI - Math.PI / 2;
+      return {
+        id: t.nodo_origen,
+        freq: t.frecuencia,
+        pct: t.pct_sobre_corpus,
+        x: cx + rx * Math.cos(angle),
+        y: cy + ry * Math.sin(angle),
+        r: 14 + Math.sqrt(t.frecuencia) * 2.2
+      };
+    });
+    const byId = new Map(nodes.map((n) => [n.id, n]));
+
+    const maxEdge = d3.max(edges, (e) => e.frecuencia) || 1;
+    const wEdge = d3.scaleLinear().domain([1, maxEdge]).range([1.2, 7.5]);
+
+    // Aristas reales de co-ocurrencia
+    const gEdges = svg.append("g");
+    edges.forEach((e) => {
+      const s = byId.get(e.nodo_origen);
+      const t = byId.get(e.nodo_destino);
+      if (!s || !t) return;
+      const isFocused = !focusTopic || e.nodo_origen === focusTopic || e.nodo_destino === focusTopic;
+      const isPed = e.nodo_origen.includes("Peatón") || e.nodo_destino.includes("Peatón");
+
+      gEdges.append("line")
+        .attr("x1", s.x).attr("y1", s.y).attr("x2", t.x).attr("y2", t.y)
+        .attr("stroke", isPed ? P.oro : P.morado)
+        .attr("stroke-width", wEdge(e.frecuencia))
+        .attr("stroke-opacity", isFocused ? 0.65 : 0.12)
+        .style("cursor", "pointer")
+        .on("mousemove", (event) => {
+          tt.style("opacity", 1).style("left", `${event.clientX + 12}px`).style("top", `${event.clientY - 12}px`)
+            .html(`<strong>${e.nodo_origen} ↔ ${e.nodo_destino}</strong><br>${e.frecuencia} notas compartidas (${e.pct_sobre_corpus} % del corpus)`);
+        })
+        .on("mouseleave", () => tt.style("opacity", 0));
+
+      if (e.frecuencia >= 10 && isFocused) {
+        gEdges.append("text")
+          .attr("x", (s.x + t.x) / 2)
+          .attr("y", (s.y + t.y) / 2 - 4)
+          .attr("text-anchor", "middle")
+          .attr("font-size", 10)
+          .attr("font-weight", 700)
+          .attr("fill", isPed ? P.oroOscuro : P.morado)
+          .text(`${e.frecuencia}`);
+      }
+    });
+
+    // Nodos de temas
+    const gNodes = svg.append("g");
+    nodes.forEach((n) => {
+      const isPed = n.id.includes("Peatón") || n.id.includes("Banquetas");
+      const active = !focusTopic || n.id === focusTopic || edges.some((e) => (e.nodo_origen === focusTopic && e.nodo_destino === n.id) || (e.nodo_destino === focusTopic && e.nodo_origen === n.id));
+      const fill = isPed ? P.oro : P.morado;
+
+      gNodes.append("circle")
+        .attr("cx", n.x).attr("cy", n.y).attr("r", n.r)
+        .attr("fill", fill)
+        .attr("fill-opacity", active ? 0.92 : 0.25)
+        .attr("stroke", "#ffffff")
+        .attr("stroke-width", 2.2)
+        .style("cursor", "pointer")
+        .on("mousemove", (event) => {
+          tt.style("opacity", 1).style("left", `${event.clientX + 12}px`).style("top", `${event.clientY - 12}px`)
+            .html(`<strong>${n.id}</strong><br>${n.freq} notas (${n.pct} % del corpus real)`);
+        })
+        .on("mouseleave", () => tt.style("opacity", 0));
+
+      gNodes.append("text")
+        .attr("x", n.x).attr("y", n.y + 4)
+        .attr("text-anchor", "middle").attr("font-size", 11.5).attr("font-weight", 800).attr("fill", "#ffffff")
+        .text(n.freq);
+
+      gNodes.append("text")
+        .attr("x", n.x).attr("y", n.y + n.r + 14)
+        .attr("text-anchor", "middle").attr("font-size", 11).attr("font-weight", 700).attr("fill", active ? P.tinta : P.gris)
+        .text(n.id);
+    });
+
+    // Panel derecho con los pares más frecuentes
+    const sx = w - 210;
+    svg.append("rect").attr("x", sx).attr("y", 42).attr("width", 196).attr("height", h - 62).attr("rx", 10).attr("fill", "#fafafa").attr("stroke", P.borde);
+    svg.append("text").attr("x", sx + 12).attr("y", 64).attr("font-size", 11.5).attr("font-weight", 700).attr("fill", P.morado).text("Pares más frecuentes");
+    edges.slice(0, 6).forEach((e, i) => {
+      const y = 88 + i * 48;
+      svg.append("text").attr("x", sx + 12).attr("y", y).attr("font-size", 10.2).attr("font-weight", 700).attr("fill", P.tinta)
+        .text(`${i + 1}. ${e.nodo_origen.split(" ")[0]} + ${e.nodo_destino.split(" ")[0]}`);
+      svg.append("text").attr("x", sx + 12).attr("y", y + 14).attr("font-size", 10).attr("fill", P.oroOscuro).attr("font-weight", 600)
+        .text(`${e.frecuencia} notas (${e.pct_sobre_corpus} %)`);
+    });
+  }
+
+  return { renderPressNetwork };
 })();

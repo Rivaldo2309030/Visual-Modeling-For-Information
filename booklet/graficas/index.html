@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23600d8b'/><circle cx='16' cy='16' r='7' fill='%23ed9f22'/></svg>">
+  <title>Capítulo 04 · Caminar Mérida — Booklet Visual Modeling</title>
+  <link rel="stylesheet" href="estilo_booklet.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+</head>
+<body>
+  <main class="booklet-page">
+    <header class="cap-header">
+      <div class="cap-acto">Acto 3 — Moverse · Capítulo 04 · Caminar Mérida</div>
+      <h1 class="cap-titulo">En Mérida, 86.7 % de las zonas urbanas no tienen semáforo y los atropellamientos subieron 71 % entre 2021 y 2024</h1>
+      <p class="cap-entrada">
+        Caminar por Mérida cambia por completo al salir del primer cuadro. Mientras la colonia Centro concentra casi la mitad de todos los semáforos mapeados del municipio, cuatro de cada diez AGEBs carecen de banquetas registradas y los siniestros con peatones involucrados pasaron de 52 en 2021 a 89 en 2024.
+      </p>
+      <div class="barra-acciones">
+        <a class="btn-enlace" href="../../index.html">Abrir explorador interactivo y visor 3D real</a>
+        <a class="btn-enlace secundario" href="../ficha.md">Ver ficha editorial (Markdown)</a>
+        <a class="btn-enlace secundario" href="../datos/FUENTES.md">Ver metodología y fuentes</a>
+      </div>
+    </header>
+
+    <section class="kpi-tira" id="kpi-tira-dinamica" aria-label="La historia en 10 segundos">
+      <div class="kpi-caja">
+        <div class="kpi-valor" id="kpi-siniestros">…</div>
+        <div class="kpi-etiqueta">Siniestros con peatón (2021–2024)</div>
+        <div class="kpi-detalle" id="kpi-siniestros-det">Calculando desde escena-2.csv…</div>
+      </div>
+      <div class="kpi-caja oro">
+        <div class="kpi-valor" id="kpi-semaforos">…</div>
+        <div class="kpi-etiqueta">Semáforos mapeados en Mérida</div>
+        <div class="kpi-detalle" id="kpi-semaforos-det">Calculando desde escena-1.csv…</div>
+      </div>
+      <div class="kpi-caja">
+        <div class="kpi-valor" id="kpi-sin-red">…</div>
+        <div class="kpi-etiqueta">AGEBs sin red peatonal mapeada</div>
+        <div class="kpi-detalle" id="kpi-sin-red-det">Calculando desde escena-3.csv…</div>
+      </div>
+    </section>
+
+    <article class="escena-card">
+      <div class="escena-rotulo">Escena 1 · Infraestructura de cruce</div>
+      <h2 class="escena-titulo">El Centro concentra 46.3 % de los 190 semáforos de Mérida y solo 1.4 % de los cruces están marcados o semaforizados</h2>
+      <p class="escena-subtitulo">Distribución espacial de los 190 semáforos reales y clasificación de los 4,092 cruces peatonales mapeados en Mérida.</p>
+      <div id="grafica-escena-1" class="svg-contenedor"></div>
+      <p class="escena-lectura"><strong>Cómo leer esta escena:</strong> Cada punto morado marca un semáforo en la colonia Centro (88) y cada punto oro uno en el resto del municipio (102). En el panel derecho, tres de cada cuatro cruces mapeados en OpenStreetMap no tienen pintura en pavimento o carecen de semáforo.</p>
+      <footer class="escena-fuente">
+        <span>Fuente: OpenStreetMap (corte nov 2026), GeoPortal Mérida y Marco Geoestadístico INEGI (dic 2025).</span>
+        <span><a href="escena-1.html">Abrir escena 1 aislada</a></span>
+      </footer>
+    </article>
+
+    <article class="escena-card">
+      <div class="escena-rotulo">Escena 2 · Siniestralidad peatonal</div>
+      <h2 class="escena-titulo">Los siniestros con peatones subieron de 52 en 2021 a 89 en 2024 y dejaron 333 personas heridas</h2>
+      <p class="escena-subtitulo">Evolución mensual de accidentes viales con peatón involucrado y peatones lesionados en Mérida, enero 2021 a diciembre 2024.</p>
+      <div id="grafica-escena-2" class="svg-contenedor"></div>
+      <p class="escena-lectura"><strong>Cómo leer esta escena:</strong> Se aíslan los 304 hechos donde hubo un peatón directamente involucrado. La línea morada sigue los siniestros mensuales y la oro las personas peatonas heridas; el pico máximo ocurrió en mayo de 2024 (14 siniestros y 15 heridos).</p>
+      <footer class="escena-fuente">
+        <span>Fuente: INEGI, Estadística de Accidentes de Tránsito Terrestre (ATUS 2021–2024, municipio 31050).</span>
+        <span><a href="escena-2.html">Abrir escena 2 aislada</a></span>
+      </footer>
+    </article>
+
+    <article class="escena-card">
+      <div class="escena-rotulo">Escena 3 · Prioridad territorial por AGEB</div>
+      <h2 class="escena-titulo">El riesgo peatonal se concentra tanto en el Centro saturado como en colonias periféricas sin banquetas ni semáforos</h2>
+      <p class="escena-subtitulo">Índice de prioridad peatonal (0–100) en las 550 AGEBs de Mérida y las 10 zonas con mayor urgencia de intervención.</p>
+      <div id="grafica-escena-3" class="svg-contenedor"></div>
+      <p class="escena-lectura"><strong>Cómo leer esta escena:</strong> Dos perfiles opuestos comparten la cima del riesgo: el Centro Histórico saturado de comercios y paraderos, y colonias periféricas como Santa Gertrudis Copó, Emiliano Zapata Sur III y Delio Moreno Cantón que suman atropellamientos con 0 km de banquetas mapeadas.</p>
+      <footer class="escena-fuente">
+        <span>Fuente: INEGI (ATUS 2021–2024, Censo 2020, DENUE 2025/2026, MDT 1.5 m), OpenStreetMap y ATY Va-y-Ven.</span>
+        <span><a href="escena-3.html">Abrir escena 3 aislada</a></span>
+      </footer>
+    </article>
+
+    <section class="bloque-editorial">
+      <h2>Lo que estos datos no dicen</h2>
+      <ul>
+        <li><strong>Cobertura incompleta en OpenStreetMap:</strong> Una AGEB con 0 km de red peatonal (225 de 550) combina ausencia física real en la periferia con falta de mapeo voluntario en calle.</li>
+        <li><strong>Ancho mínimo accesible de banqueta (1.20 m):</strong> OSM no registra sistemáticamente el ancho libre ni obstáculos en banqueta. La referencia normativa en México es la <strong>NOM-004-SEDATU-2023</strong> (Tabla 38) y el <strong>Manual de Calles SEDATU/BID (2019)</strong>, que fijan <strong>1.20 m</strong> como ancho libre mínimo absoluto (y desde 1.80 m como estándar óptimo).</li>
+        <li><strong>Subregistro en ATUS:</strong> Solo reporta fallecimientos en el lugar del hecho (2 peatones en 2021–2024) y no incluye decesos posteriores en hospital; además, 13 de los 304 siniestros ocurrieron sobre ejes carreteros fuera de polígonos AGEB.</li>
+        <li><strong>Resolución del terreno:</strong> El MDT de 1.5 m del INEGI es fotogramétrico, útil para detectar zonas bajas pero no desniveles menores a un metro sobre banquetas.</li>
+      </ul>
+    </section>
+
+    <aside class="puente-acto">
+      <strong>Puente hacia el Acto 4 · Plana sobre el agua:</strong> En las 550 AGEBs medidas sobre el MDT de 1.5 m del INEGI, Mérida promedia apenas <strong>7.39 msnm</strong> y una pendiente media de <strong>1.36 %</strong>: cuando llueve sobre una ciudad casi completamente plana, las mismas banquetas discontinuas y cruces sin señalización quedan convertidos en encharcamientos que detienen el paso.
+    </aside>
+  </main>
+
+  <script src="escena-1.js"></script>
+  <script src="escena-2.js"></script>
+  <script src="escena-3.js"></script>
+  <script>
+    // Calcular la tira "La historia en 10 segundos" en vivo desde los CSV del booklet
+    Promise.all([
+      d3.csv("../datos/escena-1.csv"),
+      d3.csv("../datos/escena-2.csv"),
+      d3.csv("../datos/escena-3.csv")
+    ]).then(([e1, e2, e3]) => {
+      const fmtInt = (n) => new Intl.NumberFormat("es-MX").format(n);
+      const fmtDec = (n) => new Intl.NumberFormat("es-MX", { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(n);
+
+      const totSin = d3.sum(e2, (d) => +d.accidentes_peaton);
+      const totHer = d3.sum(e2, (d) => +d.peatones_heridos);
+      const totMue = d3.sum(e2, (d) => +d.peatones_muertos);
+      const s2021 = d3.sum(e2.filter((d) => +d.anio === 2021), (d) => +d.accidentes_peaton);
+      const s2024 = d3.sum(e2.filter((d) => +d.anio === 2024), (d) => +d.accidentes_peaton);
+      const deltaPct = ((s2024 - s2021) / s2021) * 100;
+
+      document.getElementById("kpi-siniestros").textContent = fmtInt(totSin);
+      document.getElementById("kpi-siniestros-det").textContent =
+        `${fmtInt(totHer)} peatones heridos y ${fmtInt(totMue)} fallecidos en sitio (+${fmtDec(deltaPct)} % entre 2021 y 2024).`;
+
+      const semCentro = e1.filter((d) => d.es_centro === "Centro Histórico").length;
+      const sinSemAgeb = e3.filter((d) => +d.semaforos_osm === 0).length;
+      document.getElementById("kpi-semaforos").textContent = fmtInt(e1.length);
+      document.getElementById("kpi-semaforos-det").textContent =
+        `${fmtInt(semCentro)} (${fmtDec(100 * semCentro / e1.length)} %) en Col. Centro; ${fmtInt(sinSemAgeb)} de ${fmtInt(e3.length)} AGEBs (${fmtDec(100 * sinSemAgeb / e3.length)} %) sin semáforo.`;
+
+      const sinRed = e3.filter((d) => +d.red_peatonal_km === 0).length;
+      const totKm = d3.sum(e3, (d) => +d.red_peatonal_km);
+      document.getElementById("kpi-sin-red").textContent = `${fmtInt(sinRed)} / ${fmtInt(e3.length)}`;
+      document.getElementById("kpi-sin-red-det").textContent =
+        `${fmtDec(100 * sinRed / e3.length)} % del municipio con 0 km mapeados frente a ${fmtDec(totKm)} km en el resto.`;
+    });
+  </script>
+</body>
+</html>

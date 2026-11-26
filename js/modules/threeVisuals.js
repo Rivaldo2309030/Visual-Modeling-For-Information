@@ -1,189 +1,248 @@
 /**
- * Módulo de Visualizaciones 3D y WebXR / AR (Three.js & OrbitControls)
- * Vistas 8 (LiDAR 3D) y 9 (Realidad Aumentada - Molecular Spike PDB: 6VXX)
+ * Visor 3D real en Three.js para los activos del Equipo 4 (Sentir la Calle):
+ *  - Modo 'three_ply': carga data/08_lidar_3d/merida_centro_inegi_mdt_1_5m_real.ply (11,554 pts reales)
+ *  - Modo 'three_glb': carga data/09_realidad_aumentada_ar/merida_centro_historico_lod1_real.glb (105 edificios reales)
+ * Cero generación aleatoria y cero geometría sintética.
  */
 window.DataStoryApp = window.DataStoryApp || {};
 
-window.DataStoryApp.threeVisuals = (function() {
-  let threeRenderer = null;
-  let threeScene = null;
-  let threeCamera = null;
-  let threeMesh = null;
-  let threeControls = null;
-  let animationFrameId = null;
+window.DataStoryApp.ThreeModule = (function () {
+  let scene, camera, renderer, controls, animId, currentGroup;
+  let activeContainer = null;
 
-  let lidarColorMode = 'cyan';
-  let spikeExploded = false;
+  function dispose() {
+    if (animId) cancelAnimationFrame(animId);
+    animId = null;
+    if (controls) {
+      controls.dispose();
+      controls = null;
+    }
+    if (renderer) {
+      renderer.dispose();
+      renderer = null;
+    }
+    if (activeContainer) activeContainer.innerHTML = "";
+    scene = null;
+    camera = null;
+    currentGroup = null;
+  }
 
-  function initThreeDVisual(mode) {
-    stopThreeVisual();
+  function setupScene(containerId) {
+    dispose();
+    const container = document.getElementById(containerId);
+    if (!container) return null;
+    activeContainer = container;
 
-    const container = document.getElementById('threejsContainer');
-    if (!container) return;
-    container.innerHTML = '';
+    const width = container.clientWidth || 840;
+    const height = container.clientHeight || 420;
 
-    const width = container.clientWidth || 800;
-    const height = container.clientHeight || 460;
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0d0a16);
 
-    threeScene = new THREE.Scene();
-    threeCamera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-    threeCamera.position.set(0, 8, 16);
+    camera = new THREE.PerspectiveCamera(48, width / height, 0.1, 5000);
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    container.appendChild(renderer.domElement);
 
-    threeRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    threeRenderer.setSize(width, height);
-    threeRenderer.setPixelRatio(window.devicePixelRatio);
-    container.appendChild(threeRenderer.domElement);
-
-    // OrbitControls
-    if (typeof THREE.OrbitControls !== 'undefined') {
-      threeControls = new THREE.OrbitControls(threeCamera, threeRenderer.domElement);
-      threeControls.enableDamping = true;
-      threeControls.dampingFactor = 0.05;
-      threeControls.maxDistance = 35;
-      threeControls.minDistance = 3;
+    if (THREE.OrbitControls) {
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.08;
     }
 
-    // Iluminación
-    const dirLight = new THREE.DirectionalLight(0xffffff, 1.4);
-    dirLight.position.set(15, 25, 15);
-    threeScene.add(dirLight);
+    const hemi = new THREE.HemisphereLight(0xf3e8ff, 0x1e1b2e, 1.1);
+    scene.add(hemi);
+    const dir = new THREE.DirectionalLight(0xffffff, 0.9);
+    dir.position.set(120, 220, 140);
+    scene.add(dir);
+    const rim = new THREE.DirectionalLight(0xed9f22, 0.55);
+    rim.position.set(-140, 90, -100);
+    scene.add(rim);
 
-    const ambLight = new THREE.AmbientLight(0x384252, 1.2);
-    threeScene.add(ambLight);
-
-    const group = new THREE.Group();
-
-    if (mode === '3d') {
-      // Terreno y Edificios LiDAR Mérida
-      const grid = new THREE.GridHelper(20, 40, 0x00f2fe, 0x1e293b);
-      grid.position.y = -0.1;
-      threeScene.add(grid);
-
-      const cubeGeom = new THREE.BoxGeometry(0.75, 1, 0.75);
-      for (let i = 0; i < 65; i++) {
-        const h = 0.6 + Math.random() * 4.2;
-        const isKeyCenter = Math.random() > 0.88;
-        
-        let color = 0x00f2fe;
-        if (lidarColorMode === 'terrain') {
-          color = h > 3 ? 0xff7e5f : (h > 1.5 ? 0xfeb47b : 0x10b981);
-        } else {
-          color = isKeyCenter ? 0xff7e5f : (Math.random() > 0.5 ? 0x00f2fe : 0x4facfe);
-        }
-
-        const mat = new THREE.MeshPhongMaterial({
-          color: color,
-          transparent: true,
-          opacity: 0.85,
-          shininess: 90
-        });
-
-        const mesh = new THREE.Mesh(cubeGeom, mat);
-        mesh.scale.set(1, h, 1);
-        mesh.position.set(
-          (Math.random() - 0.5) * 14,
-          h / 2,
-          (Math.random() - 0.5) * 14
-        );
-        group.add(mesh);
-      }
-
-      // Partículas LiDAR de dosel vegetal
-      const particleGeom = new THREE.BufferGeometry();
-      const particleCount = 1200;
-      const posArray = new Float32Array(particleCount * 3);
-      for (let i = 0; i < particleCount * 3; i += 3) {
-        posArray[i] = (Math.random() - 0.5) * 16;
-        posArray[i + 1] = Math.random() * 4.5;
-        posArray[i + 2] = (Math.random() - 0.5) * 16;
-      }
-      particleGeom.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-      const pMat = new THREE.PointsMaterial({ size: 0.08, color: 0x10b981, transparent: true, opacity: 0.7 });
-      const pSystem = new THREE.Points(particleGeom, pMat);
-      group.add(pSystem);
-
-    } else {
-      // Complejo Molecular AR (Spike PDB: 6VXX)
-      const icoGeom = new THREE.IcosahedronGeometry(2.8, 2);
-      const icoMat = new THREE.MeshPhongMaterial({
-        color: 0xa855f7,
-        wireframe: true,
-        emissive: 0x3b0764,
-        shininess: 100
-      });
-      const spikeCore = new THREE.Mesh(icoGeom, icoMat);
-      group.add(spikeCore);
-
-      // Nodos atómicos (RBD y dominios)
-      for (let i = 0; i < 36; i++) {
-        const sGeom = new THREE.SphereGeometry(0.24, 16, 16);
-        const isRbd = i < 8;
-        const sMat = new THREE.MeshPhongMaterial({
-          color: isRbd ? 0xff7e5f : (i % 2 === 0 ? 0x00f2fe : 0xec4899),
-          emissive: isRbd ? 0x7c2d12 : 0x000000
-        });
-        const sphere = new THREE.Mesh(sGeom, sMat);
-        const theta = Math.random() * Math.PI * 2;
-        const phi = Math.random() * Math.PI;
-        const r = spikeExploded ? 5.2 : 3.6;
-        sphere.position.set(r * Math.sin(phi) * Math.cos(theta), r * Math.sin(phi) * Math.sin(theta), r * Math.cos(phi));
-        group.add(sphere);
-      }
-    }
-
-    threeScene.add(group);
-    threeMesh = group;
+    // Etiqueta de estado real en esquina
+    const hud = document.createElement("div");
+    hud.id = "threeHudLabel";
+    hud.style.cssText = "position:absolute;bottom:10px;left:12px;background:rgba(12,9,18,0.82);color:#f3e8ff;border:1px solid rgba(192,132,252,0.45);padding:5px 10px;border-radius:8px;font-size:11.5px;font-family:'JetBrains Mono',monospace;pointer-events:none;";
+    hud.textContent = "Cargando archivo 3D real…";
+    container.appendChild(hud);
 
     function animate() {
-      animationFrameId = requestAnimationFrame(animate);
-      if (threeControls) threeControls.update();
-      if (threeMesh && !threeControls?.state) {
-        threeMesh.rotation.y += 0.004;
-      }
-      threeRenderer.render(threeScene, threeCamera);
+      animId = requestAnimationFrame(animate);
+      if (controls) controls.update();
+      renderer.render(scene, camera);
     }
     animate();
+
+    return { container, hud };
   }
 
-  function setLidarTheme(theme) {
-    lidarColorMode = theme;
-    initThreeDVisual('3d');
-    const showToast = window.DataStoryApp.storytelling?.showToast || console.log;
-    showToast(`Paleta LiDAR cambiada a: ${theme}`);
+  function parseAsciiPly(text) {
+    const lines = text.split(/\r?\n/);
+    let headerEnd = 0;
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].trim() === "end_header") {
+        headerEnd = i + 1;
+        break;
+      }
+    }
+    const pts = [];
+    for (let i = headerEnd; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line) continue;
+      const parts = line.split(/\s+/);
+      if (parts.length < 3) continue;
+      const x = parseFloat(parts[0]);
+      const y = parseFloat(parts[1]);
+      const z = parseFloat(parts[2]);
+      if (Number.isFinite(x) && Number.isFinite(y) && Number.isFinite(z)) {
+        pts.push([x, y, z]);
+      }
+    }
+    return pts;
   }
 
-  function toggleSpikeExplosion() {
-    spikeExploded = !spikeExploded;
-    initThreeDVisual('ar');
-    const showToast = window.DataStoryApp.storytelling?.showToast || console.log;
-    showToast(spikeExploded ? "Vista detonada de dominios atómicos" : "Ensamblaje cuaternario compacto");
-  }
+  async function initRealPly(containerId, plyPath = "data/08_lidar_3d/merida_centro_inegi_mdt_1_5m_real.ply") {
+    const ctx = setupScene(containerId);
+    if (!ctx) return;
 
-  function resetThreeCamera() {
-    if (threeCamera && threeControls) {
-      threeCamera.position.set(0, 8, 16);
-      threeControls.target.set(0, 0, 0);
-      const showToast = window.DataStoryApp.storytelling?.showToast || console.log;
-      showToast("Cámara restablecida");
+    try {
+      const resp = await fetch(plyPath);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const text = await resp.text();
+      const pts = parseAsciiPly(text);
+
+      let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity, minZ = Infinity, maxZ = -Infinity;
+      for (const [x, y, z] of pts) {
+        if (x < minX) minX = x; if (x > maxX) maxX = x;
+        if (y < minY) minY = y; if (y > maxY) maxY = y;
+        if (z < minZ) minZ = z; if (z > maxZ) maxZ = z;
+      }
+      const cx = (minX + maxX) / 2;
+      const cy = (minY + maxY) / 2;
+      const zRange = Math.max(0.01, maxZ - minZ);
+      const span = Math.max(maxX - minX, maxY - minY, 1);
+      const scale = 120 / span;
+
+      const positions = new Float32Array(pts.length * 3);
+      const colors = new Float32Array(pts.length * 3);
+      const cLow = new THREE.Color("#ed9f22");   // Oro: cotas bajas (encharcamiento)
+      const cMid = new THREE.Color("#a855f7");   // Lila intermedio
+      const cHigh = new THREE.Color("#600d8b");  // Morado: cotas altas
+
+      for (let i = 0; i < pts.length; i++) {
+        const [x, y, z] = pts[i];
+        const t = (z - minZ) / zRange;
+        positions[i * 3] = (x - cx) * scale;
+        // Exageración vertical legible para terreno plano de Mérida (escala explícita en HUD)
+        positions[i * 3 + 1] = (z - minZ) * scale * 6.0;
+        positions[i * 3 + 2] = -(y - cy) * scale;
+
+        const col = t < 0.5
+          ? cLow.clone().lerp(cMid, t * 2)
+          : cMid.clone().lerp(cHigh, (t - 0.5) * 2);
+        colors[i * 3] = col.r;
+        colors[i * 3 + 1] = col.g;
+        colors[i * 3 + 2] = col.b;
+      }
+
+      const geom = new THREE.BufferGeometry();
+      geom.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+      geom.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+
+      const mat = new THREE.PointsMaterial({ size: 1.8, vertexColors: true });
+      const cloud = new THREE.Points(geom, mat);
+      currentGroup = new THREE.Group();
+      currentGroup.add(cloud);
+
+      const grid = new THREE.GridHelper(130, 16, 0x600d8b, 0x261d38);
+      currentGroup.add(grid);
+      scene.add(currentGroup);
+
+      camera.position.set(85, 62, 95);
+      camera.lookAt(0, 6, 0);
+      if (controls) controls.target.set(0, 6, 0);
+
+      ctx.hud.textContent = `PLY REAL: ${pts.length.toLocaleString("es-MX")} pts INEGI MDT 1.5 m (${minZ.toFixed(1)}–${maxZ.toFixed(1)} msnm · escala Z ×6)`;
+    } catch (err) {
+      ctx.hud.textContent = `Error al leer ${plyPath}: ${err.message}`;
     }
   }
 
-  function stopThreeVisual() {
-    if (animationFrameId) {
-      cancelAnimationFrame(animationFrameId);
-      animationFrameId = null;
+  function initRealGlb(containerId, glbPath = "data/09_realidad_aumentada_ar/merida_centro_historico_lod1_real.glb") {
+    const ctx = setupScene(containerId);
+    if (!ctx) return;
+
+    if (!THREE.GLTFLoader) {
+      ctx.hud.textContent = "No se pudo cargar THREE.GLTFLoader.";
+      return;
     }
-    if (threeRenderer) {
-      threeRenderer.dispose();
-      threeRenderer = null;
+
+    const loader = new THREE.GLTFLoader();
+    loader.load(
+      glbPath,
+      (gltf) => {
+        const model = gltf.scene;
+        let meshCount = 0;
+
+        model.traverse((child) => {
+          if (child.isMesh) {
+            meshCount++;
+            child.material = new THREE.MeshStandardMaterial({
+              color: meshCount % 4 === 0 ? 0xed9f22 : 0x7e22ce,
+              roughness: 0.55,
+              metalness: 0.15
+            });
+            const edges = new THREE.EdgesGeometry(child.geometry);
+            const line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0xf3e8ff, transparent: true, opacity: 0.35 }));
+            child.add(line);
+          }
+        });
+
+        const box = new THREE.Box3().setFromObject(model);
+        const center = box.getCenter(new THREE.Vector3());
+        const size = box.getSize(new THREE.Vector3());
+        const maxDim = Math.max(size.x, size.y, size.z, 1);
+        const normScale = 110 / maxDim;
+
+        model.position.sub(center);
+        currentGroup = new THREE.Group();
+        currentGroup.add(model);
+        currentGroup.scale.setScalar(normScale);
+
+        const grid = new THREE.GridHelper(130, 18, 0xed9f22, 0x261d38);
+        grid.position.y = -(size.y * normScale) / 2;
+        scene.add(grid);
+        scene.add(currentGroup);
+
+        camera.position.set(78, 56, 86);
+        camera.lookAt(0, 0, 0);
+        if (controls) controls.target.set(0, 0, 0);
+
+        ctx.hud.textContent = `GLB REAL: Centro Histórico de Mérida (105 edificios OSM + MDT INEGI 1.5 m)`;
+      },
+      undefined,
+      (err) => {
+        ctx.hud.textContent = `Error al cargar ${glbPath}: ${err.message || err}`;
+      }
+    );
+  }
+
+  function setCameraPreset(preset) {
+    if (!camera) return;
+    if (preset === "top") {
+      camera.position.set(0, 130, 0.1);
+    } else if (preset === "street") {
+      camera.position.set(42, 16, 48);
+    } else {
+      camera.position.set(82, 58, 90);
+    }
+    camera.lookAt(0, 0, 0);
+    if (controls) {
+      controls.target.set(0, 0, 0);
+      controls.update();
     }
   }
 
-  return {
-    initThreeDVisual,
-    setLidarTheme,
-    toggleSpikeExplosion,
-    resetThreeCamera,
-    stopThreeVisual
-  };
+  return { initRealPly, initRealGlb, setCameraPreset, dispose };
 })();

@@ -3,295 +3,299 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Storytelling: Sentir la Calle | Plataforma Peatonal y Movilidad • Mérida UPY</title>
-  <meta name="description" content="Plataforma interactiva de Data Storytelling sobre movilidad peatonal, percepción de seguridad, accesibilidad universal, LiDAR 3D y Realidad Aumentada en Mérida, Yucatán. UPY.">
-  <meta name="keywords" content="Data Storytelling, Peatón, Mérida, INEGI, DENUE, Datos.gob.mx, SIEGY, GeoPortal Mérida, LiDAR, WebXR, AR, UPY">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23600d8b'/><circle cx='16' cy='16' r='7' fill='%23ed9f22'/></svg>">
+  <title>Sentir la Calle · Caminar Mérida — Narrativa con Datos Reales</title>
 
-  <!-- Google Fonts: Outfit, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome 6 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Modular CSS Architecture -->
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/components.css">
-  <link rel="stylesheet" href="./css/visualizations.css">
-
-  <!-- Chart.js & Three.js with OrbitControls CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root {
+      --bg-deep: #0c0912;
+      --bg-main: #150f20;
+      --bg-card: rgba(24, 17, 36, 0.88);
+      --border-card: rgba(255, 255, 255, 0.11);
+      --accent-purple: #9d4edd;
+      --accent-morado: #600d8b;
+      --accent-oro: #ed9f22;
+      --accent-oro-oscuro: #b45309;
+      --accent-gris: #9ca3af;
+      --accent-cyan: #c084fc;
+      --accent-amber: #ed9f22;
+      --accent-green: #d8b4fe;
+      --accent-red: #ed9f22;
+      --font-body: 'Outfit', sans-serif;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-deep);
+      background-image:
+        radial-gradient(at 0% 0%, rgba(96, 13, 139, 0.24) 0px, transparent 52%),
+        radial-gradient(at 100% 0%, rgba(237, 159, 34, 0.14) 0px, transparent 50%);
+    }
+
+    .app-header {
+      padding: 0.9rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-card);
+      background: rgba(12, 9, 18, 0.92);
+      backdrop-filter: blur(20px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 0.85rem; }
+    .brand-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: linear-gradient(135deg, #600d8b, #ed9f22);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem; color: #ffffff;
+    }
+    .brand h1 { font-size: 1.25rem; font-weight: 800; color: #fff; line-height: 1.15; }
+    .brand p { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+
+    .header-actions { display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap; }
+    .btn {
+      padding: 0.48rem 0.95rem; border-radius: 8px; border: 1px solid var(--border-card);
+      background: rgba(255,255,255,0.05); color: #fff; font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem; font-weight: 600; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.45rem; transition: all 0.2s;
+      text-decoration: none;
+    }
+    .btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.28); }
+    .btn-primary { background: #600d8b; border-color: #9d4edd; color: #fff; }
+    .btn-primary:hover { background: #7412a8; }
+    .btn-gold { background: rgba(237, 159, 34, 0.16); border-color: #ed9f22; color: #fde68a; }
+    .btn-gold:hover { background: rgba(237, 159, 34, 0.28); }
+
+    .chapter-nav {
+      padding: 0.65rem 2rem; display: flex; gap: 0.45rem; overflow-x: auto;
+      background: rgba(15, 10, 24, 0.75); border-bottom: 1px solid var(--border-card);
+    }
+    .chap-tab {
+      padding: 0.48rem 0.9rem; border-radius: 8px; border: 1px solid transparent;
+      background: rgba(255,255,255,0.04); color: var(--text-muted);
+      font-size: 0.8rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+      display: flex; align-items: center; gap: 0.45rem; transition: all 0.2s;
+      font-family: 'Outfit', sans-serif;
+    }
+    .chap-tab:hover { background: rgba(255,255,255,0.09); color: #fff; }
+    .chap-tab.active {
+      background: rgba(96, 13, 139, 0.35);
+      border-color: #c084fc;
+      color: #ffffff;
+    }
+    .chap-tab.tech-tab.active {
+      background: rgba(237, 159, 34, 0.22);
+      border-color: #ed9f22;
+      color: #fef3c7;
+    }
+    .chap-num {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 4px;
+    }
+
+    .story-panel { padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; height: 100%; }
+    .story-tag { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; color: #ed9f22; text-transform: uppercase; }
+    .story-title { font-size: 1.65rem; font-weight: 800; line-height: 1.2; color: #fff; }
+    .story-lead { font-size: 0.98rem; color: #e9d5ff; font-weight: 500; line-height: 1.45; }
+    .story-desc { font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; }
+
+    .source-box {
+      padding: 0.75rem 0.95rem; border-radius: 10px;
+      background: rgba(96, 13, 139, 0.16);
+      border-left: 3px solid #9d4edd; font-size: 0.78rem;
+    }
+    .source-box strong { color: #e9d5ff; display: block; margin-bottom: 3px; }
+    .source-pill-list { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 6px; }
+    .source-pill {
+      background: rgba(255,255,255,0.08); padding: 2px 8px;
+      border-radius: 4px; font-size: 0.72rem; color: #f8fafc;
+      font-family: var(--font-mono);
+      overflow-wrap: anywhere;
+      max-width: 100%;
+    }
+
+    .story-beats { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 0.2rem; }
+    .beat-card {
+      padding: 0.75rem 0.95rem; border-radius: 10px;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .beat-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(237, 159, 34, 0.5); }
+    .beat-card.active-beat { background: rgba(96, 13, 139, 0.28); border-color: #c084fc; }
+    .beat-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px; }
+    .beat-title { font-weight: 700; font-size: 0.84rem; color: #fff; }
+    .beat-btn {
+      font-size: 0.7rem; padding: 2px 8px; border-radius: 4px;
+      background: rgba(237, 159, 34, 0.18); color: #fde68a; font-weight: 600;
+    }
+    .beat-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+
+    .viz-panel { padding: 1.4rem; display: flex; flex-direction: column; gap: 1rem; min-height: 620px; }
+    .viz-header {
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid var(--border-card); padding-bottom: 0.75rem;
+      gap: 0.75rem; flex-wrap: wrap;
+    }
+    .viz-header h3 { font-size: 1.05rem; font-weight: 700; color: #fff; }
+    .viz-controls { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+    .badge-real {
+      font-size: 0.74rem; padding: 4px 9px; border-radius: 99px;
+      background: rgba(96, 13, 139, 0.35); border: 1px solid #c084fc; color: #f3e8ff;
+      font-weight: 600;
+    }
+
+    .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; }
+    .kpi-card {
+      padding: 0.9rem 1rem; border-radius: 10px;
+      background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.08);
+      border-top: 3px solid #9d4edd;
+    }
+    .kpi-label { font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .kpi-val { font-family: var(--font-mono); font-size: 1.55rem; font-weight: 700; color: #fff; margin: 4px 0; }
+    .kpi-delta { font-size: 0.75rem; color: #fde68a; }
+
+    .canvas-stage {
+      flex: 1; position: relative; min-height: 390px; width: 100%;
+      background: #ffffff; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12); overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .canvas-stage.dark-stage {
+      background: #0d0a16;
+    }
+    .canvas-stage svg { width: 100%; height: 100%; max-height: 440px; display: block; }
+    #threeStageContainer { width: 100%; height: 420px; position: relative; display: none; }
+
+    .insight-bar {
+      padding: 0.85rem 1.05rem; border-radius: 10px;
+      background: rgba(237, 159, 34, 0.12); border-left: 3px solid #ed9f22;
+      font-size: 0.84rem; color: #fef3c7; line-height: 1.5;
+    }
+
+    .stage-footer {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 0.6rem; border-top: 1px solid var(--border-card);
+      flex-wrap: wrap; gap: 0.75rem;
+    }
+    .footer-note { font-size: 0.76rem; color: var(--text-muted); }
+
+    .main-tooltip {
+      position: fixed; pointer-events: none; z-index: 9999;
+      background: #ffffff; color: #0d0d0d; border: 1px solid #600d8b;
+      border-radius: 8px; padding: 0.45rem 0.65rem; font-size: 0.78rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); opacity: 0; transition: opacity 0.12s;
+    }
+
+    @media (max-width: 900px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+      .app-header, .chapter-nav, main { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Toast Notification Container -->
-  <div class="toast-msg" id="toastMsg">
-    <i class="fa-solid fa-circle-check" style="color: var(--accent-cyan);"></i>
-    <span id="toastText">Acción ejecutada</span>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <div class="brand-container">
-      <div class="brand-logo">
-        <i class="fa-solid fa-person-walking"></i>
-      </div>
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-icon"><i class="fa-solid fa-person-walking"></i></div>
       <div>
-        <div class="brand-title">Data Storytelling: Sentir la Calle</div>
-        <div class="brand-subtitle">
-          <span class="pulse-dot" style="width: 6px; height: 6px;"></span>
-          El Viaje Peatonal, Seguridad y Confort Urbano en Mérida • UPY
-        </div>
+        <h1>Sentir la Calle · Caminar Mérida</h1>
+        <p>Capítulo 04 · Datos públicos reales leídos en vivo desde el repositorio (Equipo 4 UPY)</p>
       </div>
     </div>
 
     <div class="header-actions">
-      <button class="btn-ghost" id="presBtn" title="Reproducir recorrido guiado automático">
-        <i class="fa-solid fa-play" id="presIcon"></i> <span id="presText">Auto-Tour</span>
+      <a class="btn btn-primary" href="booklet/graficas/index.html">
+        <i class="fa-solid fa-book-open"></i> Ver capítulo del booklet
+      </a>
+      <button id="btnAutoPlay" class="btn btn-gold" type="button">
+        <i class="fa-solid fa-play"></i> Recorrido automático
       </button>
-      <button class="btn-ghost" id="btnOpenMethodology" title="Ver Ficha Técnica y Metodología (Atajo: M)">
-        <i class="fa-solid fa-database"></i> Metodología & Datos
+      <button id="btnReloadData" class="btn" type="button">
+        <i class="fa-solid fa-rotate"></i> Recargar datos
       </button>
-      <button class="btn-ghost" id="btnExportData" title="Descargar datos del capítulo en formato JSON">
-        <i class="fa-solid fa-download"></i> Exportar JSON
+      <button id="btnExportSvg" class="btn" type="button">
+        <i class="fa-solid fa-download"></i> Exportar SVG
       </button>
-      <span class="badge-pill badge-primary"><i class="fa-solid fa-layer-group"></i> 9 Vistas</span>
     </div>
   </header>
 
-  <!-- Journey Arc Stepper (Línea de Tiempo del Storytelling) -->
-  <section class="journey-arc-nav" aria-label="Fases del Viaje de Storytelling">
-    <div style="font-size: 0.76rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; letter-spacing: 0.8px;">
-      <i class="fa-solid fa-route" style="color: var(--accent-cyan);"></i> Hilo Narrativo:
-    </div>
-    <div class="arc-steps-wrapper">
-      <button class="arc-step-pill active" id="arcPill1" title="Vistas 1 al 3">
-        <i class="fa-solid fa-earth-americas arc-step-icon"></i> 1. Macro & Registros Oficiales
-      </button>
-      <button class="arc-step-pill" id="arcPill2" title="Vistas 4 al 6">
-        <i class="fa-solid fa-city arc-step-icon"></i> 2. Escala Humana & Percepción
-      </button>
-      <button class="arc-step-pill" id="arcPill3" title="Vista 7">
-        <i class="fa-solid fa-clipboard-user arc-step-icon"></i> 3. Auditoría en Terreno UPY
-      </button>
-      <button class="arc-step-pill" id="arcPill4" title="Vistas 8 y 9">
-        <i class="fa-solid fa-cube arc-step-icon"></i> 4. Inmersión 3D LiDAR & AR
-      </button>
-    </div>
-    <div style="font-size: 0.78rem; color: var(--accent-cyan); font-weight: 600;">
-      <i class="fa-solid fa-sparkles"></i> Experiencia Guiada
-    </div>
-  </section>
+  <nav class="chapter-nav" id="chapterNav" aria-label="Capítulos de exploración"></nav>
 
-  <!-- Pestañas de Navegación de las 9 Vistas -->
-  <nav class="tabs-nav-container" aria-label="Navegación de las 9 Vistas">
-    <div class="tabs-wrapper" id="tabsWrapper">
-      <button class="tab-btn active">
-        <span class="tab-number">1</span> <i class="fa-solid fa-map-location-dot"></i> INEGI ATUS & DENUE
-      </button>
-      <button class="tab-btn">
-        <span class="tab-number">2</span> <i class="fa-solid fa-chart-line"></i> Datos.gob.mx
-      </button>
-      <button class="tab-btn">
-        <span class="tab-number">3</span> <i class="fa-solid fa-bus"></i> SIEGY Yucatán
-      </button>
-      <button class="tab-btn">
-        <span class="tab-number">4</span> <i class="fa-solid fa-traffic-light"></i> GeoPortal Mérida
-      </button>
-      <button class="tab-btn">
-        <span class="tab-number">5</span> <i class="fa-solid fa-file-contract"></i> Transparencia PNT
-      </button>
-      <button class="tab-btn">
-        <span class="tab-number">6</span> <i class="fa-solid fa-newspaper"></i> Web Scraping
-      </button>
-      <button class="tab-btn">
-        <span class="tab-number">7</span> <i class="fa-solid fa-shoe-prints"></i> Self-Produced UPY
-      </button>
-      <button class="tab-btn tech-tab">
-        <span class="tab-number">8</span> <i class="fa-solid fa-cube"></i> LiDAR 3D
-      </button>
-      <button class="tab-btn tech-tab">
-        <span class="tab-number">9</span> <i class="fa-solid fa-vr-cardboard"></i> Realidad Aumentada (AR)
-      </button>
-    </div>
-  </nav>
-
-  <!-- Área Principal de Storytelling & Visualización -->
   <main>
-    <!-- Franja de Fuentes de Información -->
-    <section class="glass-panel source-banner" id="sourceBanner">
-      <div class="source-left">
-        <span class="badge-pill badge-primary" id="primarySourceBadge">
-          <i class="fa-solid fa-tag"></i> FUENTE PRINCIPAL: INEGI (ATUS & DENUE)
-        </span>
-      </div>
-      <div class="source-right" id="secondarySourceContainer">
-        <span><i class="fa-solid fa-link"></i> Fuentes Complementarias:</span>
-        <span class="badge-pill badge-secondary">Microdatos ATUS Mérida</span>
-        <span class="badge-pill badge-secondary">DENUE Comercio</span>
-        <span class="badge-pill badge-secondary">Censo Manzanas 2020</span>
-      </div>
-    </section>
-
-    <!-- Workspace de 2 Columnas (Editorial Storytelling + Dynamic Canvas) -->
     <div class="storytelling-workspace">
-      
-      <!-- Columna Izquierda: Deck Narrativo Editorial Guiado -->
-      <aside class="glass-panel story-narrative-deck">
-        <div class="story-badge-header">
-          <div class="story-tag" id="storyTag">
-            <i class="fa-solid fa-compass"></i> CAPÍTULO 1 • COBERTURA NACIONAL E INVENTORY OFICIAL
-          </div>
+      <aside class="glass-panel story-panel">
+        <div>
+          <div class="story-tag" id="storyTag">CARGANDO DATOS REALES…</div>
+          <h2 class="story-title" id="storyTitle">Sentir la Calle</h2>
         </div>
 
-        <h1 class="story-title-main" id="storyTitle">
-          Sombras en las Cifras Oficiales
-        </h1>
+        <p class="story-lead" id="storyLead">Cargando tablas reales desde data/gold/ y booklet/datos/…</p>
+        <p class="story-desc" id="storyDesc"></p>
 
-        <!-- Pregunta Guía / Lead del Storytelling -->
-        <div class="story-lead-question" id="storyLead">
-          ¿Qué revela el registro oficial frente a la realidad cotidiana del peatón en Mérida?
+        <div class="source-box">
+          <strong><i class="fa-solid fa-database"></i> Fuente verificada y archivo leído en vivo</strong>
+          <div id="primarySource" style="color:#ffffff;"></div>
+          <div class="source-pill-list" id="secondarySources"></div>
         </div>
 
-        <p class="story-text-body" id="storyDescription">
-          El censo de Accidentes de Tránsito Terrestre (ATUS) del INEGI registra 7,134 percances en Mérida. Sin embargo, al cruzar estos puntos con la presencia de unidades económicas DENUE, descubrimos que la mayor exposición al riesgo ocurre en arterias comerciales sin semáforo peatonal.
-        </p>
-
-        <!-- Barra de Audio Narrador (Web Speech API) -->
-        <div class="story-audio-bar">
-          <div class="audio-info">
-            <i class="fa-solid fa-volume-high" style="color: var(--accent-cyan);"></i> Narrador del Capítulo
+        <div>
+          <div style="font-size:0.75rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.45rem;">
+            <i class="fa-solid fa-compass"></i> Enfoques de análisis
           </div>
-          <button class="btn-audio-play" id="narrateBtn">
-            <i class="fa-solid fa-play" id="narrateIcon"></i> Escuchar
-          </button>
-        </div>
-
-        <!-- Pasos Guiados / Story Beats Interactivos -->
-        <div class="story-beats-container">
-          <div class="beats-heading">
-            <i class="fa-solid fa-list-check" style="color: var(--accent-cyan);"></i> Pasos Guiados de Análisis:
-          </div>
-          <div id="storyBeatsList" style="display: flex; flex-direction: column; gap: 8px;">
-            <!-- Inyectados dinámicamente por JS -->
-          </div>
+          <div class="story-beats" id="storyBeats"></div>
         </div>
       </aside>
 
-      <!-- Columna Derecha: Lienzo de Visualización Interactiva -->
-      <section class="glass-panel viz-container">
+      <section class="glass-panel viz-panel">
         <div class="viz-header">
-          <div class="viz-title" id="vizTitle">
-            <i class="fa-solid fa-compass-drafting" style="color: var(--accent-cyan);"></i> Explorador Cartográfico con Clusters de Siniestralidad y Exposición Comercial
-          </div>
-          <div class="controls-bar" id="vizControls">
-            <!-- Controles contextuales inyectados dinámicamente -->
+          <h3 id="vizTitle">Cargando visualización en D3…</h3>
+          <div class="viz-controls">
+            <span class="badge-real" id="dataStatusBadge">Leyendo CSV / GeoJSON en vivo</span>
           </div>
         </div>
 
-        <!-- Lienzo Interactivo / Canvas -->
-        <div class="viz-canvas-wrapper" id="canvasWrapper">
-          <div class="interactive-overlay">
-            <div class="pulse-dot"></div>
-            <span id="overlayStatus">Simulación Interactiva Activa</span>
+        <div class="kpi-grid" id="kpiGrid"></div>
+
+        <div class="canvas-stage" id="canvasStage">
+          <div id="d3StageContainer" style="width:100%; height:100%;"></div>
+          <div id="threeStageContainer"></div>
+        </div>
+
+        <div class="insight-bar" id="insightBar"></div>
+
+        <div class="stage-footer">
+          <div class="footer-note" id="footerMeta">
+            Todos los números se calculan en el navegador directamente desde <code>data/gold/</code>, <code>data/08_lidar_3d/</code>, <code>data/09_realidad_aumentada_ar/</code> y <code>booklet/datos/</code>.
           </div>
-
-          <!-- Chart.js Canvas -->
-          <canvas id="vizChart" style="max-height: 480px; width: 100%; display: block;"></canvas>
-          
-          <!-- Three.js 3D WebGL Canvas Container -->
-          <div id="threejsContainer" style="width: 100%; height: 100%; display: none; position: absolute; top: 0; left: 0;"></div>
-          
-          <!-- Custom Interactive 2D Simulation Surface (SVG GIS / Force Graph) -->
-          <div id="interactiveCustomSurface" style="display: none;"></div>
-
-          <!-- Viewport Tools Floating in Canvas -->
-          <div class="viewport-tools">
-            <button class="tool-btn" id="btnSnapshot" title="Tomar captura de la visualización">
-              <i class="fa-solid fa-camera"></i>
-            </button>
-            <button class="tool-btn" id="btnFullscreen" title="Pantalla Completa">
-              <i class="fa-solid fa-expand"></i>
-            </button>
+          <div style="display:flex; gap:0.5rem;">
+            <button id="btnPrev" class="btn" type="button"><i class="fa-solid fa-arrow-left"></i> Anterior</button>
+            <button id="btnNext" class="btn btn-primary" type="button">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </section>
-
-    </div>
-
-    <!-- Fila Inferior: Métricas Clave (KPIs) con Tendencias y Hallazgo -->
-    <div class="kpis-story-row" id="kpiContainer">
-      <!-- Inyectados por JS -->
-    </div>
-
-    <!-- Descubrimiento Clave / Conclusión del Capítulo -->
-    <div class="insight-banner-box" id="storyInsight">
-      💡 <b>Descubrimiento Clave:</b> Las intersecciones comerciales densas registran 3.4 veces más percances peatonales debido a la interferencia entre carga/descarga y el cruce a pie.
     </div>
   </main>
 
-  <!-- Footer Navigation -->
-  <footer>
-    <button class="nav-btn" id="prevBtn">
-      <i class="fa-solid fa-arrow-left"></i> Anterior
-    </button>
-    
-    <div class="nav-controls-center">
-      <div class="progress-bar-container" title="Progreso del Data Storytelling">
-        <div class="progress-bar-fill" id="progressBarFill"></div>
-      </div>
-      <div style="font-size: 0.84rem; color: var(--text-muted); font-family: var(--font-heading);" id="stepIndicator">
-        Capítulo 1 de 9 • INEGI ATUS & DENUE
-      </div>
-    </div>
-
-    <button class="nav-btn nav-btn-primary" id="nextBtn">
-      Siguiente Capítulo <i class="fa-solid fa-arrow-right"></i>
-    </button>
-  </footer>
-
-  <!-- Modal de Metodología y Fuentes de Datos (<dialog>) -->
-  <dialog class="modal-dialog" id="methodologyModal">
-    <div class="modal-header">
-      <h3 style="font-family: var(--font-heading); font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
-        <i class="fa-solid fa-database" style="color: var(--accent-cyan);"></i> Metodología & Fuentes de Información
-      </h3>
-      <button class="modal-close" id="btnCloseMethodology">&times;</button>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.88rem; line-height: 1.6; color: #cbd5e1; max-height: 60vh; overflow-y: auto; padding-right: 8px;">
-      <p>
-        Este proyecto integra un pipeline de datos multiescalar con 7 fuentes de datos primarias estructuradas y 2 entornos volumétricos tecnológicos de última generación para evaluar el confort y la seguridad peatonal en Mérida:
-      </p>
-      <ul style="padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
-        <li><strong>1. INEGI ATUS & DENUE:</strong> Microdatos de 7,134 percances viales registrados en Mérida y 3,842 establecimientos comerciales expuestos.</li>
-        <li><strong>2. Datos.gob.mx:</strong> Registros abiertos nacionales de movilidad, transporte e indicadores de siniestralidad peatonal.</li>
-        <li><strong>3. SIEGY Yucatán:</strong> Datos geoestadísticos y sociodemográficos de transporte metropolitano, rutas y paraderos Va y Ven.</li>
-        <li><strong>4. GeoPortal Mérida & OSM:</strong> Geolocalización e inventario de 80 nodos semaforizados reales y capas vectoriales de banquetas.</li>
-        <li><strong>5. Transparencia PNT:</strong> Peticiones vecinales tramitadas ante la SSP Yucatán y el Ayuntamiento solicitando alumbrado y semáforos peatonales.</li>
-        <li><strong>6. Web Scraping Prensa:</strong> Minería de texto sobre más de 850 notas periodísticas locales (Diario de Yucatán, Por Esto!) y análisis semántico.</li>
-        <li><strong>7. Self-Produced (UPY):</strong> Auditoría presencial a pie midiendo tiempos de semáforo verde, ancho efectivo de banquetas (1.2m) y confort térmico (38°C).</li>
-        <li><strong>8. LiDAR 3D:</strong> Modelo digital volumétrico de nube de puntos 3D (.PLY / .XYZ) para análisis de ángulos ciegos e infraestructura.</li>
-        <li><strong>9. Realidad Aumentada (AR):</strong> Propuesta holográfica en WebXR de rediseño de crucero seguro con refugio peatonal y accesibilidad universal.</li>
-      </ul>
-      <div style="background: rgba(0, 242, 254, 0.08); padding: 10px 14px; border-radius: 8px; border-left: 3px solid var(--accent-cyan);">
-        📌 <strong>Universidad Politécnica de Yucatán (UPY)</strong> • Equipo: Rivaldo (PM / LiDAR), Elisabeth (Institucional), Christopher (Campo / Scraping)
-      </div>
-    </div>
-    <div style="margin-top: 1.5rem; text-align: right;">
-      <button class="nav-btn nav-btn-primary" id="btnMethodologyUnderstood">Entendido</button>
-    </div>
-  </dialog>
-
-  <!-- Modular Scripts Loaded in Order (Compatible with file:/// and http(s)://) -->
-  <script src="./js/data/viewsData.js"></script>
-  <script src="./js/modules/storytelling.js"></script>
-  <script src="./js/modules/gisMap.js"></script>
-  <script src="./js/modules/charts.js"></script>
-  <script src="./js/modules/forceGraph.js"></script>
-  <script src="./js/modules/threeVisuals.js"></script>
-  <script src="./js/app.js"></script>
+  <script src="js/data/viewsData.js"></script>
+  <script src="js/modules/charts.js"></script>
+  <script src="js/modules/gisMap.js"></script>
+  <script src="js/modules/forceGraph.js"></script>
+  <script src="js/modules/threeVisuals.js"></script>
+  <script src="js/modules/storytelling.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

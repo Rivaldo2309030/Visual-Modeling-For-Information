@@ -1,0 +1,6 @@
+categoria,codigo_osm,cruces,porcentaje
+Sin marcar en pavimento,unmarked,1658,40.52
+Sin semáforo (no controlado),uncontrolled,1415,34.58
+Sin tipo especificado en OSM,unspecified,952,23.26
+Marcado o con semáforo,marked/traffic_signals,59,1.44
+Etiqueta genérica (yes),yes,8,0.2

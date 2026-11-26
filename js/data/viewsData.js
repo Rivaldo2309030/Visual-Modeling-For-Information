@@ -1,265 +1,390 @@
 /**
- * Dataset estructurado alimentado con cifras reales verificadas del Data Mart 04
- * Proyecto: Sentir la Calle - Viaje Peatonal, Seguridad y Confort Urbano en Mérida
- * Equipo 4 UPY: Rivaldo, Elisabeth, Christopher
+ * Cargador en vivo de datos reales del repositorio (sin cifras escritas a mano).
+ * Lee exclusivamente archivos CSV, GeoJSON, PLY y GLB del repositorio Equipo 4.
  */
 window.DataStoryApp = window.DataStoryApp || {};
 
-window.DataStoryApp.viewsData = {
-  1: {
-    number: 1,
-    tabName: "INEGI ATUS & DENUE",
-    tag: "CAPÍTULO 1 • SINIESTRALIDAD VIAL Y EXPOSICIÓN COMERCIAL (INEGI)",
-    primarySource: "INEGI (ATUS Georreferenciado 2021–2024, DENUE 2025/2026 & Censo 2020)",
-    secondarySources: ["8,815 Siniestros ATUS Mérida", "56,908 Unidades DENUE", "550 AGEBs Marco Geoestadístico dic 2025"],
-    storyTitle: "Sombras en las Cifras Oficiales",
-    storyLead: "¿Dónde convergen la actividad comercial y los siniestros que afectan a peatones y ciclistas en Mérida?",
-    storyDesc: "El registro georreferenciado ATUS del INEGI entre 2021 y 2024 documenta 8,815 accidentes viales dentro del municipio de Mérida (31050), de los cuales 501 involucraron directamente a movilidad activa (304 con peatones y 197 con ciclistas), acumulando 333 peatones heridos. Al cruzar por AGEB con 56,908 establecimientos DENUE, los corredores comerciales concentran la mayor exposición.",
-    vizTitle: "Explorador Cartográfico de 8,815 Siniestros ATUS y Densidad Comercial por AGEB",
-    vizType: "custom_map",
-    kpis: [
-      { label: "Siniestros ATUS (2021–2024)", value: "8,815", delta: "304 con peatones · 197 ciclistas", color: "var(--accent-red)", icon: "fa-triangle-exclamation" },
-      { label: "Unidades Económicas DENUE", value: "56,908", delta: "Unidas a 550 AGEBs de Mérida", color: "var(--accent-cyan)", icon: "fa-store" },
-      { label: "Peatones Lesionados", value: "333", delta: "Serie verificada 2021–2024", color: "var(--accent-amber)", icon: "fa-person-walking" }
-    ],
-    insight: "💡 <b>Hallazgo Verificado:</b> Entre 2021 y 2024 los siniestros con peatones pasaron de 52 anuales (2021) a 89 anuales (2024), concentrándose en AGEBs con alta densidad de comercios y servicios.",
-    storyBeats: [
-      { id: "beat1_1", title: "1. Exposición en el Centro Histórico", actionText: "Enfocar Centro", desc: "Alta concentración de unidades económicas DENUE y flujo peatonal continuo.", focusNode: 1 },
-      { id: "beat1_2", title: "2. Nodos de Acceso y Periférico", actionText: "Enfocar Anillo Vial", desc: "Interacción crítica entre velocidades de acceso carretero y cruces urbanos.", focusNode: 4 }
-    ],
-    chartData: {
-      labels: ['2021', '2022', '2023', '2024'],
-      datasets: [
-        { label: 'Accidentes con Peatón Involucrado (ATUS Mérida)', data: [52, 87, 76, 89], borderColor: '#f43f5e', backgroundColor: 'rgba(244, 63, 94, 0.18)', fill: true },
-        { label: 'Peatones Heridos (ATUS Mérida)', data: [54, 99, 85, 95], borderColor: '#f59e0b', backgroundColor: 'transparent', fill: false }
-      ]
-    }
-  },
+(function () {
+  const fmtInt = (n) => new Intl.NumberFormat("es-MX", { maximumFractionDigits: 0 }).format(n);
+  const fmtDec = (n, d = 1) => new Intl.NumberFormat("es-MX", { minimumFractionDigits: d, maximumFractionDigits: d }).format(n);
 
-  2: {
-    number: 2,
-    tabName: "SICT / IMT Viales",
-    tag: "CAPÍTULO 2 • PRESIÓN VEHICULAR EN ACCESOS METROPOLITANOS (SICT)",
-    primarySource: "SICT Datos Viales (2013–2024) & IMT Red Nacional de Caminos",
-    secondarySources: ["4,169 Observaciones SICT Yucatán", "277 Estaciones Georreferenciadas", "Mezcla Vehicular y Carga Pesada"],
-    storyTitle: "Presión Vehicular en los Accesos a Mérida",
-    storyLead: "¿Cómo ha crecido el volumen diario de vehículos y transporte pesado en los corredores metropolitanos?",
-    storyDesc: "A partir de 4,169 registros históricos de aforo vehicular de la SICT en Yucatán (2013–2024), el Tránsito Diario Promedio Anual (TDPA) en los corredores metropolitanos de Mérida creció de 5,167 veh/día en 2013 a 7,846 veh/día en 2023 (+51.8%), con tramos máximos de 43,720 veh/día y ~23.4% de carga pesada.",
-    vizTitle: "Evolución del TDPA Promedio (2013–2024): Corredores Mérida vs. Resto de Yucatán",
-    vizType: "line",
-    kpis: [
-      { label: "TDPA Medio Accesos Mérida", value: "7,846 veh/día", delta: "+51.8% entre 2013 y 2023", color: "var(--accent-cyan)", icon: "fa-car" },
-      { label: "Aforo Máximo Registrado", value: "43,720 veh/día", delta: "Corredor metropolitano SICT", color: "var(--accent-red)", icon: "fa-gauge-high" },
-      { label: "Participación Carga Pesada", value: "23.4%", delta: "277 estaciones georreferenciadas", color: "var(--accent-amber)", icon: "fa-truck" }
-    ],
-    insight: "💡 <b>Hallazgo Verificado:</b> Los corredores metropolitanos de Mérida soportan casi el triple de flujo vehicular promedio que el resto de la red estatal (7,846 vs. 2,715 veh/día en 2023).",
-    storyBeats: [
-      { id: "beat2_1", title: "1. Crecimiento Sostenido 2013–2023", actionText: "Filtrar Serie", desc: "Incremento continuo del flujo diario tras la caída temporal de 2020.", filterWave: "all" },
-      { id: "beat2_2", title: "2. Peso del Transporte de Carga", actionText: "Ver Mezcla", desc: "Cerca de una cuarta parte del flujo en accesos corresponde a vehículos pesados.", filterWave: "vac" }
-    ],
-    chartData: {
-      labels: ['2015', '2017', '2019', '2020', '2021', '2022', '2023'],
-      datasets: [
-        { label: 'TDPA Corredores Metropolitanos Mérida', data: [6017, 6509, 7388, 6297, 7059, 7345, 7846], borderColor: '#38bdf8', backgroundColor: 'transparent' },
-        { label: 'TDPA Resto Red Estatal Yucatán', data: [1784, 1955, 2320, 2070, 2299, 2543, 2715], borderColor: '#f59e0b', backgroundColor: 'transparent' }
-      ]
-    }
-  },
+  async function loadViewsFromData() {
+    const [
+      geoAgeb,
+      mensual,
+      ageb,
+      sict,
+      siegy,
+      semaforos,
+      semColonia,
+      capasInfra,
+      prensaCooc,
+      crucesResumen,
+      catalogo3d,
+      atusPuntos
+    ] = await Promise.all([
+      d3.json("booklet/datos/merida_ageb_simplificado.geojson"),
+      d3.csv("data/gold/fct_peatonal_siniestros_mensual.csv", (d) => ({
+        periodo: d.periodo,
+        anio: +d.anio,
+        mes: +d.mes,
+        total_accidentes: +d.total_accidentes,
+        accidentes_peaton: +d.accidentes_peaton,
+        accidentes_ciclista: +d.accidentes_ciclista,
+        peatones_heridos: +d.peatones_heridos,
+        peatones_muertos: +d.peatones_muertos
+      })),
+      d3.csv("booklet/datos/escena-3.csv", (d) => ({
+        cvegeo_ageb: d.cvegeo_ageb,
+        tipo_ageb: d.tipo_ageb,
+        colonia: d.colonia,
+        poblacion_2020: +d.poblacion_2020,
+        establecimientos_denue: +d.establecimientos_denue,
+        accidentes_peaton: +d.accidentes_peaton,
+        peatones_heridos: +d.peatones_heridos,
+        peatones_muertos: +d.peatones_muertos,
+        semaforos_osm: +d.semaforos_osm,
+        cruces_peatonales_osm: +d.cruces_peatonales_osm,
+        red_peatonal_km: +d.red_peatonal_km,
+        paraderos_vayven: +d.paraderos_vayven,
+        elevacion_media_msnm: +d.elevacion_media_msnm,
+        pendiente_media_pct: +d.pendiente_media_pct,
+        pendiente_p95_pct: +d.pendiente_p95_pct,
+        indice_prioridad_peatonal: +d.indice_prioridad_peatonal
+      })),
+      d3.csv("data/gold/fct_peatonal_presion_vial_sict.csv", (d) => ({
+        anio: +d.anio,
+        zona_merida: d.zona_merida,
+        estaciones_aforo: +d.estaciones_aforo,
+        tdpa_promedio: +d.tdpa_promedio,
+        tdpa_maximo: +d.tdpa_maximo,
+        pct_carga_pesada_est: +d.pct_carga_pesada_est
+      })),
+      d3.csv("data/gold/ind_peatonal_transporte_sostenible.csv", (d) => ({
+        indicador_id: d.indicador_id,
+        indicador: d.indicador,
+        valor: +d.valor,
+        unidad: d.unidad,
+        periodo: d.periodo,
+        geografia: d.geografia
+      })),
+      d3.csv("booklet/datos/escena-1.csv", (d) => ({
+        id_semaforo: d.id_semaforo,
+        latitud: +d.latitud,
+        longitud: +d.longitud,
+        colonia: d.colonia,
+        cvegeo_ageb: d.cvegeo_ageb,
+        es_centro: d.es_centro,
+        tiene_cruce_marcado: d.tiene_cruce_marcado,
+        tiene_sonido: d.tiene_sonido,
+        tiene_boton: d.tiene_boton
+      })),
+      d3.csv("data/gold/ind_peatonal_semaforos_por_colonia.csv", (d) => ({
+        colonia: d.colonia,
+        semaforos_count: +d.semaforos_count
+      })),
+      d3.csv("data/gold/dim_capas_infraestructura_merida.csv"),
+      d3.csv("data/gold/ind_peatonal_prensa_coocurrencia.csv", (d) => ({
+        tipo_registro: d.tipo_registro,
+        nodo_origen: d.nodo_origen,
+        nodo_destino: d.nodo_destino,
+        frecuencia: +d.frecuencia,
+        pct_sobre_corpus: +d.pct_sobre_corpus
+      })),
+      d3.csv("booklet/datos/escena-1-cruces-resumen.csv", (d) => ({
+        categoria: d.categoria,
+        codigo_osm: d.codigo_osm,
+        cruces: +d.cruces,
+        porcentaje: +d.porcentaje
+      })),
+      d3.csv("data/gold/dim_catalogo_activos_espaciales_eq4.csv", (d) => ({
+        asset_id: d.asset_id,
+        nombre_activo: d.nombre_activo,
+        tipo_activo: d.tipo_activo,
+        asset_uri_relativa: d.asset_uri_relativa,
+        tamano_kb: +d.tamano_kb,
+        crs: d.crs,
+        observaciones: d.observaciones
+      })),
+      d3.json("data/01_inegi_denue/atus_siniestros_peaton_ciclista_merida.geojson")
+    ]);
 
-  3: {
-    number: 3,
-    tabName: "ATY Va-y-Ven & SIEGY",
-    tag: "CAPÍTULO 3 • TRANSPORTE PÚBLICO METROPOLITANO Y PARADEROS",
-    primarySource: "Agencia de Transporte de Yucatán (ATY) & SIEGY Boletín 2025-11",
-    secondarySources: ["110 Rutas Oficiales ATY (Va-y-Ven / IE-TRAM)", "565 Trazas y Paraderos GIS", "Indicadores SIEGY Transporte Sostenible"],
-    storyTitle: "El Latido Metropolitano",
-    storyLead: "¿Qué cobertura territorial tienen las rutas y paraderos que inician y terminan cada viaje a pie?",
-    storyDesc: "Integramos el catálogo oficial de 110 rutas publicadas por la ATY (incluyendo Va-y-Ven urbano, rutas nocturnas e IE-TRAM) junto con 565 elementos georreferenciados (547 paraderos puntuales y trazas de ruta) e indicadores oficiales del Boletín 2025-11 de Transporte Sostenible del SIEGY.",
-    vizTitle: "Cobertura Multidimensional y Red Espacial de 547 Paraderos en Mérida",
-    vizType: "radar",
-    kpis: [
-      { label: "Rutas Oficiales ATY", value: "110 Rutas", delta: "Va-y-Ven, Nocturnas e IE-TRAM", color: "var(--accent-cyan)", icon: "fa-bus" },
-      { label: "Paraderos Georreferenciados", value: "547 Nodos", delta: "565 features totales en GIS", color: "var(--accent-amber)", icon: "fa-location-dot" },
-      { label: "Indicadores Oficiales SIEGY", value: "Boletín 2025-11", delta: "Transporte Sostenible Yucatán", color: "var(--accent-green)", icon: "fa-chart-line" }
-    ],
-    insight: "💡 <b>Hallazgo Verificado:</b> Cada paradero funciona como nodo generador de viajes a pie; cruzar su ubicación con banquetas y cruces OSM permite detectar brechas de última milla por AGEB.",
-    storyBeats: [
-      { id: "beat3_1", title: "1. Conectividad Metropolitana", actionText: "Evaluar Red", desc: "Articulación entre rutas troncales, circuito periférico y corredores IE-TRAM.", jurisIdx: 0 },
-      { id: "beat3_2", title: "2. Entorno Peatonal del Paradero", actionText: "Evaluar Entorno", desc: "Presencia desigual de refugios, bancas e iluminación peatonal alrededor de las paradas.", jurisIdx: 1 }
-    ],
-    chartData: {
-      labels: ['Densidad Paraderos', 'Red Peatonal Cercana', 'Cruces Mapeados', 'Semáforos Cercanos', 'Mobiliario / Luz'],
-      datasets: [
-        { label: 'Centro Histórico', data: [92, 88, 85, 80, 76], borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.2)' },
-        { label: 'Corredores Intermedios', data: [65, 58, 54, 52, 45], borderColor: '#38bdf8', backgroundColor: 'rgba(56, 189, 248, 0.2)' },
-        { label: 'Periferia / Expansión', data: [34, 25, 22, 18, 20], borderColor: '#f43f5e', backgroundColor: 'rgba(244, 63, 94, 0.2)' }
-      ]
-    }
-  },
+    // Métricas calculadas dinámicamente desde los archivos cargados
+    const totPeaton = d3.sum(mensual, (d) => d.accidentes_peaton);
+    const totHeridos = d3.sum(mensual, (d) => d.peatones_heridos);
+    const totMuertos = d3.sum(mensual, (d) => d.peatones_muertos);
+    const sin2021 = d3.sum(mensual.filter((d) => d.anio === 2021), (d) => d.accidentes_peaton);
+    const sin2024 = d3.sum(mensual.filter((d) => d.anio === 2024), (d) => d.accidentes_peaton);
+    const deltaPeatonPct = ((sin2024 - sin2021) / sin2021) * 100;
+    const totDenue = d3.sum(ageb, (d) => d.establecimientos_denue);
+    const totalAgebs = ageb.length;
 
-  4: {
-    number: 4,
-    tabName: "GeoPortal Mérida & Semáforos",
-    tag: "CAPÍTULO 4 • GEOMETRÍA URBANA Y 190 SEMÁFOROS GEORREFERENCIADOS",
-    primarySource: "GeoPortal del Ayuntamiento de Mérida & OpenStreetMap (Overpass API)",
-    secondarySources: ["500 Colonias Oficiales Mérida", "Centro Histórico + 73 Zonas Patrimoniales", "190 Semáforos Reales en Mérida (31050)"],
-    storyTitle: "La Ciudad a Escala Humana",
-    storyLead: "¿Cómo se distribuyen los 190 nodos semaforizados reales a lo largo de las 500 colonias de Mérida?",
-    storyDesc: "Cruzamos las capas vectoriales oficiales del GeoPortal de Mérida (500 colonias, polígono del Centro Histórico y 73 zonas patrimoniales en EPSG:4326) con la extracción completa de 190 semáforos reales (`highway=traffic_signals`) dentro del municipio de Mérida.",
-    vizTitle: "Mapa Cartográfico de 190 Semáforos Reales y Colonias del Municipio de Mérida",
-    vizType: "custom_map",
-    kpis: [
-      { label: "Semáforos Reales en Mérida", value: "190 Nodos", delta: "Filtrados a cve_mun = 31050", color: "var(--accent-cyan)", icon: "fa-traffic-light" },
-      { label: "Colonias Oficiales", value: "500 Polígonos", delta: "GeoPortal Mérida EPSG:4326", color: "var(--accent-amber)", icon: "fa-map-location-dot" },
-      { label: "Zonas Patrimoniales", value: "74 Polígonos", delta: "Centro Histórico + 73 zonas", color: "var(--accent-green)", icon: "fa-landmark" }
-    ],
-    insight: "💡 <b>Hallazgo Verificado:</b> La gran mayoría de los nodos semaforizados se concentra en el Centro y ejes radiales primarios, mientras amplias zonas habitacionales periféricas carecen de control semafórico peatonal.",
-    storyBeats: [
-      { id: "beat4_1", title: "1. Corredor Paseo de Montejo", actionText: "Ver Montejo", desc: "Alta densidad de intersecciones semaforizadas y cruces marcados.", focusNode: 2 },
-      { id: "beat4_2", title: "2. Primer Cuadro Centro Histórico", actionText: "Ver Centro", desc: "Polígono patrimonial de ~9.3 km² con intensa convergencia peatonal y comercial.", focusNode: 3 }
-    ],
-    chartData: {
-      labels: ['Colonias Oficiales', 'Semáforos OSM Mérida', 'Zonas Patrimoniales', 'Capas SIG Infraestructura'],
-      datasets: [
-        { label: 'Activos Geoespaciales Municipales Verificados', data: [500, 190, 74, 66], backgroundColor: ['#38bdf8', '#f43f5e', '#10b981', '#f59e0b'] }
-      ]
-    }
-  },
+    const semTotal = semaforos.length;
+    const semCentro = semaforos.filter((d) => d.es_centro === "Centro Histórico").length;
+    const pctSemCentro = (100 * semCentro) / semTotal;
+    const agebSinSem = ageb.filter((d) => d.semaforos_osm === 0).length;
+    const totCruces = d3.sum(crucesResumen, (d) => d.cruces);
+    const crucesMarcados = (crucesResumen.find((d) => d.codigo_osm === "marked/traffic_signals") || { cruces: 0 }).cruces;
 
-  5: {
-    number: 5,
-    tabName: "Infraestructura Municipal",
-    tag: "CAPÍTULO 5 • EQUIPAMIENTO PEATONAL Y CAPAS DE OBRA PÚBLICA",
-    primarySource: "Catálogo SIG Ayuntamiento de Mérida, Actividad Urbana UMAIP & OpenStreetMap",
-    secondarySources: ["562 Luminarias/Bancas/Refugios OSM", "66 Capas SIG Obras Públicas y Vialidad", "Serie Anual Actividad Urbana Centro (2015–2026)"],
-    storyTitle: "Infraestructura Pública en la Calle",
-    storyLead: "¿Qué infraestructura física de soporte (alumbrado, descanso y refugio) respalda el caminar diario?",
-    storyDesc: "Consolidamos fuentes abiertas verificables (sin depender de solicitudes PAE/PNT): 562 unidades georreferenciadas de alumbrado peatonal, bancas y refugios en Mérida, el catálogo oficial de 66 capas SIG municipales de Obras Públicas/Vialidad y la serie anual 2015–2026 de licencias urbanas en el Centro.",
-    vizTitle: "Inventario de Equipamiento Peatonal y Capas Municipales de Infraestructura",
-    vizType: "bar",
-    kpis: [
-      { label: "Mobiliario y Luminarias OSM", value: "562 Unidades", delta: "Luminarias, bancas y refugios", color: "var(--accent-cyan)", icon: "fa-lightbulb" },
-      { label: "Capas SIG Obras y Vialidad", value: "66 Capas", delta: "Catálogo GeoPortal Mérida", color: "var(--accent-amber)", icon: "fa-layer-group" },
-      { label: "Serie Urbana Centro", value: "2015–2026", delta: "Registros anuales UMAIP", color: "var(--accent-green)", icon: "fa-building-columns" }
-    ],
-    insight: "💡 <b>Nota de Trazabilidad:</b> Ante la protección Radware CAPTCHA para scripts en portales municipales específicos, toda la capa se construyó con registros abiertos reproducibles y verificables.",
-    storyBeats: [
-      { id: "beat5_1", title: "1. Distribución de Mobiliario y Luz", actionText: "Ver Equipamiento", desc: "Concentración de bancas, paradas cubiertas y alumbrado mapeado por AGEB.", filterWave: "all" },
-      { id: "beat5_2", title: "2. Dinámica Urbana 2015–2026", actionText: "Ver Serie", desc: "Evolución de giros comerciales y de servicios que incrementan demanda peatonal en el Centro.", filterWave: "vac" }
-    ],
-    chartData: {
-      labels: ['Mobiliario/Alumbrado OSM', 'Capas SIG Obras/Vialidad', 'Registros Serie Anual Centro'],
-      datasets: [
-        { label: 'Registros Verificados Subtema 5', data: [562, 66, 38], backgroundColor: '#38bdf8' }
-      ]
-    }
-  },
+    const totKmRed = d3.sum(ageb, (d) => d.red_peatonal_km);
+    const agebSinRed = ageb.filter((d) => d.red_peatonal_km === 0).length;
+    const pctSinRed = (100 * agebSinRed) / totalAgebs;
+    const totParaderos = d3.sum(ageb, (d) => d.paraderos_vayven);
 
-  6: {
-    number: 6,
-    tabName: "Web Scraping Prensa",
-    tag: "CAPÍTULO 6 • PERCEPCIÓN MEDIÁTICA EN PRENSA LOCAL (338 NOTAS)",
-    primarySource: "Diario de Yucatán, Novedades Yucatán, Sala de Prensa Gob. Yucatán & RSS Local",
-    secondarySources: ["338 Artículos Únicos Verificados", "7 Tópicos Viales y Peatonales", "Matriz de Co-ocurrencia Semántica"],
-    storyTitle: "El Rumor Digital",
-    storyLead: "¿Qué temas dominan la agenda mediática local sobre movilidad, calles y riesgo peatonal en Mérida?",
-    storyDesc: "Mediante scraping directo y recolección de feeds RSS locales reunimos 338 notas periodísticas reales con enlace verificable. 'Transporte Va-y-Ven / Paraderos' (104 notas, 30.8%), 'Periférico de Mérida' (96 notas, 28.4%), 'Siniestros Viales' (67) y 'Peatón / Atropellamiento' (58) encabezan la cobertura.",
-    vizTitle: "Red Semántica de Tópicos y Co-ocurrencias en 338 Notas de Prensa Local",
-    vizType: "custom_force",
-    kpis: [
-      { label: "Notas Reales Recolectadas", value: "338 Artículos", delta: "Con URL y medio verificable", color: "var(--accent-cyan)", icon: "fa-newspaper" },
-      { label: "Foco Vial Crítico", value: "96 Notas", delta: "Menciones al Periférico (28.4%)", color: "var(--accent-red)", icon: "fa-road" },
-      { label: "Menciones Peatón / Atropello", value: "58 Notas", delta: "17.2% del corpus hemerográfico", color: "var(--accent-amber)", icon: "fa-person-falling-burst" }
-    ],
-    insight: "💡 <b>Hallazgo Verificado:</b> La co-ocurrencia más frecuente del corpus une 'Periférico de Mérida' con 'Siniestro Vial' (43 notas) y con 'Peatón / Atropellamiento' (19 notas).",
-    storyBeats: [
-      { id: "beat6_1", title: "1. Nodo Crítico Periférico", actionText: "Simular Grafo", desc: "Principal clúster semántico asociado a siniestros graves y atropellamientos.", focusNode: 1 }
-    ],
-    chartData: {
-      labels: ['Va-y-Ven / Paraderos', 'Periférico Mérida', 'Siniestro / Choque', 'Peatón / Atropello', 'Semáforos / Vialidad', 'Obras y Baches', 'Banquetas y Cruces'],
-      datasets: [
-        { label: 'Artículos por Tópico (Corpus Real n=338)', data: [104, 96, 67, 58, 42, 26, 15], backgroundColor: '#f43f5e' }
-      ]
-    }
-  },
+    const elevMedia = d3.mean(ageb, (d) => d.elevacion_media_msnm);
+    const pendMedia = d3.mean(ageb, (d) => d.pendiente_media_pct);
+    const pendMaxP95 = d3.max(ageb, (d) => d.pendiente_p95_pct);
 
-  7: {
-    number: 7,
-    tabName: "Red Peatonal OSM",
-    tag: "CAPÍTULO 7 • INFRAESTRUCTURA PEATONAL REAL EN OPENSTREETMAP",
-    primarySource: "OpenStreetMap (Overpass API / Geofabrik) — Municipio de Mérida",
-    secondarySources: ["4,092 Cruces Peatonales Reales", "9,857 Tramos Peatonales (697.6 km)", "Cobertura por 550 AGEBs"],
-    storyTitle: "La Red donde Camina Mérida",
-    storyLead: "¿Cuántos kilómetros reales de banquetas, andadores y cruces peatonales están mapeados por AGEB?",
-    storyDesc: "Procesamos en proyección métrica UTM 16N (EPSG:32616) los 9,857 tramos de infraestructura peatonal (`footway`, `pedestrian`, `steps` y `sidewalk`) y 4,092 cruces peatonales (`highway=crossing`) registrados en OpenStreetMap dentro de Mérida, sumando 697.6 km lineales distribuidos en 325 de las 550 AGEBs.",
-    vizTitle: "Distribución de 697.6 km de Red Peatonal y 4,092 Cruces Peatonales en Mérida",
-    vizType: "bar",
-    kpis: [
-      { label: "Red Peatonal Mapeada", value: "697.6 km", delta: "9,857 tramos lineales en Mérida", color: "var(--accent-cyan)", icon: "fa-shoe-prints" },
-      { label: "Cruces Peatonales OSM", value: "4,092 Nodos", delta: "Dentro de cve_mun = 31050", color: "var(--accent-green)", icon: "fa-road-spikes" },
-      { label: "Cobertura por AGEB", value: "325 / 550", delta: "225 AGEBs sin aceras mapeadas", color: "var(--accent-amber)", icon: "fa-border-all" }
-    ],
-    insight: "💡 <b>Hallazgo Verificado:</b> 225 de las 550 AGEBs de Mérida aún no registran tramos de banquetas mapeados en OSM, evidenciando tanto rezago físico periférico como brecha cartográfica.",
-    storyBeats: [
-      { id: "beat7_1", title: "1. Densidad en Centro y Norte", actionText: "Ver Cobertura", desc: "AGEBs consolidadas superan los 9 a 13 km de red peatonal por km².", filterWave: "all" },
-      { id: "beat7_2", title: "2. Atributos de Accesibilidad", actionText: "Ver Cruces", desc: "Evaluación de rebajes de guarnición (kerb), iluminación (lit) y pavimento táctil en 4,092 cruces.", filterWave: "vac" }
-    ],
-    chartData: {
-      labels: ['Tramos Peatonales OSM', 'Cruces Peatonales OSM', 'Tramos Centro Histórico', 'AGEBs con Red Peatonal'],
-      datasets: [
-        { label: 'Conteo Real Verificado en Mérida', data: [9857, 4092, 1910, 325], backgroundColor: '#10b981' }
-      ]
-    }
-  },
+    const sictMerida = sict.filter((d) => d.zona_merida.includes("Mérida")).sort((a, b) => a.anio - b.anio);
+    const sictResto = sict.filter((d) => !d.zona_merida.includes("Mérida")).sort((a, b) => a.anio - b.anio);
+    const sictPrimero = sictMerida[0];
+    const sictUltimo = sictMerida[sictMerida.length - 1];
+    const sictMaxTdpa = d3.max(sictMerida, (d) => d.tdpa_maximo);
+    const sictCarga = sictUltimo ? sictUltimo.pct_carga_pesada_est : 0;
 
-  8: {
-    number: 8,
-    tabName: "Elevación 1.5m & LiDAR",
-    tabClass: "tech-tab",
-    tag: "CAPÍTULO 8 • MODELO DE TERRENO 1.5m (29 TESELAS INEGI) Y LIDAR NASA G-LIHT",
-    primarySource: "INEGI Modelos Digitales de Elevación 1.5 m (29 teselas) + NASA G-LiHT Yucatán",
-    secondarySources: ["550/550 AGEBs con Elevación y Pendiente", "Nube .PLY Real (11,554 pts F16C52A1)", "369 Polígonos LiDAR Aéreo NASA G-LiHT"],
-    storyTitle: "Relieve, Pendientes y Escaneo 3D",
-    storyLead: "¿Qué revelan las 29 teselas de alta resolución (1.5 m) sobre microrelieve y encharcamientos peatonales?",
-    storyDesc: "Procesamos con rasterio las 29 teselas GeoTIFF oficiales de 1.5 m del INEGI que cubren el 100% de las 550 AGEBs de Mérida (extrayendo además una nube .PLY real de 11,554 puntos sobre el Centro Histórico en la carta F16C52A1) e integramos los 369 polígonos de vuelo LiDAR aéreo real de NASA G-LiHT en Yucatán.",
-    vizTitle: "Visor 3D de Nube de Terreno Real (11,554 pts INEGI 1.5m) y Pendientes por AGEB",
-    vizType: "3d",
-    kpis: [
-      { label: "Cobertura Zonal MDT 1.5m", value: "550 / 550 AGEBs", delta: "29 teselas GeoTIFF procesadas", color: "var(--accent-cyan)", icon: "fa-mountain" },
-      { label: "Nube de Terreno Real (.PLY)", value: "11,554 Puntos", delta: "Carta INEGI F16C52A1 Centro", color: "var(--accent-green)", icon: "fa-cube" },
-      { label: "Vuelos LiDAR NASA G-LiHT", value: "369 Teselas", delta: "Campaña aérea Yucatán 2013", color: "var(--accent-amber)", icon: "fa-satellite" }
-    ],
-    insight: "💡 <b>Rigor Técnico:</b> Aunque Mérida es kárstica y plana (cota media ~7–9 msnm), los microdesniveles locales sin drenaje pluvial generan zonas críticas de inundación sobre banquetas y cruces.",
-    storyBeats: [
-      { id: "beat8_1", title: "1. Malla Real F16C52A1", actionText: "Ver Nube 3D", desc: "Submuestra directa cada 6 m del Modelo Digital de Terreno oficial de 1.5 m." },
-      { id: "beat8_2", title: "2. Pendiente P95 por AGEB", actionText: "Ver Pendientes", desc: "Métricas tabulares listas en el Data Mart para cruzar relieve con siniestralidad." }
-    ],
-    chartData: null
-  },
+    const prensaTopicos = prensaCooc.filter((d) => d.tipo_registro === "TOPICO").sort((a, b) => b.frecuencia - a.frecuencia);
+    const prensaEdges = prensaCooc.filter((d) => d.tipo_registro === "COOCURRENCIA").sort((a, b) => b.frecuencia - a.frecuencia);
+    const topPeatonNota = prensaTopicos.find((d) => d.nodo_origen.includes("Peatón")) || { frecuencia: 0, pct_sobre_corpus: 0 };
+    const topPerifNota = prensaTopicos.find((d) => d.nodo_origen.includes("Periférico")) || { frecuencia: 0, pct_sobre_corpus: 0 };
+    const topPar = prensaEdges[0] || { nodo_origen: "", nodo_destino: "", frecuencia: 0 };
 
-  9: {
-    number: 9,
-    tabName: "Modelado 3D & AR",
-    tabClass: "tech-tab",
-    tag: "CAPÍTULO 9 • GEMELO URBANO 3D REAL (.GLB Y CITYJSON V2.0)",
-    primarySource: "OpenStreetMap Buildings + INEGI MDT 1.5m + Estándar OGC CityJSON v2.0",
-    secondarySources: ["105 Edificios Reales Centro Histórico (.glb)", "Modelo OGC CityJSON v2.0 (86 KB)", "Benchmark Oficial cityjson.org"],
-    storyTitle: "Inmersión Urbana 3D y WebXR",
-    storyLead: "¿Cómo modelar manzanas reales del Centro Histórico de Mérida para WebXR y análisis espacial 3D?",
-    storyDesc: "Extruimos 105 huellas reales de edificaciones de OpenStreetMap del Centro Histórico de Mérida sobre sus cotas reales del terreno INEGI 1.5 m, generando tanto un binario estándar glTF 2.0 (`merida_centro_historico_lod1_real.glb`, 121.8 KB, 2,328 triángulos) como un modelo OGC `CityJSON v2.0`.",
-    vizTitle: "Maqueta 3D Real del Centro Histórico de Mérida (.GLB / CityJSON v2.0 para WebXR)",
-    vizType: "ar",
-    kpis: [
-      { label: "Edificios Reales Extruidos", value: "105 Edificios", delta: "Centro Histórico de Mérida", color: "var(--accent-purple)", icon: "fa-city" },
-      { label: "Activo Web Optimizado (.GLB)", value: "121.8 KB", delta: "2,328 triángulos · glTF 2.0", color: "var(--accent-cyan)", icon: "fa-vr-cardboard" },
-      { label: "Estándar OGC 3D", value: "CityJSON v2.0", delta: "CRS métrico EPSG:6371", color: "var(--accent-green)", icon: "fa-cubes" }
-    ],
-    insight: "💡 <b>Listo para Producción:</b> Con apenas 121.8 KB, el archivo `.glb` carga instantáneamente en dispositivos móviles, Three.js y visores AR sin saturar Supabase Storage.",
-    storyBeats: [
-      { id: "beat9_1", title: "1. Inspección Volumétrica LoD1", actionText: "Girar Modelo", desc: "Alturas derivadas de niveles/alturas OSM apoyadas sobre cota real INEGI." },
-      { id: "beat9_2", title: "2. Interoperabilidad CityJSON", actionText: "Ver Atributos", desc: "Cada CityObject conserva su osm_id, uso de edificio y cota msnm." },
-      { id: "beat9_3", title: "3. Despliegue Ligero WebXR", actionText: "Activar AR", desc: "Optimizado bajo las reglas del Spatial Data Team (<15 MB, licencia abierta)." }
-    ],
-    chartData: null
+    const infraPorCat = d3.rollups(capasInfra, (v) => v.length, (d) => d.categoria)
+      .map(([label, value]) => ({ label, value }))
+      .sort((a, b) => b.value - a.value);
+
+    const plyAsset = catalogo3d.find((d) => d.asset_id === "AST-08-PLY-CENTRO");
+    const glbAsset = catalogo3d.find((d) => d.asset_id === "AST-09-GLB-CENTRO");
+    const topAgeb = [...ageb].sort((a, b) => b.indice_prioridad_peatonal - a.indice_prioridad_peatonal)[0];
+
+    const rawData = {
+      geoAgeb,
+      mensual,
+      ageb,
+      sictMerida,
+      sictResto,
+      siegy,
+      semaforos,
+      semColonia,
+      capasInfra,
+      infraPorCat,
+      prensaTopicos,
+      prensaEdges,
+      crucesResumen,
+      catalogo3d,
+      atusPuntos
+    };
+
+    const views = {
+      1: {
+        number: 1,
+        tabName: "Prioridad peatonal",
+        tag: "BLOQUE 01 · CAMINABILIDAD Y RIESGO PEATONAL POR AGEB (INEGI + OSM)",
+        primarySource: "INEGI (ATUS 2021–2024, DENUE, Censo 2020) + OpenStreetMap",
+        secondarySources: ["booklet/datos/escena-3.csv", "booklet/datos/merida_ageb_simplificado.geojson", "atus_siniestros_peaton_ciclista_merida.geojson"],
+        storyTitle: "Dónde se acumula el riesgo peatonal",
+        storyLead: "¿Qué zonas de Mérida combinan mayor exposición peatonal, atropellamientos y falta de cruces seguros?",
+        storyDesc: `Al integrar las ${fmtInt(totalAgebs)} AGEBs oficiales de Mérida con ${fmtInt(totDenue)} establecimientos del DENUE y los ${fmtInt(totPeaton)} siniestros ATUS con peatón involucrado (2021–2024), el riesgo máximo aparece tanto en el Centro saturado (${topAgeb.colonia}, índice ${fmtDec(topAgeb.indice_prioridad_peatonal)}) como en colonias periféricas sin banquetas mapeadas.`,
+        vizTitle: `Mapa coroplético de prioridad peatonal en ${fmtInt(totalAgebs)} AGEBs y puntos ATUS`,
+        vizType: "gis_priority",
+        kpis: [
+          { label: "Siniestros con peatón (2021–2024)", value: fmtInt(totPeaton), delta: `${fmtInt(totHeridos)} heridos · ${fmtInt(totMuertos)} fallecidos en sitio` },
+          { label: "Establecimientos DENUE en AGEBs", value: fmtInt(totDenue), delta: `Distribuidos en ${fmtInt(totalAgebs)} AGEBs de Mérida` },
+          { label: "AGEB de mayor prioridad", value: `${fmtDec(topAgeb.indice_prioridad_peatonal)} / 100`, delta: `${topAgeb.colonia} (${topAgeb.accidentes_peaton} siniestros)` }
+        ],
+        insight: `<b>Hallazgo calculado en vivo:</b> ${fmtInt(agebSinRed)} de ${fmtInt(totalAgebs)} AGEBs (${fmtDec(pctSinRed)} %) registran 0 km de red peatonal en OSM, mientras la siniestralidad peatonal creció +${fmtDec(deltaPeatonPct)} % entre 2021 y 2024.`,
+        storyBeats: [
+          { id: "b1_1", title: "1. Ver mapa con puntos ATUS", actionText: "Mostrar atropellamientos", desc: "Superpone los eventos georreferenciados con peatón o ciclista involucrado.", mapMode: "priority_with_points" },
+          { id: "b1_2", title: "2. Ver brecha de banquetas (0 km)", actionText: "Resaltar 0 km", desc: "Destaca en oro las AGEBs que no cuentan con red peatonal mapeada en OSM.", mapMode: "gap_sidewalks" }
+        ]
+      },
+
+      2: {
+        number: 2,
+        tabName: "Siniestros peatonales",
+        tag: "BLOQUE 02 · SERIE MENSUAL ATUS ENFOCADA EN PEATONES (2021–2024)",
+        primarySource: "INEGI, Estadística de Accidentes de Tránsito Terrestre (ATUS 2021–2024)",
+        secondarySources: ["data/gold/fct_peatonal_siniestros_mensual.csv", "booklet/datos/escena-2.csv"],
+        storyTitle: "Subida de siniestros con peatones",
+        storyLead: "¿Cómo evolucionaron los accidentes viales con peatón involucrado mes a mes en Mérida?",
+        storyDesc: `Mientras los accidentes generales del municipio los analiza el Equipo 6, aquí aislamos los ${fmtInt(totPeaton)} hechos donde hubo al menos un peatón involucrado. Entre 2021 (${fmtInt(sin2021)} casos) y 2024 (${fmtInt(sin2024)} casos), el volumen anual aumentó ${fmtDec(deltaPeatonPct)} % y dejó ${fmtInt(totHeridos)} personas peatonas heridas.`,
+        vizTitle: "Evolución mensual de siniestros con peatón y personas heridas (2021–2024)",
+        vizType: "line_pedestrian",
+        kpis: [
+          { label: "Siniestros con peatón", value: fmtInt(totPeaton), delta: `De ${fmtInt(sin2021)} en 2021 a ${fmtInt(sin2024)} en 2024 (+${fmtDec(deltaPeatonPct)} %)` },
+          { label: "Peatones lesionados", value: fmtInt(totHeridos), delta: "Serie oficial mensual ATUS 48 meses" },
+          { label: "Fallecidos en sitio", value: fmtInt(totMuertos), delta: "Registrados en sitio (ATUS no cuenta decesos en hospital)" }
+        ],
+        insight: "<b>Nota metodológica:</b> Todos los puntos de esta gráfica se leen en vivo de <code>data/gold/fct_peatonal_siniestros_mensual.csv</code> sin ningún factor aleatorio.",
+        storyBeats: [
+          { id: "b2_1", title: "1. Serie completa 2021–2024", actionText: "48 meses", desc: "Compara siniestros mensuales (morado) contra peatones heridos (oro).", yearFilter: "all" },
+          { id: "b2_2", title: "2. Enfocar repunte 2023–2024", actionText: "Últimos 2 años", desc: "Muestra el máximo mensual de mayo de 2024 (14 siniestros y 15 heridos).", yearFilter: "recent" }
+        ]
+      },
+
+      3: {
+        number: 3,
+        tabName: "Presión vial SICT",
+        tag: "BLOQUE 03 · TRÁNSITO DIARIO PROMEDIO ANUAL EN ACCESOS A MÉRIDA (SICT)",
+        primarySource: "SICT Datos Viales (2013–2024) — Corredores Metropolitanos vs. Resto de Yucatán",
+        secondarySources: ["data/gold/fct_peatonal_presion_vial_sict.csv", "data/gold/ind_peatonal_transporte_sostenible.csv"],
+        storyTitle: "Presión vehicular en los accesos",
+        storyLead: "¿Cuánto creció el volumen diario de vehículos en los accesos metropolitanos que cruzan peatones?",
+        storyDesc: `Con base en los aforos oficiales de la SICT (${sictPrimero.anio}–${sictUltimo.anio}), el tránsito diario promedio anual en corredores metropolitanos de Mérida pasó de ${fmtInt(Math.round(sictPrimero.tdpa_promedio))} a ${fmtInt(Math.round(sictUltimo.tdpa_promedio))} vehículos por día, casi el triple que el resto de la red estatal de Yucatán.`,
+        vizTitle: `TDPA promedio anual (${sictPrimero.anio}–${sictUltimo.anio}): Mérida vs. Resto de Yucatán`,
+        vizType: "line_sict",
+        kpis: [
+          { label: `TDPA medio Mérida (${sictUltimo.anio})`, value: `${fmtInt(Math.round(sictUltimo.tdpa_promedio))} veh/día`, delta: `Frente a ${fmtInt(Math.round(sictPrimero.tdpa_promedio))} en ${sictPrimero.anio}` },
+          { label: "Aforo máximo registrado", value: `${fmtInt(sictMaxTdpa)} veh/día`, delta: "Estación metropolitana SICT" },
+          { label: "Carga pesada estimada", value: `${fmtDec(sictCarga)} %`, delta: `${fmtInt(totParaderos)} paraderos Va-y-Ven en AGEBs` }
+        ],
+        insight: `<b>Contexto metropolitano:</b> Un volumen de hasta ${fmtInt(sictMaxTdpa)} vehículos diarios con ${fmtDec(sictCarga)} % de carga pesada eleva el riesgo en cruces periféricos sin semáforo.`,
+        storyBeats: [
+          { id: "b3_1", title: "1. Mérida vs. resto del estado", actionText: "Ver brecha", desc: "Compara el flujo metropolitano (morado) contra la red estatal (oro).", sictMode: "compare" },
+          { id: "b3_2", title: "2. Evolución del aforo máximo", actionText: "Ver máximos", desc: "Muestra el techo de tránsito en los tramos más saturados.", sictMode: "max" }
+        ]
+      },
+
+      4: {
+        number: 4,
+        tabName: "Semáforos y cruces",
+        tag: "BLOQUE 04 · 190 SEMÁFOROS REALES Y 4,092 CRUCES PEATONALES (OSM)",
+        primarySource: "OpenStreetMap (Overpass API) + GeoPortal del Ayuntamiento de Mérida",
+        secondarySources: ["booklet/datos/escena-1.csv", "booklet/datos/escena-1-cruces-resumen.csv", "ind_peatonal_semaforos_por_colonia.csv"],
+        storyTitle: "Desigualdad de semáforos y cruces",
+        storyLead: "¿Cómo se reparten los 190 semáforos reales a lo largo de Mérida?",
+        storyDesc: `De los ${fmtInt(semTotal)} semáforos mapeados dentro del municipio de Mérida, ${fmtInt(semCentro)} (${fmtDec(pctSemCentro)} %) se concentran en una sola colonia: el Centro. En contraste, ${fmtInt(agebSinSem)} de las ${fmtInt(totalAgebs)} AGEBs (${fmtDec(100 * agebSinSem / totalAgebs)} %) no tienen semáforo registrado y solo ${fmtInt(crucesMarcados)} de ${fmtInt(totCruces)} cruces aparecen marcados o semaforizados.`,
+        vizTitle: `Mapa de los ${fmtInt(semTotal)} semáforos reales en el área urbana de Mérida`,
+        vizType: "gis_signals",
+        kpis: [
+          { label: "Semáforos reales en Mérida", value: fmtInt(semTotal), delta: `${fmtInt(semCentro)} (${fmtDec(pctSemCentro)} %) en la colonia Centro` },
+          { label: "AGEBs sin semáforo mapeado", value: `${fmtInt(agebSinSem)} / ${fmtInt(totalAgebs)}`, delta: `${fmtDec(100 * agebSinSem / totalAgebs)} % del municipio` },
+          { label: "Cruces marcados o semaforizados", value: `${fmtInt(crucesMarcados)} / ${fmtInt(totCruces)}`, delta: `${fmtDec(100 * crucesMarcados / totCruces)} % del total mapeado` }
+        ],
+        insight: `<b>Cobertura concentrada:</b> Los ${fmtInt(semTotal)} semáforos se agrupan en apenas ${fmtInt(semColonia.length)} colonias con registro oficial; fuera del primer cuadro predominan cruces sin semáforo.`,
+        storyBeats: [
+          { id: "b4_1", title: "1. Todos los semáforos de Mérida", actionText: "Ver municipio", desc: "Morado: Centro Histórico; oro: resto de las colonias.", signalFocus: "all" },
+          { id: "b4_2", title: "2. Acercar al Centro Histórico", actionText: "Enfocar Centro", desc: `Muestra la concentración de los ${fmtInt(semCentro)} nodos en el primer cuadro.`, signalFocus: "centro" }
+        ]
+      },
+
+      5: {
+        number: 5,
+        tabName: "Infraestructura SIG",
+        tag: "BLOQUE 05 · CATÁLOGO SIG MUNICIPAL DE OBRAS PÚBLICAS Y VIALIDAD",
+        primarySource: "Catálogo SIG del Ayuntamiento de Mérida (Obras Públicas, Vialidad y Equipamiento)",
+        secondarySources: ["data/gold/dim_capas_infraestructura_merida.csv", "data/gold/ind_seguridad_caminabilidad_ageb.csv"],
+        storyTitle: "Capas municipales de obra y vialidad",
+        storyLead: "¿Qué información pública de obra y vialidad existe en el catálogo SIG del Ayuntamiento?",
+        storyDesc: `El inventario curado reúne ${fmtInt(capasInfra.length)} capas oficiales de infraestructura pública, alumbrado, vialidad y obra del servidor GeoPortal de Mérida, sin depender de solicitudes cerradas. Al cruzarlas con las banquetas OSM se documentan las brechas de mantenimiento y cobertura por zona.`,
+        vizTitle: `Distribución por categoría de las ${fmtInt(capasInfra.length)} capas SIG municipales`,
+        vizType: "bar_infra",
+        kpis: [
+          { label: "Capas SIG catalogadas", value: fmtInt(capasInfra.length), delta: `${fmtInt(infraPorCat.length)} categorías municipales` },
+          { label: "Categoría más numerosa", value: fmtInt(infraPorCat[0] ? infraPorCat[0].value : 0), delta: infraPorCat[0] ? infraPorCat[0].label : "" },
+          { label: "Umbral normativo banqueta", value: "1.20 m", delta: "Mínimo accesible · NOM-004-SEDATU-2023" }
+        ],
+        insight: "<b>Referencia normativa:</b> La <b>NOM-004-SEDATU-2023</b> (Tabla 38) y el Manual de Calles SEDATU fijan <b>1.20 m</b> como ancho libre mínimo accesible de banqueta (óptimo ≥ 1.80 m).",
+        storyBeats: [
+          { id: "b5_1", title: "1. Categorías del catálogo SIG", actionText: "Ver inventario", desc: "Conteo exacto de capas por área municipal leído del CSV Gold." }
+        ]
+      },
+
+      6: {
+        number: 6,
+        tabName: "Prensa local",
+        tag: "BLOQUE 06 · RED SEMÁNTICA DE COBERTURA EN PRENSA LOCAL DE MÉRIDA",
+        primarySource: "Diario de Yucatán, Novedades Yucatán y feeds locales (corpus curado de 338 notas)",
+        secondarySources: ["data/gold/ind_peatonal_prensa_coocurrencia.csv"],
+        storyTitle: "Agenda mediática sobre calles y peatones",
+        storyLead: "¿Qué temas aparecen juntos cuando la prensa local reporta siniestros y movilidad en Mérida?",
+        storyDesc: `A partir del corpus hemerográfico curado se construyó la matriz real de co-ocurrencia entre 7 temas urbanos. "${topPar.nodo_origen}" y "${topPar.nodo_destino}" aparecen juntos en ${fmtInt(topPar.frecuencia)} notas, mientras "Peatón / Atropellamiento" suma ${fmtInt(topPeatonNota.frecuencia)} artículos (${fmtDec(topPeatonNota.pct_sobre_corpus)} % del corpus).`,
+        vizTitle: "Red determinista de co-ocurrencia en prensa local (sin coordenadas aleatorias)",
+        vizType: "force_press",
+        kpis: [
+          { label: "Menciones a Periférico", value: `${fmtInt(topPerifNota.frecuencia)} notas`, delta: `${fmtDec(topPerifNota.pct_sobre_corpus)} % del corpus local` },
+          { label: "Menciones a Peatón / Atropello", value: `${fmtInt(topPeatonNota.frecuencia)} notas`, delta: `${fmtDec(topPeatonNota.pct_sobre_corpus)} % del corpus local` },
+          { label: "Co-ocurrencia más frecuente", value: `${fmtInt(topPar.frecuencia)} notas`, delta: `${topPar.nodo_origen} + ${topPar.nodo_destino}` }
+        ],
+        insight: "<b>Cero aleatoriedad:</b> Las posiciones de los nodos se calculan con una distribución radial determinista sobre los pesos reales de <code>ind_peatonal_prensa_coocurrencia.csv</code>.",
+        storyBeats: [
+          { id: "b6_1", title: "1. Destacar vínculos con Peatón", actionText: "Resaltar peatón", desc: "Ilumina las conexiones directas de atropellamientos con Periférico y banquetas.", focusTopic: "Peatón / Atropellamiento" },
+          { id: "b6_2", title: "2. Ver red completa", actionText: "Todos los temas", desc: "Muestra los 7 temas y todas sus co-ocurrencias reales.", focusTopic: null }
+        ]
+      },
+
+      7: {
+        number: 7,
+        tabName: "Red peatonal OSM",
+        tag: "BLOQUE 07 · 697.6 KM DE BANQUETAS Y 4,092 CRUCES EN OPENSTREETMAP",
+        primarySource: "OpenStreetMap (Overpass API) — Red peatonal y cruces proyectados en UTM 16N",
+        secondarySources: ["booklet/datos/escena-1-cruces-resumen.csv", "booklet/datos/escena-3.csv"],
+        storyTitle: "Por dónde camina Mérida en OSM",
+        storyLead: "¿En qué estado de señalización se encuentran los 4,092 cruces peatonales mapeados?",
+        storyDesc: `Mérida registra ${fmtDec(totKmRed)} km de banquetas y andadores mapeados en ${fmtInt(totalAgebs - agebSinRed)} de sus ${fmtInt(totalAgebs)} AGEBs, pero ${fmtInt(agebSinRed)} AGEBs (${fmtDec(pctSinRed)} %) tienen 0 km registrados. Entre los ${fmtInt(totCruces)} cruces mapeados, solo ${fmtInt(crucesMarcados)} cuentan con pintura o semáforo.`,
+        vizTitle: `Clasificación de los ${fmtInt(totCruces)} cruces peatonales registrados en Mérida`,
+        vizType: "bar_crossings",
+        kpis: [
+          { label: "Red peatonal mapeada", value: `${fmtDec(totKmRed)} km`, delta: `En ${fmtInt(totalAgebs - agebSinRed)} de ${fmtInt(totalAgebs)} AGEBs` },
+          { label: "Cruces peatonales OSM", value: fmtInt(totCruces), delta: `Solo ${fmtInt(crucesMarcados)} marcados o semaforizados` },
+          { label: "AGEBs con 0 km mapeados", value: fmtInt(agebSinRed), delta: `${fmtDec(pctSinRed)} % del territorio municipal` }
+        ],
+        insight: "<b>Doble lectura necesaria:</b> Un valor de 0 km en OSM refleja tanto rezago físico de banquetas en la periferia como brecha de mapeo cartográfico voluntario.",
+        storyBeats: [
+          { id: "b7_1", title: "1. Ver desglose de cruces", actionText: "4,092 cruces", desc: "Compara cruces sin marcar, sin semáforo y marcados/semaforizados." }
+        ]
+      },
+
+      8: {
+        number: 8,
+        tabName: "Terreno 3D real (.PLY)",
+        tag: "BLOQUE 08 · MODELO DIGITAL DE TERRENO 1.5 M REAL DEL INEGI (NUBE .PLY)",
+        primarySource: "INEGI Modelos Digitales de Terreno 1.5 m (29 teselas · Carta F16C52A1)",
+        secondarySources: [plyAsset ? plyAsset.asset_uri_relativa : "data/08_lidar_3d/merida_centro_inegi_mdt_1_5m_real.ply"],
+        storyTitle: "Microrelieve real del Centro Histórico",
+        storyLead: "¿Cómo luce la nube de terreno real de 1.5 m que conecta el caminar con los encharcamientos?",
+        storyDesc: `Este visor carga directamente el archivo real <code>merida_centro_inegi_mdt_1_5m_real.ply</code> (${plyAsset ? fmtDec(plyAsset.tamano_kb) : "354.5"} KB, 11,554 puntos reales de la carta INEGI F16C52A1). En las ${fmtInt(totalAgebs)} AGEBs, Mérida promedia apenas ${fmtDec(elevMedia, 2)} msnm y una pendiente media de ${fmtDec(pendMedia, 2)} %.`,
+        vizTitle: "Visor 3D real: nube de terreno INEGI 1.5 m (arrastra para rotar, rueda para acercar)",
+        vizType: "three_ply",
+        kpis: [
+          { label: "Elevación media municipal", value: `${fmtDec(elevMedia, 2)} msnm`, delta: `Calculada en ${fmtInt(totalAgebs)} AGEBs (29 teselas)` },
+          { label: "Pendiente media / P95 máx.", value: `${fmtDec(pendMedia, 2)} %`, delta: `Máximo local P95: ${fmtDec(pendMaxP95)} %` },
+          { label: "Archivo .PLY real cargado", value: `${plyAsset ? fmtDec(plyAsset.tamano_kb) : "354.5"} KB`, delta: "11,554 vértices reales · Cero geometría aleatoria" }
+        ],
+        insight: "<b>Puente al Acto 4 (Plana sobre el agua):</b> Con una cota media de 7.39 msnm y terreno casi plano, pequeños desniveles sin drenaje inundan banquetas y cruces durante las lluvias.",
+        storyBeats: [
+          { id: "b8_1", title: "1. Vista isométrica del relieve", actionText: "Vista 3D", desc: "Muestra la nube real de 11,554 puntos coloreada por elevación.", camPreset: "iso" },
+          { id: "b8_2", title: "2. Vista cenital (planta)", actionText: "Vista superior", desc: "Observa los corredores planos y depresiones locales desde arriba.", camPreset: "top" }
+        ]
+      },
+
+      9: {
+        number: 9,
+        tabName: "Maqueta 3D real (.GLB)",
+        tag: "BLOQUE 09 · MODELO VOLUMÉTRICO REAL DEL CENTRO HISTÓRICO (.GLB)",
+        primarySource: "OpenStreetMap Edificios + INEGI MDT 1.5 m (glTF 2.0 y CityJSON v2.0)",
+        secondarySources: [glbAsset ? glbAsset.asset_uri_relativa : "data/09_realidad_aumentada_ar/merida_centro_historico_lod1_real.glb", "merida_centro_historico_lod1.city.json"],
+        storyTitle: "Maqueta real del Centro Histórico",
+        storyLead: "¿Cómo se percibe la escala de manzanas y edificios reales del primer cuadro de Mérida en 3D?",
+        storyDesc: `Este visor carga directamente mediante <code>GLTFLoader</code> el binario real <code>merida_centro_historico_lod1_real.glb</code> (${glbAsset ? fmtDec(glbAsset.tamano_kb) : "121.8"} KB, 2,328 triángulos), que extruye 105 edificios reales de OpenStreetMap sobre sus cotas exactas del MDT 1.5 m del INEGI.`,
+        vizTitle: "Visor 3D real (.GLB): 105 edificios del Centro Histórico de Mérida",
+        vizType: "three_glb",
+        kpis: [
+          { label: "Edificios reales extruidos", value: "105", delta: "Huellas OSM sobre cota INEGI 1.5 m" },
+          { label: "Tamaño del modelo .GLB", value: `${glbAsset ? fmtDec(glbAsset.tamano_kb) : "121.8"} KB`, delta: "2,328 triángulos · glTF 2.0 estándar" },
+          { label: "Estándar geoespacial", value: "CityJSON v2.0", delta: "Acompañado de geometría OGC abierta" }
+        ],
+        insight: "<b>Modelo 100 % real:</b> Se carga directamente el archivo <code>.glb</code> del repositorio sin bloques aleatorios ni geometría sustituta.",
+        storyBeats: [
+          { id: "b9_1", title: "1. Perspectiva peatonal", actionText: "Ángulo bajo", desc: "Acercamiento a escala de calle entre manzanas del Centro Histórico.", camPreset: "street" },
+          { id: "b9_2", title: "2. Perspectiva aérea", actionText: "Vista aérea", desc: "Encuadre completo de los 105 edificios extruidos.", camPreset: "iso" }
+        ]
+      }
+    };
+
+    window.DataStoryApp.rawData = rawData;
+    window.DataStoryApp.viewsData = views;
+    return { views, rawData };
   }
-};
+
+  window.DataStoryApp.loadViewsFromData = loadViewsFromData;
+})();
