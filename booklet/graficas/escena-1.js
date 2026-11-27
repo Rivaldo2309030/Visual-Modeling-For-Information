@@ -1,6 +1,7 @@
 /**
  * Escena 1 · Capítulo 04 · Caminar Mérida
  * Mapa D3 de los 190 semáforos reales de Mérida (OSM) y desglose de los 4,092 cruces peatonales.
+ * Tipografía ajustada (>= 15 unidades SVG en viewBox de 980) para asegurar >= 8 pt al imprimir en carta.
  * Lee exclusivamente desde ../datos/ (sin datos fijos en el código).
  */
 (function () {
@@ -59,7 +60,7 @@
     const coloniasConSem = new Set(semaforos.map((d) => d.colonia).filter((c) => !c.startsWith("Sin colonia"))).size;
 
     const width = 980;
-    const height = 540;
+    const height = 650;
     const svg = container
       .append("svg")
       .attr("viewBox", `0 0 ${width} ${height}`)
@@ -69,7 +70,7 @@
     const tooltip = getTooltip();
 
     // --- PANEL IZQUIERDO: MAPA URBANO DE MÉRIDA ---
-    const mapBox = { x: 16, y: 20, w: 515, h: 496 };
+    const mapBox = { x: 14, y: 16, w: 500, h: 618 };
     svg.append("rect")
       .attr("x", mapBox.x)
       .attr("y", mapBox.y)
@@ -85,18 +86,28 @@
     };
 
     const projection = d3.geoMercator().fitExtent(
-      [[mapBox.x + 18, mapBox.y + 44], [mapBox.x + mapBox.w - 18, mapBox.y + mapBox.h - 24]],
+      [[mapBox.x + 16, mapBox.y + 84], [mapBox.x + mapBox.w - 16, mapBox.y + mapBox.h - 24]],
       urbanas
     );
     const path = d3.geoPath(projection);
 
     svg.append("text")
       .attr("x", mapBox.x + 16)
-      .attr("y", mapBox.y + 26)
-      .attr("font-size", 13)
+      .attr("y", mapBox.y + 28)
+      .attr("font-size", 16.5)
       .attr("font-weight", 700)
       .attr("fill", PALETA.tinta)
-      .text(`Ubicación de los ${fmtInt(totalSemaforos)} semáforos mapeados (área urbana de Mérida)`);
+      .text(`${fmtInt(totalSemaforos)} semáforos mapeados en Mérida`);
+
+    // Leyenda compacta del mapa (15.5 SVG units >= 8 pt en carta)
+    const legMap = svg.append("g").attr("transform", `translate(${mapBox.x + 16}, ${mapBox.y + 44})`);
+    [
+      { label: `Centro (${fmtInt(semCentro.length)})`, color: PALETA.morado, x: 0 },
+      { label: `Resto de Mérida (${fmtInt(semResto.length)})`, color: PALETA.oro, x: 148 }
+    ].forEach((item) => {
+      legMap.append("circle").attr("cx", item.x + 6).attr("cy", 10).attr("r", 5.5).attr("fill", item.color);
+      legMap.append("text").attr("x", item.x + 18).attr("y", 15).attr("font-size", 15.5).attr("font-weight", 600).attr("fill", PALETA.tinta).text(item.label);
+    });
 
     // Polígonos AGEB urbanos
     const gMap = svg.append("g");
@@ -109,7 +120,6 @@
       .attr("stroke", "#d1d5db")
       .attr("stroke-width", 0.55);
 
-    // Puntos de semáforos: primero resto (oro), luego Centro (morado) para claridad visual
     const drawPoints = (data, color, radius) => {
       gMap.selectAll(null)
         .data(data)
@@ -118,7 +128,7 @@
         .attr("cy", (d) => projection([d.longitud, d.latitud])[1])
         .attr("r", radius)
         .attr("fill", color)
-        .attr("fill-opacity", 0.82)
+        .attr("fill-opacity", 0.85)
         .attr("stroke", "#ffffff")
         .attr("stroke-width", 0.7)
         .style("cursor", "pointer")
@@ -137,10 +147,10 @@
         .on("mouseleave", () => tooltip.style("opacity", 0));
     };
 
-    drawPoints(semResto, PALETA.oro, 3.8);
-    drawPoints(semCentro, PALETA.morado, 3.6);
+    drawPoints(semResto, PALETA.oro, 4.1);
+    drawPoints(semCentro, PALETA.morado, 3.8);
 
-    // Anotación directa sobre el Centro Histórico
+    // Anotación directa sobre el Centro Histórico (letra >= 15)
     const centroAvgLon = d3.mean(semCentro, (d) => d.longitud);
     const centroAvgLat = d3.mean(semCentro, (d) => d.latitud);
     const [cxCentro, cyCentro] = projection([centroAvgLon, centroAvgLat]);
@@ -151,64 +161,54 @@
       .attr("r", 26)
       .attr("fill", "none")
       .attr("stroke", PALETA.morado)
-      .attr("stroke-width", 1.8)
+      .attr("stroke-width", 2)
       .attr("stroke-dasharray", "4,3");
 
-    const callX = mapBox.x + 28;
-    const callY = mapBox.y + mapBox.h - 76;
+    const callX = mapBox.x + 18;
+    const callY = mapBox.y + mapBox.h - 102;
     gMap.append("line")
-      .attr("x1", callX + 162)
-      .attr("y1", callY - 6)
-      .attr("x2", cxCentro - 22)
-      .attr("y2", cyCentro + 14)
+      .attr("x1", callX + 225)
+      .attr("y1", callY + 18)
+      .attr("x2", cxCentro - 20)
+      .attr("y2", cyCentro + 16)
+      .attr("stroke", PALETA.morado)
+      .attr("stroke-width", 1.5);
+
+    gMap.append("rect")
+      .attr("x", callX)
+      .attr("y", callY)
+      .attr("width", 232)
+      .attr("height", 84)
+      .attr("rx", 7)
+      .attr("fill", "#ffffff")
       .attr("stroke", PALETA.morado)
       .attr("stroke-width", 1.3);
 
-    gMap.append("rect")
-      .attr("x", callX - 6)
-      .attr("y", callY - 24)
-      .attr("width", 174)
-      .attr("height", 56)
-      .attr("rx", 6)
-      .attr("fill", "#ffffff")
-      .attr("stroke", PALETA.morado)
-      .attr("stroke-width", 1.1);
-
     gMap.append("text")
-      .attr("x", callX + 2)
-      .attr("y", callY - 7)
-      .attr("font-size", 11.5)
-      .attr("font-weight", 700)
+      .attr("x", callX + 10)
+      .attr("y", callY + 23)
+      .attr("font-size", 15.5)
+      .attr("font-weight", 800)
       .attr("fill", PALETA.morado)
       .text("Colonia Centro");
 
     gMap.append("text")
-      .attr("x", callX + 2)
-      .attr("y", callY + 9)
-      .attr("font-size", 11)
-      .attr("font-weight", 600)
+      .attr("x", callX + 10)
+      .attr("y", callY + 46)
+      .attr("font-size", 15)
+      .attr("font-weight", 700)
       .attr("fill", PALETA.tinta)
-      .text(`${fmtInt(semCentro.length)} semáforos (${fmtPct(pctCentro)})`);
+      .text(`${fmtInt(semCentro.length)} nodos (${fmtPct(pctCentro)})`);
 
     gMap.append("text")
-      .attr("x", callX + 2)
-      .attr("y", callY + 23)
-      .attr("font-size", 10)
+      .attr("x", callX + 10)
+      .attr("y", callY + 69)
+      .attr("font-size", 15)
       .attr("fill", "#4b5563")
-      .text(`Resto: ${fmtInt(semResto.length)} en ${coloniasConSem - 1} colonias`);
-
-    // Leyenda compacta del mapa
-    const legMap = svg.append("g").attr("transform", `translate(${mapBox.x + 18}, ${mapBox.y + 44})`);
-    [
-      { label: `Centro Histórico (${fmtInt(semCentro.length)})`, color: PALETA.morado, x: 0 },
-      { label: `Resto de Mérida (${fmtInt(semResto.length)})`, color: PALETA.oro, x: 158 }
-    ].forEach((item) => {
-      legMap.append("circle").attr("cx", item.x + 5).attr("cy", 4).attr("r", 4.5).attr("fill", item.color);
-      legMap.append("text").attr("x", item.x + 14).attr("y", 8).attr("font-size", 11).attr("font-weight", 600).attr("fill", PALETA.tinta).text(item.label);
-    });
+      .text(`Resto: ${fmtInt(semResto.length)} en ${coloniasConSem - 1} col.`);
 
     // --- PANEL DERECHO: DESGLOSE DE LOS 4,092 CRUCES PEATONALES ---
-    const barBox = { x: 552, y: 20, w: 412, h: 496 };
+    const barBox = { x: 530, y: 16, w: 436, h: 618 };
     svg.append("rect")
       .attr("x", barBox.x)
       .attr("y", barBox.y)
@@ -220,25 +220,25 @@
 
     svg.append("text")
       .attr("x", barBox.x + 18)
-      .attr("y", barBox.y + 28)
-      .attr("font-size", 13.5)
+      .attr("y", barBox.y + 30)
+      .attr("font-size", 16.5)
       .attr("font-weight", 700)
       .attr("fill", PALETA.tinta)
-      .text(`Tipo de señalización en ${fmtInt(totalCruces)} cruces`);
+      .text(`Señalización en ${fmtInt(totalCruces)} cruces`);
 
     svg.append("text")
       .attr("x", barBox.x + 18)
-      .attr("y", barBox.y + 46)
-      .attr("font-size", 11)
+      .attr("y", barBox.y + 53)
+      .attr("font-size", 15)
       .attr("fill", "#4b5563")
-      .text("Atributo highway=crossing registrado en OpenStreetMap");
+      .text("Cruces peatonales registrados en OSM");
 
     const xBar = d3.scaleLinear()
-      .domain([0, d3.max(cruces, (d) => d.cruces) * 1.32])
-      .range([0, barBox.w - 42]);
+      .domain([0, d3.max(cruces, (d) => d.cruces) * 1.45])
+      .range([0, barBox.w - 38]);
 
-    const barStartY = barBox.y + 78;
-    const rowStep = 66;
+    const barStartY = barBox.y + 94;
+    const rowStep = 79;
 
     const colorForCode = (code) => {
       if (code === "marked/traffic_signals") return PALETA.morado;
@@ -254,49 +254,46 @@
       gBars.append("text")
         .attr("x", barBox.x + 18)
         .attr("y", y)
-        .attr("font-size", 12)
+        .attr("font-size", 15.5)
         .attr("font-weight", d.codigo_osm === "marked/traffic_signals" ? 700 : 600)
         .attr("fill", d.codigo_osm === "marked/traffic_signals" ? PALETA.morado : PALETA.tinta)
         .text(d.categoria);
 
-      // Carril gris tenue
       gBars.append("rect")
         .attr("x", barBox.x + 18)
-        .attr("y", y + 8)
-        .attr("width", barBox.w - 42)
-        .attr("height", 22)
-        .attr("rx", 4)
+        .attr("y", y + 10)
+        .attr("width", barBox.w - 38)
+        .attr("height", 28)
+        .attr("rx", 5)
         .attr("fill", "#f3f4f6");
 
-      // Barra de datos
-      const bw = Math.max(4, xBar(d.cruces));
+      const bw = Math.max(6, xBar(d.cruces));
       gBars.append("rect")
         .attr("x", barBox.x + 18)
-        .attr("y", y + 8)
+        .attr("y", y + 10)
         .attr("width", bw)
-        .attr("height", 22)
-        .attr("rx", 4)
+        .attr("height", 28)
+        .attr("rx", 5)
         .attr("fill", fill);
 
-      // Etiqueta directa (siempre legible en impresión)
       const labelText = `${fmtInt(d.cruces)} (${fmtPct(d.porcentaje)})`;
-      const inside = bw > 120;
+      const inside = bw > 175;
       gBars.append("text")
-        .attr("x", inside ? barBox.x + 26 : barBox.x + 24 + bw)
-        .attr("y", y + 23)
-        .attr("font-size", 11.5)
+        .attr("x", inside ? barBox.x + 28 : barBox.x + 26 + bw)
+        .attr("y", y + 29)
+        .attr("font-size", 15)
         .attr("font-weight", 700)
         .attr("fill", inside ? "#ffffff" : (d.codigo_osm === "marked/traffic_signals" ? PALETA.morado : PALETA.tinta))
         .text(labelText);
     });
 
-    // Caja de hallazgo de accesibilidad al pie del panel derecho
-    const noteY = barBox.y + barBox.h - 84;
+    // Caja de hallazgo de accesibilidad al pie del panel derecho (>= 15)
+    const noteY = barBox.y + barBox.h - 108;
     svg.append("rect")
-      .attr("x", barBox.x + 18)
+      .attr("x", barBox.x + 16)
       .attr("y", noteY)
-      .attr("width", barBox.w - 36)
-      .attr("height", 66)
+      .attr("width", barBox.w - 32)
+      .attr("height", 92)
       .attr("rx", 8)
       .attr("fill", "#f3e8f9")
       .attr("stroke", PALETA.morado)
@@ -304,27 +301,27 @@
 
     const markedRow = cruces.find((d) => d.codigo_osm === "marked/traffic_signals");
     svg.append("text")
-      .attr("x", barBox.x + 30)
-      .attr("y", noteY + 22)
-      .attr("font-size", 12)
+      .attr("x", barBox.x + 28)
+      .attr("y", noteY + 26)
+      .attr("font-size", 15.5)
       .attr("font-weight", 800)
       .attr("fill", PALETA.morado)
       .text(`Solo ${fmtInt(markedRow ? markedRow.cruces : 0)} de ${fmtInt(totalCruces)} cruces (${fmtPct(markedRow ? markedRow.porcentaje : 0)})`);
 
     svg.append("text")
-      .attr("x", barBox.x + 30)
-      .attr("y", noteY + 40)
-      .attr("font-size", 11)
+      .attr("x", barBox.x + 28)
+      .attr("y", noteY + 51)
+      .attr("font-size", 15)
       .attr("fill", PALETA.tinta)
-      .text("registran marca en pavimento o semáforo en OSM.");
+      .text("tienen marca en piso o semáforo.");
 
     svg.append("text")
-      .attr("x", barBox.x + 30)
-      .attr("y", noteY + 55)
-      .attr("font-size", 10.5)
+      .attr("x", barBox.x + 28)
+      .attr("y", noteY + 75)
+      .attr("font-size", 15)
       .attr("fill", PALETA.oroOscuro)
-      .attr("font-weight", 600)
-      .text("Solo 1 cruce tiene guía táctil y 4 registran rebaje de banqueta.");
+      .attr("font-weight", 700)
+      .text("Solo 1 tiene guía táctil y 4 rebaje.");
   }
 
   window.renderEscena1 = renderEscena1;

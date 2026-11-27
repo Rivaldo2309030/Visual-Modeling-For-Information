@@ -1,6 +1,7 @@
 /**
  * Escena 2 · Capítulo 04 · Caminar Mérida
  * Serie mensual (2021-2024) de accidentes con peatón involucrado y peatones heridos en Mérida.
+ * Tipografía ajustada (>= 15 unidades SVG en viewBox de 980) para asegurar >= 8 pt al imprimir en carta.
  * Lee exclusivamente desde ../datos/escena-2.csv (INEGI ATUS).
  */
 (function () {
@@ -55,8 +56,8 @@
     );
 
     const width = 980;
-    const height = 470;
-    const margin = { top: 88, right: 34, bottom: 54, left: 54 };
+    const height = 560;
+    const margin = { top: 124, right: 30, bottom: 64, left: 62 };
     const innerW = width - margin.left - margin.right;
     const innerH = height - margin.top - margin.bottom;
 
@@ -67,17 +68,29 @@
       .attr("aria-label", "Serie mensual 2021 a 2024 de accidentes con peatón involucrado y peatones heridos en Mérida");
 
     const tooltip = getTooltip();
-
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
     const x = d3.scaleTime()
       .domain(d3.extent(raw, (d) => d.fecha))
       .range([0, innerW]);
 
-    const yMax = Math.max(16, d3.max(raw, (d) => Math.max(d.accidentes_peaton, d.peatones_heridos)) + 2);
+    const yMax = Math.max(18, d3.max(raw, (d) => Math.max(d.accidentes_peaton, d.peatones_heridos)) + 3);
     const y = d3.scaleLinear().domain([0, yMax]).nice().range([innerH, 0]);
 
-    // Bandas anuales alternadas con totales anuales directos arriba
+    // Leyenda superior (>= 15.5)
+    const leg = svg.append("g").attr("transform", `translate(${margin.left}, 26)`);
+    leg.append("line").attr("x1", 0).attr("x2", 26).attr("y1", 6).attr("y2", 6).attr("stroke", PALETA.morado).attr("stroke-width", 3.5);
+    leg.append("text").attr("x", 34).attr("y", 11).attr("font-size", 15.5).attr("font-weight", 700).attr("fill", PALETA.tinta)
+      .text(`Siniestros con peatón (${fmtInt(totalSiniestros)})`);
+
+    leg.append("line").attr("x1", 315).attr("x2", 341).attr("y1", 6).attr("y2", 6).attr("stroke", PALETA.oro).attr("stroke-width", 2.8).attr("stroke-dasharray", "6,3");
+    leg.append("text").attr("x", 349).attr("y", 11).attr("font-size", 15.5).attr("font-weight", 700).attr("fill", PALETA.oroOscuro)
+      .text(`Peatones heridos (${fmtInt(totalHeridos)})`);
+
+    leg.append("text").attr("x", 615).attr("y", 11).attr("font-size", 15).attr("fill", "#4b5563")
+      .text(`Fallecidos en sitio (2021): ${fmtInt(totalMuertos)}`);
+
+    // Bandas anuales alternadas con totales anuales directos arriba (>= 15)
     const anios = [2021, 2022, 2023, 2024];
     anios.forEach((anio, idx) => {
       const x0 = x(new Date(anio, 0, 1));
@@ -97,7 +110,7 @@
         g.append("line")
           .attr("x1", x0)
           .attr("x2", x0)
-          .attr("y1", -44)
+          .attr("y1", -58)
           .attr("y2", innerH)
           .attr("stroke", PALETA.borde)
           .attr("stroke-dasharray", "3,3");
@@ -108,31 +121,31 @@
 
       g.append("text")
         .attr("x", cx)
-        .attr("y", -30)
+        .attr("y", -38)
         .attr("text-anchor", "middle")
-        .attr("font-size", 12)
+        .attr("font-size", 16.5)
         .attr("font-weight", 800)
         .attr("fill", anio === 2024 ? PALETA.morado : PALETA.tinta)
         .text(`${anio}`);
 
       g.append("text")
         .attr("x", cx)
-        .attr("y", -14)
+        .attr("y", -16)
         .attr("text-anchor", "middle")
-        .attr("font-size", 11)
+        .attr("font-size", 15)
         .attr("font-weight", 700)
         .attr("fill", PALETA.morado)
-        .text(`${fmtInt(info.siniestros)} siniestros`)
+        .text(`${fmtInt(info.siniestros)} sin.`)
         .append("tspan")
         .attr("fill", PALETA.oroOscuro)
         .attr("font-weight", 600)
-        .text(` · ${fmtInt(info.heridos)} heridos`);
+        .text(` · ${fmtInt(info.heridos)} her.`);
     });
 
     // Rejilla horizontal
     g.append("g")
       .selectAll("line")
-      .data(y.ticks(6))
+      .data(y.ticks(5))
       .join("line")
       .attr("x1", 0)
       .attr("x2", innerW)
@@ -141,35 +154,36 @@
       .attr("stroke", PALETA.borde)
       .attr("stroke-width", 1);
 
-    // Eje Y
+    // Eje Y (>= 15)
     g.append("g")
-      .call(d3.axisLeft(y).ticks(6).tickSize(0).tickPadding(10))
+      .call(d3.axisLeft(y).ticks(5).tickSize(0).tickPadding(10))
       .call((s) => s.select(".domain").remove())
       .selectAll("text")
-      .attr("font-size", 11)
+      .attr("font-size", 15)
       .attr("fill", "#4b5563");
 
     svg.append("text")
-      .attr("x", 16)
-      .attr("y", margin.top - 52)
-      .attr("font-size", 11)
+      .attr("x", 14)
+      .attr("y", margin.top - 64)
+      .attr("font-size", 15)
       .attr("font-weight", 600)
       .attr("fill", "#4b5563")
-      .text("Casos / personas por mes");
+      .text("Casos / mes");
 
-    // Eje X (marcas cada 3 meses)
-    const xTicks = raw.filter((d) => [1, 4, 7, 10].includes(d.mes)).map((d) => d.fecha);
+    // Eje X (cada 6 meses para máxima claridad a 15 unidades SVG)
+    const xTicks = raw.filter((d) => d.mes === 1 || d.mes === 7).map((d) => d.fecha);
     g.append("g")
       .attr("transform", `translate(0,${innerH})`)
       .call(
         d3.axisBottom(x)
           .tickValues(xTicks)
           .tickFormat((d) => (d.getMonth() === 0 ? `${MESES_ES[d.getMonth()]} ${d.getFullYear()}` : MESES_ES[d.getMonth()]))
-          .tickSize(5)
+          .tickSize(6)
+          .tickPadding(8)
       )
       .call((s) => s.select(".domain").attr("stroke", PALETA.gris))
       .selectAll("text")
-      .attr("font-size", 10.5)
+      .attr("font-size", 15)
       .attr("font-weight", (d) => (d.getMonth() === 0 ? 700 : 400))
       .attr("fill", (d) => (d.getMonth() === 0 ? PALETA.tinta : "#4b5563"));
 
@@ -197,7 +211,7 @@
       .attr("d", lineHeridos)
       .attr("fill", "none")
       .attr("stroke", PALETA.oro)
-      .attr("stroke-width", 2.2)
+      .attr("stroke-width", 2.5)
       .attr("stroke-dasharray", "6,3");
 
     // Línea morada: accidentes con peatón (foco)
@@ -211,7 +225,7 @@
       .attr("d", lineSiniestros)
       .attr("fill", "none")
       .attr("stroke", PALETA.morado)
-      .attr("stroke-width", 2.8);
+      .attr("stroke-width", 3.1);
 
     // Puntos de datos
     g.selectAll("circle.pt-her")
@@ -220,10 +234,10 @@
       .attr("class", "pt-her")
       .attr("cx", (d) => x(d.fecha))
       .attr("cy", (d) => y(d.peatones_heridos))
-      .attr("r", 3.1)
+      .attr("r", 3.4)
       .attr("fill", PALETA.oro)
       .attr("stroke", "#ffffff")
-      .attr("stroke-width", 0.8);
+      .attr("stroke-width", 0.9);
 
     g.selectAll("circle.pt-sin")
       .data(raw)
@@ -231,10 +245,10 @@
       .attr("class", "pt-sin")
       .attr("cx", (d) => x(d.fecha))
       .attr("cy", (d) => y(d.accidentes_peaton))
-      .attr("r", 3.7)
+      .attr("r", 4.1)
       .attr("fill", PALETA.morado)
       .attr("stroke", "#ffffff")
-      .attr("stroke-width", 1)
+      .attr("stroke-width", 1.1)
       .style("cursor", "pointer")
       .on("mousemove", (event, d) => {
         tooltip
@@ -250,65 +264,56 @@
       })
       .on("mouseleave", () => tooltip.style("opacity", 0));
 
-    // Anotación directa en el pico máximo mensual (mayo 2024)
+    // Anotación directa en el pico máximo mensual (mayo 2024) con letra >= 15
     const pico = raw.reduce((best, cur) => (cur.accidentes_peaton > best.accidentes_peaton ? cur : best), raw[0]);
     const px = x(pico.fecha);
-    const py = y(pico.peatones_heridos);
+    const py = y(pico.accidentes_peaton);
 
     g.append("circle")
       .attr("cx", px)
-      .attr("cy", y(pico.accidentes_peaton))
-      .attr("r", 6.5)
+      .attr("cy", py)
+      .attr("r", 7.5)
       .attr("fill", "none")
       .attr("stroke", PALETA.morado)
-      .attr("stroke-width", 2);
+      .attr("stroke-width", 2.2);
 
-    const annoX = Math.min(px - 185, innerW - 210);
-    const annoY = Math.max(12, py - 10);
+    const boxW = 248;
+    const boxH = 54;
+    const annoX = Math.max(12, px - boxW - 28);
+    const annoY = 6;
     g.append("line")
-      .attr("x1", annoX + 172)
-      .attr("y1", annoY + 12)
-      .attr("x2", px - 8)
-      .attr("y2", y(pico.accidentes_peaton))
+      .attr("x1", annoX + boxW)
+      .attr("y1", annoY + 34)
+      .attr("x2", px - 7)
+      .attr("y2", py - 5)
       .attr("stroke", PALETA.morado)
-      .attr("stroke-width", 1.2);
+      .attr("stroke-width", 1.5);
 
     g.append("rect")
       .attr("x", annoX)
-      .attr("y", annoY - 6)
-      .attr("width", 174)
-      .attr("height", 38)
-      .attr("rx", 6)
+      .attr("y", annoY)
+      .attr("width", boxW)
+      .attr("height", boxH)
+      .attr("rx", 7)
       .attr("fill", "#ffffff")
-      .attr("stroke", PALETA.morado);
+      .attr("stroke", PALETA.morado)
+      .attr("stroke-width", 1.3);
 
     g.append("text")
-      .attr("x", annoX + 8)
-      .attr("y", annoY + 10)
-      .attr("font-size", 11)
-      .attr("font-weight", 700)
+      .attr("x", annoX + 12)
+      .attr("y", annoY + 22)
+      .attr("font-size", 15.5)
+      .attr("font-weight", 800)
       .attr("fill", PALETA.morado)
       .text(`Pico: ${MESES_ES[pico.mes - 1]} ${pico.anio}`);
 
     g.append("text")
-      .attr("x", annoX + 8)
-      .attr("y", annoY + 25)
-      .attr("font-size", 10.5)
+      .attr("x", annoX + 12)
+      .attr("y", annoY + 43)
+      .attr("font-size", 15)
+      .attr("font-weight", 600)
       .attr("fill", PALETA.tinta)
       .text(`${fmtInt(pico.accidentes_peaton)} siniestros · ${fmtInt(pico.peatones_heridos)} heridos`);
-
-    // Leyenda superior derecha
-    const leg = svg.append("g").attr("transform", `translate(${margin.left + 210}, 18)`);
-    leg.append("line").attr("x1", 0).attr("x2", 22).attr("y1", 6).attr("y2", 6).attr("stroke", PALETA.morado).attr("stroke-width", 3);
-    leg.append("text").attr("x", 28).attr("y", 10).attr("font-size", 11.5).attr("font-weight", 700).attr("fill", PALETA.tinta)
-      .text(`Siniestros con peatón (${fmtInt(totalSiniestros)})`);
-
-    leg.append("line").attr("x1", 230).attr("x2", 252).attr("y1", 6).attr("y2", 6).attr("stroke", PALETA.oro).attr("stroke-width", 2.4).attr("stroke-dasharray", "6,3");
-    leg.append("text").attr("x", 258).attr("y", 10).attr("font-size", 11.5).attr("font-weight", 700).attr("fill", PALETA.oroOscuro)
-      .text(`Peatones heridos (${fmtInt(totalHeridos)})`);
-
-    leg.append("text").attr("x", 460).attr("y", 10).attr("font-size", 11).attr("fill", "#4b5563")
-      .text(`Fallecidos en sitio (2021): ${fmtInt(totalMuertos)}`);
   }
 
   window.renderEscena2 = renderEscena2;
